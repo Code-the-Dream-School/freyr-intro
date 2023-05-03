@@ -41,7 +41,7 @@ Clone this repository so that the code is available on your local machine:
 
 Navigate to the directory you just cloned in your terminal:
 
-    cd fenrir-intro
+    cd freyr-intro
     
 Check to be sure you've got the correct GitHub repository linked to your local folder by running the following command in your terminal
 
