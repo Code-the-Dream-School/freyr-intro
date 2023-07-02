@@ -4,7 +4,7 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
-copyright.innerHTML = `© ${thisYear} Irina Postnova`;
+copyright.innerHTML = `&copy; ${thisYear} Irina Postnova`;
 footer.appendChild(copyright);
 
 
