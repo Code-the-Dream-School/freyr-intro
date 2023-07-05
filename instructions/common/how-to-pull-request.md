@@ -8,6 +8,8 @@
 
 ## Step 2: Click "Compare and pull request"
 
+**NOTE:** If this is your first pull request at all, you may need to click "New Pull Request" instead of Compare and pull request.
+
 ![Create Pull Request: Step 2](../assets/create-pull-request/step-2.jpg)
 
 ## Step 3: Type a title and description
