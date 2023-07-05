@@ -16,6 +16,7 @@ This assignment will teach you the following:
 ### Getting Started:
 
 Fork this GitHub repository to create your own working version:
+**Note:** You'll be forking the freyr-intro repository NOT the eridanus-intro repository as shown in the image below
 
 ![Fork Assignment: Step 1](../assets/fork-assignment/fork-step-1.png)
 
