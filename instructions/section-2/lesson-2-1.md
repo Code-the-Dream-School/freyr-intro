@@ -16,15 +16,16 @@ This assignment will teach you the following:
 ### Getting Started:
 
 Fork this GitHub repository to create your own working version:
+
 **Note:** You'll be forking the freyr-intro repository NOT the eridanus-intro repository as shown in the image below
 
 ![Fork Assignment: Step 1](../assets/fork-assignment/fork-step-1.png)
 
-Select your GitHub account from the list and click the green Create Fork button to copy this repository from the Code the Dream School GitHub account to your personal GitHub account
+Select **_your_** GitHub account from the list and click the green Create Fork button to copy this repository from the Code the Dream School GitHub account to your personal GitHub account
 
 ![Fork Assignment: Step 2](../assets/fork-assignment/fork-step-2.png)
 
-You should be directed to your forked GitHub repository so you will see your username in the top left instead of Code-the-Dream-School
+You should be directed to your forked GitHub repository so you will see **_your_** username in the top left instead of Code-the-Dream-School
 
 ![Fork Assignment: Step 3](../assets/fork-assignment/fork-step-3.png)
 
