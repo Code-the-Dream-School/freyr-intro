@@ -66,6 +66,12 @@ messageForm.addEventListener('submit', (e) => {
     removeButton.innerText = "remove";
     removeButton.type = "button";
 
+    const editButton = document.createElement('button');
+    editButton.innerText = "edit";
+    editButton.type = "button";
+
+
+    newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageSection.show();
@@ -80,6 +86,28 @@ messageList.addEventListener('click', (e) => {
         const action = button.textContent;
 
         const nameActions = {
+            edit: () => {
+                const span = li.querySelector('span');
+                const input = document.createElement('input');
+                input.type = "text";
+                input.value = span.textContent;
+                li.insertBefore(input, span);
+                li.removeChild(span);
+                button.textContent = 'save';
+            },
+            save: () => {
+                const input = li.querySelector('input');
+                const span = document.createElement('span');
+                const editedMessage = input.value.trim();
+                if (editedMessage === '') {
+                    alert('Write a message.');
+                    return;
+                }
+                span.textContent = editedMessage;
+                li.insertBefore(span, input);
+                li.removeChild(input);
+                button.textContent = 'edit';            
+            },
             remove: () => {
                 li.remove();
                 updateMessageSection();
