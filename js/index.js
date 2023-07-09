@@ -23,6 +23,26 @@ const messageForm = document.querySelector('form[name="leave_message"]');
 const messageSection = document.querySelector('#messages');
 const messageList = messageSection.querySelector('ul');
 
+messageSection.hide = function () {
+    this.style.display = 'none';
+};
+messageSection.show = function () {
+    this.style.display = '';
+};
+
+Object.defineProperty(messageList, "hasNoMessages", {
+    get: function () {
+        return this.childElementCount === 0
+    }
+});
+
+function updateMessageSection() {
+    if (messageList.hasNoMessages) {
+        messageSection.hide();
+    }
+};
+updateMessageSection();
+
 
 messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -48,6 +68,7 @@ messageForm.addEventListener('submit', (e) => {
 
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
+    messageSection.show();
 
     form.reset();
 });
@@ -61,6 +82,7 @@ messageList.addEventListener('click', (e) => {
         const nameActions = {
             remove: () => {
                 li.remove();
+                updateMessageSection();
             }
         }
         nameActions[action]();
