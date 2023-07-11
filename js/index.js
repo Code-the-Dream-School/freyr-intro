@@ -61,6 +61,7 @@ messageForm.addEventListener('submit', (e) => {
         <a href="mailto:${useEmail}" target="_blank">${userName}</a>
         wrote: <span> ${userMessage}</span>
     `;
+    newMessage.messageText = userMessage;
 
     const removeButton = document.createElement('button');
     removeButton.innerText = "remove";
@@ -82,11 +83,24 @@ messageForm.addEventListener('submit', (e) => {
 messageList.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON') {
         const button = e.target;
+        const listButtons = messageList.querySelectorAll('button');
         const li = button.parentNode;
+        const messageText = li.messageText;
         const action = button.textContent;
+
+        const disableButton = (btn) => {
+            if (btn.parentNode !== li) {
+                btn.disabled = true;
+            }
+        };
+        const enableButton = (btn) => btn.disabled = false;
+        const switchButtons = (buttons, switcher) => {
+            buttons.forEach(button => switcher(button));
+        }
 
         const nameActions = {
             edit: () => {
+                switchButtons(listButtons, disableButton);
                 const span = li.querySelector('span');
                 const input = document.createElement('input');
                 input.type = "text";
@@ -99,17 +113,26 @@ messageList.addEventListener('click', (e) => {
                 const input = li.querySelector('input');
                 const span = document.createElement('span');
                 const editedMessage = input.value.trim();
+
                 if (editedMessage === '') {
-                    alert('Write a message.');
+                    const answer = confirm('Delete message?');
+                    if (answer === true) {
+                        nameActions['remove']();
+                    } else {
+                        input.value = messageText;
+                    }
                     return;
                 }
-                span.textContent = editedMessage;
+
+                switchButtons(listButtons, enableButton);
+                span.textContent = editedMessage || messageText;
                 li.insertBefore(span, input);
                 li.removeChild(input);
                 button.textContent = 'edit';            
             },
             remove: () => {
                 li.remove();
+                switchButtons(listButtons, enableButton);
                 updateMessageSection();
             }
         }
