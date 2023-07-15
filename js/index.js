@@ -115,8 +115,8 @@ messageList.addEventListener('click', (e) => {
                 const editedMessage = input.value.trim();
 
                 if (editedMessage === '') {
-                    const answer = confirm('Delete message?');
-                    if (answer === true) {
+                    const isConfirmedDeleting = confirm('Delete message?');
+                    if (isConfirmedDeleting) {
                         nameActions['remove']();
                     } else {
                         input.value = messageText;
@@ -128,6 +128,7 @@ messageList.addEventListener('click', (e) => {
                 span.textContent = editedMessage || messageText;
                 li.insertBefore(span, input);
                 li.removeChild(input);
+                li.messageText = span.textContent;
                 button.textContent = 'edit';            
             },
             remove: () => {
