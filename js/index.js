@@ -81,62 +81,63 @@ messageForm.addEventListener('submit', (e) => {
 });
 
 messageList.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON') {
-        const button = e.target;
-        const listButtons = messageList.querySelectorAll('button');
-        const li = button.parentNode;
-        const messageText = li.messageText;
-        const action = button.textContent;
-
-        const disableButton = (btn) => {
-            if (btn.parentNode !== li) {
-                btn.disabled = true;
-            }
-        };
-        const enableButton = (btn) => btn.disabled = false;
-        const switchButtons = (buttons, switcher) => {
-            buttons.forEach(button => switcher(button));
-        }
-
-        const nameActions = {
-            edit: () => {
-                switchButtons(listButtons, disableButton);
-                const span = li.querySelector('span');
-                const input = document.createElement('input');
-                input.type = "text";
-                input.value = span.textContent;
-                li.insertBefore(input, span);
-                li.removeChild(span);
-                button.textContent = 'save';
-            },
-            save: () => {
-                const input = li.querySelector('input');
-                const span = document.createElement('span');
-                const editedMessage = input.value.trim();
-
-                if (editedMessage === '') {
-                    const isConfirmedDeleting = confirm('Delete message?');
-                    if (isConfirmedDeleting) {
-                        nameActions['remove']();
-                    } else {
-                        input.value = messageText;
-                    }
-                    return;
-                }
-
-                switchButtons(listButtons, enableButton);
-                span.textContent = editedMessage || messageText;
-                li.insertBefore(span, input);
-                li.removeChild(input);
-                li.messageText = span.textContent;
-                button.textContent = 'edit';            
-            },
-            remove: () => {
-                li.remove();
-                switchButtons(listButtons, enableButton);
-                updateMessageSection();
-            }
-        }
-        nameActions[action]();
+    if (e.target.tagName !== 'BUTTON') {
+        return;
     }
+    const button = e.target;
+    const listButtons = messageList.querySelectorAll('button');
+    const li = button.parentNode;
+    const messageText = li.messageText;
+    const action = button.textContent;
+
+    const disableButton = (btn) => {
+        if (btn.parentNode !== li) {
+            btn.disabled = true;
+        }
+    };
+    const enableButton = (btn) => btn.disabled = false;
+    const switchButtons = (buttons, switcher) => {
+        buttons.forEach(button => switcher(button));
+    }
+
+    const nameActions = {
+        edit: () => {
+            switchButtons(listButtons, disableButton);
+            const span = li.querySelector('span');
+            const input = document.createElement('input');
+            input.type = "text";
+            input.value = span.textContent;
+            li.insertBefore(input, span);
+            li.removeChild(span);
+            button.textContent = 'save';
+        },
+        save: () => {
+            const input = li.querySelector('input');
+            const span = document.createElement('span');
+            const editedMessage = input.value.trim();
+
+            if (editedMessage === '') {
+                const isConfirmedDeleting = confirm('Delete message?');
+                if (isConfirmedDeleting) {
+                    nameActions['remove']();
+                } else {
+                    input.value = messageText;
+                }
+                return;
+            }
+
+            switchButtons(listButtons, enableButton);
+            span.textContent = editedMessage || messageText;
+            li.insertBefore(span, input);
+            li.removeChild(input);
+            li.messageText = span.textContent;
+            button.textContent = 'edit';            
+        },
+        remove: () => {
+            li.remove();
+            switchButtons(listButtons, enableButton);
+            updateMessageSection();
+        }
+    }
+    nameActions[action]();
 });
