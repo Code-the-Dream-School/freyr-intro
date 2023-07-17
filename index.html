@@ -25,6 +25,24 @@
         <ul>
             <li><a href="https://github.com/Ronapj1991">My Github Page</a></li>
         </ul>
+        <section>
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <label for="usersName">Username:</label>
+                <input type="text" name="usersName" required="true"/>
+                <br />
+                <label for="usersEmail">E-mail:</label>
+                <input type="email" name="usersEmail" required="true"/>
+                <br />
+                <textarea name="usersMessage" required="true"></textarea>
+                <br />
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul></ul>
+        </section>
         <footer class='footer'></footer>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
