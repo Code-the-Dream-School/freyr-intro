@@ -8,9 +8,12 @@ copyright.innerHTML = `&copy; ${thisYear} Kateryna Mikhailiuk`;
 footer.appendChild(copyright);
 
 const skills = [
-  "HTML",
-  "CSS",
+  "HTML5",
+  "CSS3",
   "JavaScript",
+  "Bootstrap",
+  "API",
+  "GSAP",
   "Excellent written and verbal communication skills",
   "Strong organizational and time-management skills",
   "Proven problem-solving abilities with quick and effective issue resolution",
@@ -25,3 +28,6 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
+
+const projectSection = document.getElementById("projects");
+const projectList = projectSection.querySelector("ul");
