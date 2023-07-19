@@ -96,8 +96,10 @@ Check the log to make sure your commit has been published:
 
 Create a pull request and submit:
 
-[View instructions](../common/how-to-pull-request.md)
+[View instructions][../common/how-to-pull-request.md]
 
 ---
 
 Created by [Code the Dream](https://www.codethedream.org)
+
+
