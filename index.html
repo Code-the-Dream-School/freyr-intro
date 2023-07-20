@@ -3,15 +3,17 @@
     <head>
         <title>My Portfolio Page</title>
         <meta charset="UTF-8" content="HTML, CSS, JavaScript" />
+        <link rel="stylesheet" href="css/index.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body>
-        <h1>About</h1>
-        <img src="https://drive.google.com/uc?id=1GI0T51uy8hU_nL8F6rufV8i6Iw8pk6lu" alt="Photo of myself" />
-        <p>A student who loves coding, chess, video games, and most of all my inspiration, my wife.</p>
+        <h1>About Me</h1>
+        <img class="my_photo" src="https://drive.google.com/uc?id=1GI0T51uy8hU_nL8F6rufV8i6Iw8pk6lu" alt="Photo of myself" />
+        <p class="my_description">A student who loves coding, chess, video games, and most of all my inspiration, my wife.</p>
         <h2>Experience</h2>
-        <p>Places Worked: EbryIT, Fulton County Government Center, Barracuda Networks, IRONSCALES</p>
+        <p class="places_worked">Places Worked: EbryIT, Fulton County Government Center, Barracuda Networks, IRONSCALES</p>
         <h3>Projects</h3>
-        <ul>
+        <ul class="projects">
             <li><a href="https://ronapj1991.github.io/admin-dashboard/">Admin Dashboard Mock-up</a></li>
             <li><a href="https://ronapj1991.github.io/Etch-a-sketch/">Etch a Sketch</a></li>
             <li><a href="https://ronapj1991.github.io/RPS-odinproject/">Rock, Paper, Scissors on Web</a></li>
@@ -19,19 +21,21 @@
         </ul>
         <section id="skills">
             <h2>Skills</h2>
-            <ul></ul>
+            <ul class="skill_list"></ul>
         </section>
         <h3>Connect</h3>
-        <ul>
+        <ul class="social_media">
             <li><a href="https://github.com/Ronapj1991">My Github Page</a></li>
         </ul>
         <section>
             <h2>Leave a Message</h2>
-            <form name="leave_message">
+            <form class= "leave_message" name="leave_message">
                 <label for="usersName">Username:</label>
+                <br />
                 <input type="text" name="usersName" required="true"/>
                 <br />
                 <label for="usersEmail">E-mail:</label>
+                <br />
                 <input type="email" name="usersEmail" required="true"/>
                 <br />
                 <textarea name="usersMessage" required="true"></textarea>

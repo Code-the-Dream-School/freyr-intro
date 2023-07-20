@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&family=Pacifico&family=Press+Start+2P&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #eeeee4;
+	color: #181817;
+	font-family: 'Press Start 2P', cursive;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a, a:visited, a:hover, a:active {
+  color: blue;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3%;
+    font-size: 1.5em;
+    color: #5f5f5b;
+    padding-top: 10px;
+}
+
+.my_photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    margin-bottom: 3%;
+    width: 150px;
+}
+
+.my_description {
+    color: #30302e;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+h2 {
+	background-color: #873e23;
+	font-size: 1.2em;
+	color: #E2DAD9;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.places_worked {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+}
+
+h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	text-decoration: underline;
+	color: #960718;
+}
+
+.projects {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+a:link { 
+	text-decoration: none;
+}
+
+.projects li {
+	border: 10px inset #969186;
+	background-color: #D3D2D1;
+	margin: 5px;
+	padding: 1%;
+}
+
+.projects li:hover {
+	transform: scale(1.01);
+}
+
+.skill_list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: 35px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.skill_list li {
+	border-radius: 10px;
+	box-shadow: 10px 5px 5px #225F35;
+	margin: 5px;
+	padding: 10px;
+	background-color: #225F54;
+	color: #C3BAB9;
+}
+
+.social_media {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.social_media li:hover {
+	transform: scale(1.02);
+}
+
+.leave_message {
+	padding: 15px;
+}
+
+.leave_message input {
+	padding: 0;
+  	height: 25px;
+  	outline: none;
+  	border-color: rgba(0, 0, 0, .15);
+  	background-color: white;
+  	font-size: 1.1em;
+  	margin-bottom: 10px;
+}
+
+.leave_message textarea {
+	width: 100%;
+  	height: 150px;
+  	padding: 12px 20px;
+  	box-sizing: border-box;
+ 	border: 2px solid #ccc;
+  	border-radius: 4px;
+	background-color: #f8f8f8;
+	font-size: 16px;
+  	resize: none;
+}
+
+button[type="submit"] {
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	border: none;
+	border-radius: 25px;
+	background-color: #B0ACB8;
+	padding: 10px;
+	color: #38353E;
+	font-family: inherit;
+}
+
+button:hover {
+	transform: scale(1.02);
+}
+
+#messages ul {
+	padding: 25px;
+	margin-bottom: 30px;
+}
+
+#messages button {
+	border-radius: 10px;
+	background-color: #B0ACB8;
+	padding: 10px;
+	color: #38353E;
+	font-family: inherit;
+	margin: 10px;
+}
+
+.footer {
+	text-align: right;
+	background-color: #7B0000;
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #FFE3E3;
+}
+
+@media (min-width: 376px) {
+	.my_photo {
+		width: 180px;
+		height: auto;
+	}
+}
+
+@media (min-width: 600px) {
+	body {
+		font-size: 1.25rem;
+	}
+	.my_photo {
+		width: 200px;
+		height: auto;
+	}
+}
+
+@media (min-width: 800px) {
+	.my_photo {
+		width: 220px;
+		height: auto;
+	}
+}

@@ -3,7 +3,7 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
-copyright.innerHTML = `Ron Javellana ${thisYear}`;
+copyright.innerHTML = `&copy; Ron Javellana ${thisYear}`;
 footer.appendChild(copyright)
 
 const skills = ["HTML", "CSS", "Ruby", "Javascript", "SQL", "Linux", "Postman"];
@@ -18,16 +18,11 @@ for (let i = 0; i < skills.length; i += 1) {
 const messageForm = document.querySelector("[name=leave_message]");
 const messagesHeader = document.querySelector("#messages");
 
-let listSize = messagesHeader.lastElementChild.childElementCount;
-
-if (listSize === 0) {
-    messagesHeader.setAttribute("hidden", "");
-}
+messagesHeader.style.display = "none";
 
 messageForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    messagesHeader.removeAttribute("hidden");
-    
+    let listSize = messagesHeader.lastElementChild.childElementCount;
     let userName = event.target.usersName.value;
     let email = event.target.usersEmail.value;
     let message = event.target.usersMessage.value;
@@ -41,15 +36,34 @@ messageForm.addEventListener("submit", (event) => {
     newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a><span> wrote: ${message} </span>`;
     
     let removeButton = document.createElement("button");
+    let editButton = document.createElement("button");
     
     removeButton.innerText = "remove";
+    editButton.innerText = "edit";
+    
     removeButton.setAttribute("type", "button");
+    editButton.setAttribute("type", "button");
     
     removeButton.addEventListener("click", (event) => {
         let entry = removeButton.parentNode;
         entry.remove();
-    })
+        
+        if (listSize === 0) {
+            messagesHeader.style.display = "none";
+        } else {
+            messagesHeader.style.display = "";
+        }
+    });
     
+    editButton.addEventListener("click", (event) => {
+        let span = editButton.previousSibling;
+        let editText = span.innerText;
+        let newText = prompt("Edit message: ", editText.slice(8, editText.length - 1));
+        span.innerText = " wrote: " + newText + " ";
+    });
+    
+    messagesHeader.style.display = "";
+    newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageForm.reset();
