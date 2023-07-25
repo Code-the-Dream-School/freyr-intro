@@ -26,7 +26,8 @@ Fetch the updated instructions from the base repository:
 
 ![Fetch Upstream: Step 1](../assets/fetch-upstream/step-1.jpg)
 
-Checkout your main branch and pull changes:
+C
+
 
     git checkout main
     git pull
