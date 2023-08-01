@@ -15,9 +15,12 @@ for (let i = 0; i < skills.length; i++){
 const today = new Date();
 const thisYear = today.getFullYear();
 
-const containerF = document.querySelector('#containerF');
+const textC = `<small>&#169; Anna Gerhardt ${thisYear}</small>`;
+document.getElementById("containerF").innerHTML = textC;
+
+/* const containerF = document.querySelector('#containerF');
 const footerContent = document.createElement('p');
 const textC = `<small>&#169; Anna Gerhardt ${thisYear}</small>`;
 footerContent.innerHTML = textC;
-containerF.appendChild(footerContent);
+containerF.appendChild(footerContent); */
 
