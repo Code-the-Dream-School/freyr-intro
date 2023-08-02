@@ -68,4 +68,27 @@ document.addEventListener('DOMContentLoaded', () => {
     let copyright = document.createElement('p');
     copyright.innerHTML = `&copy; Nataly Mota ${thisYear}`;
     footer.appendChild(copyright);
+
+    let messageForm = document.querySelector("form[name='leave_message']");
+    messageForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        let name = event.target.usersName.value;
+        let email = event.target.usersEmail.value;
+        let message = event.target.usersMessage.value;
+        console.log(`name: ${name} \nemail: ${email} \nmessage: ${message}`);
+        let messageSection = document.getElementById('messages');
+        let messageList = messageSection.querySelector('ul');
+        let newMessage = document.createElement('li');
+        newMessage.innerHTML = `<strong>Email the User:</strong> <a href='mailto:${email}'>${name}</a><br><strong>User's Message:</strong><span> ${message}</span><br>`;
+        let removeButton = document.createElement('button');
+        removeButton.innerText = "remove";
+        removeButton.type = "button";
+        newMessage.appendChild(removeButton);
+        messageList.appendChild(newMessage);
+        removeButton.addEventListener('click', () => {
+            let entry = removeButton.parentNode;
+            entry.remove();
+        });
+        messageForm.reset();
+    });
 });
