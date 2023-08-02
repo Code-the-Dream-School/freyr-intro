@@ -7,10 +7,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body>
-        <h1>About Me</h1>
+        <nav>
+            <ul class="nav_bar">
+                <li><a href="#about_me">About</a></li>
+                <li><a href="#my_experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#write_messages">Message</a></li>
+            </ul>
+        </nav>
+        <h1 id="about_me">About Me</h1>
         <img class="my_photo" src="https://drive.google.com/uc?id=1GI0T51uy8hU_nL8F6rufV8i6Iw8pk6lu" alt="Photo of myself" />
         <p class="my_description">A student who loves coding, chess, video games, and most of all my inspiration, my wife.</p>
-        <h2>Experience</h2>
+        <h2 id="my_experience">Experience</h2>
         <p class="places_worked">Places Worked: EbryIT, Fulton County Government Center, Barracuda Networks, IRONSCALES</p>
         <h3>Projects</h3>
         <ul class="projects">
@@ -28,7 +36,7 @@
             <li><a href="https://github.com/Ronapj1991">My Github Page</a></li>
         </ul>
         <section>
-            <h2>Leave a Message</h2>
+            <h2 id="write_messages">Leave a Message</h2>
             <form class= "leave_message" name="leave_message">
                 <label for="usersName">Username:</label>
                 <br />
@@ -50,5 +58,4 @@
         <footer class='footer'></footer>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
-    
 </html>

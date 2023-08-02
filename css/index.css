@@ -55,6 +55,17 @@ a, a:visited, a:hover, a:active {
   color: blue;
 }
 
+nav .nav_bar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #ccbb99;	
+}
+	
+nav .nav_bar li {
+	padding: 10px;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 3%;
@@ -199,6 +210,12 @@ button:hover {
 #messages ul {
 	padding: 25px;
 	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#messages ul li {
+	padding-bottom: 15px;
 }
 
 #messages button {
@@ -240,5 +257,16 @@ button:hover {
 	.my_photo {
 		width: 220px;
 		height: auto;
+	}
+}
+
+@media (min-width: 500px) {
+	nav .nav_bar {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-bottom: 40px;
 	}
 }
