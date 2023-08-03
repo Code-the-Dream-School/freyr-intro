@@ -161,56 +161,16 @@ document.addEventListener('DOMContentLoaded', () => {
         editButton.style.margin = '0 .4rem 0 1rem';
 
         messageList.appendChild(newMessage);
-
-        /*
-        newMessage.addEventListener('click', (e) => {
-            if (e.target.tagName === 'BUTTON') {
-                const button = e.target;
-                let entry = button.parentNode;
-                // The variable entry is a list item (li), which is the element that is 
-                //the parent of the button.
-                //const ul = entry.parentNode;
-                // It's parent is the unordered list (ul), which is stored in the 
-                //variable messageList.
-
-                if (button.textContent === 'remove') {
-                    entry.remove();
-                    let numOfListItems = messageList.childElementCount;
-                    //console.log(numOfListItems);
-                    if (numOfListItems <= 1) {
-                        messageSection.style.display = 'none';
-                    } 
-                } else if (button.textContent === 'edit') {
-                    //let saveButton = createButton('save');
-
-                    let messageContainerSpan = newMessage.getElementsByTagName('span')[0];
-                    let messageText = messageContainerSpan.textContent;
-                    messageContainerSpan.textContent = '';
-
-                    let editInputField = document.createElement('input');
-                    editInputField.type = 'text';
-                    editInputField.id = 'editInputField';
-                    editInputField.value = messageText;
-
-                    newMessage.insertBefore(editInputField, editButton);
-                    //newMessage.insertBefore(saveButton, removeButton);
-                    //editButton.remove();
-                } else if (button.textContent === 'save') { 
-                    
-                }
-            }
-        });
-        */
         
         removeButton.addEventListener('click', () => {
             let entry = removeButton.parentNode;
-            
-                //The variable entry is a list item (li), which is the element that is 
-                //the parent of the editButton. 
-                //It's parent is the unordered list (ul), which is stored in the 
-                //variable messageList.
-                //The ul's parent is the section element with the id of messages.
-            
+            /*
+                The variable entry is a list item (li), which is the element that is 
+                the parent of the editButton. 
+                It's parent is the unordered list (ul), which is stored in the 
+                variable messageList.
+                The ul's parent is the section element with the id of messages.
+            */
             let numOfListItems = messageList.childElementCount;
             console.log(numOfListItems);
             entry.remove();
