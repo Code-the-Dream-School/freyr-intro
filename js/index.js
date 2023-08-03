@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     let skillsSection = document.getElementById('skills');
     let skillsList = skillsSection.querySelector('ul');
+    let messageSection = document.getElementById('messages');
+    messageSection.style.display = 'none';
     
     for (let i=0; i < skills.length; i++) {
         let skill = document.createElement('li');
@@ -72,14 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let messageForm = document.querySelector("form[name='leave_message']");
     messageForm.addEventListener('submit', (event) => {
         event.preventDefault();
+        messageSection.removeAttribute('style');
+        /*
+            The above line of code right now has the same effect as the line of code below. However, if more styles were added to the messageSection element, the line of code below would not remove them, in order to make the display of this element visible once again.
+            messageSection.style.display = '';
+        */
         let name = event.target.usersName.value;
         let email = event.target.usersEmail.value;
         let message = event.target.usersMessage.value;
         console.log(`name: ${name} \nemail: ${email} \nmessage: ${message}`);
-        let messageSection = document.getElementById('messages');
         let messageList = messageSection.querySelector('ul');
         let newMessage = document.createElement('li');
-        newMessage.innerHTML = `<strong>Email the User:</strong> <a href='mailto:${email}'>${name}</a><br><strong>User's Message:</strong><span> ${message}</span><br>`;
+        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span> ${message}</span> `;
         let removeButton = document.createElement('button');
         removeButton.innerText = "remove";
         removeButton.type = "button";
@@ -87,7 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
         messageList.appendChild(newMessage);
         removeButton.addEventListener('click', () => {
             let entry = removeButton.parentNode;
+            /* 
+                The variable entry is a list item (li). 
+                It's parent is the unordered list (ul), which is stored in the variable messageList.
+                The ul's parent is the section element with the id of messages.
+            */
+            let numOfListItems = messageList.childElementCount;
+            console.log(numOfListItems);
             entry.remove();
+            if (numOfListItems === 1) {
+                messageSection.style.display = 'none';
+            } 
         });
         messageForm.reset();
     });
