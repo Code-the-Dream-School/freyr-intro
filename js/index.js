@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /*
             A previous, simpler version of the code above, that did not have all of the same functionality, but which had some of it, looked like the code below:
-            
+
             let name = event.target.usersName.value;
             let email = event.target.usersEmail.value;
             let message = event.target.usersMessage.value;
@@ -128,12 +128,17 @@ document.addEventListener('DOMContentLoaded', () => {
             let typeOfButton = document.createElement('button');
             typeOfButton.innerText = buttonText;
             typeOfButton.type = "button";
+            return typeOfButton;
+        }
+        
+        function createButtonAndAppendIt(buttonText) {
+            let typeOfButton = createButton(buttonText);
             newMessage.appendChild(typeOfButton);
             return typeOfButton;
         }
 
-        let editButton = createButton('edit');
-        let removeButton = createButton('remove');
+        let editButton = createButtonAndAppendIt('edit');
+        let removeButton = createButtonAndAppendIt('remove');
         /*
             The above code is the same as the following code, in a refactored form:
 
@@ -167,18 +172,23 @@ document.addEventListener('DOMContentLoaded', () => {
             } 
         });
 
+        
+
         editButton.addEventListener('click', () => {
             let messageContainerSpan = newMessage.getElementsByTagName('span')[0];
             // console.log(messageContainerSpan);
             let messageText = messageContainerSpan.textContent;
-            // messageText = messageText.trim();
             // messageContainerSpan.style.visibility = 'hidden';
             messageContainerSpan.textContent = '';
             let editInputField = document.createElement('input');
             editInputField.type = 'text';
             editInputField.value = messageText;
-            messageContainerSpan.appendChild(editInputField);
+            newMessage.insertBefore(editInputField, editButton);
+            //messageContainerSpan.appendChild(editInputField);
 
+            let saveButton = createButton('save');
+            newMessage.insertBefore(saveButton, removeButton);
+            editButton.remove();
         });
         messageForm.reset();
     });
