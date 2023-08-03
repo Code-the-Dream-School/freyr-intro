@@ -63,38 +63,99 @@ document.addEventListener('DOMContentLoaded', () => {
         skillWrapperDiv.appendChild(skill);
         skillsList.appendChild(skillWrapperDiv);
     }
+
+    function placeCopyrightNotice() {
+        let today = new Date();
+        var thisYear = today.getFullYear();
+        let footer = document.querySelector('footer');
+        let copyright = document.createElement('p');
+        copyright.innerHTML = `&copy; Nataly Mota ${thisYear}`;
+        footer.appendChild(copyright);
+    }
+    placeCopyrightNotice();
     
-    let today = new Date();
-    var thisYear = today.getFullYear();
-    let footer = document.querySelector('footer');
-    let copyright = document.createElement('p');
-    copyright.innerHTML = `&copy; Nataly Mota ${thisYear}`;
-    footer.appendChild(copyright);
 
     let messageForm = document.querySelector("form[name='leave_message']");
     messageForm.addEventListener('submit', (event) => {
         event.preventDefault();
         messageSection.removeAttribute('style');
         /*
-            The above line of code right now has the same effect as the line of code below. However, if more styles were added to the messageSection element, the line of code below would not remove them, in order to make the display of this element visible once again.
+            The above line of code right now has the same effect as the line of code below. It makes the message section visible once again. However, if more styles were added to the messageSection element, the line of code below would not remove them, in order to make the display of this element as visible one more time.
             messageSection.style.display = '';
         */
-        let name = event.target.usersName.value;
-        let email = event.target.usersEmail.value;
-        let message = event.target.usersMessage.value;
+
+        function getValueOfFormField(formFieldName) {
+            let fieldName = event.target[formFieldName];
+            let fieldValue = fieldName.value;
+            return fieldValue;
+        }
+
+        function getValueOfFormFieldAndTrimIt(formFieldName) {
+            let formFieldData = getValueOfFormField(formFieldName);
+            formFieldData = formFieldData.trim();
+            return formFieldData;
+        }
+
+        let name = getValueOfFormFieldAndTrimIt('usersName');
+        let email = getValueOfFormFieldAndTrimIt('usersEmail');
+        let message = getValueOfFormFieldAndTrimIt('usersMessage');
+        
+        /*
+            The code above does the same thing as the code below:
+            let name = getValueOfFormField('usersName');
+            name = name.trim();
+
+            let email = getValueOfFormField('usersEmail');
+            email = email.trim();
+
+            let message = getValueOfFormField('usersMessage');
+            message = message.trim();
+        */
+
+        /*
+            A previous, simpler version of the code above, that did not have all of the same functionality, but which had some of it, looked like the code below:
+            
+            let name = event.target.usersName.value;
+            let email = event.target.usersEmail.value;
+            let message = event.target.usersMessage.value;
+        */
         console.log(`name: ${name} \nemail: ${email} \nmessage: ${message}`);
         let messageList = messageSection.querySelector('ul');
         let newMessage = document.createElement('li');
-        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span> ${message}</span> `;
-        let removeButton = document.createElement('button');
-        removeButton.innerText = "remove";
-        removeButton.type = "button";
-        newMessage.appendChild(removeButton);
+        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span>${message}</span> `;
+
+        function createButton(buttonText) {
+            let typeOfButton = document.createElement('button');
+            typeOfButton.innerText = buttonText;
+            typeOfButton.type = "button";
+            newMessage.appendChild(typeOfButton);
+            return typeOfButton;
+        }
+
+        let editButton = createButton('edit');
+        let removeButton = createButton('remove');
+        /*
+            The above code is the same as the following code, in a refactored form:
+
+            let editButton = document.createElement('button');
+            editButton.innerText = "edit";
+            editButton.type = "button";
+            newMessage.appendChild(editButton);
+
+            let removeButton = document.createElement('button');
+            removeButton.innerText = "remove";
+            removeButton.type = "button";
+            newMessage.appendChild(removeButton);
+        */
+
+        editButton.style.margin = '0 .4rem 0 1rem';
+
         messageList.appendChild(newMessage);
+
         removeButton.addEventListener('click', () => {
             let entry = removeButton.parentNode;
             /* 
-                The variable entry is a list item (li). 
+                The variable entry is a list item (li), which is the element that is the parent of the editButton. 
                 It's parent is the unordered list (ul), which is stored in the variable messageList.
                 The ul's parent is the section element with the id of messages.
             */
@@ -104,6 +165,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (numOfListItems === 1) {
                 messageSection.style.display = 'none';
             } 
+        });
+
+        editButton.addEventListener('click', () => {
+            let messageContainerSpan = newMessage.getElementsByTagName('span')[0];
+            // console.log(messageContainerSpan);
+            let messageText = messageContainerSpan.textContent;
+            // messageText = messageText.trim();
+            // messageContainerSpan.style.visibility = 'hidden';
+            messageContainerSpan.textContent = '';
+            let editInputField = document.createElement('input');
+            editInputField.type = 'text';
+            editInputField.value = messageText;
+            messageContainerSpan.appendChild(editInputField);
+
         });
         messageForm.reset();
     });
