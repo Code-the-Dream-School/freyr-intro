@@ -119,10 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
             let email = event.target.usersEmail.value;
             let message = event.target.usersMessage.value;
         */
+
+        let createSpanWithMessage = (userMessage) => `<span>${userMessage}</span>`;
+
         console.log(`name: ${name} \nemail: ${email} \nmessage: ${message}`);
         let messageList = messageSection.querySelector('ul');
         let newMessage = document.createElement('li');
-        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span>${message}</span> `;
+        //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong><span>${message}</span>`;
+        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a></strong> wrote: ${createSpanWithMessage(message)}`;
 
         function createButton(buttonText) {
             let typeOfButton = document.createElement('button');
@@ -172,23 +176,37 @@ document.addEventListener('DOMContentLoaded', () => {
             } 
         });
 
-        
+        let saveButton = createButton('save');
 
         editButton.addEventListener('click', () => {
             let messageContainerSpan = newMessage.getElementsByTagName('span')[0];
-            // console.log(messageContainerSpan);
             let messageText = messageContainerSpan.textContent;
-            // messageContainerSpan.style.visibility = 'hidden';
             messageContainerSpan.textContent = '';
+
             let editInputField = document.createElement('input');
             editInputField.type = 'text';
+            editInputField.id = 'editInputField';
             editInputField.value = messageText;
             newMessage.insertBefore(editInputField, editButton);
-            //messageContainerSpan.appendChild(editInputField);
 
-            let saveButton = createButton('save');
+            
             newMessage.insertBefore(saveButton, removeButton);
             editButton.remove();
+
+        });
+
+        saveButton.addEventListener('click', () => {
+            let messageContainerSpan = newMessage.getElementsByTagName('span')[0];
+            let editInputField = document.getElementById('editInputField');
+            let messageText = editInputField.value;
+            // console.log(messageContainerSpan);
+            messageContainerSpan.innerHTML = createSpanWithMessage(messageText);
+            
+            editInputField.remove();
+
+            let editButton = createButton('edit');
+            newMessage.insertBefore(editButton, removeButton);
+            saveButton.remove();
         });
         messageForm.reset();
     });
