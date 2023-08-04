@@ -34,6 +34,7 @@ const skills = [
     'Cisco & Juniper',
     'Firewalls'
 ];
+
 // 2- Using "DOM Selection", select the #skills section by id and store it in a variable named 
 // skillsSection hint: querySelector or getElementById method
 const skillsSection = document.querySelector('#skills');
