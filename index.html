@@ -7,76 +7,69 @@
         <meta name="keywords" content="Anna, Gerhardt, Anna Gerhardt, Portfolio">
         <meta name="author" content="Anna Gerhardt, Portfolio">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body {
-                background-color: rgb(239, 247, 241);
-            }
-            
-            h1 {
-                color: rgb(18, 8, 152);
-            }
-            p {color: rgb(7, 7, 142);}
-            
-            div.a {
-                text-align: center;
-                color: rgb(7, 7, 142);
-            }
-            
-            ol.al{
-                margin: 4;
-                display: inline-block;
-                text-align: justify;
-            }
+        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
         
-            nav.a {
-                text-align: center;
-            }
-
-            div.b {
-                text-align: right;
-            }
-            
-            div.c {
-                text-align: justify;
-            }
-        </style>
     </head>
 
     <body>
-        <div class="a"> 
-            <h1>Anna Gerhardt</h1>
-            <!-- <figure> -->
+        <header>
+            <nav>
+                <a href = "#about">About</a>
+                <a href = "#experience">Experience</a>
+                <a href = "#skills">Skills</a>
+                <a href = "#connect">Connect</a>
+            </nav>
+        </header>
+        <div  class="content" id="top"> 
+            <div class="a"> 
+                <h1>Anna Gerhardt</h1>
                 <img src="img\AnnaG.jpg" width="150" alt="Photo of Anna" title="Photo of Anna Gerhardt">
-            <!-- </figure> -->
-            <section>
-               <div class="a"> 
-                    <h2> About</h2>
-                    <ol class = "al">
-                        <li>Was born and grew up in Russia.</li>
-                        <li>Immigrated to USA in August 2013. </li>
-                        <li>Enjoying outdoors, loves travel.</li>
-                    </ol>
-                </div>
-            </section>
-            <section>
-                <div class="a">
-                    <h2>Experience</h2>
-                    <ol class = "al">
-                        <li>Since 2016 have been working at DICOM visualization in Radiology.</li> 
-                        <li>From 2016 to 2020 worked as a QA Engrneer.</li>
-                        <li>Since 2020 have been a QA Lead.</li> 
-                    </ol>
-                </div>
-            </section>
-            <section>
-                <div class="a">
-                    <h2>Connect</h2>
-                    <nav>
-                        <a href="https://github.com/annaUniversal" target="_blank" title="GitHub" rel="noopener noreferrer">GitHub</a><br>
-                        <a href="https://www.linkedin.com/in/annager" target="_blank" title="LinkedIn" rel="noopener noreferrer">LinkedIn</a>
-                    </nav>
-                </div>
-            </section>
-        </div>
+                
+                <section id= "about">
+                <div class="a"> 
+                        <h2>About</h2>
+                        <ol class = "al">
+                            <li>Was born and grew up in Russia.</li>
+                            <li>Immigrated to USA in August 2013. </li>
+                            <li>Enjoying outdoors, loves travel.</li>
+                        </ol>
+                    </div>
+                </section>
+                <section id = "experience">
+                    <div class="a">
+                        <h2>Experience</h2>
+                        <ol class = "al">
+                            <li>Since 2016 have been working at DICOM visualization in Radiology.</li> 
+                            <li>From 2016 to 2020 worked as a QA Engrneer.</li>
+                            <li>Since 2020 have been a QA Lead.</li> 
+                        </ol>
+                    </div>
+                </section>
+                <section id = "skills">
+                    <h2>Skills</h2>
+                    <ul class = "al"></ul>
+                </section>
+                
+                <section id = "connect">
+                    <div class="a">
+                        <h2>Connect</h2>
+                        <nav>
+                            <a href="https://github.com/annaUniversal" target="_blank" title="GitHub" rel="noopener noreferrer">GitHub</a><br>
+                            <a href="https://www.linkedin.com/in/annager" target="_blank" title="LinkedIn" rel="noopener noreferrer">LinkedIn</a>
+                            <p><strong>Email: </strong><a href="mailto:anna.universal@yahoo.com?subject=Connection%20from%20portfolio">anna.universal@yahoo.com</a></p>
+                        </nav>
+                    </div>
+                </section>
+            </div> 
+            <nav class="right">
+                <a href = "#top">To the top</a>        
+            </nav>
+        </div>  
+        <footer>
+            <p id ="containerF"></p>
+        </footer>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
