@@ -115,28 +115,6 @@ h3 {
 	color: #960718;
 }
 
-.projects {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	margin-bottom: 20px;
-}
-
-a:link { 
-	text-decoration: none;
-}
-
-.projects li {
-	border: 10px inset #969186;
-	background-color: #D3D2D1;
-	margin: 5px;
-	padding: 1%;
-}
-
-.projects li:hover {
-	transform: scale(1.01);
-}
-
 .skill_list {
 	display: flex;
 	justify-content: space-around;
@@ -153,6 +131,28 @@ a:link {
 	padding: 10px;
 	background-color: #225F54;
 	color: #C3BAB9;
+}
+
+a:link { 
+	text-decoration: none;
+}
+
+#projects ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+
+#projects ul li {
+	border: 10px inset #969186;
+	background-color: #D3D2D1;
+	margin: 5px;
+	padding: 1%;
+}
+
+#projects li:hover {
+	transform: scale(1.01);
 }
 
 .social_media {
