@@ -68,3 +68,20 @@ messageForm.addEventListener("submit", (event) => {
     messageList.appendChild(newMessage);
     messageForm.reset();
 })
+
+const githubRequest = new XMLHttpRequest();
+
+githubRequest.open("GET", "https://api.github.com/users/Ronapj1991/repos");
+githubRequest.send();
+
+githubRequest.addEventListener("load", () => {
+    const repositories = JSON.parse(githubRequest.responseText);
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.lastElementChild;
+    
+    for (let i = 0; i < repositories.length; i += 1) {
+        let project = document.createElement("li");
+        project.innerHTML = `<a href="${repositories[i].ml_url}">${repositories[i].name}</a>`;
+        projectList.appendChild(project);
+    }
+});
