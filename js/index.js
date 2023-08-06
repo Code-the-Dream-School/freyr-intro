@@ -29,3 +29,39 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
+
+const messageForm = document.getElementById("messageForm");
+
+messageForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let userName = e.target.usersName.value;
+  let userEmail = e.target.usersEmail.value;
+  let userMessage = e.target.usersMessage.value;
+  //console.log(userName);
+  //console.log(userEmail);
+  //console.log(userMessage);
+  let messageSection = document.getElementById("messages");
+
+  let messageList = messageSection.getElementsByTagName("ul");
+
+  let newMessage = document.createElement("li");
+
+  newMessage.innerHTML = `<a mailto:"${userEmail}">${userName} <span>${userMessage}</span></a>`;
+  console.log(newMessage);
+
+  let removeButton = document.createElement("input");
+  removeButton.type = "button";
+
+  removeButton.innerText = "remove";
+
+  removeButton.addEventListener("click", (e) => {
+    let entry = removeButton.parentNode;
+    entry.remove(newMessage);
+  });
+
+  //newMessage.appendChild(removeButton);
+  document.getElementById("messages").appendChild(removeButton);
+
+  messageList.append(newMessage);
+  e.target.reset();
+});
