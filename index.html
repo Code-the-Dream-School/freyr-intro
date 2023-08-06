@@ -52,7 +52,34 @@
         >
       </p>
     </section>
-    <footer></footer>
+    <footer>
+      <section>
+        <h2>Leave a Message</h2>
+
+        <form action="" name="leave_message" id="messageForm">
+          <label for="usersName">Name</label>
+          <input type="text" name="usersName" required />
+          <br />
+          <label for="usersEmail">Email</label>
+          <input type="email" name="usersEmail" required />
+          <br />
+          <label for="usersMessage">Message</label>
+          <textarea
+            name="usersMessage"
+            id=""
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+      </section>
+    </footer>
     <script src="./js/index.js"></script>
   </body>
 </html>
