@@ -6,7 +6,7 @@ const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
 
-copyright.innerHTML = 'JUAN PABLO BERGALLO MARTINEZ ' + thisYear;
+copyright.innerHTML = '© JUAN PABLO BERGALLO MARTINEZ ' + thisYear;
 
 footer.appendChild(copyright);
 
