@@ -1,0 +1,70 @@
+img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: calc(100% - 20px);
+  background-color: #c6f5c8;
+  padding: 10px;
+  text-align: right;
+  margin-right: 30px; /* add right margin */
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #c6f5c8;
+  text-align: left;
+  padding-left: 20px;
+}
+
+div.content {
+  margin: 50px 20px; /* Add a top/bottom margin to avoid content being hidden behind fixed header/footer */
+  padding: 20px;
+}
+
+body {
+    background-color: #eff7f1;
+    margin: 0; 
+    padding: 0;
+}
+
+h1 {
+    color: #120898;
+}
+p {color: #07078e;}
+
+div.a {
+    text-align: center;
+    color: #07078e;
+}
+
+ol.al{
+    margin: 4;
+    display: inline-block;
+    text-align: justify;
+}
+
+ul.al{
+  margin: 4;
+  display: inline-block;
+  text-align: justify;
+}
+
+nav.a {
+    text-align: center;
+}
+
+div.b {
+    text-align: right;
+}
+
+div.c {
+    text-align: justify;
+}
+
