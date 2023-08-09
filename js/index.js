@@ -30,7 +30,7 @@ messageForm.addEventListener("submit", (event) => {
     console.log(userName, email, message);
     
     let messageSection = document.querySelector("#messages");
-    let messageList = messageSection.lastElementChild;
+    let messageList = document.querySelector('#skills ul');
     let newMessage = document.createElement('li');
     
     newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a><span> wrote: ${message} </span>`;
@@ -77,7 +77,7 @@ githubRequest.send();
 githubRequest.addEventListener("load", () => {
     const repositories = JSON.parse(githubRequest.responseText);
     const projectSection = document.getElementById("projects");
-    const projectList = projectSection.lastElementChild;
+    const projectList = document.querySelector('#projects ul');
     
     for (let i = 0; i < repositories.length; i += 1) {
         let project = document.createElement("li");
