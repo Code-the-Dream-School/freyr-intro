@@ -53,13 +53,13 @@ header nav a:not(:first-child):hover {
     background-color: rgba(229, 231, 233, 1);
 }
 
-header .header_logo {
+.header_logo {
     margin-right: auto;
     padding: 0;
     height: 30px;
 }
 
-header .header_logo img {
+.header_logo img {
     height: 100%;
 }
 
@@ -71,7 +71,7 @@ header .header_logo img {
     background-color: rgba(229, 231, 233, 0.3);
 }
 
-.intro .intro_inner {
+.intro_inner {
     padding: 20px;
     height: fit-content;
     min-height: 500px;
@@ -80,17 +80,17 @@ header .header_logo img {
     align-items: center;
 }
 
-.intro .intro_picture img {
+.intro_picture img {
     width: 250px;
 }
 
-.intro .intro_about {
+.intro_about {
     margin-left: 50px;
     width: 100%;
     max-width: 250px;
 }
 
-.intro .intro_about h1 {
+.intro_about h1 {
     margin: 10px 0 20px;
     font-size: 28px;
     font-family: 'Caveat Brush', cursive;
@@ -99,25 +99,25 @@ header .header_logo img {
     line-height: 1.2;
 }
 
-.intro .intro_about .intro_about_subheader {
+.intro_about_subheader {
     margin: 5px 0;
     line-height: 1.1;
     font-size: 16px;
 }
 
-.intro .intro_about .intro_about_text {
+.intro_about_text {
     margin: 0;
     line-height: 1.4;
     font-size: 16px;
 }
 
-.intro .intro_about nav {
+.intro_about nav {
     margin-top: 30px;
     display: flex;
     justify-content: center;
 }
 
-.intro .intro_about nav a {
+.intro_about nav a {
     margin: 0 5px;
     padding: 5px;
     width: fit-content;
@@ -131,19 +131,19 @@ header .header_logo img {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
-.intro .intro_about nav a:hover {
+.intro_about nav a:hover {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)) brightness(95%);
 }
 
-.intro .intro_about nav .intro_skills {
+.intro_skills {
     background-color: rgba(240, 217, 123, 1.00);
 }
 
-.intro .intro_about nav .intro_projects {
+.intro_projects {
     background-color: rgba(252, 219, 214, 1.00);
 }
 
-.intro .intro_about nav .intro_contact {
+.intro_contact {
     background-color: rgba(196, 226, 226, 1.00);
 }
 
@@ -155,7 +155,7 @@ header .header_logo img {
     margin-top: 100px;
 }
 
-.projects .projects_header {
+.projects_header {
     margin: 10px 0 40px;
     font-size: 28px;
     font-family: 'Caveat Brush', cursive;
@@ -165,7 +165,7 @@ header .header_logo img {
     line-height: 1.2;
 }
 
-.projects .projects_cards {
+.projects_cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,21 +173,21 @@ header .header_logo img {
     gap: 20px;
 }
 
-.projects .projects_cards .projects_card {
+.projects_card {
     margin: 0;
     width: 300px;
 }
 
-.projects .projects_cards .projects_card:hover {
+.projects_card:hover {
     filter:opacity(0.6)
 }
 
-.projects .projects_cards .projects_card a{
+.projects_card a{
     display: inline-block;
     width: fit-content;
 }
 
-.projects .projects_cards .projects_card img{
+.projects_card img{
     width: 100%;
 }
 
@@ -200,13 +200,13 @@ header .header_logo img {
     background-color: rgba(229, 231, 233, 0.3);
 }
 
-.skills .skills_inner {
+.skills_inner {
     margin: 0 auto;
     width: 100%;
     max-width: 650px;
 }
 
-.skills .skills_inner .skills_header {
+.skills_header {
     margin: 10px 0;
     font-size: 28px;
     font-family: 'Caveat Brush', cursive;
@@ -216,19 +216,19 @@ header .header_logo img {
     line-height: 1.2;
 }
 
-.skills .skills_inner p {
+.skills_inner p {
     margin: 5px auto 0;
     text-indent: 30px;
 }
 
-.skills .skills_inner .skills_list {
+.skills_list {
     margin: 30px auto 0;
     width: 100%;
     padding: 0;
     list-style: none;
 }
 
-.skills .skills_inner .skills_list li {
+.skills_list li {
     margin: 8px 0;
     padding: 15px;
     background-color: #ffffff;
@@ -237,28 +237,48 @@ header .header_logo img {
     transition: background-color .4s linear;
 }
 
-.skills .skills_inner .skills_list li:nth-child(3n+1) {
+.skills_list li:nth-child(3n+1) {
     border-left: 4px solid rgba(240, 217, 123, 1.00);
 }
-.skills .skills_inner .skills_list li:nth-child(3n+1):hover {
+.skills_list li:nth-child(3n+1):hover {
     background-color: rgba(240, 217, 123, 1.00);
 }
 
-.skills .skills_inner .skills_list li:nth-child(3n+2) {
+.skills_list li:nth-child(3n+2) {
     border-left: 4px solid rgba(252, 219, 214, 1.00);
 }
 
-.skills .skills_inner .skills_list li:nth-child(3n+2):hover {
+.skills_list li:nth-child(3n+2):hover {
     background-color: rgba(252, 219, 214, 1.00);
 }
 
 
-.skills .skills_inner .skills_list li:nth-child(3n+3) {
+.skills_list li:nth-child(3n+3) {
     border-left: 4px solid rgba(196, 226, 226, 1.00);
 }
 
-.skills .skills_inner .skills_list li:nth-child(3n+3):hover {
+.skills_list li:nth-child(3n+3):hover {
     background-color: rgba(196, 226, 226, 1.00);
+}
+
+
+/*********************** EXPERIENCE *****************/
+
+.experience {
+    background-color: rgba(229, 231, 233, 0.3);
+}
+
+.experience_inner {
+    padding: 20px;
+    background-color: rgba(196, 226, 226, 0.50);
+}
+
+.experience_header {
+    font-size: 28px;
+    font-family: 'Caveat Brush', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 
@@ -269,7 +289,7 @@ header .header_logo img {
     padding: 20px;
 }
 
-.messages .messages_header {
+.messages_header {
     margin: 10px 0 30px;
     font-size: 28px;
     font-family: 'Caveat Brush', cursive;
@@ -279,7 +299,7 @@ header .header_logo img {
     line-height: 1.2;
 }
 
-.messages .messages_list {
+.messages_list {
     margin: 0 auto;
     padding: 0;
     max-width: 80%;
@@ -287,7 +307,7 @@ header .header_logo img {
     flex-direction: column;
 }
 
-.messages .messages_list .message_item {
+.message_item {
     margin: 0;
     padding: 0;
     width: 70%;
@@ -297,24 +317,24 @@ header .header_logo img {
     align-items: center;
 }
 
-.messages .messages_list .message_item:nth-child(odd) {
+.message_item:nth-child(odd) {
     align-self: flex-start;
     flex-direction: row;
 }
 
-.messages .messages_list .message_item:nth-child(even) {
+.message_item:nth-child(even) {
     align-self: flex-end;
     flex-direction: row-reverse;
 }
 
-.messages .messages_list .message_item .message_icon {
+.message_icon {
     height: 30px;
     width: 30px;
     display: inline-block;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
-.messages .messages_list .message_item .message_info {
+.message_info {
     flex: 1;
     margin: 20px;
     padding: 10px;
@@ -326,18 +346,18 @@ header .header_logo img {
     box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-.messages .messages_list .message_item .message_link {
+.message_link {
     margin-bottom: 5px;
     text-decoration: none;
     font-weight: 400;
     color: #483C32;
 }
 
-.messages .messages_list .message_item .message_link span {
+.message_link span {
     font-weight: bold;
 }
 
-.messages .messages_list .message_item .message_info textarea {
+.message_info textarea {
     min-height: 31px;
     border-radius: 6px;
     border: none;
@@ -350,14 +370,14 @@ header .header_logo img {
     resize: none;
 }
 
-.messages .messages_list .message_item .message_info span {
+.message_info span {
     margin: 0;
     min-height: 31px;
     font-size: 14px;
     line-height: 1.3;
 }
 
-.messages .messages_list .message_item .message_btn {
+.message_btn {
     margin: 0;
     padding: 6px;
     width: 25px;
@@ -368,7 +388,7 @@ header .header_logo img {
     background-color: transparent;
 }
 
-.messages .messages_list .message_item .message_btn img {
+.message_btn img {
     display: inline-block;
     margin: auto;
     width: 100%;
@@ -376,11 +396,11 @@ header .header_logo img {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
-.messages .messages_list .message_item .message_edit {
+.message_edit {
     right: 25px;
 }
 
-.messages .messages_list .message_item .message_delete {
+.message_delete {
     right: 0;
 }
 
@@ -400,7 +420,7 @@ header .header_logo img {
     align-items: center;
 }
 
-.feedback .feedback_form {
+.feedback_form {
     margin: 0 auto;
     padding: 20px 50px;
     width: 100%;
@@ -412,15 +432,15 @@ header .header_logo img {
     align-items: stretch;
 }
 
-.feedback .feedback_form .feedback_header {
+.feedback_header {
     margin: 0 0 20px;
     text-align: center;
     font-size: 18px;
     line-height: 1.2;
 }
 
-.feedback .feedback_form input,
-.feedback .feedback_form textarea {
+.feedback_form input,
+.feedback_form textarea {
     margin: 10px 0;
     padding: 4px 8px;
     border-radius: 0;
@@ -431,25 +451,25 @@ header .header_logo img {
     font-size: 14px;
 }
 
-.feedback .feedback_form textarea {
+.feedback_form textarea {
     height: 80px;
     resize: none;
 }
 
-.feedback .feedback_form input::placeholder,
-.feedback .feedback_form textarea::placeholder {
+.feedback_form input::placeholder,
+.feedback_form textarea::placeholder {
     font-size: 11px;
     color: rgb(0, 0, 0, 0.8);
     font-family: 'Preahvihear', sans-serif;
     font-weight: 400;
 }
 
-.feedback .feedback_form input:focus,
-.feedback .feedback_form textarea:focus {
+.feedback_form input:focus,
+.feedback_form textarea:focus {
     outline: 2px solid #483C32;
 }
 
-.feedback .feedback_form .feedback_btn {
+.feedback_btn {
     margin: 10px 0;
     padding: 4px 8px;
     border-radius: 0;
@@ -469,64 +489,65 @@ header .header_logo img {
     font-size: 16px;
 }
 
-.footer .footer_cards {
+.footer_cards {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.footer .footer_cards .footer_header {
+.footer_header {
     margin: 3px 0;
     font-size: 14px;
 }
 
-.footer .footer_cards .footer_link {
+.footer_link {
     text-decoration: none;
     font-size: 14px;
     color: #483C32;
 }
 
-.footer .footer_cards .footer_link img{
+.footer_link img{
     width: 20px;
 }
+
 
 @media all and (max-width: 700px) {
 
 
 /*********************** INTRO *****************/
 
-        .intro .intro_picture img {
-            width: 180px;
-        }
+    .intro_picture img {
+        width: 180px;
+    }
 
-        .intro .intro_about {
-            margin-left: 20px;
-            max-width: unset;
-        }
+    .intro_about {
+        margin-left: 20px;
+        max-width: unset;
+    }
 
-        .intro .intro_about h1 {
-            margin: 10px 0;
-            font-size: 18px;
-            letter-spacing: 1px;
-        }
+    .intro_about h1 {
+        margin: 10px 0;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
 
-        .intro .intro_about .intro_about_subheader {
-            font-size: 16px;
-        }
+    .intro_about_subheader {
+        font-size: 16px;
+    }
 
-        .intro .intro_about .intro_about_text {
-            font-size: 14px;
-        }
+    .intro_about_text {
+        font-size: 14px;
+    }
 
-        .intro .intro_about nav {
-            margin-top: 20px;
-        }
+    .intro_about nav {
+        margin-top: 20px;
+    }
 
-        .intro .intro_about nav a {
-            padding: 5px 2px;
-            min-width: 60px;
-            font-size: 14px;
-        }
+    .intro_about nav a {
+        padding: 5px 2px;
+        min-width: 60px;
+        font-size: 14px;
+    }
 
 
     /*********************** PROJECTS *****************/
@@ -535,17 +556,17 @@ header .header_logo img {
         margin-top: 40px;
     }
 
-    .projects .projects_header {
+    .projects_header {
         margin: 10px 0 30px;
         font-size: 18px;
         letter-spacing: 1px;
     }
 
-    .projects .projects_cards {
+    .projects_cards {
         gap: 10px;
     }
 
-    .projects .projects_cards .projects_card {
+    .projects_card {
         width: 210px;
     }
 
@@ -557,22 +578,22 @@ header .header_logo img {
         padding: 30px 20px;
     }
 
-    .skills .skills_inner .skills_header {
+    .skills_header {
         font-size: 18px;
         letter-spacing: 1px;
     }
 
-    .skills .skills_inner p {
+    .skills_inner p {
         margin: 5px auto 0;
         text-indent: 20px;
         font-size: 15px;
     }
 
-    .skills .skills_inner .skills_list {
+    .skills_list {
         margin-top: 20px;
     }
 
-    .skills .skills_inner .skills_list li {
+    .skills_list li {
         padding: 12px;
         font-size: 14px;
     }
@@ -584,28 +605,28 @@ header .header_logo img {
         margin-top: 50px;
     }
 
-    .messages .messages_header {
+    .messages_header {
         margin: 10px 0 20px;
         font-size: 18px;
         letter-spacing: 1px;
     }
 
-    .messages .messages_list {
+    .messages_list {
         max-width: initial;
     }
 
-    .messages .messages_list .message_item .message_info {
+    .message_item .message_info {
         margin: 20px;
         padding: 10px;
     }
 
-    .messages .messages_list .message_item .message_btn {
+    .message_btn {
         padding: 4px;
         width: 20px;
         height: 20px;
     }
 
-    .messages .messages_list .message_item .message_edit {
+    .message_edit {
         right: 20px;
     }
 
@@ -617,27 +638,27 @@ header .header_logo img {
         height: fit-content;
     }
 
-    .feedback .feedback_form {
+    .feedback_form {
         padding: 20px 50px;
         max-width: 350px;
     }
 
-    .feedback .feedback_form .feedback_header {
+    .feedback_header {
         margin-bottom: 10px;
         font-size: 16px;
     }
 
 
-    .feedback .feedback_form input,
-    .feedback .feedback_form textarea {
+    .feedback_form input,
+    .feedback_form textarea {
         margin: 6px 0;
     }
 
-    .feedback .feedback_form textarea {
+    .feedback_form textarea {
         height: 60px;
     }
 
-    .feedback .feedback_form .feedback_btn {
+    .feedback_btn {
         margin: 6px 0;
     }
 
@@ -649,21 +670,19 @@ header .header_logo img {
         font-size: 14px;
     }
 
-    .footer .footer_cards .footer_header {
+    .footer_header {
         margin: 3px 0;
         font-size: 14px;
     }
 
-    .footer .footer_cards .footer_link {
+    .footer_link {
         font-size: 14px;
     }
 
-    .footer .footer_cards .footer_link img{
+    .footer_link img{
         width: 18px;
     }
 }
-
-
 
 
 @media all and (max-width: 480px) {
@@ -680,55 +699,55 @@ header .header_logo img {
         font-size: 14px;
     }
 
-    header .header_logo {
+    .header_logo {
         height: 20px;
     }
 
 
     /*********************** INTRO *****************/
 
-        .intro {
-            padding: 0 20px;
-        }
+    .intro {
+        padding: 0 20px;
+    }
 
-        .intro .intro_inner {
-            min-height: 400px;
-            flex-wrap: wrap;
-            align-content: center;
-        }
+    .intro_inner {
+        min-height: 400px;
+        flex-wrap: wrap;
+        align-content: center;
+    }
 
-        .intro .intro_picture img {
-            width: 150px;
-        }
+    .intro_picture img {
+        width: 150px;
+    }
 
-        .intro .intro_about {
-            margin-left: 0;
-            max-width: unset;
-        }
+    .intro_about {
+        margin-left: 0;
+        max-width: unset;
+    }
 
-        .intro .intro_about h1 {
-            text-align: center;
-            font-size: 17px;
-        }
+    .intro_about h1 {
+        text-align: center;
+        font-size: 17px;
+    }
 
-        .intro .intro_about .intro_about_subheader {
-            margin: 15px 0 5px;
-            font-size: 15px;
-        }
+    .intro_about_subheader {
+        margin: 15px 0 5px;
+        font-size: 15px;
+    }
 
-        .intro .intro_about .intro_about_text {
-            font-size: 14px;
-        }
+    .intro_about_text {
+        font-size: 14px;
+    }
 
-        .intro .intro_about nav {
-            margin-top: 20px;
-        }
+    .intro_about nav {
+        margin-top: 20px;
+    }
 
-        .intro .intro_about nav a {
-            padding: 5px 2px;
-            min-width: 60px;
-            font-size: 14px;
-        }
+    .intro_about nav a {
+        padding: 5px 2px;
+        min-width: 60px;
+        font-size: 14px;
+    }
 
 
     /*********************** PROJECTS *****************/
@@ -737,16 +756,16 @@ header .header_logo img {
         margin-top: 30px;
     }
 
-    .projects .projects_header {
+    .projects_header {
         margin: 20px 0;
         font-size: 17px;
     }
 
-    .projects .projects_cards {
+    .projects_cards {
         gap: 20px;
     }
 
-    .projects .projects_cards .projects_card {
+    .projects_card {
         width: 100%;
         max-width: 350px;
     }
@@ -759,20 +778,20 @@ header .header_logo img {
         padding-top: 10px;
     }
 
-    .skills .skills_inner .skills_header {
+    .skills_header {
         font-size: 17px;
     }
 
-    .skills .skills_inner p {
+    .skills_inner p {
         text-indent: 15px;
         font-size: 14px;
     }
 
-    .skills .skills_inner .skills_list {
+    .skills_list {
         margin-top: 15px;
     }
 
-    .skills .skills_inner .skills_list li {
+    .skills_list li {
         padding: 10px;
         font-size: 14px;
     }
@@ -784,48 +803,48 @@ header .header_logo img {
         margin-top: 20px;
     }
 
-    .messages .messages_header {
+    .messages_header {
         margin: 10px 0;
         font-size: 17px;
     }
 
-    .messages .messages_list {
+    .messages_list {
         max-width: initial;
     }
 
-    .messages .messages_list .message_item {
+    .message_item {
         width: 100%;
     }
 
-    .messages .messages_list .message_item .message_icon {
+    .message_icon {
         height: 25px;
         width: 25px;
     }
 
-    .messages .messages_list .message_item .message_info {
+    .message_info {
         margin: 10px;
         padding: 15px;
     }
 
-    .messages .messages_list .message_item .message_link {
+    .message_link {
         margin-bottom: 3px;
     }
 
-    .messages .messages_list .message_item .message_info textarea {
+    .message_info textarea {
         min-height: 25px;
     }
 
-    .messages .messages_list .message_item .message_info span {
+    .message_info span {
         min-height: 25px;
     }
 
-    .messages .messages_list .message_item .message_btn {
+    .message_btn {
         padding: 4px;
         width: 20px;
         height: 20px;
     }
 
-    .messages .messages_list .message_item .message_edit {
+    .message_edit {
         right: 20px;
     }
 
@@ -837,11 +856,11 @@ header .header_logo img {
         height: fit-content;
     }
 
-    .feedback .feedback_form {
+    .feedback_form {
         padding: 20px;
     }
 
-    .feedback .feedback_form textarea {
+    .feedback_form textarea {
         height: 60px;
     }
 
@@ -853,17 +872,17 @@ header .header_logo img {
         font-size: 13px;
     }
 
-    .footer .footer_cards {
+    .footer_cards {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .footer .footer_card {
+    .footer_card {
         margin-top: 15px;
     }
 
-    .footer .footer_cards .footer_header {
+    .footer_header {
         margin: 5px;
     }
 }
