@@ -1,14 +1,18 @@
+// 1. create copyright element in footer
+
 const today = new Date();
 const thisYear = today.getFullYear();
 
-const footer = document.querySelector('footer');
+const footer = document.querySelector('footer .copyright');
 
 const copyright = document.createElement('p');
 copyright.innerHTML = `&copy; ${thisYear} Irina Postnova`;
 footer.appendChild(copyright);
 
 
-const skills = ['HTML', 'CSS', 'JavaScript'];
+// 2. create skills list
+
+const skills = ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'GSAP'];
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
 
@@ -18,126 +22,148 @@ for (let i = 0; i < skills.length; i++) {
     skillsList.appendChild(skill);
 }
 
-
-const messageForm = document.querySelector('form[name="leave_message"]');
+// 3. add feedback
+const messageForm = document.forms["leave_message"];
 const messageSection = document.querySelector('#messages');
-const messageList = messageSection.querySelector('ul');
-
-messageSection.hide = function () {
-    this.style.display = 'none';
-};
-messageSection.show = function () {
-    this.style.display = '';
-};
-
-Object.defineProperty(messageList, "hasNoMessages", {
-    get: function () {
-        return this.childElementCount === 0
-    }
-});
-
-function updateMessageSection() {
-    if (messageList.hasNoMessages) {
-        messageSection.hide();
-    }
-};
-updateMessageSection();
+const messageList = messageSection.querySelector('.messages_list');
+const imageSrc = 'media/img/icons/message.png';
+const editButtonImgSRc = 'media/img/icons/btn_edit.png';
+const removeButtonImgSRc = 'media/img/icons/btn_delete.png';
+const saveButtonImgSRc = 'media/img/icons/btn_save.png';
 
 
 messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const form = e.target;
 
-    const userName = form.usersName.value;
-    const useEmail = form.usersEmail.value;
-    const userMessage = form.usersMessage.value;
+    const userName = messageForm.usersName.value;
+    const userEmail = messageForm.usersEmail.value;
+    const userMessage = messageForm.usersMessage.value;
 
-    // console.log(userName);
-    // console.log(useEmail);
-    // console.log(userMessage);
 
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `
-        <a href="mailto:${useEmail}" target="_blank">${userName}</a>
-        wrote: <span> ${userMessage}</span>
-    `;
-    newMessage.messageText = userMessage;
+    newMessage.classList.add('message_item');
 
+    const messageImage = document.createElement('img');
+    messageImage.classList.add('message_icon');
+    messageImage.alt = 'user logo';
+    messageImage.src = imageSrc;
+
+    const messageText = document.createElement('div');
+    messageText.classList.add('message_info');
+    messageText.innerHTML = `
+        <a class="message_link" href="mailto:${userEmail}"> <span>${userName}</span> wrote: </a>                        
+        <span>${userMessage}</span>
+        `;
+    
+    const editButton = document.createElement('button');
+    editButton.name = "edit";
+    editButton.classList.add('message_btn', 'message_edit');
+    editButton.innerHTML = `
+        <img src="${editButtonImgSRc}" alt="edit button">
+    `;
+    editButton.type = "button";
+    
     const removeButton = document.createElement('button');
-    removeButton.innerText = "remove";
+    removeButton.name = "delete";
+    removeButton.classList.add('message_btn', 'message_delete');
+    removeButton.innerHTML = `
+        <img src="${removeButtonImgSRc}" alt="delete button">
+    `;
     removeButton.type = "button";
 
-    const editButton = document.createElement('button');
-    editButton.innerText = "edit";
-    editButton.type = "button";
-
-
-    newMessage.appendChild(editButton);
-    newMessage.appendChild(removeButton);
+    messageText.append(editButton);
+    messageText.append(removeButton);
+    newMessage.append(messageImage);
+    newMessage.append(messageText);
     messageList.appendChild(newMessage);
-    messageSection.show();
 
-    form.reset();
+    messageForm.reset();
 });
 
 messageList.addEventListener('click', (e) => {
-    if (e.target.tagName !== 'BUTTON') {
+    e.preventDefault();
+    if (e.target.parentNode.tagName !== 'BUTTON') {
         return;
     }
-    const button = e.target;
-    const listButtons = messageList.querySelectorAll('button');
-    const li = button.parentNode;
-    const messageText = li.messageText;
-    const action = button.textContent;
+    const button = e.target.parentNode;
+    const li = button.closest('li');
+    const action = button.name;
 
-    const disableButton = (btn) => {
-        if (btn.parentNode !== li) {
-            btn.disabled = true;
-        }
-    };
-    const enableButton = (btn) => btn.disabled = false;
-    const switchButtons = (buttons, switcher) => {
-        buttons.forEach(button => switcher(button));
-    }
 
     const nameActions = {
         edit: () => {
-            switchButtons(listButtons, disableButton);
-            const span = li.querySelector('span');
-            const input = document.createElement('input');
+            const div = li.querySelector('.message_info');
+            const span = div.querySelector(':scope > span');
+            const input = document.createElement('textarea');
             input.type = "text";
+            input.style.height = span.offsetHeight + 'px';
             input.value = span.textContent;
-            li.insertBefore(input, span);
-            li.removeChild(span);
-            button.textContent = 'save';
+            div.insertBefore(input, span);
+            div.removeChild(span);  
+            button.name = "save";
+            button.innerHTML = `
+                <img src="${saveButtonImgSRc}" alt="save button">
+            `;
         },
         save: () => {
-            const input = li.querySelector('input');
+            const div = li.querySelector('.message_info');
+            const input = div.querySelector('textarea');
             const span = document.createElement('span');
             const editedMessage = input.value.trim();
 
             if (editedMessage === '') {
-                const isConfirmedDeleting = confirm('Delete message?');
-                if (isConfirmedDeleting) {
-                    nameActions['remove']();
-                } else {
-                    input.value = messageText;
-                }
+                nameActions['delete']();
                 return;
             }
-
-            switchButtons(listButtons, enableButton);
-            span.textContent = editedMessage || messageText;
-            li.insertBefore(span, input);
-            li.removeChild(input);
-            li.messageText = span.textContent;
-            button.textContent = 'edit';            
+            
+            span.textContent = editedMessage;
+            div.insertBefore(span, input);
+            div.removeChild(input);
+            button.name = 'edit';
+            button.innerHTML = `
+                <img src="${editButtonImgSRc}" alt="save button">
+            `;
         },
-        remove: () => {
+
+        delete: () => {
             li.remove();
-            switchButtons(listButtons, enableButton);
-            updateMessageSection();
         }
     }
     nameActions[action]();
 });
+
+
+/*
+
+        edit: () => {
+            const div = li.querySelector('.message_info');
+            const span = div.querySelector(':scope > span');
+            const input = document.createElement('input');
+            input.type = "text";
+            input.value = span.textContent;
+            div.insertBefore(input, span);
+            div.removeChild(span);  
+            button.name = "save";
+            button.querySelector('img').src = saveButtonImgSRc;
+            button.querySelector('img').alt = "save button";
+        },
+        save: () => {
+            const div = li.querySelector('.message_info');
+            const input = div.querySelector('input');
+            const span = document.createElement('span');
+            const editedMessage = input.value.trim();
+
+            if (editedMessage === '') {
+                nameActions['delete']();
+                return;
+            }
+            
+            span.textContent = editedMessage;
+            div.insertBefore(span, input);
+            div.removeChild(input);
+            button.name = 'edit';
+            button.querySelector('img').src = editButtonImgSRc;
+            button.querySelector('img').alt = "edit button";
+        },
+
+        */

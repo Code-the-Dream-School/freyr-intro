@@ -4,57 +4,151 @@
     <meta charset="UTF-8">
     <meta name="author" content="Irina Postnova">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About me </title>
+    <title> Irina Postnova </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Preahvihear&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/img/icons/cat.ico">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <h1> Irina Postnova </h1>
+    <header>        
+        <div class="container">
+            <nav>
+                <a class="header_logo" href="#"><img src="media/img/icons/message.png" alt="logo"></a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <hr>
+        </div>
+    </header>
 
-    <section>
-        <h2> About </h2>
-        <p> I'm an engineer from Russia. I love cats, reading and snowboarding. I have been dreaming about programming since 15. </p>
+    <section class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <div class="intro_picture" >
+                    <img src="media/img/author.png" alt="my photo">
+                </div>
+                <div class="intro_about">
+                    <h1> Irina Postnova </h1>
+                    <h3 class="intro_about_subheader"> Hello! </h3>
+                    <p class="intro_about_text"> I am your future full stack developer.
+                        I'm currently learning JavaScript and can't wait to get started! </p>
+                    <nav>
+                        <a class="intro_skills" href="#skills">Skills</a>
+                        <a class="intro_projects" href="#projects">Projects</a>
+                        <a class="intro_contact" href="#contact">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2> Experience </h2>
-        <ul>
-            <li> helper in a kindergarten </li>
-            <li> design engineer </li>
-            <li> calculation engineer </li>
-        </ul>
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="projects_header">My projects</h2>
+            <div class="projects_cards">
+                <div class="projects_card">
+                    <a href="https://github.com/pstnv/js-chalet-restaurant/" target="_blank">
+                        <img src="media/img/projects/project_1.png" alt="project restaurant">
+                    </a>
+                </div>
+                <div class="projects_card">
+                    <a href="https://github.com/pstnv/js-photographer/" target="_blank">
+                        <img src="media/img/projects/project_2.png" alt="project photographer">
+                    </a>
+                </div>
+                <div class="projects_card">
+                    <a href="https://github.com/pstnv/js-kindergarten-itshka/" target="_blank">
+                        <img src="media/img/projects/project_3.png" alt="project kindergarten">
+                    </a>
+                </div>
+                <div class="projects_card">
+                    <a href="https://github.com/pstnv/js-recipe-book/" target="_blank">
+                        <img src="media/img/projects/project_4.png" alt="project recipes">
+                    </a>
+                </div>
+                <div class="projects_card">
+                    <a href="https://github.com/pstnv/js-wedding-dress-promo/" target="_blank">
+                        <img src="media/img/projects/project_5.png" alt="project wedding shop">
+                    </a>
+                </div>
+                <div class="projects_card">
+                    <a href="https://github.com/pstnv/js-guess-a-number/" target="_blank">
+                        <img src="media/img/projects/project_6.png" alt="project game">
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id = "skills">
-        <h2> Skills </h2>
-        <ul> 
-        </ul>
 
-    </section>
-    <section>
-        <h2> Connect </h2>
-        <a href="https://github.com/pstnv" target="_blank"> My GitHub </a>
-    </section>
-
-    <section>
-        <h2> Leave a Message </h2>
-        <form name="leave_message">
-            <label for="name">Name</label> <br>
-            <input type="text" id="name" name="usersName" required> <br>
-            <label for="email">Email</label> <br>
-            <input type="email" id="email" name="usersEmail" required> <br>
-            <label for="message">Message</label> <br>
-            <textarea id="message" name="usersMessage" required></textarea> <br>
-            <button type="submit"> Submit </button>
-
-        </form>
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="skills_inner">
+                <h2 class="skills_header">Skills</h2>
+                <p> My name is Irina. I am from Russia, Yekaterinburg. I work as an electrical engineer. In my free time, I study web development.</p>
+                <p> My goal is to get a profession that I have dreamed of since I was 15 years old.</p>
+                <ul class="skills_list"></ul>
+            </div>
+        </div>
     </section>
 
-    <section id="messages">
-        <h2> Messages </h2>
-        <ul></ul>
+    <section class="messages" id="messages">
+        <div class="container">
+            <h2 class="messages_header"> Messages </h2>
+            <ul class="messages_list">
+                <li class="message_item">
+                    <img class="message_icon" src="media/img/icons/message.png" alt="user logo">
+                    <div class="message_info">
+                        <a class="message_link" href="maito:pstnv@"> <span>Irina</span> wrote: </a>                        
+                        <span class="message_text">Welcome to my page!</span>
+                        <button class="message_btn message_edit" name="edit"> <img src="media/img/icons/btn_edit.png" alt="edit button"></button>
+                        <button class="message_btn message_delete" name="delete"> <img src="media/img/icons/btn_delete.png" alt="edit button"></button>
+                    </div>
+                </li>
+                <li class="message_item">
+                    <img class="message_icon" src="media/img/icons/message.png" alt="user logo">
+                    <div class="message_info">
+                        <a class="message_link" href="maito:pstnv@"> <span>Irina</span> wrote: </a>                        
+                        <span class="message_text">Feel free to write something! </span>
+                        <button class="message_btn message_edit" name="edit"> <img src="media/img/icons/btn_edit.png" alt="edit button"></button>
+                        <button class="message_btn message_delete" name="delete"> <img src="media/img/icons/btn_delete.png" alt="edit button"></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
 
-    <footer>  </footer>
+    <section id="contact" class="feedback">
+        <div class="container">
+            <form class="feedback_form" name="leave_message">
+                <h2 class="feedback_header"> Leave a Message </h2>
+                <input type="text" id="name" name="usersName" required placeholder="name*">
+                <input type="email" id="email" name="usersEmail" required placeholder="email*">
+                <textarea id="message" name="usersMessage" required placeholder="message*"></textarea>
+                <button class="feedback_btn" type="submit"> Submit </button>
+            </form>
+        </div>
+    </section>
 
+    <footer class="footer">
+        <div class="container">
+            <hr>
+            <div class="footer_cards">
+                <div class="footer_card">
+                    <h5 class="footer_header">Email Me</h5>
+                    <a class="footer_link" href="mailto:pstnv@mail.ru" target="_blank">pstnv@mail.ru</a>
+                </div>
+                <div class="footer_card">
+                    <h5 class="footer_header">Follow Me</h5>
+                    <a class="footer_link" href="https://github.com/pstnv" target="_blank"> <img src="media/img/icons/github_1.png" alt="Github icon"></a>
+                </div>
+                <div class="footer_card copyright">
+                </div>
+            </div>
+        </div>
+    </footer>  
 
     <script src="js/index.js"></script>
 </body>
