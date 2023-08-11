@@ -11,8 +11,6 @@ for (let i = 0; i < skills.length; i++){
 };
 
 
-
-
 // Email form handeling
 const messageForm = document.getElementsByName('leaveMessege')[0];
 messageForm.addEventListener('submit', (event) =>{
@@ -26,9 +24,7 @@ messageForm.addEventListener('submit', (event) =>{
 
     // Selection for the Messages List
     const messageSection = document.getElementById('message');
-    //const messageList = document.getElementById('messageList');
-    const messageList = messageSection.getElementsByTagName(ul);
-    //const newMessage = document.createElement('li');
+    const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
     
     // Output on the page the user's message
@@ -46,11 +42,10 @@ messageForm.addEventListener('submit', (event) =>{
      });
 
     newMessage.appendChild(removeButton);
-    messageList.append(newMessage);
+    messageList.appendChild(newMessage);
 
     event.target.reset();
 });
-
 
 
 // Adding copyright in the footer
