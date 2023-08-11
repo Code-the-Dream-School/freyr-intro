@@ -63,10 +63,37 @@
                     </div>
                 </section>
             </div> 
-            <nav class="right">
+            
+            <section>
+                <form name="leaveMessege" id = "leave_messege" action="index.html" method="post">
+                    <h2>Leave a message</h2>
+                    <fieldset>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id = "name" name="userName" required><br>
+
+                        <label for="email">Email:</label><br>
+                        <input type="email" id = "email" name="userEmail" required><br>
+                      
+
+                    <label for="message">Message</label><br>
+                    <textarea id = "message"  name="userMessage" required placeholder="Leave a Message"></textarea><br>
+
+                    <button type="submit" name="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <sevtion>
+                <h2>Messages</h2>
+                <ul id = "messageList"></ul>
+            </sevtion>
+
+            <nav>
                 <a href = "#top">To the top</a>        
             </nav>
         </div>  
+        
+
         <footer>
             <p id ="containerF"></p>
         </footer>
