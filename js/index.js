@@ -131,39 +131,3 @@ messageList.addEventListener('click', (e) => {
     }
     nameActions[action]();
 });
-
-
-/*
-
-        edit: () => {
-            const div = li.querySelector('.message_info');
-            const span = div.querySelector(':scope > span');
-            const input = document.createElement('input');
-            input.type = "text";
-            input.value = span.textContent;
-            div.insertBefore(input, span);
-            div.removeChild(span);  
-            button.name = "save";
-            button.querySelector('img').src = saveButtonImgSRc;
-            button.querySelector('img').alt = "save button";
-        },
-        save: () => {
-            const div = li.querySelector('.message_info');
-            const input = div.querySelector('input');
-            const span = document.createElement('span');
-            const editedMessage = input.value.trim();
-
-            if (editedMessage === '') {
-                nameActions['delete']();
-                return;
-            }
-            
-            span.textContent = editedMessage;
-            div.insertBefore(span, input);
-            div.removeChild(input);
-            button.name = 'edit';
-            button.querySelector('img').src = editButtonImgSRc;
-            button.querySelector('img').alt = "edit button";
-        },
-
-        */
