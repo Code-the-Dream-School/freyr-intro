@@ -4,10 +4,10 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
 copyright.innerHTML = `&copy; Ron Javellana ${thisYear}`;
-footer.appendChild(copyright)
+footer.appendChild(copyright);
 
 const skills = ["HTML", "CSS", "Ruby", "Javascript", "SQL", "Linux", "Postman"];
-const skillsList = document.querySelector('#skills').lastElementChild;
+const skillsList = document.querySelector('#skills .skill_list');
 
 for (let i = 0; i < skills.length; i += 1) {
     let skill = document.createElement('li');
@@ -15,6 +15,7 @@ for (let i = 0; i < skills.length; i += 1) {
     skillsList.appendChild(skill);
 }
 
+const projectList  = document.querySelector('#projects ul');
 const messageForm = document.querySelector("[name=leave_message]");
 const messagesHeader = document.querySelector("#messages");
 
@@ -30,7 +31,7 @@ messageForm.addEventListener("submit", (event) => {
     console.log(userName, email, message);
     
     let messageSection = document.querySelector("#messages");
-    let messageList = document.querySelector('#skills ul');
+    let messageList = document.querySelector('#messages ul');
     let newMessage = document.createElement('li');
     
     newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a><span> wrote: ${message} </span>`;
@@ -67,21 +68,17 @@ messageForm.addEventListener("submit", (event) => {
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageForm.reset();
-})
-
-const githubRequest = new XMLHttpRequest();
-
-githubRequest.open("GET", "https://api.github.com/users/Ronapj1991/repos");
-githubRequest.send();
-
-githubRequest.addEventListener("load", () => {
-    const repositories = JSON.parse(githubRequest.responseText);
-    const projectSection = document.getElementById("projects");
-    const projectList = document.querySelector('#projects ul');
-    
-    for (let i = 0; i < repositories.length; i += 1) {
-        let project = document.createElement("li");
-        project.innerHTML = `<a href="${repositories[i].ml_url}">${repositories[i].name}</a>`;
-        projectList.appendChild(project);
-    }
 });
+
+fetch('https://api.github.com/users/Ronapj1991/repos')
+    .then( response => response.json() )
+    .then( repositories => {
+        for (let i = 0; i < repositories.length; i += 1) {
+            let project = document.createElement("li");
+            project.innerHTML = `<a href="${repositories[i].ml_url}">${repositories[i].name}</a>`;
+            projectList.appendChild(project);
+        }
+    })
+    .catch( error => {
+        console.log("hello");
+    })
