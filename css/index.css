@@ -1,3 +1,7 @@
+:root {
+    --header-height: 75px;
+}
+
 html {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -15,8 +19,11 @@ body {
 }
 
 *::selection {
-	background-color: #828c7f;
 	background-color: rgba(196, 226, 226, 1.00);
+}
+
+section {
+    scroll-margin-top: var(--header-height);
 }
 
 
@@ -30,7 +37,12 @@ body {
 
 header {
     padding: 10px 20px;
-    background-color: rgba(229, 231, 233, 0.3);
+    width: 100%;
+    height: var(--header-height);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(rgba(229, 231, 233, 0.3), rgba(229, 231, 233, 0.3)), linear-gradient(#ffffff, #ffffff);
 }
 
 header nav {
@@ -512,6 +524,10 @@ header nav a:not(:first-child):hover {
 
 
 @media all and (max-width: 700px) {
+    
+    :root {
+    --header-height: 70px;
+}
 
 
 /*********************** INTRO *****************/

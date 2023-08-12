@@ -1,3 +1,35 @@
+// opt-1. set scroll-margin-top for sections
+
+// const header = document.querySelector('header');
+// const headerNav = document.querySelector('#headerNav');
+// headerNav.addEventListener('click', (e) => {
+//     const link = e.target;
+//     if (link.tagName === 'A' && link.hash) {
+//         const section = document.querySelector(link.hash);
+//         section.style.scrollMarginTop = header.offsetHeight + 'px';
+//     }
+// });
+
+
+// opt-2. prevent default behavior and use scrollTo
+// const header = document.querySelector('header');
+// const headerNav = document.querySelector('#headerNav');
+// headerNav.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const linkID = e.target.hash || e.target.closest('a').hash ;
+//     console.log(linkID)
+//     if (linkID) {
+//         const section = document.querySelector(linkID);
+//         const sectionOffset = section.offsetTop;
+//         const headerHeight = header.clientHeight;
+//         document.documentElement.scrollTo({
+//             top: sectionOffset - headerHeight,
+//             behavior: 'smooth'
+//         });
+//     }
+// });
+
+
 // 1. create copyright element in footer
 
 const today = new Date();
@@ -6,7 +38,8 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer .copyright');
 
 const copyright = document.createElement('p');
-copyright.innerHTML = `<div>&copy; ${thisYear} Irina Postnova.</div><div>For educational purposes.</div>`;
+copyright.innerHTML =   `<div>&copy; ${thisYear} Irina Postnova.</div>
+                        <div>For educational purposes.</div>`;
 footer.appendChild(copyright);
 
 
@@ -27,9 +60,9 @@ const messageForm = document.forms["leave_message"];
 const messageSection = document.querySelector('#messages');
 const messageList = messageSection.querySelector('.messages_list');
 const imageSrc = 'media/img/icons/message.png';
-const editButtonImgSRc = 'media/img/icons/btn_edit.png';
-const removeButtonImgSRc = 'media/img/icons/btn_delete.png';
-const saveButtonImgSRc = 'media/img/icons/btn_save.png';
+const editButtonImgSrc = 'media/img/icons/btn_edit.png';
+const removeButtonImgSrc = 'media/img/icons/btn_delete.png';
+const saveButtonImgSrc = 'media/img/icons/btn_save.png';
 
 
 messageForm.addEventListener('submit', (e) => {
@@ -59,7 +92,7 @@ messageForm.addEventListener('submit', (e) => {
     editButton.name = "edit";
     editButton.classList.add('message_btn', 'message_edit');
     editButton.innerHTML = `
-        <img src="${editButtonImgSRc}" alt="edit button">
+        <img src="${editButtonImgSrc}" alt="edit button">
     `;
     editButton.type = "button";
     
@@ -67,7 +100,7 @@ messageForm.addEventListener('submit', (e) => {
     removeButton.name = "delete";
     removeButton.classList.add('message_btn', 'message_delete');
     removeButton.innerHTML = `
-        <img src="${removeButtonImgSRc}" alt="delete button">
+        <img src="${removeButtonImgSrc}" alt="delete button">
     `;
     removeButton.type = "button";
 
@@ -102,7 +135,7 @@ messageList.addEventListener('click', (e) => {
             div.removeChild(span);  
             button.name = "save";
             button.innerHTML = `
-                <img src="${saveButtonImgSRc}" alt="save button">
+                <img src="${saveButtonImgSrc}" alt="save button">
             `;
         },
         save: () => {
@@ -121,7 +154,7 @@ messageList.addEventListener('click', (e) => {
             div.removeChild(input);
             button.name = 'edit';
             button.innerHTML = `
-                <img src="${editButtonImgSRc}" alt="save button">
+                <img src="${editButtonImgSrc}" alt="save button">
             `;
         },
 
