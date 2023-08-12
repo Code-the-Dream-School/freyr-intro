@@ -1,4 +1,10 @@
 :root {
+	--brown-color: #483C32;
+	--yellow-color: rgba(240, 217, 123, 1.00);
+	--pink-color: rgba(252, 219, 214, 1.00);
+	--blue-color: rgba(196, 226, 226, 1.00);
+	--grey-color: rgba(229, 231, 233, 0.3);
+	--button-size: 25px;
     --header-height: 75px;
 }
 
@@ -9,8 +15,7 @@ html {
 body {
     margin: 0;
     background-color: #ffffff;
-    color: #483C32;
-    font-family: 'Preahvihear', sans-serif;
+    color: var(--brown-color);
     font-weight: 400;
 }
 
@@ -57,12 +62,13 @@ header nav a {
     display: inline-block;
     text-decoration: none;
     font-size: 15px;
-    color: #483C32;
+	font-family: 'Preahvihear', sans-serif;
+    color: var(--brown-color);
     transition: background-color linear .2s ;
 }
 
 header nav a:not(:first-child):hover {
-    background-color: rgba(229, 231, 233, 1);
+    background-color: rgba(229, 231, 233);
 }
 
 .header_logo {
@@ -75,12 +81,16 @@ header nav a:not(:first-child):hover {
     height: 100%;
 }
 
+.hidden {
+	display: initial;
+}
+
 
 /*********************** INTRO *****************/
 
 .intro {
     padding: 20px;
-    background-color: rgba(229, 231, 233, 0.3);
+    background-color: var(--grey-color);
 }
 
 .intro_inner {
@@ -115,12 +125,14 @@ header nav a:not(:first-child):hover {
     margin: 5px 0;
     line-height: 1.1;
     font-size: 16px;
+	font-family: 'Preahvihear', sans-serif;
 }
 
 .intro_about_text {
     margin: 0;
     line-height: 1.4;
     font-size: 16px;
+	font-family: 'Preahvihear', sans-serif;
 }
 
 .intro_about nav {
@@ -139,7 +151,8 @@ header nav a:not(:first-child):hover {
     text-align: center;
     font-weight: bold;
     font-size: 15px;
-    color: #483C32;
+	font-family: 'Preahvihear', sans-serif;
+    color: var(--brown-color);
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
@@ -148,15 +161,15 @@ header nav a:not(:first-child):hover {
 }
 
 .intro_skills {
-    background-color: rgba(240, 217, 123, 1.00);
+	background-color: var(--yellow-color);
 }
 
 .intro_projects {
-    background-color: rgba(252, 219, 214, 1.00);
+	background-color: var(--pink-color);
 }
 
 .intro_contact {
-    background-color: rgba(196, 226, 226, 1.00);
+	background-color: var(--blue-color);
 }
 
 
@@ -209,7 +222,7 @@ header nav a:not(:first-child):hover {
 .skills {
     margin-top: 100px;
     padding: 70px 20px;
-    background-color: rgba(229, 231, 233, 0.3);
+    background-color: var(--grey-color);
 }
 
 .skills_inner {
@@ -220,17 +233,18 @@ header nav a:not(:first-child):hover {
 
 .skills_header {
     margin: 10px 0;
+    text-transform: uppercase;
+    text-align: center;
     font-size: 28px;
     font-family: 'Caveat Brush', cursive;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    text-align: center;
     line-height: 1.2;
 }
 
 .skills_inner p {
     margin: 5px auto 0;
     text-indent: 30px;
+	font-family: 'Preahvihear', sans-serif;
 }
 
 .skills_list {
@@ -245,52 +259,85 @@ header nav a:not(:first-child):hover {
     padding: 15px;
     background-color: #ffffff;
     font-size: 16px;
+	font-family: 'Preahvihear', sans-serif;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
     transition: background-color .4s linear;
 }
 
 .skills_list li:nth-child(3n+1) {
-    border-left: 4px solid rgba(240, 217, 123, 1.00);
+	border-left: 4px solid var(--yellow-color);
 }
+
 .skills_list li:nth-child(3n+1):hover {
-    background-color: rgba(240, 217, 123, 1.00);
+	background-color: var(--yellow-color);
 }
 
 .skills_list li:nth-child(3n+2) {
-    border-left: 4px solid rgba(252, 219, 214, 1.00);
+	border-left: 4px solid var(--pink-color);
 }
 
 .skills_list li:nth-child(3n+2):hover {
-    background-color: rgba(252, 219, 214, 1.00);
+	background-color: var(--pink-color);
 }
 
 
 .skills_list li:nth-child(3n+3) {
-    border-left: 4px solid rgba(196, 226, 226, 1.00);
+	border-left: 4px solid var(--blue-color);
 }
 
 .skills_list li:nth-child(3n+3):hover {
-    background-color: rgba(196, 226, 226, 1.00);
+	background-color: var(--blue-color);
 }
 
 
 /*********************** EXPERIENCE *****************/
 
 .experience {
-    background-color: rgba(229, 231, 233, 0.3);
+	background-color: rgba(229, 231, 233, 0.1);
 }
 
 .experience_inner {
-    padding: 20px;
-    background-color: rgba(196, 226, 226, 0.50);
+	padding: 20px;
+	background-color: rgba(196, 226, 226, 0.50);
 }
 
 .experience_header {
-    font-size: 28px;
-    font-family: 'Caveat Brush', cursive;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    line-height: 1.2;
+	margin: 10px 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 28px;
+	font-family: 'Caveat Brush', cursive;
+	letter-spacing: 2px;
+	line-height: 1.2;
+}
+
+.experience_list {
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.experience_list li {
+	margin: 15px;
+	padding: 15px;
+	min-width: 110px;
+	border: 1px solid #ffffff;
+	font-size: 16px;
+	font-family: 'Preahvihear', sans-serif;
+	line-height: 1.6;
+	list-style-type: none;
+	position: relative;
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.experience_list li::before {
+	content: "➨";
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	left: -30px;
+	color: var(--brown-color);
 }
 
 
@@ -325,6 +372,7 @@ header nav a:not(:first-child):hover {
     width: 70%;
     list-style: none;
     font-size: 14px;
+	font-family: 'Preahvihear', sans-serif;
     display: flex;
     align-items: center;
 }
@@ -351,7 +399,7 @@ header nav a:not(:first-child):hover {
     margin: 20px;
     padding: 10px;
     border-radius: 6px;
-    background-color: rgba(229, 231, 233, 0.3);
+    background-color: var(--grey-color);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -362,7 +410,8 @@ header nav a:not(:first-child):hover {
     margin-bottom: 5px;
     text-decoration: none;
     font-weight: 400;
-    color: #483C32;
+	font-family: 'Preahvihear', sans-serif;
+    color: var(--brown-color);
 }
 
 .message_link span {
@@ -378,7 +427,7 @@ header nav a:not(:first-child):hover {
     font-size: 14px;
     line-height: 1.3;
     font-family: 'Preahvihear', sans-serif;
-    color: #483C32;
+    color: var(--brown-color);
     resize: none;
 }
 
@@ -386,14 +435,15 @@ header nav a:not(:first-child):hover {
     margin: 0;
     min-height: 31px;
     font-size: 14px;
+	font-family: 'Preahvihear', sans-serif;
     line-height: 1.3;
 }
 
 .message_btn {
     margin: 0;
     padding: 6px;
-    width: 25px;
-    height: 25px;
+	width: var(--button-size);
+	height: var(--button-size);
     position: absolute;
     top: 0;
     border: none;
@@ -409,7 +459,7 @@ header nav a:not(:first-child):hover {
 }
 
 .message_edit {
-    right: 25px;
+	right: var(--button-size);
 }
 
 .message_delete {
@@ -448,6 +498,7 @@ header nav a:not(:first-child):hover {
     margin: 0 0 20px;
     text-align: center;
     font-size: 18px;
+	font-family: 'Preahvihear', sans-serif;
     line-height: 1.2;
 }
 
@@ -458,9 +509,9 @@ header nav a:not(:first-child):hover {
     border-radius: 0;
     border: none;
     background-color: rgba(229, 231, 233, 0.8);
-    font-family: 'Preahvihear', sans-serif;
     font-weight: 400;
     font-size: 14px;
+    font-family: 'Preahvihear', sans-serif;
 }
 
 .feedback_form textarea {
@@ -472,13 +523,13 @@ header nav a:not(:first-child):hover {
 .feedback_form textarea::placeholder {
     font-size: 11px;
     color: rgb(0, 0, 0, 0.8);
-    font-family: 'Preahvihear', sans-serif;
     font-weight: 400;
+    font-family: 'Preahvihear', sans-serif;
 }
 
 .feedback_form input:focus,
 .feedback_form textarea:focus {
-    outline: 2px solid #483C32;
+    outline: 2px solid var(--brown-color);
 }
 
 .feedback_btn {
@@ -486,7 +537,7 @@ header nav a:not(:first-child):hover {
     padding: 4px 8px;
     border-radius: 0;
     border: none;
-    background-color: #483C32;
+    background-color: var(--brown-color);
     font-family: 'Preahvihear', sans-serif;
     font-weight: 400;
     color: #ffffff;
@@ -497,8 +548,9 @@ header nav a:not(:first-child):hover {
 
 .footer {
     padding: 100px 20px 20px;
-    background-color: rgba(229, 231, 233, 0.3);
+    background-color: var(--grey-color);
     font-size: 16px;
+    font-family: 'Preahvihear', sans-serif;
 }
 
 .footer_cards {
@@ -510,12 +562,14 @@ header nav a:not(:first-child):hover {
 .footer_header {
     margin: 3px 0;
     font-size: 14px;
+    font-family: 'Preahvihear', sans-serif;
 }
 
 .footer_link {
     text-decoration: none;
     font-size: 14px;
-    color: #483C32;
+    font-family: 'Preahvihear', sans-serif;
+    color: var(--brown-color);
 }
 
 .footer_link img{
@@ -527,6 +581,7 @@ header nav a:not(:first-child):hover {
     
     :root {
     --header-height: 70px;
+	--button-size: 20px;
 }
 
 
@@ -538,7 +593,7 @@ header nav a:not(:first-child):hover {
 
     .intro_about {
         margin-left: 20px;
-        max-width: unset;
+        max-width: initial;
     }
 
     .intro_about h1 {
@@ -615,6 +670,21 @@ header nav a:not(:first-child):hover {
     }
 
 
+	/*********************** EXPERIENCE *****************/
+
+	.experience_header {
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+
+	.experience_list li {
+		padding: 10px;
+		min-width: initial;
+		flex: 1;
+		font-size: 15px;
+	}
+
+
     /*********************** FEEDBACKS && MESSAGES *****************/
 
     .messages {
@@ -638,12 +708,6 @@ header nav a:not(:first-child):hover {
 
     .message_btn {
         padding: 4px;
-        width: 20px;
-        height: 20px;
-    }
-
-    .message_edit {
-        right: 20px;
     }
 
 
@@ -718,6 +782,10 @@ header nav a:not(:first-child):hover {
     .header_logo {
         height: 20px;
     }
+
+	.hidden {
+		display: none;
+	}
 
 
     /*********************** INTRO *****************/
@@ -813,6 +881,26 @@ header nav a:not(:first-child):hover {
     }
 
 
+	/*********************** EXPERIENCE *****************/
+
+	.experience_header {
+		font-size: 17px;
+	}
+
+	.experience_list {
+		flex-wrap: wrap-reverse;
+	}
+
+	.experience_list li {
+		margin: 12px 0;
+		padding: 8px;
+		width: 100%;
+		min-height: 60px;
+		flex: initial;
+		font-size: 14px;
+	}
+
+
     /*********************** FEEDBACKS && MESSAGES *****************/
 
     .messages {
@@ -856,12 +944,6 @@ header nav a:not(:first-child):hover {
 
     .message_btn {
         padding: 4px;
-        width: 20px;
-        height: 20px;
-    }
-
-    .message_edit {
-        right: 20px;
     }
 
 
