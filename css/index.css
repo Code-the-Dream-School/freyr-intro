@@ -24,7 +24,7 @@ body {
 }
 
 *::selection {
-	background-color: rgba(196, 226, 226, 1.00);
+	background-color: var(--blue-color);
 }
 
 section {
@@ -47,7 +47,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: linear-gradient(rgba(229, 231, 233, 0.3), rgba(229, 231, 233, 0.3)), linear-gradient(#ffffff, #ffffff);
+    background: linear-gradient(var(--grey-color), var(--grey-color)), linear-gradient(#ffffff, #ffffff);
 }
 
 header nav {
@@ -940,10 +940,6 @@ header nav a:not(:first-child):hover {
 
     .message_info span {
         min-height: 25px;
-    }
-
-    .message_btn {
-        padding: 4px;
     }
 
 
