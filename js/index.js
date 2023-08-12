@@ -119,10 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
             let email = event.target.usersEmail.value;
             let message = event.target.usersMessage.value;
         */
+
+        let createSpanWithMessage = (userMessage) => `<span>${userMessage}</span>`;
+
         console.log(`name: ${name} \nemail: ${email} \nmessage: ${message}`);
         let messageList = messageSection.querySelector('ul');
         let newMessage = document.createElement('li');
-        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span>${message}</span> `;
+        //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong><span>${message}</span>`;
+        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a></strong> wrote: ${createSpanWithMessage(message)}`;
 
         function createButton(buttonText) {
             let typeOfButton = document.createElement('button');
@@ -138,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let editButton = createButtonAndAppendIt('edit');
+        let saveButton = createButton('save');
         let removeButton = createButtonAndAppendIt('remove');
         /*
             The above code is the same as the following code, in a refactored form:
@@ -157,13 +162,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
         messageList.appendChild(newMessage);
 
+        /*
+        newMessage.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                const button = e.target;
+                let entry = button.parentNode;
+                // The variable entry is a list item (li), which is the element that is 
+                //the parent of the button.
+                //const ul = entry.parentNode;
+                // It's parent is the unordered list (ul), which is stored in the 
+                //variable messageList.
+
+                if (button.textContent === 'remove') {
+                    entry.remove();
+                    let numOfListItems = messageList.childElementCount;
+                    //console.log(numOfListItems);
+                    if (numOfListItems <= 1) {
+                        messageSection.style.display = 'none';
+                    } 
+                } else if (button.textContent === 'edit') {
+                    //let saveButton = createButton('save');
+
+                    let messageContainerSpan = newMessage.getElementsByTagName('span')[0];
+                    let messageText = messageContainerSpan.textContent;
+                    messageContainerSpan.textContent = '';
+
+                    let editInputField = document.createElement('input');
+                    editInputField.type = 'text';
+                    editInputField.id = 'editInputField';
+                    editInputField.value = messageText;
+
+                    newMessage.insertBefore(editInputField, editButton);
+                    //newMessage.insertBefore(saveButton, removeButton);
+                    //editButton.remove();
+                } else if (button.textContent === 'save') { 
+                    
+                }
+            }
+        });
+        */
+        
         removeButton.addEventListener('click', () => {
             let entry = removeButton.parentNode;
-            /* 
-                The variable entry is a list item (li), which is the element that is the parent of the editButton. 
-                It's parent is the unordered list (ul), which is stored in the variable messageList.
-                The ul's parent is the section element with the id of messages.
-            */
+            
+                //The variable entry is a list item (li), which is the element that is 
+                //the parent of the editButton. 
+                //It's parent is the unordered list (ul), which is stored in the 
+                //variable messageList.
+                //The ul's parent is the section element with the id of messages.
+            
             let numOfListItems = messageList.childElementCount;
             console.log(numOfListItems);
             entry.remove();
@@ -172,23 +219,39 @@ document.addEventListener('DOMContentLoaded', () => {
             } 
         });
 
-        
-
         editButton.addEventListener('click', () => {
+            saveButton.style.display = '';
             let messageContainerSpan = newMessage.getElementsByTagName('span')[0];
-            // console.log(messageContainerSpan);
             let messageText = messageContainerSpan.textContent;
-            // messageContainerSpan.style.visibility = 'hidden';
             messageContainerSpan.textContent = '';
+
             let editInputField = document.createElement('input');
             editInputField.type = 'text';
+            editInputField.id = 'editInputField';
             editInputField.value = messageText;
             newMessage.insertBefore(editInputField, editButton);
-            //messageContainerSpan.appendChild(editInputField);
 
-            let saveButton = createButton('save');
+            
             newMessage.insertBefore(saveButton, removeButton);
-            editButton.remove();
+            editButton.style.display = 'none'; 
+            //editButton.remove();
+
+        });
+        
+        saveButton.addEventListener('click', () => {
+            editButton.style.display = '';
+            let messageContainerSpan = newMessage.getElementsByTagName('span')[0];
+            let editInputField = document.getElementById('editInputField');
+            let messageText = editInputField.value;
+            // console.log(messageContainerSpan);
+            messageContainerSpan.innerHTML = createSpanWithMessage(messageText);
+            
+            editInputField.remove();
+
+            //let editButton = createButton('edit');
+            newMessage.insertBefore(editButton, removeButton);
+            saveButton.style.display = 'none';
+            //saveButton.remove();
         });
         messageForm.reset();
     });
