@@ -1,0 +1,888 @@
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #483C32;
+    font-family: 'Preahvihear', sans-serif;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::selection {
+	background-color: #828c7f;
+	background-color: rgba(196, 226, 226, 1.00);
+}
+
+
+/*********************** HEADER *****************/
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+header {
+    padding: 10px 20px;
+    background-color: rgba(229, 231, 233, 0.3);
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0;
+    padding: 5px 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+    color: #483C32;
+    transition: background-color linear .2s ;
+}
+
+header nav a:not(:first-child):hover {
+    background-color: rgba(229, 231, 233, 1);
+}
+
+.header_logo {
+    margin-right: auto;
+    padding: 0;
+    height: 30px;
+}
+
+.header_logo img {
+    height: 100%;
+}
+
+
+/*********************** INTRO *****************/
+
+.intro {
+    padding: 20px;
+    background-color: rgba(229, 231, 233, 0.3);
+}
+
+.intro_inner {
+    padding: 20px;
+    height: fit-content;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro_picture img {
+    width: 250px;
+}
+
+.intro_about {
+    margin-left: 50px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.intro_about h1 {
+    margin: 10px 0 20px;
+    font-size: 28px;
+    font-family: 'Caveat Brush', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.intro_about_subheader {
+    margin: 5px 0;
+    line-height: 1.1;
+    font-size: 16px;
+}
+
+.intro_about_text {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.intro_about nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro_about nav a {
+    margin: 0 5px;
+    padding: 5px;
+    width: fit-content;
+    min-width: 75px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #483C32;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.intro_about nav a:hover {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)) brightness(95%);
+}
+
+.intro_skills {
+    background-color: rgba(240, 217, 123, 1.00);
+}
+
+.intro_projects {
+    background-color: rgba(252, 219, 214, 1.00);
+}
+
+.intro_contact {
+    background-color: rgba(196, 226, 226, 1.00);
+}
+
+
+/*********************** PROJECTS *****************/
+
+.projects {
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.projects_header {
+    margin: 10px 0 40px;
+    font-size: 28px;
+    font-family: 'Caveat Brush', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.projects_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projects_card {
+    margin: 0;
+    width: 300px;
+}
+
+.projects_card:hover {
+    filter:opacity(0.6)
+}
+
+.projects_card a{
+    display: inline-block;
+    width: fit-content;
+}
+
+.projects_card img{
+    width: 100%;
+}
+
+
+/*********************** SKILLS *****************/
+
+.skills {
+    margin-top: 100px;
+    padding: 70px 20px;
+    background-color: rgba(229, 231, 233, 0.3);
+}
+
+.skills_inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 650px;
+}
+
+.skills_header {
+    margin: 10px 0;
+    font-size: 28px;
+    font-family: 'Caveat Brush', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.skills_inner p {
+    margin: 5px auto 0;
+    text-indent: 30px;
+}
+
+.skills_list {
+    margin: 30px auto 0;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.skills_list li {
+    margin: 8px 0;
+    padding: 15px;
+    background-color: #ffffff;
+    font-size: 16px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+    transition: background-color .4s linear;
+}
+
+.skills_list li:nth-child(3n+1) {
+    border-left: 4px solid rgba(240, 217, 123, 1.00);
+}
+.skills_list li:nth-child(3n+1):hover {
+    background-color: rgba(240, 217, 123, 1.00);
+}
+
+.skills_list li:nth-child(3n+2) {
+    border-left: 4px solid rgba(252, 219, 214, 1.00);
+}
+
+.skills_list li:nth-child(3n+2):hover {
+    background-color: rgba(252, 219, 214, 1.00);
+}
+
+
+.skills_list li:nth-child(3n+3) {
+    border-left: 4px solid rgba(196, 226, 226, 1.00);
+}
+
+.skills_list li:nth-child(3n+3):hover {
+    background-color: rgba(196, 226, 226, 1.00);
+}
+
+
+/*********************** EXPERIENCE *****************/
+
+.experience {
+    background-color: rgba(229, 231, 233, 0.3);
+}
+
+.experience_inner {
+    padding: 20px;
+    background-color: rgba(196, 226, 226, 0.50);
+}
+
+.experience_header {
+    font-size: 28px;
+    font-family: 'Caveat Brush', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+
+/*********************** FEEDBACKS && MESSAGES *****************/
+
+.messages {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.messages_header {
+    margin: 10px 0 30px;
+    font-size: 28px;
+    font-family: 'Caveat Brush', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.messages_list {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message_item {
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    list-style: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.message_item:nth-child(odd) {
+    align-self: flex-start;
+    flex-direction: row;
+}
+
+.message_item:nth-child(even) {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message_icon {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.message_info {
+    flex: 1;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(229, 231, 233, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.message_link {
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #483C32;
+}
+
+.message_link span {
+    font-weight: bold;
+}
+
+.message_info textarea {
+    min-height: 31px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 1.3;
+    font-family: 'Preahvihear', sans-serif;
+    color: #483C32;
+    resize: none;
+}
+
+.message_info span {
+    margin: 0;
+    min-height: 31px;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.message_btn {
+    margin: 0;
+    padding: 6px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.message_btn img {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.message_edit {
+    right: 25px;
+}
+
+.message_delete {
+    right: 0;
+}
+
+
+/*********************** FEEDBACK FORM *****************/
+
+.feedback {
+    margin-top: 100px;
+    padding: 50px 20px;
+    height: 550px;
+    background-image: url('../media/img/wp/wp.jpg');
+    background-position: left;
+    background-repeat: repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback_form {
+    margin: 0 auto;
+    padding: 20px 50px;
+    width: 100%;
+    max-width: 400px;
+    border: 10px inset rgb(72, 60, 50, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.feedback_header {
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.feedback_form input,
+.feedback_form textarea {
+    margin: 10px 0;
+    padding: 4px 8px;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(229, 231, 233, 0.8);
+    font-family: 'Preahvihear', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.feedback_form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.feedback_form input::placeholder,
+.feedback_form textarea::placeholder {
+    font-size: 11px;
+    color: rgb(0, 0, 0, 0.8);
+    font-family: 'Preahvihear', sans-serif;
+    font-weight: 400;
+}
+
+.feedback_form input:focus,
+.feedback_form textarea:focus {
+    outline: 2px solid #483C32;
+}
+
+.feedback_btn {
+    margin: 10px 0;
+    padding: 4px 8px;
+    border-radius: 0;
+    border: none;
+    background-color: #483C32;
+    font-family: 'Preahvihear', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+
+/*********************** FOOTER *****************/
+
+.footer {
+    padding: 100px 20px 20px;
+    background-color: rgba(229, 231, 233, 0.3);
+    font-size: 16px;
+}
+
+.footer_cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer_header {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.footer_link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #483C32;
+}
+
+.footer_link img{
+    width: 20px;
+}
+
+
+@media all and (max-width: 700px) {
+
+
+/*********************** INTRO *****************/
+
+    .intro_picture img {
+        width: 180px;
+    }
+
+    .intro_about {
+        margin-left: 20px;
+        max-width: unset;
+    }
+
+    .intro_about h1 {
+        margin: 10px 0;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .intro_about_subheader {
+        font-size: 16px;
+    }
+
+    .intro_about_text {
+        font-size: 14px;
+    }
+
+    .intro_about nav {
+        margin-top: 20px;
+    }
+
+    .intro_about nav a {
+        padding: 5px 2px;
+        min-width: 60px;
+        font-size: 14px;
+    }
+
+
+    /*********************** PROJECTS *****************/
+
+    .projects {
+        margin-top: 40px;
+    }
+
+    .projects_header {
+        margin: 10px 0 30px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .projects_cards {
+        gap: 10px;
+    }
+
+    .projects_card {
+        width: 210px;
+    }
+
+
+    /*********************** SKILLS *****************/
+
+    .skills {
+        margin-top: 50px;
+        padding: 30px 20px;
+    }
+
+    .skills_header {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .skills_inner p {
+        margin: 5px auto 0;
+        text-indent: 20px;
+        font-size: 15px;
+    }
+
+    .skills_list {
+        margin-top: 20px;
+    }
+
+    .skills_list li {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+
+    /*********************** FEEDBACKS && MESSAGES *****************/
+
+    .messages {
+        margin-top: 50px;
+    }
+
+    .messages_header {
+        margin: 10px 0 20px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .messages_list {
+        max-width: initial;
+    }
+
+    .message_item .message_info {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .message_btn {
+        padding: 4px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .message_edit {
+        right: 20px;
+    }
+
+
+    /*********************** FEEDBACK FORM *****************/
+
+    .feedback {
+        margin-top: 50px;
+        height: fit-content;
+    }
+
+    .feedback_form {
+        padding: 20px 50px;
+        max-width: 350px;
+    }
+
+    .feedback_header {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+
+    .feedback_form input,
+    .feedback_form textarea {
+        margin: 6px 0;
+    }
+
+    .feedback_form textarea {
+        height: 60px;
+    }
+
+    .feedback_btn {
+        margin: 6px 0;
+    }
+
+
+    /*********************** FOOTER *****************/
+
+    .footer {
+        padding: 50px 20px 20px;
+        font-size: 14px;
+    }
+
+    .footer_header {
+        margin: 3px 0;
+        font-size: 14px;
+    }
+
+    .footer_link {
+        font-size: 14px;
+    }
+
+    .footer_link img{
+        width: 18px;
+    }
+}
+
+
+@media all and (max-width: 480px) {
+
+
+    /*********************** HEADER *****************/
+
+    header {
+        padding: 10px 20px;
+    }
+
+    header nav a {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+
+    .header_logo {
+        height: 20px;
+    }
+
+
+    /*********************** INTRO *****************/
+
+    .intro {
+        padding: 0 20px;
+    }
+
+    .intro_inner {
+        min-height: 400px;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .intro_picture img {
+        width: 150px;
+    }
+
+    .intro_about {
+        margin-left: 0;
+        max-width: unset;
+    }
+
+    .intro_about h1 {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .intro_about_subheader {
+        margin: 15px 0 5px;
+        font-size: 15px;
+    }
+
+    .intro_about_text {
+        font-size: 14px;
+    }
+
+    .intro_about nav {
+        margin-top: 20px;
+    }
+
+    .intro_about nav a {
+        padding: 5px 2px;
+        min-width: 60px;
+        font-size: 14px;
+    }
+
+
+    /*********************** PROJECTS *****************/
+
+    .projects {
+        margin-top: 30px;
+    }
+
+    .projects_header {
+        margin: 20px 0;
+        font-size: 17px;
+    }
+
+    .projects_cards {
+        gap: 20px;
+    }
+
+    .projects_card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /*********************** SKILLS *****************/
+
+    .skills {
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+
+    .skills_header {
+        font-size: 17px;
+    }
+
+    .skills_inner p {
+        text-indent: 15px;
+        font-size: 14px;
+    }
+
+    .skills_list {
+        margin-top: 15px;
+    }
+
+    .skills_list li {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+
+    /*********************** FEEDBACKS && MESSAGES *****************/
+
+    .messages {
+        margin-top: 20px;
+    }
+
+    .messages_header {
+        margin: 10px 0;
+        font-size: 17px;
+    }
+
+    .messages_list {
+        max-width: initial;
+    }
+
+    .message_item {
+        width: 100%;
+    }
+
+    .message_icon {
+        height: 25px;
+        width: 25px;
+    }
+
+    .message_info {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .message_link {
+        margin-bottom: 3px;
+    }
+
+    .message_info textarea {
+        min-height: 25px;
+    }
+
+    .message_info span {
+        min-height: 25px;
+    }
+
+    .message_btn {
+        padding: 4px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .message_edit {
+        right: 20px;
+    }
+
+
+    /*********************** FEEDBACK FORM *****************/
+
+    .feedback {
+        margin-top: 50px;
+        height: fit-content;
+    }
+
+    .feedback_form {
+        padding: 20px;
+    }
+
+    .feedback_form textarea {
+        height: 60px;
+    }
+
+
+    /*********************** FOOTER *****************/
+
+    .footer {
+        padding: 30px 20px 20px;
+        font-size: 13px;
+    }
+
+    .footer_cards {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer_card {
+        margin-top: 15px;
+    }
+
+    .footer_header {
+        margin: 5px;
+    }
+}
