@@ -23,7 +23,7 @@ messagesHeader.style.display = "none";
 
 messageForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    let listSize = messagesHeader.lastElementChild.childElementCount;
+    let listSize = document.querySelector('#messages ul').childElementCount;
     let userName = event.target.usersName.value;
     let email = event.target.usersEmail.value;
     let message = event.target.usersMessage.value;
@@ -70,7 +70,8 @@ messageForm.addEventListener("submit", (event) => {
     messageForm.reset();
 });
 
-fetch('https://api.github.com/users/Ronapj1991/repos')
+fetch('https://api.github.com/users/Ronapj1991/reposa')
+    .then(handleErrors)
     .then( response => response.json() )
     .then( repositories => {
         for (let i = 0; i < repositories.length; i += 1) {
@@ -79,6 +80,15 @@ fetch('https://api.github.com/users/Ronapj1991/repos')
             projectList.appendChild(project);
         }
     })
-    .catch( error => {
-        console.log("hello");
-    })
+    .catch(error => {
+        let project = document.createElement("p");
+        project.innerHTML = `<i class="fa-duotone fa-spinner fa-spin fa"></i> ${error}`;
+        projectList.appendChild(project);
+    });
+
+function handleErrors(response) {
+    if (!response.ok) {
+        throw Error(response.status);
+}
+    return response;
+}

@@ -31,9 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: #eeeee4;
+	background-color: #FFFFFF;
 	color: #181817;
-	font-family: 'Press Start 2P', cursive;
 }
 ol, ul {
 	list-style: none;
@@ -55,11 +54,15 @@ a, a:visited, a:hover, a:active {
   color: blue;
 }
 
+a:hover {
+	font-size: 1.1em;
+}
+
 nav .nav_bar {
+	background-color: #ccbb99;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #ccbb99;	
+	justify-content: space-around;
+	margin-bottom: 40px;
 }
 	
 nav .nav_bar li {
@@ -69,7 +72,6 @@ nav .nav_bar li {
 h1 {
     text-align: center;
     margin-bottom: 3%;
-    font-size: 1.5em;
     color: #5f5f5b;
     padding-top: 10px;
 }
@@ -88,11 +90,11 @@ h1 {
     text-align: center;
     padding-left: 25px;
     padding-right: 25px;
+    margin-bottom: 100px;
 }
 
 h2 {
 	background-color: #873e23;
-	font-size: 1.2em;
 	color: #E2DAD9;
 	text-align: center;
 	padding-top: 10px;
@@ -105,6 +107,7 @@ h2 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 25px;
+	margin-bottom: 100px;
 }
 
 h3 {
@@ -115,11 +118,15 @@ h3 {
 	color: #960718;
 }
 
+#skills {
+	margin-bottom: 100px;
+}
+
 .skill_list {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	margin-bottom: 35px;
+	padding-top: 20px;
 	padding-left: 25px;
 	padding-right: 25px;
 }
@@ -137,10 +144,15 @@ a:link {
 	text-decoration: none;
 }
 
+#projects {
+	margin-bottom: 100px;
+}
+
 #projects ul {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	padding-top: 20px;
 	margin-bottom: 30px;
 }
 
@@ -155,14 +167,8 @@ a:link {
 	transform: scale(1.01);
 }
 
-.social_media {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 20px;
-}
-
-.social_media li:hover {
-	transform: scale(1.02);
+.my-form {
+	margin-bottom: 100px;
 }
 
 .leave_message {
@@ -175,7 +181,6 @@ a:link {
   	outline: none;
   	border-color: rgba(0, 0, 0, .15);
   	background-color: white;
-  	font-size: 1.1em;
   	margin-bottom: 10px;
 }
 
@@ -187,7 +192,6 @@ a:link {
  	border: 2px solid #ccc;
   	border-radius: 4px;
 	background-color: #f8f8f8;
-	font-size: 16px;
   	resize: none;
 }
 
@@ -228,12 +232,21 @@ button:hover {
 }
 
 .footer {
-	text-align: right;
-	background-color: #7B0000;
+	background-color: #8F1717;
 	margin-top: 10px;
 	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-bottom: 1px;
+	padding-right: 15px;
 	color: #FFE3E3;
+}
+
+.footer span a {
+	color: #FFFFFF;
+}
+
+.nav-item {
+	padding-right: 25px;
+	color: #FFFFFF;
 }
 
 @media (min-width: 376px) {
@@ -244,9 +257,6 @@ button:hover {
 }
 
 @media (min-width: 600px) {
-	body {
-		font-size: 1.25rem;
-	}
 	.my_photo {
 		width: 200px;
 		height: auto;
@@ -257,16 +267,5 @@ button:hover {
 	.my_photo {
 		width: 220px;
 		height: auto;
-	}
-}
-
-@media (min-width: 500px) {
-	nav .nav_bar {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		margin-bottom: 40px;
 	}
 }
