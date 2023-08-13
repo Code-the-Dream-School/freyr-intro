@@ -42,10 +42,13 @@ const messageForm = document.querySelector('form[name="leave_message"]');
 
 messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
     const usersName = e.target.usersName.value;
     console.log(usersName);
+
     const usersEmail = e.target.usersEmail.value;
     console.log(usersEmail);
+
     const usersMessage= e.target.usersMessage.value;
     console.log(usersMessage);
 
