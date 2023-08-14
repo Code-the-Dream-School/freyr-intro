@@ -1,3 +1,5 @@
+
+
 const today = new Date();
 
 const thisYear = today.getFullYear();
@@ -32,3 +34,34 @@ for (i = 0; i < skills.length; i += 1) {
 
   skillsList.appendChild(skill); // this appends the items from the skill variable to the skillsSection. note: the instructions said skillList, but that seem to do nothing.
 }
+
+//const messageForm = document.getElementsByName('leave_message')[0];
+const messageForm = document.querySelector('form[name="leave_message"]') 
+
+messageForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+ 
+    const usersName = e.target.usersName.value;
+    const usersEmail = e.target.usersEmail.value;
+    const usersMessage = e.target.usersMessage.value;
+    console.log(usersName,usersEmail,usersMessage);
+    
+    const messageSection = document.getElementById('messages');
+    let messageList = messageSection.querySelector('ul');
+    let newMessage = document.createElement('li');
+    newMessage.innerHTML = `<a href=mailto:${usersEmail}> ${usersName} </a>` + "wrote:" + `<span> ${usersMessage}</span>`
+
+    messageList.appendChild(newMessage);
+    let removeButton = document.createElement('button');
+    removeButton.innerText = 'remove';
+    removeButton.type='button';
+
+    newMessage.appendChild(removeButton);
+    removeButton.addEventListener('click', (e) => {
+      let entry = removeButton.parentNode;
+      entry.remove();
+
+    })
+
+    messageForm.reset();
+});
