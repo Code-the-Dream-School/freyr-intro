@@ -34,9 +34,10 @@ body {
     padding: 0;
 }
 
-h1 {
+h1, h2 {
     color: #120898;
 }
+
 p {color: #07078e;}
 
 div.a {
@@ -68,3 +69,30 @@ div.c {
     text-align: justify;
 }
 
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #c5e7f3;
+  border-radius: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="uderMessage"],
+textarea {
+  color: #120898;
+  border: none;
+  font-size: 12px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 90%;
+  background-color: #ebf1f1;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+}
