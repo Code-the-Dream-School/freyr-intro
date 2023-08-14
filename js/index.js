@@ -70,13 +70,14 @@ messageForm.addEventListener("submit", (event) => {
     messageForm.reset();
 });
 
-fetch('https://api.github.com/users/Ronapj1991/reposa')
+fetch('https://api.github.com/users/Ronapj1991/repos')
     .then(handleErrors)
     .then( response => response.json() )
     .then( repositories => {
+        console.log(repositories)
         for (let i = 0; i < repositories.length; i += 1) {
             let project = document.createElement("li");
-            project.innerHTML = `<a href="${repositories[i].ml_url}">${repositories[i].name}</a>`;
+            project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
             projectList.appendChild(project);
         }
     })
