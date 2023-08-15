@@ -2,6 +2,15 @@
 * {
     margin: 0;
 }
+img {
+    display: inline-block;
+    position: relative;
+    top: 2rem;
+    border-right: 1.4rem;
+    width: 6rem;
+    border: .4rem solid rgb(52, 81, 94);
+    border-radius: 100%;
+}
 main, #website-brand, #main-navigation, #copyright {
     margin-top: 0;
 }
@@ -51,8 +60,11 @@ h1 {
     /* Although the font Notable looks bold, it only comes with one style. So, it does not allow me to change the font-weight of text that uses it. Therefore, I could not use it to meet the requirements of this portion of the assignment. Hence, I commented out the following line of code:
     font-family: 'Notable', sans-serif; 
     */
+    display: inline;
+    vertical-align: baseline;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
+    /* font-size: 7.5rem; */
     font-size: 2.7rem;
 }
 h2 {
