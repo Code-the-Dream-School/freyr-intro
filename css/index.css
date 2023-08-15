@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.25em;
+}
+
+body {
+  background-color: antiquewhite;
+  color: #454959;
+  font: 300 100%/1.5 "Work Sans", sans-serif;
+  margin: 1rem;
+}
+
+a {
+  color: #cc4e13;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font: 400 4rem/1.1;
+}
+
+h1 {
+  text-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1 rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  hyphens: auto;
+}
+
+button {
+  display: block;
+  width: 250px;
+  padding: 0.25rem 1rem;
+  border-radius: 20px/10px;
+  margin: 1rem auto;
+  box-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
+  background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 224, 0.8) 0%,
+      rgba(250, 100, 50, 0.2) 50%
+    ),
+    linear-gradient(#b40 0%, #d63 50%, #c51 51%, #e74 100%);
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.jsBtn {
+  width: 120px;
+  text-align: center;
+  font-size: 1em;
+  margin: 1rem auto;
+  box-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
+  background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 224, 0.8) 0%,
+      rgba(250, 100, 50, 0.2) 50%
+    ),
+    linear-gradient(#b40 0%, #d63 50%, #c51 51%, #e74 100%);
+  color: white;
+  padding: 0.25rem 1rem;
+}
+
+#experience,
+#skills,
+#connect {
+  display: block;
+}
+
+form {
+  /*width: 100%;
+  max-width: 768px;*/
+  display: flex;
+  flex-direction: column;
+  /*align-items: center; */
+  padding: 2rem 2rem 1.5rem;
+}
+
+input {
+  padding: 0.25rem 0.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-decoration: none;
+  background-color: rgba(250, 100, 50, 0.1);
+  margin: 20px;
+}
+
+.jsTag {
+  border-radius: 10px;
+  border: 2px solid firebrick;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
+  margin: 0.5rem;
+}
+
+.jsUserMessageSpan {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 200px;
+  }
+  form {
+    padding: 1rem 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    width: 150px;
+  }
+  form {
+    padding: 0.75rem 0.75rem 0;
+  }
+  li.card {
+    margin: calc(1rem - 5px) auto;
+  }
+}

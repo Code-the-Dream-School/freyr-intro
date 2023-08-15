@@ -26,6 +26,7 @@ let skillsList = skillsSection.querySelector("ul");
 
 for (let i = 0; i < skills.length; i++) {
   let skill = document.createElement("li");
+  skill.classList.add("jsTag");
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
@@ -44,15 +45,16 @@ messageForm.addEventListener("submit", (e) => {
 
   let newMessage = document.createElement("li");
 
-  newMessage.innerHTML = `<a href="${userEmail}" mailto:"${userEmail}">${userName}</a> wrote: <span>${userMessage}</span>`;
+  newMessage.innerHTML = `<a href="${userEmail}" mailto:"${userEmail}">${userName}</a> - wrote:<span class="jsUserMessageSpan">${userMessage}</span>`;
 
   let removeButton = document.createElement("input");
   //removeButton.type = "button";
   removeButton.setAttribute("type", "button");
 
   removeButton.value = "remove";
-  removeButton.style.width = "60px";
-  removeButton.style.color = "black";
+  //removeButton.style.width = "60px";
+  //removeButton.style.color = "black";
+  removeButton.classList.add("jsBtn");
 
   newMessage.appendChild(removeButton);
 
