@@ -1,7 +1,6 @@
 /* The weights available for the Poppins font for this project are 200 (extra light), 200 italic, 400 (regular), 700 (bold), and 700 bold italic. */
-body {
+* {
     margin: 0;
-    padding: 0;
 }
 main, #website-brand, #main-navigation, #copyright {
     margin-top: 0;
@@ -10,6 +9,9 @@ main, #website-brand, #main-navigation, #connect, #copyright {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+ul {
+    margin-top: 1em;
 }
 #main-navigation ul {
     margin-top: 0;
@@ -47,16 +49,26 @@ h1 {
     /* Although the font Notable looks bold, it only comes with one style. So, it does not allow me to change the font-weight of text that uses it. Therefore, I could not use it to meet the requirements of this portion of the assignment. Hence, I commented out the following line of code:
     font-family: 'Notable', sans-serif; 
     */
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
     font-size: 2.7rem;
 }
 h2 {
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
     font-size: 2.1rem;
 }
 h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
     font-family: 'Righteous', cursive;
     font-weight: 500;
     font-size: 1.3rem;
     color: #37474F;
+}
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 label, #about p {
     color: #102027;
@@ -87,6 +99,9 @@ section {
 .innerList {
     font-weight: 400;
     list-style-type: disc;
+}
+.subListOfInnerList {
+    margin-top: .3rem;
 }
 #skills ul li {
     border: 3px solid #546E7A;
@@ -175,6 +190,7 @@ footer {
     text-align: left;
 }
 #copyright {
-    margin-top: 5rem;
+    margin-top: 2.9rem;
+    padding-bottom: 3.5rem;
     text-align: center;
 }
