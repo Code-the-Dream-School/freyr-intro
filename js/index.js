@@ -124,10 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let editButton = createButtonAndAppendIt('Edit');
-        editButton.className = 'edit-and-save-btn';
+        editButton.id = 'edit-btn';
         let saveButton = createButton('Save');
-        saveButton.className = 'edit-and-save-btn';
-        let removeButton = createButtonAndAppendIt('remove');
+        saveButton.id = 'save-btn';
+        let removeButton = createButtonAndAppendIt('Remove');
         removeButton.id = 'remove-btn';
         /*
             The above code is the same as the following code, in a refactored form:

@@ -33,6 +33,23 @@ The weights that could be available for the 'Nunito Sans' font, for this project
 - For more information about how to create box shadows using cascading style sheets, visit:
   - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
 
+## Trimming Values from Data Captured from Form Fields
+
+let name = getValueOfFormFieldAndTrimIt('usersName');
+let email = getValueOfFormFieldAndTrimIt('usersEmail');
+let message = getValueOfFormFieldAndTrimIt('usersMessage');
+
+#### The code above does the same thing as the code below:
+
+let name = getValueOfFormField('usersName');
+name = name.trim();
+
+let email = getValueOfFormField('usersEmail');
+email = email.trim();
+
+let message = getValueOfFormField('usersMessage');
+message = message.trim();
+
 ## DOM Manipulation
 
 - For assistance with DOM Manipulation, I used the following resources:
