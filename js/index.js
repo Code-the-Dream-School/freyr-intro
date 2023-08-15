@@ -101,26 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let name = getValueOfFormFieldAndTrimIt('usersName');
         let email = getValueOfFormFieldAndTrimIt('usersEmail');
         let message = getValueOfFormFieldAndTrimIt('usersMessage');
-        
-        /*
-            The code above does the same thing as the code below:
-            let name = getValueOfFormField('usersName');
-            name = name.trim();
-
-            let email = getValueOfFormField('usersEmail');
-            email = email.trim();
-
-            let message = getValueOfFormField('usersMessage');
-            message = message.trim();
-        */
-
-        /*
-            A previous, simpler version of the code above, that did not have all of the same functionality, but which had some of it, looked like the code below:
-
-            let name = event.target.usersName.value;
-            let email = event.target.usersEmail.value;
-            let message = event.target.usersMessage.value;
-        */
 
         let createSpanWithMessage = (userMessage) => `<span>${userMessage}</span>`;
 
@@ -128,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let messageList = messageSection.querySelector('ul');
         let newMessage = document.createElement('li');
         //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong><span>${message}</span>`;
-        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a></strong> wrote: ${createSpanWithMessage(message)}`;
+        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> ${createSpanWithMessage(message)}`;
 
         function createButton(buttonText) {
             let typeOfButton = document.createElement('button');

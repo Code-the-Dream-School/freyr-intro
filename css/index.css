@@ -75,9 +75,16 @@ section {
 }
 #skills ul li {
     border: 3px solid #546E7A;
-    border-radius: 1rem;
     background-color: #d4e3e8;
     padding: .9rem 1.7rem 1.4rem 1.9rem;
+}
+#messages li {
+    border: 3px solid rgb(124, 150, 161);
+    background-color: #dbeef5;
+    padding: 1.3rem 1.7rem 1.3rem 1.9rem;
+}
+#skills ul li, #messages li {
+    border-radius: 1rem;
     display: inline-block;
 }
 input, textarea, button[type=submit] {
@@ -124,9 +131,6 @@ button[type=submit] {
 .edit-and-save-btn {   
     margin-right: .4em;
     margin-left: 11rem;
-}
-#messages li {
-    /*margin-left: -2.4rem; */
 }
 #messages li strong {
     
