@@ -33,7 +33,7 @@ ul {
     display: inline;
 }
 a:hover {
-    color: #22577A;
+    color: #1c4c6c;
 }
 #website-brand, #website-brand h1 {
     margin-bottom: 1.2rem;
@@ -280,18 +280,20 @@ button {
     border-radius: .7rem;
 }
 button[type=submit] {
-    border: .2rem solid #546E7A;
-    background-color: #546E7A;
+    border: .2rem solid #303e45;
+    background-color: #385360;
     font-family: 'Righteous', cursive;
 }
 button[type=submit]:hover {
-    background-color: #00B4D8;
-    color: #314047;
+    border: .2rem solid #3d4f58;
+    background-color: #a2d6e0;
+    color: #242e33;
     margin-left: .1rem;
     margin-top: -.1rem;
 }
 #edit-btn, #save-btn, #remove-btn {
     background-color: #8EACBB;
+    color: #071734;
     font-family: 'Blinker', sans-serif;
     font-weight: 600;
 }
