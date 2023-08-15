@@ -103,36 +103,25 @@ textarea {
 input[type=text] {
     width: 19.5rem;
 }
+button {
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: #FFF;
+    padding: .7rem .9rem;
+    border-radius: .7rem;
+}
 button[type=submit] {
     background-color: #546E7A;
     font-family: 'Righteous', cursive;
-    font-size: 1.5rem;
-    letter-spacing: .1rem;
-    color: #FFF;
-    padding: .7rem .9rem;
-    border-radius: .7rem;
 }
-.edit-and-save-btn {
+.edit-and-save-btn, #remove-btn {
     background-color: #8EACBB;
     font-family: 'Blinker', sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
-    letter-spacing: .1rem;
-    color: #FFF;
-    padding: .7rem .9rem;
-    border-radius: .7rem;
+}
+.edit-and-save-btn {   
     margin-right: .4em;
     margin-left: 11rem;
-}
-#remove-btn {
-    background-color: #8EACBB;
-    font-family: 'Blinker', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    letter-spacing: .1rem;
-    color: #FFF;
-    padding: .7rem .9rem;
-    border-radius: .7rem;
 }
 #messages li {
     list-style-type: none;
