@@ -112,3 +112,32 @@ button[type=submit] {
     padding: .7rem .9rem;
     border-radius: .7rem;
 }
+.edit-and-save-btn {
+    background-color: #8EACBB;
+    font-family: 'Blinker', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: #FFF;
+    padding: .7rem .9rem;
+    border-radius: .7rem;
+    margin-right: .4em;
+    margin-left: 11rem;
+}
+#remove-btn {
+    background-color: #8EACBB;
+    font-family: 'Blinker', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: #FFF;
+    padding: .7rem .9rem;
+    border-radius: .7rem;
+}
+#messages li {
+    list-style-type: none;
+    margin-left: -2.4rem;
+}
+#messages li span {
+    list-style-type: none;
+}

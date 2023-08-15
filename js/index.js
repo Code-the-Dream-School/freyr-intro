@@ -143,9 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return typeOfButton;
         }
 
-        let editButton = createButtonAndAppendIt('edit');
-        let saveButton = createButton('save');
+        let editButton = createButtonAndAppendIt('Edit');
+        editButton.className = 'edit-and-save-btn';
+        let saveButton = createButton('Save');
+        saveButton.className = 'edit-and-save-btn';
         let removeButton = createButtonAndAppendIt('remove');
+        removeButton.id = 'remove-btn';
         /*
             The above code is the same as the following code, in a refactored form:
 
@@ -160,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
             newMessage.appendChild(removeButton);
         */
 
-        editButton.style.margin = '0 .4rem 0 1rem';
+        //editButton.style.margin = '0 .4rem 0 3rem';
 
         messageList.appendChild(newMessage);
         
