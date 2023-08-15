@@ -48,6 +48,7 @@ label, #about p {
 }
 label {
     font-weight: 600;
+    font-size: 1.9rem;
 }
 section {
     margin-top: 5.7rem;
@@ -70,11 +71,31 @@ section {
     font-weight: 400;
     list-style-type: disc;
 }
-
 #skills ul li {
     border: 3px solid #546E7A;
     border-radius: 1rem;
     background-color: #d4e3e8;
     padding: .9rem 1.7rem 1.4rem 1.9rem;
     display: inline-block;
+}
+input {
+    border: .2rem solid #34515E;
+    width: 27rem;
+    border-radius: .7rem;
+    margin-bottom: 1.1rem;
+    padding: .7rem;
+    font-size: 1.3rem;
+    font-family: 'Blinker', sans-serif;
+}
+textarea {
+    border: .2rem solid #34515E;
+    width: 42rem;
+    height: 18rem;
+    border-radius: .7rem;
+    padding: .7rem;
+    font-size: 1.3rem;
+    font-family: 'Blinker', sans-serif;
+}
+input[type=text] {
+    width: 19.5rem;
 }
