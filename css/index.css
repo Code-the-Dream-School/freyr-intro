@@ -43,15 +43,14 @@ h3 {
     font-size: 1.3rem;
     color: #37474F;
 }
+label, #about p {
+    color: #102027;
+}
 label {
     font-weight: 600;
-    color: #102027;
 }
 section {
     margin-top: 5.7rem;
-}
-#about p {
-    color: #102027;
 }
 #experience li.outerList, #skills ul li {
     margin: 0 0 2.7rem -2.4rem;
@@ -60,7 +59,6 @@ section {
     border: 2px solid #CCCCC4;
     border-radius: 1.6rem;
     background-color: #EEEEE4;
-    /* padding: 3px 15px 30px 27px; */
     padding: .4rem 1.7rem 2.2rem 1.9rem;
     list-style-type: none;
 }
