@@ -67,10 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function placeCopyrightNotice() {
         let today = new Date();
         var thisYear = today.getFullYear();
-        let footer = document.querySelector('footer');
-        let copyright = document.createElement('p');
-        copyright.innerHTML = `&copy; Nataly Mota ${thisYear}`;
-        footer.appendChild(copyright);
+        // footer = document.querySelector('footer');
+        let copyrightSection = document.getElementById("copyright");
+        let copyrightNotice = document.createElement('p');
+        copyrightNotice.innerHTML = `&copy; Nataly Mota ${thisYear}`;
+        // footer.appendChild(copyrightNotice);
+        copyrightSection.appendChild(copyrightNotice)
     }
     placeCopyrightNotice();
     
