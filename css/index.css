@@ -1,0 +1,91 @@
+/* The weights available for the Poppins font for this project are 200 (extra light), 200 italic, 400 (regular), 700 (bold), and 700 bold italic. */
+main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#website-brand {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#main-navigation {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    padding-top: 0;
+}
+#connect {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+html {
+    color: #0D0D06;
+    font-family: 'Genos', sans-serif;
+}
+body {
+    background-color: #FAFAF0;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+h1 {
+    /* Although the font Notable looks bold, it only comes with one style. So, it does not allow me to change the font-weight of text that uses it. Therefore, I could not use it to meet the requirements of this portion of the assignment. Hence, I commented out the following line of code:
+    font-family: 'Notable', sans-serif; 
+    */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #34515E;
+}
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #34515E;
+}
+h3 {
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #37474F;
+}
+label {
+    font-weight: 600;
+    color: #102027;
+}
+section {
+    margin-top: 5.7rem;
+}
+#about p {
+    color: #102027;
+}
+#experience li.outerList {
+    border: 2px solid #CCCCC4;
+    border-radius: 1.6rem;
+    background-color: #EEEEE4; 
+    margin: 0 0 2.7rem -2.4rem;
+    /* padding: 3px 15px 30px 27px; */
+    padding: .4rem 1.7rem 2.2rem 1.9rem;
+    list-style-type: none;
+}
+#experience li:first-child {
+    font-weight: 500;
+    color: #102027;
+}
+.innerList {
+    font-weight: 400;
+    list-style-type: disc;
+}
+
+#skills ul li {
+    border: 3px solid #546E7A;
+    border-radius: 1rem;
+    background-color: #d4e3e8;
+    margin: 0 0 2.7rem -2.4rem;
+    padding: .9rem 1.7rem 1.4rem 1.9rem;
+    display: inline-block;
+}

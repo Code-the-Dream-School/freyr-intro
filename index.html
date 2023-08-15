@@ -8,17 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nataly Mota's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--
+        Although the font Notable looks bold, it only comes with one style. So, it does not allow me to change the font-weight of text that uses it. Therefore, I could not use it to meet the requirements of this portion of the assignment. Hence, I commented out the following line of code:
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <header id="top-of-webpage">
-        <h1>Nataly Mota</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#connect">Connect</a></li>
-            </ul>
-        </nav>
+        <section id="website-brand">
+            <h1>Nataly Mota</h1>
+        </section>
+        <section id="main-navigation">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#connect">Connect</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
     <main>
         <section id="about">
@@ -29,8 +44,8 @@
         <section id="experience">
             <h2>Experience</h2>
             <ul>
-                <li><h3>Code the Dream | May 2023 – current</h3>
-                    <ul>
+                <li class="outerList"><h3>Code the Dream | May 2023 – current</h3>
+                    <ul class="innerList">
                         <li>JavaScript Coding Training Participant in Code Ramp++ Course</li>
                         <li>Remote, Durham, North Carolina, USA
                             <ul>
@@ -42,8 +57,8 @@
                         </li>
                     </ul>
                 </li>
-                <li><h3>Code Tenderloin | Apr 2023 – May 2023</h3>
-                    <ul>
+                <li class="outerList"><h3>Code Tenderloin | Apr 2023 – May 2023</h3>
+                    <ul class="innerList">
                         <li>JavaScript Coding Training Participant in Code Ramp++ Course</li>
                         <li>Remote, San Francisco, California, USA
                             <ul>
@@ -55,17 +70,9 @@
                         </li>
                     </ul>
                 </li>
-                <li><h3>Code Tenderloin | Feb 2023 – Mar 2023</h3>
-                    <ul>
+                <li class="outerList"><h3>Code Tenderloin | Feb 2023 – Mar 2023</h3>
+                    <ul class="innerList">
                         <li>JavaScript Coding Training Participant in Code Ramp Course</li>
-                        <li>Remote, San Francisco, California, USA
-                            <ul></ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><h3>Code Tenderloin | Jan 2023 – Jan 2023</h3>
-                    <ul>
-                        <li>HTML/CSS Coding Training Participant in Pre-Code Ramp Course</li>
                         <li>Remote, San Francisco, California, USA
                             <ul>
                                 <li>Reviewed JavaScript and increased technical proficiency in this web programming language.</li>
@@ -77,16 +84,31 @@
                         </li>
                     </ul>
                 </li>
-                <li><h3>HCD International (Healthcare Dynamics International) | Oct 2008 – Feb 2009</h3>
-                    <ul>
-                        <li>Associate Graphics and Web Designer</li>
-                        <li>Lanham, Maryland, USA
+                <li class="outerList"><h3>Code Tenderloin | Jan 2023 – Jan 2023</h3>
+                    <ul class="innerList">
+                        <li>HTML/CSS Coding Training Participant in Pre-Code Ramp Course</li>
+                        <li>Remote, San Francisco, California, USA
                             <ul>
                                 <li>Reviewed HTML and CSS and learning new styling tricks, to qualify for entry into a free JavaScript course, while getting a brief update on new developments of both languages’ most recent versions, in order to improve one’s own knowledge of web development; and to keep current with the industry.</li>
                                 <li>Gained familiarity and experience with a web-based development environment for HTML, CSS and JavaScript, which is hosted in the CodePen.io website.</li>
                                 <li>Attended synchronous lectures part-time, Mondays and Wednesdays, from 8 PM to 11 PM CST, using Zoom, with the option to attend additional synchronous training during office hours, for further learning help, on Tuesdays and Thursdays, from 8 PM to 11 PM CST; while completing additional studies and practice outside of class time; as well as a co-requisite course in Job Readiness, from Mondays through Thursdays from 11 AM to 3 PM CST. Both courses were 3 weeks long. Lightly used Google Docs along with Google Classroom to submit assignments.</li>
                                 <li>Reported to instructors Caroline Sarkki, Nick Rice and Tyler Breisacher; as well as to teacher assistants Jacqueline Watts and Sheila Ramaswamy.</li>
                                 <li>Gained a certificate of course completion.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="outerList"><h3>HCD International (Healthcare Dynamics International) | Oct 2008 – Feb 2009</h3>
+                    <ul class="innerList">
+                        <li>Associate Graphics and Web Designer</li>
+                        <li>Lanham, Maryland, USA
+                            <ul>
+                                <li>Gained professional experience with programming XHTML (extended Hypertext Markup Language), CSS (Cascading Style Sheets) languages, and ActionScript; which is a scripting language similar to JavaScript.</li>
+                                <li>Demonstrated attention to detail by analyzing website accessibility problem situations for end-users, and by presenting appropriate solutions for Section 508 regulation compliancy for a portal within the Environmental Protection Agency’s website. Also, by quality testing website builds and launches, as well as by debugging and validating source code.</li>
+                                <li>Creatively designed and developed a multimedia user interface for a Flash component that was used as a centerpiece, in a previous version of the company’s website. Also produced an interactive prototype of it, that responded to the user’s mouse movements and mouse presses. Utilized ActionScript for developing functionality for this programming-related project. Did so while multi-tasking to assist with other work; and while solving problems and completing projects with minimal supervision.</li>
+                                <li>Worked independently and collaborated with coworkers as a team-player, to design solutions for both print-based and digital materials in an often fast-paced and extremely demanding, deadline driven environment. Utilized organization, communication, and troubleshooting skills to prioritize multiple assignments and to meet project deadlines.</li>
+                                <li>Worked full-time, Monday through Friday.</li>
+                                <li>Reported to Mr. Alfonso Sullivan, Manager of Human Resources.</li>
                             </ul>
                         </li>
                     </ul>
@@ -98,30 +120,30 @@
             <h2>Skills</h2>
             <ul></ul>
         </section>
+        <section>
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" id="name" name="usersName" required="true">
+                <br>
+                <label for="email">Email Address</label>
+                <br>
+                <input type="email" id="email" name="usersEmail" required="true">
+                <br>
+                <label for="message">Message</label>
+                <br>
+                <textarea id="message" name="usersMessage" required="true">
+                </textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul></ul>
+        </section>
     </main>
-    <section>
-        <h2>Leave a Message</h2>
-        <form name="leave_message">
-            <label for="name">Name</label>
-            <br>
-            <input type="text" id="name" name="usersName" required="true">
-            <br>
-            <label for="email">Email Address</label>
-            <br>
-            <input type="email" id="email" name="usersEmail" required="true">
-            <br>
-            <label for="message">Message</label>
-            <br>
-            <textarea id="message" name="usersMessage" required="true">
-            </textarea>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    <section id="messages">
-        <h2>Messages</h2>
-        <ul></ul>
-    </section>
     <footer>
         <section id="connect">
             <h2>Connect</h2>
