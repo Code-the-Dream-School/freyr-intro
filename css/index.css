@@ -3,11 +3,8 @@
     margin: 0;
 }
 img {
-    display: inline-block;
     position: relative;
-    top: 2rem;
-    border-right: 1.4rem;
-    width: 6rem;
+    margin-right: 1.4rem;
     border: .4rem solid rgb(52, 81, 94);
     border-radius: 100%;
 }
@@ -60,9 +57,7 @@ h1 {
     /* Although the font Notable looks bold, it only comes with one style. So, it does not allow me to change the font-weight of text that uses it. Therefore, I could not use it to meet the requirements of this portion of the assignment. Hence, I commented out the following line of code:
     font-family: 'Notable', sans-serif; 
     */
-    display: inline;
     vertical-align: baseline;
-    margin-top: 0.67em;
     margin-bottom: 0.67em;
     /* font-size: 7.5rem; */
     font-size: 2.7rem;
@@ -150,13 +145,20 @@ input, textarea {
 #connect li {
     list-style-type: none;
 }
-@media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 510px) and (max-width: 890px) {
+@media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 523px) and (max-width: 890px) {
     #connect {
         text-align: center;
     }
     #connect li {
         display: inline;
         margin-right: 1.5rem;
+    }
+    img {
+        display: inline-block;
+    }
+    h1 {
+        display: inline;
+        margin-top: 0.67em;
     }
 }
 @media (min-width: 890px) {
@@ -173,6 +175,10 @@ input, textarea {
     input[type=text] {
         width: 19.5rem;
     }
+    img {
+        top: 2rem;
+        width: 6rem;
+    }
 }
 @media (min-width: 720px) and (max-width: 889px) {
     #main-navigation ul {
@@ -187,6 +193,10 @@ input, textarea {
     }
     input[type=text] {
         width: 45%;
+    }
+    img {
+        top: 1.9rem;
+        width: 5.5rem;
     }
 }
 @media (min-width: 600px) and (max-width: 719px) {
@@ -203,8 +213,12 @@ input, textarea {
     input[type=text] {
         width: 55%;
     }
+    img {
+        top: 1.8rem;
+        width: 5rem;
+    }
 }
-@media (min-width: 510px) and (max-width: 599px), (min-width: 0px) and (max-width: 509px) {
+@media (min-width: 510px) and (max-width: 599px), (min-width: 0px) and (min-width: 523px) {
     input {
         width: 77%;
         min-width: 245px;
@@ -219,20 +233,37 @@ input, textarea {
         min-width: 235px;
     }
 }
-@media (min-width: 510px) and (max-width: 599px) {
+@media (min-width: 523px) and (max-width: 599px), (min-width: 0px) and (max-width: 522px) {
     #main-navigation ul {
         text-align: center;
     }
 }
-@media (min-width: 0px) and (max-width: 509px) {
-    #main-navigation ul {
-        text-align: left;
+@media (min-width: 523px) and (max-width: 599px) {
+    
+    #website-brand div {
+        margin-bottom: 1.5rem;
+    }
+    img {
+        top: 1.4rem;
+        width: 4.5rem;
+    }
+}
+@media (min-width: 0px) and (max-width: 522px) {
+    #website-brand div {
+        text-align: center;
     }
     #connect li {
         display: block;
     }
     #connect {
         text-align: left;
+    }
+    img {
+        width: 6rem;
+        margin-top: 2.3rem;
+    }
+    h1 {
+        margin-top: 0.2em;
     }
 }
 input:hover, textarea:hover {
