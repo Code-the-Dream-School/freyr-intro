@@ -1,33 +1,18 @@
 /* The weights available for the Poppins font for this project are 200 (extra light), 200 italic, 400 (regular), 700 (bold), and 700 bold italic. */
-main {
+main, #website-brand, #main-navigation, #copyright {
+    margin-top: 0;
+}
+main, #website-brand, #main-navigation, #connect, #copyright {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 #website-brand {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 #main-navigation {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
     padding-top: 0;
-}
-#connect {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-#copyright {
-    width: 80%;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
 }
 html {
     color: #0D0D06;
