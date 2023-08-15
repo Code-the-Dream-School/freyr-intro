@@ -1,6 +1,6 @@
 // index.js
 
-//Task 1 by steps - insert Copyright text in footer
+//Lesson 4-2 Task 1 by steps - insert Copyright text in footer
 
 // 1- Create a new date object
 const today = new Date();
@@ -60,7 +60,49 @@ for (let i = 0; i < skills.length; i++) {
     skillsList.appendChild(skillElement);
 }
 
+// LESSON 4-3
+// Select the "leave_message" form by name attribute
+const messageForm = document.forms.leave_message;
 
+const messageSection = document.querySelector('#messages');
+const messageList = messageSection.querySelector('ul');
 
+// Add an event listener to handle the "submit" event
+messageForm.addEventListener('submit', function(event) {
+// add a new line to prevent the default refreshing behavior of the "submit" event     
+  event.preventDefault(); 
+// Inside the callback function for your event listener, create a new variable for each of the three
+// form fields and retrieve the value from the event 
+  const usersName = event.target.usersName.value;
+  const usersEmail = event.target.usersEmail.value;
+  const usersMessage = event.target.usersMessage.value;
+// add a console.log statement to log the three variables you created in the previous step
+  console.log('Name:', usersName);
+  console.log('Email:', usersEmail);
+  console.log('Message:', usersMessage);
+// Create a new list item (li) element
+  const newMessage = document.createElement('li');
+// Set the inner HTML of the newMessage element
+  newMessage.innerHTML = `
+    <a href="mailto:${usersEmail}">${usersName}</a>
+    <span>${usersMessage}</span>
+  `;
+// Create a new remove button
+const removeButton = document.createElement('button'); 
+removeButton.textContent = 'Remove'; 
 
+removeButton.addEventListener('click', function () {
+  const entry = removeButton.parentNode;
+  entry.remove();
+});
+
+// Append the removeButton to the newMessage
+newMessage.appendChild(removeButton);
+
+// Append the newMessage to the messageList
+messageList.appendChild(newMessage);
+
+// Clear the form after submitting
+messageForm.reset();
+});
 
