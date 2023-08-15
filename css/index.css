@@ -53,11 +53,13 @@ section {
 #about p {
     color: #102027;
 }
+#experience li.outerList, #skills ul li {
+    margin: 0 0 2.7rem -2.4rem;
+}
 #experience li.outerList {
     border: 2px solid #CCCCC4;
     border-radius: 1.6rem;
-    background-color: #EEEEE4; 
-    margin: 0 0 2.7rem -2.4rem;
+    background-color: #EEEEE4;
     /* padding: 3px 15px 30px 27px; */
     padding: .4rem 1.7rem 2.2rem 1.9rem;
     list-style-type: none;
@@ -75,7 +77,6 @@ section {
     border: 3px solid #546E7A;
     border-radius: 1rem;
     background-color: #d4e3e8;
-    margin: 0 0 2.7rem -2.4rem;
     padding: .9rem 1.7rem 1.4rem 1.9rem;
     display: inline-block;
 }
