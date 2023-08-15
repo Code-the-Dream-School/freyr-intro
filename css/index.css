@@ -15,11 +15,13 @@ ul {
 }
 #main-navigation ul {
     margin-top: 0;
-    text-align: right;
+    padding-left: 0;
 }
-#main-navigation li, #connect li {
-    display: inline;
+#main-navigation li {
     margin-right: 1.5rem;
+}
+#main-navigation li {
+    display: inline;
 }
 a:hover {
     color: #22577A;
@@ -83,7 +85,7 @@ section {
 #experience li.outerList, #skills ul li, #messages li, #connect ul {
     margin: 0 0 2.7rem -2.4rem;
 }
-#experience li.outerList, #messages li, #connect li {
+#experience li.outerList, #messages li {
     list-style-type: none;
 }
 #experience li.outerList {
@@ -133,18 +135,96 @@ input, textarea {
     font-size: 1.3rem;
     margin-bottom: 1.1rem;
 }
-input {
-    width: 27rem;
+#connect li {
+    list-style-type: none;
+}
+@media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 510px) and (max-width: 890px) {
+    #connect {
+        text-align: center;
+    }
+    #connect li {
+        display: inline;
+        margin-right: 1.5rem;
+    }
+}
+@media (min-width: 890px) {
+    #main-navigation ul {
+        text-align: right;
+    }
+    input {
+        width: 27rem;
+    }
+    textarea {
+        width: 42rem;
+        height: 18rem;
+    }
+    input[type=text] {
+        width: 19.5rem;
+    }
+}
+@media (min-width: 720px) and (max-width: 889px) {
+    #main-navigation ul {
+        text-align: right;
+    }
+    input {
+        width: 62%;
+    }
+    textarea {
+        width: 97%;
+        height: 15rem;
+    }
+    input[type=text] {
+        width: 45%;
+    }
+}
+@media (min-width: 600px) and (max-width: 719px) {
+    #main-navigation ul {
+        text-align: right;
+    }
+    input {
+        width: 67%;
+    }
+    textarea {
+        width: 97%;
+        height: 12rem;
+    }
+    input[type=text] {
+        width: 55%;
+    }
+}
+@media (min-width: 510px) and (max-width: 599px), (min-width: 0px) and (max-width: 509px) {
+    input {
+        width: 77%;
+        min-width: 245px;
+    }
+    textarea {
+        width: 97%;
+        min-width: 250px;
+        height: 12rem;
+    }
+    input[type=text] {
+        width: 64%;
+        min-width: 235px;
+    }
+}
+@media (min-width: 510px) and (max-width: 599px) {
+    #main-navigation ul {
+        text-align: center;
+    }
+}
+@media (min-width: 0px) and (max-width: 509px) {
+    #main-navigation ul {
+        text-align: left;
+    }
+    #connect li {
+        display: block;
+    }
+    #connect {
+        text-align: left;
+    }
 }
 input:hover, textarea:hover {
     border-color: #8EACBB;
-}
-textarea {
-    width: 42rem;
-    height: 18rem;
-}
-input[type=text] {
-    width: 19.5rem;
 }
 button {
     font-size: 1.5rem;
@@ -182,9 +262,6 @@ footer {
     margin: 0;
     padding: 0;
     background-color: #CAF0F8;
-}
-#connect {
-    text-align: center;
 }
 #connect h2 {
     text-align: left;

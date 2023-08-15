@@ -50,6 +50,16 @@ email = email.trim();
 let message = getValueOfFormField('usersMessage');
 message = message.trim();
 
+## Default Browser Styles
+
+- You can find a list of default browser styles for HTML elements here:
+  - https://www.w3schools.com/cssref/css_default_values.php
+
+## CSS Media Queries
+
+- CSS media queries help to make the web-page or web-site responsive to different screen sizes. You can view the following guide, to learn more about how to use them:
+  - https://css-tricks.com/a-complete-guide-to-css-media-queries/
+
 ## DOM Manipulation
 
 - For assistance with DOM Manipulation, I used the following resources:
