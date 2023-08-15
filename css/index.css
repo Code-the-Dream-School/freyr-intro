@@ -78,16 +78,23 @@ section {
     padding: .9rem 1.7rem 1.4rem 1.9rem;
     display: inline-block;
 }
+input, textarea, button[type=submit] {
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: .4rem .5rem .3rem rgba(142, 172, 187, .2);
+}
 input, textarea {
     border: .2rem solid #546E7A;
     border-radius: .7rem;
     padding: .7rem;
     font-family: 'Blinker', sans-serif;
     font-size: 1.3rem;
+    margin-bottom: 1.1rem;
 }
 input {
     width: 27rem;
-    margin-bottom: 1.1rem;
+}
+input:hover, textarea:hover {
+    border-color: #8EACBB;
 }
 textarea {
     width: 42rem;
@@ -95,4 +102,13 @@ textarea {
 }
 input[type=text] {
     width: 19.5rem;
+}
+button[type=submit] {
+    background-color: #546E7A;
+    font-family: 'Righteous', cursive;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: #FFF;
+    padding: .7rem .9rem;
+    border-radius: .7rem;
 }

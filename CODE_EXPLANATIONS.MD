@@ -28,6 +28,11 @@ The weights that could be available for the 'Nunito Sans' font, for this project
   - https://www.markdownguide.org/basic-syntax
   - https://blog.duckdocs.com/posts/using-nested-lists-and-sub-bullets-in-markdown
 
+## CSS Box Shadows
+
+- For more information about how to create box shadows using cascading style sheets, visit:
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+
 ## DOM Manipulation
 
 - For assistance with DOM Manipulation, I used the following resources:
