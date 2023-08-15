@@ -23,20 +23,19 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
 }
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: #34515E;
+}
 h1 {
     /* Although the font Notable looks bold, it only comes with one style. So, it does not allow me to change the font-weight of text that uses it. Therefore, I could not use it to meet the requirements of this portion of the assignment. Hence, I commented out the following line of code:
     font-family: 'Notable', sans-serif; 
     */
-    font-family: 'Orbitron', sans-serif;
     font-size: 2.7rem;
-    font-weight: 700;
-    color: #34515E;
 }
 h2 {
-    font-family: 'Orbitron', sans-serif;
     font-size: 2.1rem;
-    font-weight: 700;
-    color: #34515E;
 }
 h3 {
     font-family: 'Righteous', cursive;
