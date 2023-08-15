@@ -9,7 +9,7 @@ main, #website-brand, #main-navigation, #connect, #copyright {
 }
 #main-navigation ul {
     margin-top: 0;
-    margin-left: 32rem;
+    text-align: right;
 }
 #main-navigation li, #connect li {
     display: inline;
@@ -159,6 +159,13 @@ button[type=submit]:hover {
 #save-btn {
     margin-left: 5rem;
 }
+#connect {
+    text-align: center;
+}
+#connect h2 {
+    text-align: left;
+}
 #copyright {
+    margin-top: 5rem;
     text-align: center;
 }
