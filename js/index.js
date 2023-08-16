@@ -205,7 +205,6 @@ function createProjectItem(project) {
         if (name.startsWith(prefix)) {
             name = name.replace(prefix, '');
         }
-        return name;
     });
     name = name[0].toUpperCase() + name.slice(1);
     name = name
