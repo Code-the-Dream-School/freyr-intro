@@ -113,6 +113,7 @@ messageForm.addEventListener('submit', (e) => {
     messageForm.reset();
 });
 
+// 4. add edit, save, remove for message list
 messageList.addEventListener('click', (e) => {
     e.preventDefault();
     if (e.target.parentNode.tagName !== 'BUTTON') {
@@ -164,3 +165,63 @@ messageList.addEventListener('click', (e) => {
     }
     nameActions[action]();
 });
+
+
+// 5. API - fetch projects from GitHub
+const githubUser = 'pstnv';
+const reposUrl = `https://api.github.com/users/${githubUser}/repos`;
+const projectSection = document.querySelector('#projects');
+const projectList = projectSection.querySelector('ul');
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch(reposUrl)
+        .then(response => response.json())
+        .then(repositories => {
+            const projects = repositories.map(repo => {
+                const { html_url: url, name } = repo;
+                return {
+                    url,
+                    name
+                }
+            });
+            return projects;
+        })
+        .then(projects => {
+            projects.forEach(project => {
+                const projectItem = createProjectItem(project);
+                projectList.append(projectItem);
+            });
+        })
+        .catch(error => {
+            console.log('Error: ' + error.message);
+            const rejectMessageItem = createRejectMessage();
+            projectList.append(rejectMessageItem);
+        });
+});
+
+function createProjectItem(project) {
+    let { url, name } = project;
+    ['app-', 'html-', 'js-'].forEach(prefix => {
+        if (name.startsWith(prefix)) {
+            name = name.replace(prefix, '');
+        }
+        return name;
+    });
+    name = name[0].toUpperCase() + name.slice(1);
+    name = name
+            .split('-')
+            .join(' ');
+    const projectItem = document.createElement('li');
+    projectItem.classList.add('projects_card');
+    projectItem.innerHTML = `
+        <a href="${url}" target="_blank"> ${name} </a>            
+    `;
+    return projectItem;
+}
+
+function createRejectMessage() {
+    rejectMessageItem = document.createElement('li');
+    rejectMessageItem.classList.add('projects_card');
+    rejectMessageItem.innerText = 'Try again later...';
+    return rejectMessageItem;
+}

@@ -31,7 +31,6 @@ section {
     scroll-margin-top: var(--header-height);
 }
 
-
 /*********************** HEADER *****************/
 
 .container {
@@ -182,6 +181,7 @@ header nav a:not(:first-child):hover {
 
 .projects_header {
     margin: 10px 0 40px;
+    padding: 0;
     font-size: 28px;
     font-family: 'Caveat Brush', cursive;
     letter-spacing: 2px;
@@ -191,6 +191,8 @@ header nav a:not(:first-child):hover {
 }
 
 .projects_cards {
+    margin: 0 auto;
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
