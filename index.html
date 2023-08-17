@@ -6,7 +6,10 @@
         <meta name="keywords" content="Description">
         <meta name="author" content="Yeni M.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>About</title>  
+      <title>About</title> 
+
+      <link href="index.css" rel="stylesheet"/>
+
     </head>
     <body>
         <h1>Who am I?</h1>
@@ -33,18 +36,26 @@ yntutors@gmail.com
 <section><h2>Leave a Message</h2>
     <form name="leave_message" >
     <input type="text" name="usersName" required=true>
+
     <label for="usersName">Name</label><br>
     <input type="email" name="usersEmail" required=true>
+
     <label for="usersEmail">Email Address</label><br>
     <textarea name="usersMessage" required=true></textarea>
+
     <label for="usersMessage">Message</label><br>
     <button type="submit" name="submit" value="Submit">submit</button>
     <label for="submit">Submit</label>
+
 </form></section>
+
 <section><h2 id="messages">Messages</h2>
     <ul></ul>
 </section>
+
 <footer></footer>
+
 <script src="js/index.js"></script>
+
 </body>
 </html>
