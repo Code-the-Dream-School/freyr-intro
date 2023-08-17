@@ -5,23 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Tetiana's content" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <h1>Tetiana's WebSite</h1>
-    <style>
-        body {
-          background-image: url('/instructions/images/background.png');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
-        </style>
+    <div class="header">
+      <h1>TETIANA'S FIRST WEBSITE</h1>
+      </div>
    
-    
-    <section>
-      <h2> -> ABOUT ME</h2>
-
-      <p>
+    <style src="css/index.css"> </style>
+    <section id="about_me_section">
+      <h2>*** ABOUT ME ***</h2>
+      
+      <p>I enjoy testing Software and have a passion to
+        learn the new tools and technologies. Testing is a kind of solving a logical puzzle. We not only find the bugs. We break the system too in terms of stress testing. I do help in releasing a quality product to the market. Even though developers do their best to release a good product, there will be some mistakes. I also love to take challenges. It’s a big challenge to explore new systems and find the bugs. I am also enjoying coding.</p>
+        
+        <p>
         I consider myself as: 
       </p>
       <ul>
@@ -32,12 +30,10 @@
         <li>adaptable
             to changing circumstances</li>
       </ul>
-
-      <p>I enjoy testing Software and have a passion to
-        learn the new tools and technologies.</p>
+      
     </section>
-    <section>
-      <h2> -> EXPERIENCE:</h2>
+    <section id="experience_section">
+      <h2>*** EXPERIENCE ***</h2>
 
       <p>
         I have been in the IT industry for 5 years and I started off as a manual
@@ -50,16 +46,20 @@
       </p>
     </section>
     <section id="skills">
-        <h2>Skills</h2>
+        <h2>*** SKILLS ***</h2>
         <ul></ul>
     </section>
-    <section>
-      <h2> -> CONNECT:</h2>
-      <a href="https://github.com/tetianaNEC/freyr-intro/" > <img src="" alt=""> Visit my GIT HUB</a>
+    <section id="connect_section">
+      <h2>*** CONNECT ***</h2>
+      
     </section>
     <footer>
+        <a href="https://github.com/tetianaNEC/freyr-intro/" > <img src="/images/github.png" id="git_image"> </a>
         <section>
-            <h2>Leave a Message</h2>
+            <fieldset>
+                <legend>
+                    <h3>Leave a message</h3>
+                </legend>
             <form name = "leave_message">
                 <br><label>Name</label></br>
                 <input type ="text" name ="usersName"  required ="true"/>
@@ -67,13 +67,15 @@
                 <input type ="text" name ="usersEmail"  required ="true"/>
                 <br><label>Message</label></br>
                 <textarea name = "usersMessage"  required ="true"></textarea>
-                <br><button type = "submit">Submit</button></br>
+                <br><button type = "submit">submit</button></br>
             </form>
-        </section>
+        </fieldset>
+        </section>     
         <section id="messages">
-            <h2>Messages</h2>
+            <h2>*** MESSAGES ***</h2>
             <ul></ul>
         </section>
+    
     </footer>
     <script src="js/index.js"></script>
   </body>
