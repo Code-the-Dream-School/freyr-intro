@@ -40,3 +40,4 @@ messageForm.addEventListener("submit", (event) => {
     messageList.appendChild(newMessage);
     messageForm.reset();  
 } );   
+
