@@ -58,6 +58,15 @@ function AboutMeAnimation() {
 
 
 //EVENT HANDLERS
+
+function deleteMessage(event){
+   let removebutton = event.target
+   let message = removebutton.parentNode
+
+   // don't remove only the button, but remove the entire message
+   message.remove()
+   
+}
 function submit(event){
    //prevent it from refreshing the whole page 
    event.preventDefault()
@@ -66,20 +75,24 @@ function submit(event){
    const Email = event.target.usersEmail.value
    const usersMessage = event.target.usersMessage.value
    const newMessage = document.createElement('li')
-
-   newMessage.setAttribute("id","Inbox")
-   newMessage.innerHTML = `<a> ${Name} ${Email} ${usersMessage}<a/a> <span></span>`
-   
-   messageList.appendChild(newMessage)
+   newMessage.innerHTML = `<a href = "mailto:${Email}"> ${Name}</a> <span>${Email} ${usersMessage}</span> `
    //clear all inputs
    event.target.reset()
-}
+   
+   //REMOVE BUTTON FOR MESSAGES
+   const removebutton = document.createElement('button')
+         console.log(removebutton)
+   removebutton.innerHTML = "remove"
+   removebutton.setAttribute("type","button")
+   
+   
 
-function entry(event){
-   removebutton.remove()
-}
-function Click(event){
-   console.log("This is the event: ",event)
+   console.log("RemoveButton",removebutton)
+   console.log("Messages",messages)
+   //TODO can't access null messages, it's inside the handler
+   newMessage.appendChild(removebutton)
+   removebutton.addEventListener("click",deleteMessage)
+   messageList.appendChild(newMessage)
 }
 
 
@@ -91,16 +104,3 @@ messageForm.addEventListener("submit",submit)
 
 
 
-//REMOVE BUTTON FOR MESSAGES
-const removebutton = document.createElement('button')
-
-removebutton.innerHTML = "remove"
-removebutton.setAttribute("type","button"
-)
-const messages = document.getElementById("Inbox")
-
-console.log("RemoveButton",removebutton)
-console.log("Messages",messages)
-//TODO can't access null messages, it's inside the handler
-messages.appendChild(removebutton)
-removebutton.addEventListener("click",entry)
