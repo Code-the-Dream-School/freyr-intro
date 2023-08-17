@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 projectList.append(projectItem);
             });
         })
-        .catch(error => {
+        .catch(error => { // on error show message 'Try again later...'
             console.log('Error: ' + error.message);
             const rejectMessageItem = createRejectMessage();
             projectList.append(rejectMessageItem);
@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function createProjectItem(project) {
     let { url, name } = project;
+    // delete prefix from project name
     ['app-', 'html-', 'js-'].forEach(prefix => {
         if (name.startsWith(prefix)) {
             name = name.replace(prefix, '');
