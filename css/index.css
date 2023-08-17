@@ -1,5 +1,5 @@
 body {
-  background-image: url("/instructions/images/background.png");
+  background-image: url("../images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -79,10 +79,12 @@ button {
 #connect_section,
 #messages {
   border: 4px;
+  
 }
 
 footer {
   background: fixed;
+  align-items: center;
 }
 
 #git_image {
@@ -90,3 +92,4 @@ footer {
   width: 14%;
   height: 14%;
 }
+

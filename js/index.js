@@ -28,7 +28,7 @@ for (var i = 0; i < skills.length; i++) {
 }
 
 const messageForm = document.getElementsByName("leave_message");
-messageForm[0].addEventListener("submit", Callback, true);
+messageForm[0].addEventListener("submit", handleSubmit, true);
 function handleSubmit(event) {
   event.preventDefault();
   const name = event.target.usersName.value;
