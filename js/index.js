@@ -188,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projectList.append(projectItem);
         });
     });
+    // on error show message 'Try again later...'
     githubRequest.addEventListener('error', (e) => {
         const rejectMessageItem = createRejectMessage();
         projectList.append(rejectMessageItem);
@@ -199,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function createProjectItem(project) {
     let { html_url: url, name } = project;
+    // delete prefix from project name
     ['app-', 'html-', 'js-'].forEach(prefix => {
         if (name.startsWith(prefix)) {
             name = name.replace(prefix, '');
