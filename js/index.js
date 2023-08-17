@@ -35,9 +35,9 @@ messageForm.addEventListener("submit", (event) => {
     removeButton.addEventListener("click", (event) => {
     const entry = removeButton.parentNode
     entry.remove();
+    })
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
-    })
     messageForm.reset();  
 } );   
     
