@@ -1,0 +1,92 @@
+body {
+  background-image: url("/instructions/images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+* {
+  color: rgb(18, 18, 94);
+}
+h1 {
+  font-size: 40px;
+  color: rgb(9, 74, 74);
+  text-align: center;
+  font-weight: bolder;
+  font-family: monospace;
+}
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #cce5ff;
+  font-size: 50px;
+}
+h2,
+h3,
+label {
+  color: rgb(68, 120, 120);
+  text-align: center;
+  font-family: monospace;
+}
+
+h2 {
+  background-color: white;
+}
+
+p {
+  text-align: center, justify;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+
+li {
+  text-align: left;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+a {
+  color: rgb(77, 77, 241);
+}
+fieldset {
+  width: min-content;
+  border-color: rgb(68, 120, 120);
+}
+
+input,
+textarea {
+  width: 300px;
+}
+textarea {
+  height: inherit;
+}
+button {
+  border-style: solid;
+  border-color: rgb(68, 120, 120);
+  color: rgb(68, 120, 120);
+}
+#experience_section,
+#skills,
+#about_me_section {
+  border: 4px;
+  padding: 45px;
+}
+
+#connect_section,
+#messages {
+  border: 4px;
+}
+
+footer {
+  background: fixed;
+}
+
+#git_image {
+  float: right;
+  width: 14%;
+  height: 14%;
+}
