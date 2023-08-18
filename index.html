@@ -12,14 +12,32 @@
 
     </head>
     <body>
-        <h1>Who am I?</h1>
-        <p>Hey y'all, my name is Yeni Martinez and I am currently working as a Spanish 
+        <header>
+            <h1>Yeni Martinez</h1>
+            <nav>
+                <ul>
+                 <li>
+                    <a href="#About">About</a>
+                 </li>   
+                 <li>
+                    <a href="#Experience">Experience</a>
+                 </li>  
+                 <li>
+                    <a href="#Skills">Skills</a>
+                 </li>  
+                </ul>    
+            </nav>
+        </header>
+        <section id="About">
+            <h1>Who am I?</h1>
+            <p>Hey y'all, my name is Yeni Martinez and I am currently working as a Spanish 
 teacher in New York City. I am hoping in 3 years or less to switch careers. 
 I have been interested in software engineering for some time but I just 
 couldn't find time to study since I have a very busy schedule. I am grafeful 
 to have found a great program like Code the Dream because it has allowed me 
 to work and study at the same time. </p>
-<section> 
+        </section>
+<section id="Experience"> 
     <h2>Experience</h2>
     <ul>
         <li>The American Dream Charter School</li>
@@ -27,12 +45,21 @@ to work and study at the same time. </p>
         <li>LIC Optometry</li>
     </ul>
 </section>
-<section id="skills">
+<section id="Skills">
     <h2>Skills</h2>
-    <ul></ul>
-    <h2>Connect</h2>
+    <ul>
+        <li>Google Suite</li>
+        <li>Microsoft Office</li>
+        <li>Teamwork Skills</li>
+        <li>Strong work ethic</li>
+        <li>Proficient speaker in Spanish & English</li>
+    </ul>
 </section>
-yntutors@gmail.com
+
+<section>
+    <h2>Connect</h2>
+    yntutors@gmail.com
+</section>
 <section><h2>Leave a Message</h2>
     <form name="leave_message" >
     <input type="text" name="usersName" required=true>
@@ -45,8 +72,6 @@ yntutors@gmail.com
 
     <label for="usersMessage">Message</label><br>
     <button type="submit" name="submit" value="Submit">submit</button>
-    <label for="submit">Submit</label>
-
 </form></section>
 
 <section><h2 id="messages">Messages</h2>
