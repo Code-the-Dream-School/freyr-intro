@@ -29,6 +29,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -81,6 +82,10 @@ button {
   display: block;
 }
 
+.margin-less {
+  padding-inline-start: 0;
+}
+
 form {
   /*width: 100%;
   max-width: 768px;*/
@@ -96,12 +101,17 @@ input {
 
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 1rem;
   text-decoration: none;
   background-color: rgba(250, 100, 50, 0.1);
-  margin: 20px;
+  margin: 20px 0;
 }
+
+/*.date {
+  align-items: right;
+} */
 
 .jsTag {
   border-radius: 10px;
@@ -112,9 +122,22 @@ input {
   margin: 0.5rem;
 }
 
+/*
 .jsUserMessageSpan {
-  margin: 0 10px;
+  margin: 0 2.8rem 0 0;
 }
+*/
+
+#messageList {
+  margin-top: -0.2rem;
+}
+
+/*
+#messageList .jsBtn {
+  display: inline;
+  text-align: right;
+}
+*/
 
 @media (max-width: 768px) {
   button {

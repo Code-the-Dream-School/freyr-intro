@@ -33,12 +33,20 @@ for (let i = 0; i < skills.length; i++) {
 
 const messageForm = document.getElementById("messageForm");
 
+const messageSection = document.getElementById("messages");
+
+messageSection.style.display = "none";
+
+let messageCount = 0;
+
 messageForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let userName = e.target.usersName.value;
   let userEmail = e.target.usersEmail.value;
   let userMessage = e.target.usersMessage.value;
-  let messageSection = document.getElementById("messages");
+
+  messageSection.style.display = "";
+  messageCount++;
 
   //let messageList = messageSection.getElementsByTagName("ul");
   let messageList = document.getElementById("messageList");
@@ -63,6 +71,10 @@ messageForm.addEventListener("submit", (e) => {
   removeButton.addEventListener("click", (e) => {
     let entry = removeButton.parentNode.parentNode;
     entry.removeChild(newMessage);
+    messageCount--;
+    if (messageCount === 0) {
+      messageSection.style.display = "none";
+    }
   });
 
   e.target.reset();
