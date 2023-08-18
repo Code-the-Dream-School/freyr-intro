@@ -34,10 +34,10 @@ messageForm.addEventListener("submit", (event) => {
     removeButton.type = "button" 
     removeButton.addEventListener("click", (event) => {
     const entry = removeButton.parentNode
-    entry.remove();
+    entry.remove();    
     })
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageForm.reset();  
 } );   
-    
+
