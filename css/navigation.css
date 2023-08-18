@@ -1,3 +1,4 @@
+
 #Circle { 
     width: 194px;
     height: 194px;
@@ -24,39 +25,23 @@
     transform: translate(-51%, -47%);
   
   }
-  /* BUTTONS */
-  .Home{
-    position: absolute;
-      top: 36%;
-      left: 60%;
-      width: 183px;
-      height: 31px;
-      background-color: darkblue;
-      border-radius: 4px;
-      border-color: azure;
-      text-transform: capitalize;
-      font-size: 20px;
-  }
-  /* #Hidden{
+  .Hidden{
     display: none;
-  } */
-  
-  /* .Home:hover{
-   
-  } */
-  .Projects{
-    position: absolute;
-      top: 47%;
-      left: 60%;
-      width: 183px;
-      height: 31px;
-      background-color: darkblue;
-      border-radius: 4px;
-      border-color: azure;
-      text-transform: capitalize;
-      font-size: 20px;
   }
-  .Contact{
+  /* BUTTONS */
+  #Home{
+    position: absolute;
+    width: 183px;
+    height: 31px;
+    top: 35%;
+    left: 60%;
+    border-color: azure;
+    background-color: darkblue;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+  #Contact{
     position: absolute;
       top: 54%;
       left: 60%;
@@ -68,7 +53,7 @@
       text-transform: capitalize;
       font-size: 20px;
   }
-  .AboutMe{
+  #AboutMe{
     position: absolute;
     width: 183px;
     height: 31px;
@@ -80,3 +65,62 @@
     text-transform: capitalize;
     font-size: 20px;
   }
+  #Projects{
+    position: absolute;
+    width: 183px;
+    height: 31px;
+    top: 47%;
+    left: 60%;
+    border-color: azure;
+    background-color: darkblue;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+  
+  #Home:hover{
+    background-color: darkcyan;
+    width: 184px;
+    height: 33px;
+  }
+  #Projects:hover{
+    background-color: darkcyan;
+    width: 184px;
+    height: 33px;
+  }
+  #Contact:hover{
+    background-color: darkcyan;
+    width: 184px;
+    height: 33px;
+  }
+  #AboutMe:hover{
+    background-color: darkcyan;
+    width: 184px;
+    height: 33px;
+  }
+  
+  /* .Home:hovr{
+   
+  } */
+  /* a */
+  body{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100vh;
+    min-width: 100vh;
+  }
+  /* /* #Hidden{
+    display: none;
+  } */
+   */
+
+  #GithubIcon,
+#InstagramIcon,
+#PortfolioIcon,
+#MailIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}

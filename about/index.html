@@ -6,39 +6,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AboutMe</title>
-  <link type="text/css" href="../css/index.css" rel="stylesheet" />
-  <link type="text/css" href="../css/navigation.css" rel="stylesheet" />
-  
-  
+  <link rel="stylesheet" href="../about/about.css" type = "text/css">
 </head>
 <body>
-  <section class = "Menu">
-    <button   alt = powerButton id = "Circle"></button>
+  <section>
 
-    <button class = "Home" id = "Hidden">Home</button>
-    <button class = "Projects" id = "Hidden">Projects</button>
-    <button class = "Contact" id = "Hidden">Contact</button>
-    <button class = "AboutMe" id = "Hidden">About Me</button>
-  </section>
+  
+  <button   alt = powerButton id = "Circle"></button>
+    <a href="../index.html">
+      <button id = "Home"  class = "Hidden"  >Home</button>
+    </a>
+  
+
+  <a href="../Projects/index.html">
+<button id = "Projects"    class = "Hidden" >Projects</button>
+</a>
+<a href="../Contact/index.html">
+<button id = "Contact"   class = "Hidden"  >Contact</button>
+</a>
+<a href="index.html">
+<button id = "AboutMe"  class = "Hidden"   >About Me</button>
+</a>
   
  
   <!-- Your content goes here -->
-  <section class = "AboutMeButton">
+  <section class = "About">
     <!-- ABoutME-->
-    <h1 name = "Animation1">Hi, my name is John Gutierrez</h1>
-    <p>I am pursuing a degree in computer science. I'm very involved in a few industries and still learning about Game development, Web Development, and Software Engineering.</p>
+    <h1 name = "Animation1" id  = "Animation1">Hi, my name is John Gutierrez</h1>
+    <p name = "Animation2" id = "Animation2">I am pursuing a degree in computer science. I'm very involved in a few industries and still learning about Game development, Web Development, and Software Engineering.</p>
   </section>
   <!-- Expereince-->
-  <section class = "SkillsButton">
-    <ul>
-      <li>Games</li>
-      <li>Web Projects</li>
-    </ul>
-  </section>
   
- 
+<section class = "SkillsButton">
+  <div class = "Experience">
+      <h2 id = "ExpereinceHeader">Experience</h2>
+  <ul class = "SkillList">
+        <li id = "GameExperience">
+          <h3 id = "Games" class = "GameDevelopmentExp">GameDevelopment</h3>
+          <ul id = "GameList">
+            <li>Game Testing and Buggin</li>
+            <p>Experience Level: Intermediate</p>
+            <li>User Interface Design</li>
+            <p>Experience Level: Begginer</p>
+            <li>Game Optimization</li>
+            <p>Experience Level: Begginer/Intermediate</p>
+            <li>Roblox Platform</li>
+            <p>Experience Level: Advanced</p>
+          </ul>
+        </li>
+        <li id = "Web">
+            <h4 class  = "WebDevelopment"> WebDevelopment</h4>
+            <ul>
+             
+                  <li> HTML</li>
+                    <p>Experience Level: Begginer</p>
+                     <li> CSS</li>
+                      <p>Experience Level: Begginer</p>
+                    <li>JAVASCRIPT</li>
+                    <p>Expereince Level: Begginer</p>
+             
+          </ul>
+        </li>
+        <li id = "Languages">
+          <h4 class = "ProgrammingLanguages">ProgrammingLanguage</h4>
+          <ul>
+            <li>JavaScript</li>
+            <p>Experience Level: Begginer</p>
+            <li>Python</li>
+            <p>ExperienceLevel: Begginer</p>
+            <li>C++</li>
+            <p>Experience Level: Begginer</p>
+            <li>Lua(ROBLOX)</li>
+            <p> Experience Level: Intermediate</p>
+          </ul>
+        </li>
+        <li id = "DataStructures">
+          <h5>DataStructures</h5>
+          <ul>
+            <li>Arrays, Linked Lists, Stacks, Queues</li>
+            <p>ExperienceLevel: Begginer</p>
+            <li>Trees (Binary Trees, Binary Search Trees)</li>
+            <p>ExperienceLevel: Begginer</p>
+            <li>Sorting Algorithms (e.g., Bubble Sort, Quick Sort, Merge Sort)</li>
+            <p>ExperienceLevel: Begginer</p>
+            <li>Searching Algorithms (e.g., Binary Search)</li>
+            <p>ExperienceLevel: Begginer</p>
+            <li>Searching Algorithms (e.g., Binary Search)</li>
+            <p>ExperienceLevel: Begginer</p>
+            <li>Recursion and Dynamic Programming</li>
+            <p>ExperienceLevel: Begginer</p>
+          </ul>
+        </li>
+        
+  </ul>
+  </div>
+</section>
+  <footer id = "footer" class = "ContactMeButton" >
+    <a href="https://github.com/">
+      <img src="../css/images/github.png" alt="GithubIcon" class = "GithubIcon" width =  30 height = 30>
+    </a>
+    
+      <a href="https://www.instagram.com/">
+        <img src="../css/images/instagram.png" alt="InstagramIcon" class = "InstagramIcon" width = 30 height = 30>
+      </a>
+      <a href="https://www.example.com/">
+        <img src="../css/images/contract.png" alt="PortfolioIcon" class = "PortfolioIcon" width = 30 height = 30>
+      </a>
+      <a href="https://wwww.mail.google.com/">
+        <img src="../css/images/mail-inbox-app.png" alt="Mailicon" class = "MailIcon" width = 30 height = 30>
+      </a>
   <script src = "about.js"></script>
  
-
+</section>
 </body>
 </html>

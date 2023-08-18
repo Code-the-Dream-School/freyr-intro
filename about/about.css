@@ -1,0 +1,239 @@
+body{
+  background-color: cyan;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+.Experience{
+  background-color: bisque;
+  position: absolute;
+  top: 335px;
+  left: 218px;
+}
+.SkillList li{
+  background-color: royalblue;
+}
+#ExpereinceHeader{
+  background-color: chartreuse;
+}
+
+#GameExperience{
+  background-color: coral;
+}
+#Web{
+  background-color: crimson;
+}
+#Languages{
+  background-color: darkmagenta;
+}
+#DataStructures{
+  background-color: forestgreen;
+}
+#Games{
+  background-color: cadetblue;
+}
+#GameList{
+  background-color: darkkhaki;
+}
+/* .GameDevelopmentExp{
+  background-color: bisque;
+} */
+#Circle { 
+  width: 194px;
+  height: 194px;
+  border-radius: 60%;
+  position: absolute;
+  top: 47%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  background-color: darkblue;
+  background-image: url("../css/images/powerbutton-PhotoRoom.png-PhotoRoom.png");
+  background-blend-mode: color;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+  box-shadow: -8px 23px 19px rgba(7, 1, 94, 0.452), /* Outer shadow */ inset -4px 19px 16px rgba(70, 130, 180, 0.336), /* Inner shadow */ 78px -23px 16px rgba(-14, 53, -16, -1.9), 33px 50px 191px rgba(32, 0, 30, 0.1);
+}
+
+.CircleImage{
+  color: blue;
+  position: absolute;
+  top: 46%;
+  left: 52%;
+  transform: translate(-51%, -47%);
+
+}
+.Hidden{
+  display: none;
+}
+/* BUTTONS */
+#Home{
+  position: absolute;
+  width: 183px;
+  height: 31px;
+  top: 35%;
+  left: 60%;
+  border-color: azure;
+  background-color: darkblue;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#Contact{
+  position: absolute;
+    top: 54%;
+    left: 60%;
+    width: 183px;
+    height: 31px;
+    background-color: darkblue;
+    border-radius: 4px;
+    border-color: azure;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+#AboutMe{
+  position: absolute;
+  width: 183px;
+  height: 31px;
+  top: 41%;
+  left: 60%;
+  border-color: azure;
+  background-color: darkblue;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#Projects{
+  position: absolute;
+  width: 183px;
+  height: 31px;
+  top: 47%;
+  left: 60%;
+  border-color: azure;
+  background-color: darkblue;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+#Home:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#Projects:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#Contact:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#AboutMe:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+
+/* .Home:hovr{
+ 
+} */
+/* a */
+
+/* /* #Hidden{
+  display: none;
+} */
+ 
+#GithubIcon,
+#InstagramIcon,
+#PortfolioIcon,
+#MailIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#Animation1{
+  background-color: bisque;
+  border-radius: 20px;
+  position: absolute;
+    top: 93px;
+    left: 212px;
+    font-size: 51px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#Animation2{
+  background-color: purple;
+  border-radius: 20px;
+  position: absolute;
+  top: 224px;
+  left: 212px;
+  font-size: 33px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+/* .GameExperience{
+  background-color: burlywood;
+}
+.SkillsButton{
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  position: absolute;
+  top: 420px;
+  left: 233px;
+  width: 1108px;
+  height: 75px;
+}
+#Expereince{
+  background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: -61px;
+    left: -2px;
+}
+.SkillsButton ul[name = "Games"]  {
+  
+  margin-right: 10px;
+  background-color:navy ;
+}
+
+.GameDevelopmentExp{
+  display: flex;
+  justify-content: end;
+  background-color: brown;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+.WebDevelopment{
+  display: flex;
+  justify-content: end;
+  background-color: brown;
+  position: absolute;
+  top: 345px;
+  left: 8px;
+}
+.ProgrammingLanguages{
+  display: flex;
+  justify-content: end;
+  background-color: brown;
+  position: absolute;
+  top: 548px;
+  left: 8px;
+}
+.DataStructures {
+  display: flex;
+  justify-content: end;
+  background-color: brown;
+  position: absolute;
+  top: 748px;
+  left: 8px;
+} */
