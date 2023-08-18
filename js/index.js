@@ -30,7 +30,6 @@ messageForm.addEventListener("submit", (event) => {
     
     console.log(userName, email, message);
     
-    let messageSection = document.querySelector("#messages");
     let messageList = document.querySelector('#messages ul');
     let newMessage = document.createElement('li');
     
@@ -74,7 +73,6 @@ fetch('https://api.github.com/users/Ronapj1991/repos')
     .then(handleErrors)
     .then( response => response.json() )
     .then( repositories => {
-        console.log(repositories)
         for (let i = 0; i < repositories.length; i += 1) {
             let project = document.createElement("li");
             project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
