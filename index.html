@@ -4,6 +4,7 @@
     <title>Krista Zaloudek Portfolio</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
   <body>
     <header>
@@ -15,48 +16,49 @@
         </ul>
       </nav>
     </header>
-    <h1>Krista Zaloudek</h1>
-    <section>
-      <h2 id="about">About</h2>
-      <p>
-        Krista is an excited life long learner. She has worked in several
-        industries to understand and define business problems and to seek
-        creative, efficient solutions. A lover of puzzles, she is excited to be
-        improving her development skills. No stranger to hard work, Krista has
-        the drive to learn new technology and SaaS solutions. She'd love to
-        connect with you on your project and get to know you better!
-      </p>
-    </section>
-    <section>
-      <h2 id="experience">Experience</h2>
-      <h3>First American Financial</h3>
-      <ul>
-        <li>Zendesk Administrator</li>
-        <li>Zoom Administrator</li>
-        <li>Lexis Nexis Administrator</li>
-      </ul>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul></ul>
-    </section>
-    <section>
-      <h2 id="connect">Connect</h2>
-      <h3>LinkedIn</h3>
-      <p>
-        <a
-          href="https://www.linkedin.com/in/krista-zaloudek-2a6b011aa"
-          target="_blank"
-          rel="noreferrer noopener"
-          >LinkedIn Resume</a
-        >
-      </p>
-    </section>
+    <main>
+      <h1>Krista Zaloudek</h1>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Krista is an excited life long learner. She has worked in several
+          industries to understand and define business problems and to seek
+          creative, efficient solutions. A lover of puzzles, she is excited to
+          be improving her development skills. No stranger to hard work, Krista
+          has the drive to learn new technology and SaaS solutions. She'd love
+          to connect with you on your project and get to know you better!
+        </p>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <h3>First American Financial</h3>
+        <ul>
+          <li class="card">Zendesk Administrator</li>
+          <li class="card">Zoom Administrator</li>
+          <li class="card">Lexis Nexis Administrator</li>
+        </ul>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul></ul>
+      </section>
+      <section id="connect">
+        <h2>Connect</h2>
+        <h3>LinkedIn</h3>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/krista-zaloudek-2a6b011aa"
+            target="_blank"
+            rel="noreferrer noopener"
+            >LinkedIn Resume</a
+          >
+        </p>
+      </section>
+    </main>
     <footer>
       <section>
         <h2>Leave a Message</h2>
-
-        <form action="" name="leave_message" id="messageForm">
+        <form name="leave_message" id="messageForm">
           <label for="usersName">Name</label>
           <input type="text" name="usersName" required />
           <br />
@@ -64,13 +66,7 @@
           <input type="email" name="usersEmail" required />
           <br />
           <label for="usersMessage">Message</label>
-          <textarea
-            name="usersMessage"
-            id=""
-            cols="30"
-            rows="10"
-            required
-          ></textarea>
+          <input type="text" name="usersMessage" id="" required></input>
           <br />
           <button type="submit">Submit</button>
         </form>
