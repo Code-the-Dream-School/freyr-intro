@@ -1,12 +1,23 @@
 /* styles.css */
 
+header {
+    background-color:rgb(235, 238, 240);
+    padding: 18px; 
+}
+
+footer {
+    background-color: salmon;
+}
+
 h1 {
     color: rgb(65, 85, 165);
-    background-color: white;
+    background-color: salmon;
+    padding: 18px; 
 }
 
 p{
     color: rgb(37, 37, 103);
+    font-size: 16px;
 }
 
 h2 {
@@ -16,4 +27,13 @@ h2 {
 
 ul {
     color: rgb(37, 37, 103);
+}
+
+body {
+    text-align: justify;
+    padding: 56px; 
+}
+
+#skillslist {
+    border: 3px; color: blue; 
 }
