@@ -50,6 +50,8 @@ Now, open the project directory in your code editor and continue to the next sec
 
 For this assignment, there are some general requirements but the design is up to you! This is your chance to be creative and transform your webpage into a reflection of who you are.
 
+
+
 - [ ] Change the background color of the page body
 - [ ] Change the default text color
 - [ ] Customize the font family

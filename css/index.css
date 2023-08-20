@@ -1,0 +1,186 @@
+ 
+ /* header {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 20px);
+    background-color: #8d8c8c;
+    padding: 10px;
+    text-align: right;
+    margin-right: 30px; 
+    color:blueviolet;
+
+ }
+ 
+ 
+ 
+ footer:hover {
+    background-color: transparent;
+
+ }
+  
+ body {
+    background-color:rgb(225, 224, 223);
+    color:rgb(81, 29, 29);
+    font-family: 'Cinzel', serif;s
+    width: 300px;
+    border: 30px solid grey ;
+    padding: 40;
+    margin: 40;
+    display: block;
+    text-align:left;
+ }
+
+
+
+
+ #experience :first-child {
+    font-size:50px;
+
+ }
+
+  
+
+  #bio {
+    font-size:25px;
+    font-style:initial;
+    background-color:rgb(212, 206, 198);
+
+  }
+
+  .heading {
+    background-color:rgb(161, 161, 161);
+    font-size:50px;
+    font-style:bold;
+    font-weight: 200;
+  }
+
+  
+
+
+
+  }
+
+  
+
+
+
+
+
+    /*New version*/
+
+    body {
+
+        color:black;
+        text-align:left;
+        font-size:1.25rem;
+        font-family: 'Cinzel', serif;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Ysabeau Office', sans-serif;
+        border-style: solid black;
+        padding:100px;
+        margin-trim:all;
+
+    }
+
+    section {
+      scroll-padding-block: 30px;
+      margin-bottom:15px;
+      padding:20px;
+
+    }
+
+    .heading {
+      font-size 60x;
+      font-style:bold;
+      font-weight: 800;
+      color:rgb(0, 0, 0);
+
+    }
+    
+    ul {
+      font-size: 20px;
+      font-style:regular;
+      color:rgb(0, 0, 0);
+      border-block: 3px rgb(50, 65, 78);
+      writing-mode: horizontal-tb;
+      border-block-style: outset;
+      margin-bottom:60px;
+    }
+
+    #about {
+      background-color: rgb(236, 236, 236);
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      text-align:center;
+  }
+
+  h3{
+    font-size:smaller;
+    font-style:italic;
+  }
+
+  footer {
+    position: fixed;    
+    bottom: 15px;
+    width: 100%
+    background-color: beige;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  #message {
+
+    border-block-style:solid;
+    writing-mode: horizontal-tb;
+
+    .questions {
+  
+      font-size: 25px;
+      font-style:oblique;
+      color:rgb(149, 62, 124);
+      padding:10;
+      border-block-style: dotted;
+      writing-mode: horizontal-tb;
+
+      #name{
+        border-block-style: solid;
+        writing-mode: horizontal-tb;
+    }
+
+    #email {
+        border-block-style:solid;
+        writing-mode:horizontal-tb;
+        
+    }
+    
+    #message {
+
+        border-block-style:solid;
+        writing-mode: horizontal-tb;
+    }
+
+  /* links */
+
+
+    a:link{
+
+    color:darkblue;
+    background-color:peachpuff;
+    text-decoration:none;
+    }
+    
+    a:visited {
+    color:seagreen;
+    
+    }
+    
+    a:hover{
+    text-decoration:underline;
+    }
+    
+    a:focus {
+    color:white;
+    background-color:orange;
+    }

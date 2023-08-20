@@ -42,10 +42,13 @@ const messageForm = document.querySelector('form[name="leave_message"]');
 
 messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
     const usersName = e.target.usersName.value;
     console.log(usersName);
+
     const usersEmail = e.target.usersEmail.value;
     console.log(usersEmail);
+
     const usersMessage= e.target.usersMessage.value;
     console.log(usersMessage);
 
@@ -67,11 +70,12 @@ messageForm.addEventListener('submit', (e) => {
         let entry = removeButton.parentNode;
         entry.remove();
 
-        if (messageList.value) {
-            messageSection.style.display = 'Messages';
-         } else {
-            messageSection.style.display = 'none';
-         }
+        let listSize = document.querySelector('#messages ul').childElementCount;
+        if (listSize === 0) {
+          messagesHeader.style.display = "none";
+        } else {
+          messagesHeader.style.display = "";
+        } 
         
     });
 
