@@ -25,11 +25,13 @@ h2 {
 
 h1 {
   text-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
+  text-align: center;
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 0;
+  text-align: center;
 }
 
 h3 {
@@ -42,6 +44,12 @@ main {
   hyphens: auto;
 }
 
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  max-width: 40%;
+}
 button {
   display: block;
   width: 250px;
@@ -138,6 +146,14 @@ input {
   text-align: right;
 }
 */
+
+.jsCopyrightSpan {
+  margin: 10px;
+}
+
+.jsCopyright {
+  max-width: 40%;
+}
 
 @media (max-width: 768px) {
   button {

@@ -8,7 +8,8 @@ const myName = "Krista Zaloudek";
 
 const copyright = document.createElement("p");
 
-copyright.innerHTML = `${myName} &copy ${thisYear}`;
+copyright.innerHTML = `${myName} <span class="jsCopyrightSpan">&copy ${thisYear}</span>`;
+copyright.addClassName = "jsCopyright";
 
 footer.appendChild(copyright);
 
