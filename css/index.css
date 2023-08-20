@@ -60,25 +60,7 @@
 
   }
 
-    #name{
-        border-block-style: solid;
-        writing-mode: horizontal-tb;
-    }
-
-    #email {
-        border-block-style:solid;
-        writing-mode:horizontal-tb;
-        
-    }
-    
-    #message {
-
-        border-block-style:solid;
-        writing-mode: horizontal-tb;
-    }
-  /*Links*/
   
-  /*  */ 
 
 
 
@@ -161,6 +143,23 @@
       padding:10;
       border-block-style: dotted;
       writing-mode: horizontal-tb;
+
+      #name{
+        border-block-style: solid;
+        writing-mode: horizontal-tb;
+    }
+
+    #email {
+        border-block-style:solid;
+        writing-mode:horizontal-tb;
+        
+    }
+    
+    #message {
+
+        border-block-style:solid;
+        writing-mode: horizontal-tb;
+    }
 
   /* links */
 
