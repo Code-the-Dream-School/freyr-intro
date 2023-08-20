@@ -70,11 +70,12 @@ messageForm.addEventListener('submit', (e) => {
         let entry = removeButton.parentNode;
         entry.remove();
 
-        if (messageList.value) {
-            messageSection.style.display = 'Messages';
-         } else {
-            messageSection.style.display = 'none';
-         }
+        let listSize = document.querySelector('#messages ul').childElementCount;
+        if (listSize === 0) {
+          messagesHeader.style.display = "none";
+        } else {
+          messagesHeader.style.display = "";
+        } 
         
     });
 
