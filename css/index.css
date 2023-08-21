@@ -5,10 +5,6 @@ header {
     padding: 18px; 
 }
 
-footer {
-    background-color: salmon;
-}
-
 h1 {
     color: rgb(65, 85, 165);
     background-color: salmon;
@@ -16,8 +12,7 @@ h1 {
 }
 
 p{
-    color: rgb(37, 37, 103);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h2 {
@@ -25,15 +20,26 @@ h2 {
     background-color: white;
 }
 
-ul {
-    color: rgb(37, 37, 103);
-}
-
 body {
     text-align: justify;
     padding: 56px; 
+    background-color: rgb(146, 216, 205);
+    color: rgb(123, 22, 225);
+    font: Noto Sans Korean; 
 }
 
-#skillslist {
-    border: 3px; color: blue; 
+/* #skills-list {
+    border: 4px dashed blue;
+    border-radius: 10px;
+} */
+
+#skills-list li {
+    border: 1px solid white;
+    padding: 10px 20px;
+    margin: 10px 4px 30px 15px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: salmon;
 }
