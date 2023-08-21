@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BERGALLOMARTINEZ</title>      
+    <title>BERGALLOMARTINEZ</title> 
+    <link rel="stylesheet" href="css/index.css">    
 </head>
 <body>
-       <h1>Juan Pablo Bergallo Martinez</h1>
-       <section>
+       <div class="container">
+              <div class="content">
+                <header>
+                  <h1>Juan Pablo Bergallo Martinez</h1>
+                </header>
+       <section>     
               <h2>About</h2>
-              <p>My name is Juan Pablo, I am 42 years old, and I am from Argentina, born in France, currently living in Denmark. I studied graphic design, although I haven't been practicing it for some time. I want to become a digital nomad by programming and combining my existing design knowledge.</p>
+              <p>Hi im Juan Pablo, I am 42 years old, and I am from Argentina, born in France, currently living in Denmark. I studied graphic design, although I haven't been practicing it for some time. I want to become a digital nomad by programming and combining my existing design knowledge.</p>
        </section> 
 
        <section>
@@ -35,27 +40,36 @@
               <p>Github BERGALLOMARTINEZ </p>    
                      
        </section>
-       <section>
-              <h2>Leave a Message</h2>
-              <form name="leave_message">
-                     <label for="usersName">Name:</label><br>
-                     <input type="text" name="usersName" required><br>
-                     
-                     <label for="usersEmail">Email:</label><br>
-                     <input type="email" name="usersEmail" required><br><br>
-                     
-                     <label for="usersMessage">Message:</label><br>
-                     <textarea name="usersMessage" required></textarea><br>
-                     
-                     <button type="submit">Submit</button>
-              </form>
-       </section>
-       <section id="messages">
-              <h2>Messages</h2>
-              <ul>
-                     <!-- Messages here -->
-              </ul>
-       </section>
+       
+
+</div>
+       <div class="profile-picture-container">
+               <img src="media/jp1.jpg" alt="Profile Picture" class="profile-picture">
+       <div class="form-container">
+              <section>
+                     <h2>Leave a Message</h2>
+                     <form name="leave_message">
+                            <label for="usersName">Name:</label><br>
+                            <input type="text" name="usersName" required><br>
+                            
+                            <label for="usersEmail">Email:</label><br>
+                            <input type="email" name="usersEmail" required><br><br>
+                            
+                            <label for="usersMessage">Message:</label><br>
+                            <textarea name="usersMessage" required></textarea><br>
+                            
+                            <button type="submit">Submit</button>
+                     </form>
+              </section>
+              <section id="messages">
+                     <h2>Messages</h2>
+                     <ul>
+                            <!-- Messages here -->
+                     </ul>
+              </section>
+       </div>        
+       </div>
+</div>
 
        <br><br>
        <footer></footer>

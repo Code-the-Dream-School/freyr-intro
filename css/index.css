@@ -1,0 +1,133 @@
+/* General styles */
+body {
+    background-color: #040404;
+    color: #979797;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: ;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: #909090;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  h2, h3 {
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    color: #c7c6c6;
+  }
+  
+  /* Container styles */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .content {
+    flex: 4;
+    padding: 20px;
+  }
+  
+  .profile-picture-container {
+    flex: 41;
+    padding: 1%;
+    text-align: center;
+  }
+  
+  /* Profile picture */
+  .profile-picture {
+    max-width: 100%;
+    height: auto;
+   
+  }
+  
+  /* Section styles */
+  section {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #000000;
+    border: 1px solid #262525;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(118, 25, 25, 0.1);
+    max-width: 800px;
+  }
+  
+  /* Form styles */
+  form {
+    margin: 5px auto;
+    padding: 5px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #9b9595;
+  }
+  
+  input, textarea {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #171818;
+    color: #676363;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Message list styles */
+  #messages li {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #6a6666;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Footer styles */
+  footer {
+    margin-top: 8px;
+    padding: 10px;
+    background-color: #000000;
+    color: #3b3636;
+    text-align: center;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    body {
+      font-size: 14px;
+    }
+    section, form {
+      margin: 10px;
+      padding: 15px;
+    }
+  }
+  
