@@ -2,8 +2,9 @@ let today = new Date();
 let thisYear = new Date().getFullYear(); 
 let footer = document.querySelector("footer"); 
 let copyright =  document.createElement("p"); 
-copyright.innerHTML = "Yeni " + thisYear; 
+copyright.innerHTML = "&copy; Yeni " + thisYear; 
 footer.appendChild(copyright); 
+
 let skills = ['Problem Solver', 'Team player', 'Great communicator', 
 'Strong work ethic']; 
 let skillsSection = document.getElementById("skills"); 
