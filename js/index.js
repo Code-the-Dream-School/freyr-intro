@@ -32,29 +32,45 @@ const skills = [
   }
   
   document.addEventListener("DOMContentLoaded", function () {
-    // ... Previous code ...
   
     const messageForm = document.forms.leave_message;
   
     messageForm.addEventListener("submit", function (event) {
       event.preventDefault();
   
-      const userName = event.target.usersName.value;
-      const userEmail = event.target.usersEmail.value;
-      const userMessage = event.target.usersMessage.value;
+      const userNameInput = event.target.usersName;
+      const userEmailInput = event.target.usersEmail;
+      const userMessageInput = event.target.usersMessage;
+  
+      const userName = userNameInput.value;
+      const userEmail = userEmailInput.value;
+      const userMessage = userMessageInput.value;
+  
+      console.log("Name:", userName);
+      console.log("Email:", userEmail);
+      console.log("Message:", userMessage);
   
       // Clear the form fields after submission
-      event.target.reset();
+      messageForm.reset();
   
-      // Display messages 
+      // Display messages in a list
       const messageSection = document.getElementById("messages");
       const messageList = messageSection.querySelector("ul");
   
       const newMessage = document.createElement("li");
-      newMessage.innerHTML = `
-        <a href="mailto:${userEmail}">${userName}</a>: 
-        <span>${userMessage}</span>
-      `;
+      // ... Your existing code ...
+  
+      const editButton = document.createElement("button");
+      editButton.innerText = "edit";
+      editButton.type = "button";
+  
+      editButton.addEventListener("click", function () {
+        const messageSpan = newMessage.querySelector("span");
+        const editedMessage = prompt("Edit the message:", userMessage);
+        if (editedMessage !== null) {
+          messageSpan.textContent = editedMessage;
+        }
+      });
   
       const removeButton = document.createElement("button");
       removeButton.innerText = "remove";
@@ -63,9 +79,13 @@ const skills = [
       removeButton.addEventListener("click", function () {
         const entry = removeButton.parentNode;
         entry.remove();
+        messageSection.style.display = messageList.children.length > 0 ? "block" : "none";
       });
   
+      newMessage.appendChild(editButton);
       newMessage.appendChild(removeButton);
       messageList.appendChild(newMessage);
+  
+      messageSection.style.display = messageList.children.length > 0 ? "block" : "none";
     });
   });
