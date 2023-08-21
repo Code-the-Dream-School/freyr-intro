@@ -1,0 +1,112 @@
+body {
+  background-color: whitesmoke;
+  color: black;
+  font-family: "Lucida Grande";
+}
+h1 {
+  font-family: "Trebuchet MS";
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+h2 {
+  font-family: "Franklin Gothic Medium";
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+#submit:hover {
+  background-color: blue;
+}
+#submit {
+  background-color: #0000ffb3;
+  padding: 10px;
+  border: 2px solid blue;
+  width: 100px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.mainskills {
+  display: flex;
+}
+.mainskills li {
+  margin-right: 80px;
+  list-style: none;
+  padding: 10px;
+  border: 1px solid blue;
+  width: 100px;
+  text-align: center;
+  background-color: white;
+  color: blue;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.experience li {
+  list-style: none;
+  padding: 20px;
+  border: 1px solid lightgray;
+  width: 100%;
+  text-align: left;
+  background-color: lightgray;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.footerpara {
+  padding: 20px;
+  background-color: lightgray;
+}
+
+#labelName,
+#labelEmail {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+.nameInput,
+.emailInput {
+  width: 200px;
+  height: 30px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid gray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.labelMessage {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+.textarea {
+  width: 400px;
+  height: 60px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid gray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 540px) {
+  #labelName,
+  #labelEmail {
+    flex-direction: column;
+    color: blue;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .mainskills li {
+    flex-direction: column;
+    color: green;
+  }
+}
