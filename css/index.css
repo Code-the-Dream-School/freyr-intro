@@ -17,6 +17,18 @@ footer {
   text-align: left;
   padding-left: 20px;
 }
+/*
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.row {
+  flex: 1;
+}
+*/
+
 
 body {
   background-color: #eff7f1;
@@ -108,7 +120,9 @@ div.c {
   background-color: #c6f5c8; /* Slightly darker background on hover */
 }
 
-
+div.a {
+  font-size: 18px;
+}
 
 button[type="submit"]:hover {
   background-color: #0771ea /* A slightly darker shade for hover effect */
@@ -118,7 +132,28 @@ fieldset {
   border: none;
 }
 
-@media screen and (min-width: 1000px){
+.experience-flex{
+  display: flex;
+  justify-content: space-between; /* Distributes the items evenly across the main axis */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+}
+
+.messageList-grit{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: minmax(50px, 1fr);
+  grid-gap: 5px;
+  /*grid: auto-flow dense / repeat(5, 150px);
+  grid-template-areas: "media detail detail";
+  grid-template-columns: 200px 400px;*/
+}
+
+@media screen and (min-width: 1025px){
+  .experience{
+    justify-content: center;
+  }
+  
+  
   img {
     border-radius: 50%;
     width: 130px;
@@ -126,10 +161,6 @@ fieldset {
   }
 
   div.content {
-    font-size: 18px;
-  }
-
-  div.a {
     font-size: 18px;
   }
 
@@ -146,7 +177,7 @@ fieldset {
   } 
 }
 
-@media screen and (max-width: 999px){
+@media screen and (max-width: 1024px){
   img {
     border-radius: 50%;
     width: 80px;
@@ -154,10 +185,6 @@ fieldset {
   }
 
   div.content {
-    font-size: 12px;
-  }
-
-  div.a {
     font-size: 12px;
   }
 
@@ -172,9 +199,21 @@ fieldset {
     font-size: 16px;
     background-color: #eff7f7;
   }
+
+  .messageList-grit{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 769px){
+  .experience-flex{
+    flex-direction: column;
+  }
+
+  .messageList-grit{
+    grid-auto-rows: minmax(200px, auto);
+  }
+
   img {
     border-radius: 50%;
     width: 50px;
@@ -182,11 +221,14 @@ fieldset {
   }
   
   div.content {
-    font-size: 12px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
   }
 
   div.a {
-    font-size: 12px;
+    font-size: 20px;
   }
 
   .al{
@@ -194,7 +236,7 @@ fieldset {
   }
   
   form {
-    max-width: 150px;
+    max-width: 250px;
     padding: 5px;
   }
   
@@ -202,7 +244,7 @@ fieldset {
   input[type="email"],
   input[type="uderMessage"],
   textarea {
-    font-size: 12px;
+    font-size: 20px;
     background-color: #eff7f7;
   }
 }
