@@ -1,0 +1,324 @@
+/* The weights available for the Poppins font for this project are 200 (extra light), 200 italic, 400 (regular), 700 (bold), and 700 bold italic. */
+* {
+    margin: 0;
+}
+#main-navigation h2 {
+    display: none;
+}
+img {
+    position: relative;
+    margin-right: 1.4rem;
+    border: .4rem solid rgb(52, 81, 94);
+    border-radius: 100%;
+}
+main, #website-brand, #main-navigation, #copyright {
+    margin-top: 0;
+}
+main, #website-brand, #main-navigation, #connect, #copyright {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {
+    margin-top: 1em;
+}
+#main-navigation ul {
+    margin-top: 0;
+    padding-left: 0;
+}
+#main-navigation li {
+    margin-right: 1.5rem;
+}
+#main-navigation li {
+    display: inline;
+}
+a:hover {
+    color: #1c4c6c;
+}
+#website-brand, #website-brand h1 {
+    margin-bottom: 1.2rem;
+    padding-bottom: 0;
+}
+#main-navigation {
+    padding-top: 0;
+}
+html {
+    color: #0D0D06;
+    font-family: 'Genos', sans-serif;
+}
+body {
+    background-color: #FAFAF0;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: #34515E;
+}
+h1 {
+    /* Although the font Notable looks bold, it only comes with one style. So, it does not allow me to change the font-weight of text that uses it. Therefore, I could not use it to meet the requirements of this portion of the assignment. Hence, I commented out the following line of code:
+    font-family: 'Notable', sans-serif; 
+    */
+    vertical-align: baseline;
+    margin-bottom: 0.67em;
+    /* font-size: 7.5rem; */
+    font-size: 2.7rem;
+}
+h2 {
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    font-size: 2.1rem;
+}
+h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #37474F;
+}
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+label, #about p {
+    color: #102027;
+}
+label {
+    font-weight: 600;
+    font-size: 1.9rem;
+}
+section {
+    margin-top: 5.7rem;
+}
+#experience li.outerList, #skills ul li, #messages li, #connect ul {
+    margin: 0 0 2.7rem -2.4rem;
+}
+#experience li.outerList, #messages li {
+    list-style-type: none;
+}
+#experience li.outerList {
+    border: 2px solid #CCCCC4;
+    border-radius: 1.6rem;
+    background-color: #EEEEE4;
+    padding: .4rem 1.7rem 2.2rem 1.9rem;
+}
+#experience li:first-child {
+    font-weight: 500;
+    color: #102027;
+}
+.innerList {
+    font-weight: 400;
+    list-style-type: disc;
+}
+.subListOfInnerList {
+    margin-top: .3rem;
+}
+#skills ul li {
+    border: 3px solid #546E7A;
+    background-color: #d4e3e8;
+    padding: .9rem 1.7rem 1.4rem 1.9rem;
+}
+#messages li {
+    border: 3px solid rgb(124, 150, 161);
+    background-color: #dbeef5;
+    padding: 1.3rem 1.7rem 1.3rem 1.9rem;
+}
+#skills ul li, #messages li {
+    border-radius: 1rem;
+    display: inline-block;
+}
+input, textarea, button {
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: .4rem .5rem .3rem rgba(142, 172, 187, .2);
+}
+button:hover {
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: -.4rem .5rem .3rem rgba(142, 172, 187, .2);
+}
+input, textarea {
+    border: .2rem solid #546E7A;
+    border-radius: .7rem;
+    padding: .7rem;
+    font-family: 'Blinker', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1.1rem;
+}
+#connect li {
+    list-style-type: none;
+}
+@media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 523px) and (max-width: 890px) {
+    #connect {
+        text-align: center;
+    }
+    #connect li {
+        display: inline;
+        margin-right: 1.5rem;
+    }
+    img {
+        display: inline-block;
+    }
+    h1 {
+        display: inline;
+        margin-top: 0.67em;
+    }
+}
+@media (min-width: 890px) {
+    #main-navigation ul {
+        text-align: right;
+    }
+    input {
+        width: 27rem;
+    }
+    textarea {
+        width: 42rem;
+        height: 18rem;
+    }
+    input[type=text] {
+        width: 19.5rem;
+    }
+    img {
+        top: 2rem;
+        width: 6rem;
+    }
+}
+@media (min-width: 720px) and (max-width: 889px) {
+    #main-navigation ul {
+        text-align: right;
+    }
+    input {
+        width: 62%;
+    }
+    textarea {
+        width: 97%;
+        height: 15rem;
+    }
+    input[type=text] {
+        width: 45%;
+    }
+    img {
+        top: 1.9rem;
+        width: 5.5rem;
+    }
+}
+@media (min-width: 600px) and (max-width: 719px) {
+    #main-navigation ul {
+        text-align: right;
+    }
+    input {
+        width: 67%;
+    }
+    textarea {
+        width: 97%;
+        height: 12rem;
+    }
+    input[type=text] {
+        width: 55%;
+    }
+    img {
+        top: 1.8rem;
+        width: 5rem;
+    }
+}
+@media (min-width: 510px) and (max-width: 599px), (min-width: 0px) and (min-width: 523px) {
+    input {
+        width: 77%;
+        min-width: 245px;
+    }
+    textarea {
+        width: 97%;
+        min-width: 250px;
+        height: 12rem;
+    }
+    input[type=text] {
+        width: 64%;
+        min-width: 235px;
+    }
+}
+@media (min-width: 523px) and (max-width: 599px), (min-width: 0px) and (max-width: 522px) {
+    #main-navigation ul {
+        text-align: center;
+    }
+}
+@media (min-width: 523px) and (max-width: 599px) {
+    
+    #website-brand div {
+        margin-bottom: 1.5rem;
+    }
+    img {
+        top: 1.4rem;
+        width: 4.5rem;
+    }
+}
+@media (min-width: 0px) and (max-width: 522px) {
+    #website-brand div {
+        text-align: center;
+    }
+    #connect li {
+        display: block;
+    }
+    #connect {
+        text-align: left;
+    }
+    img {
+        width: 6rem;
+        margin-top: 2.3rem;
+    }
+    h1 {
+        margin-top: 0.2em;
+    }
+}
+input:hover, textarea:hover {
+    border-color: #8EACBB;
+}
+button {
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: #FFF;
+    padding: .7rem .9rem;
+    border-radius: .7rem;
+}
+button[type=submit] {
+    border: .2rem solid #303e45;
+    background-color: #385360;
+    font-family: 'Righteous', cursive;
+}
+button[type=submit]:hover {
+    border: .2rem solid #3d4f58;
+    background-color: #a2d6e0;
+    color: #242e33;
+    margin-left: .1rem;
+    margin-top: -.1rem;
+}
+#edit-btn, #save-btn, #remove-btn {
+    background-color: #8EACBB;
+    color: #071734;
+    font-family: 'Blinker', sans-serif;
+    font-weight: 600;
+}
+#edit-btn, #save-btn {
+    margin-right: .4em;
+}
+#edit-btn {   
+    margin-left: 11rem;
+}
+#save-btn {
+    margin-left: 5rem;
+}
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: #CAF0F8;
+}
+#connect h2 {
+    text-align: left;
+}
+#copyright {
+    margin-top: 2.9rem;
+    padding-bottom: 3.5rem;
+    text-align: center;
+}
+#copyright h4 {
+    display: none;
+}

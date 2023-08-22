@@ -67,10 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function placeCopyrightNotice() {
         let today = new Date();
         var thisYear = today.getFullYear();
-        let footer = document.querySelector('footer');
-        let copyright = document.createElement('p');
-        copyright.innerHTML = `&copy; Nataly Mota ${thisYear}`;
-        footer.appendChild(copyright);
+        // footer = document.querySelector('footer');
+        let copyrightSection = document.getElementById("copyright");
+        let copyrightNotice = document.createElement('p');
+        copyrightNotice.innerHTML = `&copy; Nataly Mota ${thisYear}`;
+        // footer.appendChild(copyrightNotice);
+        copyrightSection.appendChild(copyrightNotice)
     }
     placeCopyrightNotice();
     
@@ -99,26 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let name = getValueOfFormFieldAndTrimIt('usersName');
         let email = getValueOfFormFieldAndTrimIt('usersEmail');
         let message = getValueOfFormFieldAndTrimIt('usersMessage');
-        
-        /*
-            The code above does the same thing as the code below:
-            let name = getValueOfFormField('usersName');
-            name = name.trim();
-
-            let email = getValueOfFormField('usersEmail');
-            email = email.trim();
-
-            let message = getValueOfFormField('usersMessage');
-            message = message.trim();
-        */
-
-        /*
-            A previous, simpler version of the code above, that did not have all of the same functionality, but which had some of it, looked like the code below:
-
-            let name = event.target.usersName.value;
-            let email = event.target.usersEmail.value;
-            let message = event.target.usersMessage.value;
-        */
 
         let createSpanWithMessage = (userMessage) => `<span>${userMessage}</span>`;
 
@@ -126,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let messageList = messageSection.querySelector('ul');
         let newMessage = document.createElement('li');
         //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong><span>${message}</span>`;
-        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a></strong> wrote: ${createSpanWithMessage(message)}`;
+        newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> ${createSpanWithMessage(message)}`;
 
         function createButton(buttonText) {
             let typeOfButton = document.createElement('button');
@@ -141,9 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return typeOfButton;
         }
 
-        let editButton = createButtonAndAppendIt('edit');
-        let saveButton = createButton('save');
-        let removeButton = createButtonAndAppendIt('remove');
+        let editButton = createButtonAndAppendIt('Edit');
+        editButton.id = 'edit-btn';
+        let saveButton = createButton('Save');
+        saveButton.id = 'save-btn';
+        let removeButton = createButtonAndAppendIt('Remove');
+        removeButton.id = 'remove-btn';
         /*
             The above code is the same as the following code, in a refactored form:
 
@@ -158,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             newMessage.appendChild(removeButton);
         */
 
-        editButton.style.margin = '0 .4rem 0 1rem';
+        //editButton.style.margin = '0 .4rem 0 3rem';
 
         messageList.appendChild(newMessage);
         
