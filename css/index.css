@@ -1,13 +1,14 @@
 /* styles.css */
 
 header {
-    background-color:rgb(235, 238, 240);
+    background-color:ghostwhite;
     padding: 18px; 
+    font-family: sans-serif;
 }
 
 h1 {
-    color: rgb(65, 85, 165);
-    background-color: salmon;
+    color: rgb(85, 114, 232);
+    background-color: rgb(240, 153, 143);
     padding: 18px; 
 }
 
@@ -16,16 +17,16 @@ p{
 }
 
 h2 {
-    color: rgb(65, 85, 165);
-    background-color: white;
+    color:  rgb(85, 114, 232);
+    background-color: ghostwhite;
 }
 
 body {
-    text-align: justify;
+    text-align: center;
     padding: 56px; 
     background-color: rgb(146, 216, 205);
-    color: rgb(123, 22, 225);
-    font: Noto Sans Korean; 
+    color: rgb(138, 53, 223);
+    font-family: sans-serif;
 }
 
 /* #skills-list {
@@ -38,8 +39,24 @@ body {
     padding: 10px 20px;
     margin: 10px 4px 30px 15px;
     border-radius: 10px;
+    font-family: sans-serif;
+    list-style: none;
+
 }
 
 footer {
-    background-color: salmon;
+    background-color: rgb(240, 153, 143);
+    
 }
+
+@media screen and (max-width: 480px) {
+    body{
+        background-color: ghostwhite;
+        font-family: sans-serif
+    }
+}
+
+#submit{
+    background-color: rgb(240, 153, 143);
+}
+
