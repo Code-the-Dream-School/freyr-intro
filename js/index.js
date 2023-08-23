@@ -43,6 +43,8 @@ messageForm.addEventListener("submit", (event) => {
     
     removeButton.setAttribute("type", "button");
     editButton.setAttribute("type", "button");
+    removeButton.classList.add("message-buttons");
+    editButton.classList.add("message-buttons");
     
     removeButton.addEventListener("click", (event) => {
         let entry = removeButton.parentNode;

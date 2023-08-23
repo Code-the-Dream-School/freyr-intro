@@ -195,7 +195,7 @@ a:link {
   	resize: none;
 }
 
-button[type="submit"] {
+.leave_message button[type="submit"] {
 	display: block;
 	margin: auto;
 	margin-top: 20px;
@@ -249,6 +249,10 @@ button:hover {
 	color: #FFFFFF;
 }
 
+#messages ul li span {
+	width: 75%;
+}
+
 @media (min-width: 376px) {
 	.my_photo {
 		width: 180px;
@@ -267,5 +271,16 @@ button:hover {
 	.my_photo {
 		width: 220px;
 		height: auto;
+	}
+}
+
+@media (max-width: 500px) {
+	#messages ul li {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#messages ul li button {
+		width: 80px;
 	}
 }
