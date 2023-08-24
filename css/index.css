@@ -1,9 +1,15 @@
 /* styles.css */
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500&family=Sedgwick+Ave+Display&family=Tilt+Prism&family=Wavefont:wght@300;600&display=swap');
+
+
 header {
+    font-family: 'Chakra Petch', sans-serif;
     background-color:ghostwhite;
     padding: 18px; 
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
 }
 
 h1 {
