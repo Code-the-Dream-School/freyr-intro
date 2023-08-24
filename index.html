@@ -10,23 +10,29 @@
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
         <link href="css/index.css" rel="stylesheet">
+        <link href="css/grid.css" rel="stylesheet">
         
     </head>
 
     <body>
-        <header>
-            <nav>
-                <a href = "#about">About</a>
-                <a href = "#experience">Experience</a>
-                <a href = "#skills">Skills</a>
-                <a href = "#connect">Connect</a>
-            </nav>
-        </header>
-        <div  class="content" id="top"> 
-                <h1>Anna Gerhardt</h1>
-                <img src="img\AnnaG.jpg" width="150" alt="Photo of Anna" title="Photo of Anna Gerhardt">
+        <div class="body-grid">
+            <header>
+                <nav>
+                    <a href = "#about">About</a>
+                    <a href = "#experience">Experience</a>
+                    <a href = "#skills">Skills</a>
+                    <a href = "#connect">Connect</a>
+                </nav>
+            </header>
+
+            
                 
-                <section id= "about">
+                <section class="image-grid">
+                    <h1>Anna Gerhardt</h1>
+                    <img src="img\AnnaG.jpg" width="150" alt="Photo of Anna" title="Photo of Anna Gerhardt">
+                </section>
+
+                <section id= "about" class="about-grid">
                 <div class="a"> 
                         <h2>About</h2>
                         <ol class = "al">
@@ -36,7 +42,8 @@
                         </ol>
                     </div>
                 </section>
-                <section id = "experience">
+                
+                <section id = "experience" class="experience-grid">
                     <div class="a">
                         <h2>Experience</h2>
                         <div class="experience-flex">
@@ -46,12 +53,12 @@
                         </div>
                     </div>
                 </section>
-                <section id = "skills">
+                <section id = "skills" class="skills-grid">
                     <h2>Skills</h2>
                     <ul class = "al"></ul>
                 </section>
                 
-                <section id = "connect">
+                <section id = "connect" class="connect-grid"> 
                     <div class="a">
                         <h2>Connect</h2>
                         <nav>
@@ -61,41 +68,42 @@
                         </nav>
                     </div>
                 </section>
-           
             
-            <section>
-                <form name="leaveMessege" id = "leave_messege" action="index.html" method="post">
-                    <h2>Leave a message</h2>
-                    <fieldset>
-                        <label for="name">Name:</label><br>
-                        <input type="text" id = "name" name="userName" required><br>
+                
+                <section class="message-grid">
+                    <form name="leaveMessege" id = "leave_messege" action="index.html" method="post">
+                        <h2>Leave a message</h2>
+                        <fieldset>
+                            <label for="name">Name:</label><br>
+                            <input type="text" id = "name" name="userName" required><br>
 
-                        <label for="email">Email:</label><br>
-                        <input type="email" id = "email" name="userEmail" required><br>
-                      
+                            <label for="email">Email:</label><br>
+                            <input type="email" id = "email" name="userEmail" required><br>
+                        
 
-                    <label for="message">Message</label><br>
-                    <textarea  name="userMessage" required placeholder="Leave a Message"></textarea><br>
+                        <label for="message">Message</label><br>
+                        <textarea  name="userMessage" required placeholder="Leave a Message"></textarea><br>
 
-                    <button type="submit" name="submit">Submit</button>
-                    </fieldset>
-                </form>
-            </section>
+                        <button type="submit" name="submit">Submit</button>
+                        </fieldset>
+                    </form>
 
-            <sevtion id = "message" >
-                <h2>Messages</h2>
-                <ul id = "messageList" class ="messageList-grit"></ul>
-            </sevtion>
+                    <section id = "message" >
+                        <h2>Messages</h2>
+                        <ul id = "messageList" class ="messageList-grid"></ul>
+                        <nav>
+                            <a href = "#top">To the top</a> 
+                            <br>       
+                        </nav>
+                    </sevtion>
 
-            <nav>
-                <a href = "#top">To the top</a>        
-            </nav>
-        </div>  
-        
+                </section>
 
-        <footer>
-            <p id ="containerF"></p>
-        </footer>
-        <script type="text/javascript" src="js/index.js"></script>
+              <footer>
+                <p id ="containerF"></p>
+              </footer>
+            <script type="text/javascript" src="js/index.js"></script>
+            
+        </div>
     </body>
 </html>
