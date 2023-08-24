@@ -21,11 +21,13 @@ h1, h2, h3 {
  color:azure;
 }
 
-/* task 6:7 - Experience and Skills List style */
+/* task 6:7 - Experience and Skills List style - commented it out due to task 2 lesson 4-5
 #experience ul {
  list-style-type: none;
  padding: 0;
 }
+/*
+/* commented it out due to task 2 lesson 4-5
 #experience li {
  margin-bottom: 15px;
  padding: 15px;
@@ -33,6 +35,7 @@ h1, h2, h3 {
  border: 1px solid #ccc;
  border-radius: 5px;
 }
+*/
 #skills ul {
     list-style-type: none;
     padding: 0;
@@ -64,9 +67,10 @@ form[name="leave_message"] textarea {
   margin-bottom: 15px; 
 }
 
+form[name="leave_message"] input[type="message"]
 form[name="leave_message"] textarea {
-  resize: vertical; 
-}
+  resize: vertical;
+  }
 
 form[name="leave_message"] button[type="submit"] {
   padding: 10px 20px; 
@@ -124,10 +128,104 @@ footer {
  main {
   padding: 20px; /* Adjust padding for tablets */
 }
-
+}
 @media (min-width: 1024px) {
  main {
   width: 80%; /* Adjust content width for desktops */
   margin: 0 auto; /* Center the content on desktops */
  }
 } 
+
+
+/* Lesson 4-5:
+   Task1: Add a navigational header to your webpage
+
+    The navigation menu should include a link to each of your sections (i.e. "About", "Experience", etc.)
+    (Optional) Make the header sticky/fixed on the page
+*/
+
+nav {
+ background-color: olive;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ text-align: center; 
+}
+
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+
+nav li {
+ display: inline;
+ margin-right: 20px;
+}
+
+nav a {
+ text-decoration: none;
+ color: white; 
+ font-weight: bold;
+}
+
+/* Task2:  Change the layout of your "Experience" section using rows and columns so items are displayed in a grid rather than a list
+
+    Hint: use either Flexbox or CSS Grid
+*/
+
+#experience {
+ margin-top: 20px;
+}
+
+.experience-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ grid-gap: 20px;
+}
+
+.experience-item {
+ border: 1px solid gray;
+ padding: 10px; 
+}
+
+.experience-item h3 {
+ font-size: 1.2rem; 
+}
+
+/* Task3:   Update the "Leave a Message" form to use Flexbox or CSS Grid*/
+
+
+
+.message-form {
+ display: grid;
+ grid-template-columns: 1fr 1fr; 
+ grid-gap: 10px; 
+}
+
+.message-form div {
+ display: grid;
+ flex-direction: column;
+}
+
+.message-form label {
+ font-weight: bold;
+}
+
+.message-form .message textarea {
+ resize: vertical;
+ }
+
+.message-form .submit-button {
+ grid-column: span 2; 
+}
+
+.message-form button {
+ width: 100%;
+ padding: 10px;
+ background-color: blue; 
+ color: white;
+ border: none;
+}
+
+/* Task4:   add media   queries. Adjusted up top in media query section*/

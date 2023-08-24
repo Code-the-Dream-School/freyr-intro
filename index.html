@@ -7,7 +7,16 @@
  </head>
 
  <body>
-  <div>  
+  <div>
+    <nav>
+      <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#connect">Connect</a></li>
+          <li><a href="#messages">Messages</a></li>
+      </ul>
+   </nav>  
   <header>
    <h1>Marcelo Villamar</h1>
     <p>IT Profesional looking to develop</p>
@@ -22,12 +31,20 @@
     <section id="experience">
      <h2>Experience</h2>
       <p>I have worked at many different places throughtout my career in IT:</p>
-       <ul>
-        <li>Carter's Inc - Helpdesk Analyst</li>
-        <li>Rubin Lublin LLC - Systems/network Administrator</li>
-        <li>LMI Inc - Support Engineer</li>
-        <li>Intercontinental Exchange - Network Analyst (currently)</li>
-       </ul>
+       <div class="experience-grid">
+        <div class="experience-item">
+         <h3>Carter's Inc - Helpdesk Analyst</h3>
+        </div>
+        <div class="experience-item"> 
+         <h3>Rubin Lublin LLC - Systems/network Administrator</h3>
+        </div>
+        <div class="experience-item"> 
+         <h3>LMI Inc - Support Engineer</h3>
+        </div>
+        <div class="experience-item">
+         <h3>Intercontinental Exchange - Network Analyst (currently)</h3>
+        </div>
+       </div>
     </section>
     
     <section id="skills">
@@ -47,17 +64,22 @@
 
   <section>
     <h2>Leave a Message</h2>
-    <form name="leave_message">
+    <form name="leave_message" class="message-form">
+     <div> 
       <label for="usersName">Your Name:</label> <br>
       <input type="text" name="usersName" required> <br>
-
+     </div>
+     <div>
       <label for="usersEmail">Your Email:</label> <br>
       <input type="email" name="usersEmail" required> <br>
-
+     </div>
+     <div class="message">
       <label for="usersMessage">Message:</label> <br>
-      <textarea name="usersMessage" required></textarea> <br>
-
+      <textarea type="usersMessage" required></textarea> <br>
+     </div>
+     <div class="submit-button">
       <button type="submit">Submit</button>  
+     </div>
     </form>
   </section>
 
