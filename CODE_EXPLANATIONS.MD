@@ -1,3 +1,8 @@
+## Preventing Image Stretching Behavior When Using Flex-Box
+
+- The following tutorial showed me how to stop my image file from stretching weirdly when using flex-box for styling:
+  - https://techstacker.com/how-to-prevent-image-stretching-with-flexbox/
+
 ## Google Fonts
 
 - For frequently asked questions about Google fonts, you may visit the following website:
@@ -59,6 +64,13 @@ message = message.trim();
 
 - CSS media queries help to make the web-page or web-site responsive to different screen sizes. You can view the following guide, to learn more about how to use them:
   - https://css-tricks.com/a-complete-guide-to-css-media-queries/
+
+## Accessible Headers on Main Navigation and on the Copyright Section
+
+- Due to finding out that creating a header element for accessibility reasons, then hiding it from view using "display: none," actually made it so screen readers could not read the header either, I changed the method of hiding this header item to a different method.
+- The new method involves making the font-size super small, setting visibility to hidden, then setting the top margin to a negative value, to compensate for extra space caused by the display of this header element.
+- I also had the idea of hiding the text of this header from view, by making its color the same as the background color; since its sole purpose for existing is to make the website more accessible for blind people using screen readers. This would involve the following code being placed inside of the CSS selectors for the h4 element inside of the element with the copyright ID, as well as for the h2 elemen t inside of the element with the main-navigation ID:
+  - color: #FAFAF0;
 
 ## DOM Manipulation
 
