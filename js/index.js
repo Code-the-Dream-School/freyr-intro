@@ -22,8 +22,8 @@ headings.forEach(function (heading) {
 //this is a variable refering to the buttonContainer
 var container = document.querySelector("nav button");
 
-// container.addEventListener("click", function (event) {
-//   var clicked = event.target.id;
+//container.addEventListener("click", function (event) {
+//var clicked = event.target.id;
 //   if (clicked == "button" || "About") {
 //     alert("Welcome to my page!");
 //   } else if (clicked == "button" || "Experience") {
@@ -45,7 +45,6 @@ const skills = [
   "Creativity",
   "Growth Mindset",
 ];
-
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
 
@@ -54,3 +53,38 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
+//messagesform
+const messageForm = document.getElementById("leave_message");
+messageForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const usersNameInput = event.target.usersMessage;
+  const emailInput = event.target.email;
+  const usersMessageInput = event.target.usersMessage;
+  console.log(usersNameInput);
+  console.log(emailInput);
+  console.log(usersMessageInput);
+
+  //messagesection
+  const messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul");
+  const newMessage = document.createElement("li");
+  newMessage.innerHTML = `
+    <a href="mailto:${emailInput}">${usersNameInput}</a>
+    <span>${usersMessageInput}</span>
+  `;
+
+  //remove button
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
+
+  removeButton.addEventListener("click", function (event) {
+    const entry = removeButton.parentNode;
+    entry.remove();
+  });
+
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+
+  messageForm.reset();
+});

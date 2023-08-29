@@ -149,7 +149,7 @@
               height="30"
           /></a>
         </p>
-        <!-- Testing -->
+        <!-- Testing
         <form action="submit/" method="post">
           <fieldset>
             <legend>Contact Details</legend>
@@ -164,12 +164,8 @@
             <input type="email" id="email" name="email" />
             <label id="DOB">Date of Birth:</label>
             <input type="text" id="dob" name="dob" placeholder="06.19.2003" />
-          </fieldset>
-        </form>
-        <!-- Testing -->
-        <!-- Testing -->
-
-        <!-- Testing -->
+          </fieldset> -->
+        <!-- </form> -->
 
         <label for="Favorite Drake Song?" name="Favorite Drake Song?"
           >Favorite Drake Song?</label
@@ -183,10 +179,54 @@
             Hold on we're going home
           </option>
         </select>
-        <!-- Testing -->
       </div>
       <!-- Testing -->
-      <!-- Testing -->
+    </div>
+    <div>
+      <section>
+        <h2><legend>Leave a Message</legend></h2>
+        <form id="leave_message" name="leave_message">
+          <fieldset>
+            <div>
+              <label for="usersName">Name:</label>
+              <input
+                type="text"
+                name="usersName"
+                required="true"
+                placeholder="Cristian"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                required="true"
+                placeholder="you@gmail.com"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="usersMessage">Message:</label>
+              <textarea name="usersMessage" required="true"></textarea>
+            </div>
+            <br />
+            <div>
+              <button type="submit">Submit</button>
+              <!-- <button type="reset" id="resetButton">Reset</button> -->
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+    <div>
+      <section id="messages">
+        <h2>Messages</h2>
+        <div>
+          <ul></ul>
+        </div>
+      </section>
     </div>
     <footer id="footer"></footer>
     <script src="js/index.js"></script>
