@@ -29,12 +29,24 @@
  
  const skillsList = skillsSection.querySelector('ul');
 
-for (let i = 0; i < skills.length; i ++) {
-    const skill = document.createElement('li');
-    skill.textContent = skills[i];
-    skillsList.appendChild(skill);
+// for (let i = 0; i < skills.length; i ++) {
+//     const skill = document.createElement('li');
+//     skill.textContent = skills[i];
+//     skillsList.appendChild(skill);
 
-};
+// };
+
+for (let i = 0; i < skills.length; i++) {
+  const skill = skills[i];
+  const span = document.createElement('span');
+  span.textContent = skill;
+  const listItem = document.createElement('li');
+  listItem.appendChild(span);
+  skillsList.appendChild(listItem);
+  span.classList.add('skillSpan');
+}
+
+
 
 
 
