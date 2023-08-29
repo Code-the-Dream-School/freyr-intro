@@ -57,9 +57,9 @@ for (let i = 0; i < skills.length; i++) {
 const messageForm = document.getElementById("leave_message");
 messageForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  const usersNameInput = event.target.usersMessage;
-  const emailInput = event.target.email;
-  const usersMessageInput = event.target.usersMessage;
+  const usersNameInput = event.target.usersMessage.value;
+  const emailInput = event.target.email.value;
+  const usersMessageInput = event.target.usersName.value;
   console.log(usersNameInput);
   console.log(emailInput);
   console.log(usersMessageInput);
