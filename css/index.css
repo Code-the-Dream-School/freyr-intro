@@ -1,0 +1,103 @@
+body {
+    background-color: #A7F3EF; 
+    color: #ced5d5;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+section{
+    margin-bottom: 20px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #FFD700;
+    padding: 10px;
+    /* Other header styling */
+}
+
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ebbcd0;
+
+}
+
+ul.experience li {
+    display: block;
+    background-color: #9bccd1;
+    padding: 15px; 
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.experience-item {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #FFD700;
+}
+
+
+//Transform the "Skills" list items into styled blocks
+
+ul.skills li{
+    display: block
+    backgtound-color: #edc2c7;
+    padding: 15px;
+}
+
+//Style the "Leave a Message" form elements
+//Change font size and color of labels
+//Change font size, padding, border, etc. of inputs and textarea
+//Add spacing (padding/margin) between form fields
+//Change padding, background color, border, etc. of submit button
+
+label {
+    font-size: 16px;
+    color: #ada5a6;
+}
+
+input, textarea {
+    padding: 5px;
+    border: 1px solid #f0ec7d;
+}
+
+ul.messages li {
+    display: block;
+    background-color: #c5faaa;
+    padding: 10px;
+}
+
+.messages-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}                   
+ 
+.messages-item {
+    flex: 1;
+    padding: 20px;                                             
+    border: 1px solid #FFD700;
+} 
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #000000;
+    border: 1px solid #fbfcfa;
+    color: white;
+}   
+
+footer {
+    padding: 20px;
+    border: 1px solid #f0ec7d;
+    background-color: #f0f0f0;
+}
+
+
+@media (max-width: 1921px) {
+}
