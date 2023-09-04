@@ -8,7 +8,7 @@ githubRequest.onload = function() {
   let projectList = projectSection.querySelector('ul');
   for (let i=0; repositories.length; i++) {
     let project = document.createElement('li');
-    project.innerHTML = `${repositories[i].name}`;
+    project.innerHTML = `<a href='${repositories[i].html_url}'>${repositories[i].name}</a>`;
     projectList.appendChild(project);
   }
 }
