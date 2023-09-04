@@ -1,4 +1,4 @@
-var xhr = new XMLHttpRequest;
+var githubRequest = new XMLHttpRequest;
 
 document.addEventListener("DOMContentLoaded", () => {
   let skills = [
