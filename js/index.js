@@ -6,9 +6,12 @@ githubRequest.onload = function() {
   console.log(repositories);
   let projectSection = document.getElementById('projects');
   let projectList = projectSection.querySelector('ul');
-  for (let i=0; repositories.length; i++) {
+  for (let i=0; i < repositories.length; i++) {
     let project = document.createElement('li');
-    project.innerHTML = `<a href='${repositories[i].html_url}'>${repositories[i].name}</a>`;
+    repositoryURL = repositories[i].html_url;
+    repositoryName = repositories[i].name;
+    //project.innerHTML = '<a href=' + repositoryURL + '>' + repositoryName + '</a>';
+    project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a>`;
     projectList.appendChild(project);
   }
 }
