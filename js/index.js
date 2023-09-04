@@ -1,5 +1,10 @@
 let githubRequest = new XMLHttpRequest;
 githubRequest.open('GET', 'https://api.github.com/users/NatalyBMota/repos');
+/* Added headers using a combination of the instructions in the following websites:
+https://dev.to/gr2m/github-api-authentication-personal-access-tokens-53kd
+*/
+githubRequest.setRequestHeader('authorization', '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');
+githubRequest.setRequestHeader('X-GitHub-Api-Version', '2022-11-28');
 githubRequest.send();
 githubRequest.onload = function() {
   let repositories = JSON.parse(githubRequest.responseText);
@@ -11,10 +16,11 @@ githubRequest.onload = function() {
     repositoryURL = repositories[i].html_url;
     repositoryName = repositories[i].name;
     //project.innerHTML = '<a href=' + repositoryURL + '>' + repositoryName + '</a>';
-    project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a>`;
+    project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a>: `;
+    project.innerHTML += `${repositories[i].description}`;
     projectList.appendChild(project);
   }
-}
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   let skills = [
