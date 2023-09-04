@@ -7,7 +7,7 @@ githubRequest.onload = function() {
   let projectSection = document.getElementById('projects');
   let projectList = projectSection.querySelector('ul');
   for (let i=0; repositories.length; i++) {
-    
+    let project = document.createElement('li');
   }
 }
 
