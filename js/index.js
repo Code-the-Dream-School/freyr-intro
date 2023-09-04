@@ -1,9 +1,14 @@
-var githubRequest = new XMLHttpRequest;
+let githubRequest = new XMLHttpRequest;
 githubRequest.open('GET', 'https://api.github.com/users/NatalyBMota/repos');
 githubRequest.send();
 githubRequest.onload = function() {
-  var repositories = JSON.parse(githubRequest.responseText);
+  let repositories = JSON.parse(githubRequest.responseText);
   console.log(repositories);
+  let projectSection = document.getElementById('projects');
+  let projectList = projectSection.querySelector('ul');
+  for (let i=0; repositories.length; i++) {
+    
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
