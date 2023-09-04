@@ -9,6 +9,7 @@ githubRequest.onload = function() {
   for (let i=0; repositories.length; i++) {
     let project = document.createElement('li');
     project.innerText = repositories[i].name;
+    projectList.appendChild(project);
   }
 }
 
