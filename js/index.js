@@ -1,9 +1,5 @@
 let githubRequest = new XMLHttpRequest;
 githubRequest.open('GET', 'https://api.github.com/users/NatalyBMota/repos');
-/* Added headers using a combination of the instructions in the following websites:
-https://dev.to/gr2m/github-api-authentication-personal-access-tokens-53kd
-*/
-githubRequest.setRequestHeader('authorization', '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');
 githubRequest.setRequestHeader('X-GitHub-Api-Version', '2022-11-28');
 githubRequest.send();
 githubRequest.onload = function() {
@@ -13,11 +9,44 @@ githubRequest.onload = function() {
   let projectList = projectSection.querySelector('ul');
   for (let i=0; i < repositories.length; i++) {
     let project = document.createElement('li');
-    repositoryURL = repositories[i].html_url;
-    repositoryName = repositories[i].name;
+    let repositoryURL = repositories[i].html_url;
+    let repositoryName = repositories[i].name;
+    let repositoryDateOfCreation = new Date(repositories[i].created_at);
+    const monthSpelledOut = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    let creationDate = repositoryDateOfCreation.getDate();
+    let creationMonth = repositoryDateOfCreation.getMonth();
+    let creationYear = repositoryDateOfCreation.getFullYear();
+    console.log('Creation month:' + monthSpelledOut[creationMonth]);
+    
+    let subList = document.createElement("ul");
+    let li1 = document.createElement("li");
+    let li2 = document.createElement("li");
     //project.innerHTML = '<a href=' + repositoryURL + '>' + repositoryName + '</a>';
     project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a>: `;
+    /*
     project.innerHTML += `${repositories[i].description}`;
+    */
+    li1.innerHTML = `<strong>Description:</strong> ${repositories[i].description}`;
+    
+    li2.innerHTML = `<strong>Date of Creation:</strong> `;
+    li2.innerHTML += `${monthSpelledOut[creationMonth]} ${creationDate}, ${creationYear}`;
+    //li2.innerHTML = `<strong>Date of Creation:</strong> ${repositoryDateOfCreation}`;
+    subList.appendChild(li1);
+    subList.appendChild(li2);
+    project.appendChild(subList);
     projectList.appendChild(project);
   }
 };

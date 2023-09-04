@@ -98,6 +98,9 @@ p {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+strong {
+    font-weight: 500;
+}
 label, #about p {
     color: #102027;
 }
