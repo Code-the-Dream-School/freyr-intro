@@ -1,3 +1,5 @@
+var xhr = new XMLHttpRequest;
+
 document.addEventListener("DOMContentLoaded", () => {
   let skills = [
     "Wireframing",
