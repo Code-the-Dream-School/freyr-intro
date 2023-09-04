@@ -3,6 +3,7 @@ githubRequest.open('GET', 'https://api.github.com/users/NatalyBMota/repos');
 githubRequest.send();
 githubRequest.onload = function() {
   var repositories = JSON.parse(githubRequest.responseText);
+  console.log(repositories);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
