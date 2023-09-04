@@ -1,6 +1,9 @@
 var githubRequest = new XMLHttpRequest;
 githubRequest.open('GET', 'https://api.github.com/users/NatalyBMota/repos');
 githubRequest.send();
+githubRequest.onload = function() {
+  
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   let skills = [
