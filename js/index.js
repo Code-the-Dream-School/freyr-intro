@@ -199,10 +199,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
-    //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong><span>${message}</span>`;
-    newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> ${createSpanWithMessage(
-      message
-    )}`;
+    //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span>${message}</span>`;
+    newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong>&nbsp;`;
+    newMessage.innerHTML += `${createSpanWithMessage(message)}`;
 
     function createButton(buttonText) {
       let typeOfButton = document.createElement("button");
