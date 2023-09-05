@@ -206,10 +206,17 @@ li.outerList div {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    /*column-gap: 2rem; */
     align-items: center;
     border: 3px solid rgb(124, 150, 161);
     background-color: #dbeef5;
     padding: 1.3rem 1.7rem 1.3rem 1.9rem;
+}
+
+#startingFlexItems {
+    margin-right: 20%;
+    background-color: 'red';
+    border: 2px solid blue;
 }
 
 input, textarea, button {
