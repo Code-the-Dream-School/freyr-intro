@@ -342,9 +342,6 @@ textarea {
     }
 }
 @media (min-width: 0px) and (max-width: 522px) {
-    #website-brand div {
-        /* text-align: center; */
-    }
     #connect {
         text-align: left;
     }
@@ -360,9 +357,6 @@ textarea {
     }
     #experience ul ul {
         padding-left: 1.9rem;
-    }
-    #main-navigation ul {
-        
     }
     #skills ul {
         padding-left: 0;

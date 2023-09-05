@@ -31,7 +31,8 @@ githubRequest.onload = function() {
     let creationYear = repositoryDateOfCreation.getFullYear();
     
     let subList = document.createElement("ul");
-    subList.classList.add('subListOfInnerList');
+    //subList.classList.add('subListOfInnerList');
+    subList.className = 'subListOfInnerList';
     let li1 = document.createElement('li');
     let li2 = document.createElement('li');
     //project.innerHTML = '<a href=' + repositoryURL + '>' + repositoryName + '</a>';
