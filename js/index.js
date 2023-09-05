@@ -13,6 +13,9 @@ footer.appendChild(copyright);
 //  skills 
 
 const skills = [
+    
+    "Graphic Desing",
+    "Web Development",
     "HTML",
     "CSS",
     "JavaScript",   
@@ -32,7 +35,6 @@ const skills = [
   }
   
   document.addEventListener("DOMContentLoaded", function () {
-    // ... Previous code ...
   
     const messageForm = document.forms.leave_message;
   

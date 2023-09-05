@@ -1,133 +1,194 @@
-/* General styles */
+
+/* Heading styles */
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 60px;
+  color: #f8f7f7;
+ 
+  
+}
+
+h2 {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff9800;
+ 
+}
+
+h3 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-size: 14px;
+  font-weight: bold;
+  color: #b4b4b4;
+}
+
+/* Container styles */
 body {
-    background-color: #040404;
-    color: #979797;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: ;
-    margin: 0;
-    padding: 0;
-  }
+  background-color: #000000;
+  color: #ddd8d8;
   
-  /* Heading styles */
-  h1 {
-    font-family: "Georgia", serif;
-    font-weight: bold;
-    font-size: 60px;
-    color: #909090;
-    margin: 0;
-    padding: 0;
-  }
+ 
+}
+
+
+header {
+  background-color: #000000;
+  padding: 0;
+  margin:0
+}
+
+
+
+.navigation-menu {
+  list-style: none;
+  display: flex;
+  flex-direction:row;
+  gap:30px;
+  padding: 15px;
+  margin:0
+}
+
+/*.navigation-menu li {
+  text-transform: uppercase;
+}*/
+
+/* Target only the "a" elements within .navigation-menu for hover effect */
+.navigation-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Apply hover effect to the "a" elements within .navigation-menu */
+.navigation-menu li a:hover {
+  color: #ff9800;
+}
+
+
+main{
+  background-color: #000000;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+
+  width: 300px;
+  height: 320px;
+}
+
+.container {
+  display:flex;
+  align-items: center;
+  width: 40%;
+}
+
+
+.content {
+  padding: 1px;
+  align-items:center;
+}
+/* Section styles */
+section {
   
-  
-  h2, h3 {
-    font-family: "Georgia", serif;
-    font-weight: bold;
-    color: #c7c6c6;
-  }
-  
-  /* Container styles */
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  
-  .content {
-    flex: 4;
-    padding: 20px;
-  }
-  
-  .profile-picture-container {
-    flex: 41;
-    padding: 1%;
-    text-align: center;
-  }
-  
-  /* Profile picture */
-  .profile-picture {
-    max-width: 100%;
-    height: auto;
-   
-  }
-  
-  /* Section styles */
-  section {
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #000000;
-    border: 1px solid #262525;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(118, 25, 25, 0.1);
-    max-width: 800px;
-  }
-  
-  /* Form styles */
-  form {
-    margin: 5px auto;
-    padding: 5px;
-    background-color: #000000;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    max-width: 600px;
-  }
-  
-  label {
-    font-size: 16px;
-    color: #9b9595;
-  }
-  
-  input, textarea {
-    font-size: 16px;
-    padding: 12px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    margin-bottom: 15px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #000000;
+  border: 1px solid #2b2b2b;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(27, 140, 36, 0.1);
+  max-width: 500px;
+  align-items:last baseline;
+}
+
+.right{
+  align-items: center;
+  width: 100%;
+}
+.profile-picture-container {
     width: 100%;
-    box-sizing: border-box;
-  }
-  
-  button[type="submit"] {
-    padding: 12px 24px;
-    background-color: #171818;
-    color: #676363;
-    border: none;
-    border-radius: 5px; 
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  /* Message list styles */
-  #messages li {
-    margin: 10px 0;
-    padding: 20px;
-    background-color: #6a6666;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Footer styles */
-  footer {
-    margin-top: 8px;
-    padding: 10px;
-    background-color: #000000;
-    color: #3b3636;
-    text-align: center;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-    body {
+    height: 55%;
+
+}
+
+/* Profile picture */
+.profile-picture {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* Form styles */
+form {
+  margin: 1px auto;
+  padding: 1px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 20px;
+  color: #c9c9c9;
+  align-items: center;
+}
+
+input, textarea {
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  padding: 12px 24px;
+  background-color: #171818;
+  color: #9c9c9c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Message list styles */
+#messages li {
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #dcd7d7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #4f4e4e;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #000000;
+  color: #dadada;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
       font-size: 14px;
-    }
-    section, form {
+  }
+  section, form {
       margin: 10px;
       padding: 15px;
-    }
   }
-  
+
+}

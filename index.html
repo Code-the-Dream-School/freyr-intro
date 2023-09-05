@@ -6,75 +6,98 @@
     <title>BERGALLOMARTINEZ</title> 
     <link rel="stylesheet" href="css/index.css">    
 </head>
+
 <body>
-       <div class="container">
-              <div class="content">
-                <header>
-                  <h1>Juan Pablo Bergallo Martinez</h1>
-                </header>
-       <section>     
-              <h2>About</h2>
-              <p>Hi im Juan Pablo, I am 42 years old, and I am from Argentina, born in France, currently living in Denmark. I studied graphic design, although I haven't been practicing it for some time. I want to become a digital nomad by programming and combining my existing design knowledge.</p>
-       </section> 
+    
+    <header>
 
-       <section>
-              <h2>Experience</h2>
-              <p>I have had various types of jobs. Currently, I work as a chef at a restaurant here in Copenhagen. Regarding design, I have worked in advertising agencies and printing shops in Cordoba, Argentina. As for programming, I am just starting out, and I am very excited about gaining work experience in this field.</p>
-       </section>
+    </header>
+    
+    <main> 
+       <div>
+        
+                <div class="container">
+                <div class="content">
 
-       <section id="skills">
-              <h2>Skills</h2>
-              <ul>
-                     
-              </ul>
-       </section>
+            <section class="title">
+               <h1>Juan Pablo Bergallo Martinez</h1>
+             </section>                    
+             <div class="nav-container">
+                <nav>
+                   <ul class="navigation-menu">
+                        <li><a href="#about">About</a></li>
+                       <li><a href="#experience">Experience</a></li>
+                       <li><a href="#skills">Skills</a></li>
+                       <li><a href="#contact">Contact</a></li>
+                    </ul>
+               </nav>
+           </div>
+            <section id="about">     
+                <h2>About</h2>
+                <h3>
+                    <p>Hi, I'm Juan Pablo. I am 42 years old and I am from Argentina, born in France, currently living in Denmark. I studied graphic design, although I haven't been practicing it for some time. I want to become a digital nomad by programming and combining my existing design knowledge.</p>
+                </h3>
+            </section> 
 
-       <section>
-              <h2>Contact</h2>
-              <p>email:</p>
-              <ul>
-                     <li>bergallomartinez@gmail.com</li>
-                     <li>juampibergallo@gmail.com</li>
-              </ul> 
+            <section id="experience">
+                <h2>Experience</h2>
+                <h3>
+                    <ul>
+                        <li>I have had various types of jobs.</li>
+                        <li>Currently, I work as a chef at a restaurant here in Copenhagen.</li>
+                        <li>Regarding design, I have worked in advertising agencies and printing shops in Cordoba, Argentina.</li>
+                        <li>As for programming, I am just starting out, and I am very excited about gaining work experience in this field.</li>
+                    </ul>
+                </h3>
+            </section>
+            
+            <!-- Skills section here -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>  
+                </ul>
+            </section>
 
-              <p>Github BERGALLOMARTINEZ </p>    
-                     
-       </section>
-       
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email:</p>
+                <ul>
+                    <li>bergallomartinez@gmail.com</li>
+                    <li>juampibergallo@gmail.com</li>
+                </ul> 
+                <p>Github BERGALLOMARTINEZ </p>    
+            </section>
+        </div>    
+        </div>
+    </div>  
+    
+   <div class="right">
+    <div class="profile-picture-container">
+        <img src="media/jp1.jpg" alt="Profile Picture" class="profile-picture">
+    </div>
+        
 
-</div>
-       <div class="profile-picture-container">
-               <img src="media/jp1.jpg" alt="Profile Picture" class="profile-picture">
-       <div class="form-container">
-              <section>
-                     <h2>Leave a Message</h2>
-                     <form name="leave_message">
-                            <label for="usersName">Name:</label><br>
-                            <input type="text" name="usersName" required><br>
-                            
-                            <label for="usersEmail">Email:</label><br>
-                            <input type="email" name="usersEmail" required><br><br>
-                            
-                            <label for="usersMessage">Message:</label><br>
-                            <textarea name="usersMessage" required></textarea><br>
-                            
-                            <button type="submit">Submit</button>
-                     </form>
-              </section>
-              <section id="messages">
-                     <h2>Messages</h2>
-                     <ul>
-                            <!-- Messages here -->
-                     </ul>
-              </section>
-       </div>        
-       </div>
-</div>
+        <div class="form-container">
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <label for="usersName">Name:</label><br>
+                <input type="text" name="usersName" required><br>
+        
+                <label for="usersEmail">Email:</label><br>
+                <input type="email" name="usersEmail" required><br><br>
+        
+                <label for="usersMessage">Message:</label><br>
+                <textarea name="usersMessage" required></textarea><br>
+        
+                <button type="submit">Submit</button> 
+            </form>
+        </div>
+    </div> 
+    </main>   
 
-       <br><br>
-       <footer></footer>
-       <script src="js/index.js"></script>
-
+    <footer class="footer">
+     <script src="js/index.js"></script>
+    </footer>
 </body>
-  
+
 </html>
