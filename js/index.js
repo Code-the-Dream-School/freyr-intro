@@ -29,18 +29,22 @@ githubRequest.onload = function() {
     let creationDate = repositoryDateOfCreation.getDate();
     let creationMonth = repositoryDateOfCreation.getMonth();
     let creationYear = repositoryDateOfCreation.getFullYear();
-    console.log('Creation month:' + monthSpelledOut[creationMonth]);
     
     let subList = document.createElement("ul");
-    let li1 = document.createElement("li");
-    let li2 = document.createElement("li");
+    subList.classList.add('subListOfInnerList');
+    let li1 = document.createElement('li');
+    let li2 = document.createElement('li');
     //project.innerHTML = '<a href=' + repositoryURL + '>' + repositoryName + '</a>';
-    project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a>: `;
+    project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a><span class="hideable">:</span> `;
     /*
     project.innerHTML += `${repositories[i].description}`;
     */
-    li1.innerHTML = `<strong>Description:</strong> ${repositories[i].description}`;
-    
+    let descriptionStrong = document.createElement('strong');
+    descriptionStrong.innerText = 'Description: ';
+    //li1.innerHTML = `<strong><span class="hideable">:</span></strong> ${repositories[i].description}`;
+    li1.appendChild(descriptionStrong);
+    let descriptionTextNode = document.createTextNode(`${repositories[i].description}`);
+    li1.appendChild(descriptionTextNode);
     li2.innerHTML = `<strong>Date of Creation:</strong> `;
     li2.innerHTML += `${monthSpelledOut[creationMonth]} ${creationDate}, ${creationYear}`;
     //li2.innerHTML = `<strong>Date of Creation:</strong> ${repositoryDateOfCreation}`;
@@ -170,9 +174,9 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     messageSection.removeAttribute("style");
     /*
-            The above line of code right now has the same effect as the line of code below. It makes the message section visible once again. However, if more styles were added to the messageSection element, the line of code below would not remove them, in order to make the display of this element as visible one more time.
-            messageSection.style.display = '';
-        */
+        The above line of code right now has the same effect as the line of code below. It makes the message section visible once again. However, if more styles were added to the messageSection element, the line of code below would not remove them, in order to make the display of this element as visible one more time.
+        messageSection.style.display = '';
+    */
 
     function getValueOfFormField(formFieldName) {
       let fieldName = event.target[formFieldName];
@@ -240,12 +244,12 @@ document.addEventListener("DOMContentLoaded", () => {
     removeButton.addEventListener("click", () => {
       let entry = removeButton.parentNode;
       /*
-                The variable entry is a list item (li), which is the element that is 
-                the parent of the editButton. 
-                It's parent is the unordered list (ul), which is stored in the 
-                variable messageList.
-                The ul's parent is the section element with the id of messages.
-            */
+          The variable entry is a list item (li), which is the element that is 
+          the parent of the editButton. 
+          It's parent is the unordered list (ul), which is stored in the 
+          variable messageList.
+          The ul's parent is the section element with the id of messages.
+      */
       let numOfListItems = messageList.childElementCount;
       console.log(numOfListItems);
       entry.remove();

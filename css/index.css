@@ -2,8 +2,11 @@
 * {
     margin: 0;
 }
-ul.subListOfInnerList li {
+ul.subListOfInnerList li  {
     display: none;
+}
+.hideable {
+    visibility: hidden;
 }
 h3 {
     margin-bottom: 0;
@@ -254,6 +257,9 @@ textarea {
     ul.subListOfInnerList li {
         display: list-item;
         list-style-type: disc;
+    }
+    .hideable {
+        visibility: visible;
     }
 }
 @media (min-width: 890px) {
