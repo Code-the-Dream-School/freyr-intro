@@ -201,26 +201,40 @@ li.outerList div {
 }
 
 #messages li {
-    display: inline-block;
-    width: 96.5%;
     /*
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     column-gap: 2rem; 
-    align-items: center; */
+    align-items: center;
+    */
+    
+    display: inline-block;
+    /*
+    width: 96.5%;
+    */
     border: 3px solid rgb(124, 150, 161);
     background-color: #dbeef5;
     padding: 1.3rem 1.7rem 1.3rem 1.9rem;
 }
 
+/*
 #startingFlexItems {
-    margin-right: 20%;
+    display: inline-flex;
+    margin-right: 20%; 
+    background-color: pink;
+    flex-direction: row;
     background-color: 'red';
     border: 2px solid blue;
 }
-
+#endingFlexItems {
+    display: inline-flex;
+    background-color: red;
+    flex-direction: row;
+    justify-content: flex-end; 
+}
+*/
 input, textarea, button {
     /* offset-x | offset-y | blur-radius | color */
     box-shadow: .4rem .5rem .3rem rgba(142, 172, 187, .2);
@@ -410,7 +424,8 @@ button[type=submit]:hover {
     font-family: 'Blinker', sans-serif;
     font-weight: 600;
 }
-#edit-btn, #save-btn {
+#edit-btn, #save-btn, #remove-btn {
+    display: inline-block;
     margin-right: .4em;
 }
 /*
@@ -420,7 +435,7 @@ button[type=submit]:hover {
 }
 */
 #edit-btn {   
-    margin-left: 20%; 
+    /*margin-left: 20%; */
 }
 
 #save-btn {
