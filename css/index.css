@@ -404,8 +404,14 @@ button[type=submit]:hover {
 #edit-btn, #save-btn {
     margin-right: .4em;
 }
-#edit-btn {   
-    margin-left: 11rem;
+/*
+#edit-btn, #remove-btn {   
+    margin-left: 11rem; 
+    align-self: flex-end;
+}
+*/
+#remove-btn {   
+    align-self: flex-end;
 }
 #save-btn {
     margin-left: 5rem;
