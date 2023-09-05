@@ -140,9 +140,15 @@ li.outerList div {
 #experience li.outerList, #skills ul li, #messages li, #connect ul {
     margin: 0 0 2.7rem -2.4rem;
 }
-#experience li.outerList, #messages li, #main-navigation ul, #skills ul li {
+
+#experience li.outerList, #main-navigation ul, #skills ul li {
     list-style-type: none;
 }
+/*
+#messages li {
+    list-style-type: none;
+}
+*/
 #experience li.outerList {
     border: 2px solid #CCCCC4;
     border-radius: 1.6rem;
@@ -190,17 +196,22 @@ li.outerList div {
     /* list-style-type: none; */
 }
 
+#skills ul li, #messages li {
+    border-radius: 1rem;
+}
+
 #messages li {
+    /*display: inline-block; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
     border: 3px solid rgb(124, 150, 161);
     background-color: #dbeef5;
     padding: 1.3rem 1.7rem 1.3rem 1.9rem;
 }
-#skills ul li, #messages li {
-    border-radius: 1rem;
-}
-#messages li {
-    display: inline-block;
-}
+
 input, textarea, button {
     /* offset-x | offset-y | blur-radius | color */
     box-shadow: .4rem .5rem .3rem rgba(142, 172, 187, .2);

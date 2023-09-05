@@ -42,7 +42,7 @@ githubRequest.onload = function() {
     */
     let descriptionStrong = document.createElement('strong');
     descriptionStrong.innerText = 'Description: ';
-    //li1.innerHTML = `<strong><span class="hideable">:</span></strong> ${repositories[i].description}`;
+    //li1.innerHTML = `<strong>Description:</strong> ${repositories[i].description}`;
     li1.appendChild(descriptionStrong);
     let descriptionTextNode = document.createTextNode(`${repositories[i].description}`);
     li1.appendChild(descriptionTextNode);
@@ -197,7 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let createSpanWithMessage = (userMessage) => `<span>${userMessage}</span>`;
 
-    console.log(`name: ${name} \nemail: ${email} \nmessage: ${message}`);
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
     //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong><span>${message}</span>`;
@@ -252,7 +251,6 @@ document.addEventListener("DOMContentLoaded", () => {
           The ul's parent is the section element with the id of messages.
       */
       let numOfListItems = messageList.childElementCount;
-      console.log(numOfListItems);
       entry.remove();
       if (numOfListItems === 1) {
         messageSection.style.display = "none";
