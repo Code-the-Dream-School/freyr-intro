@@ -97,3 +97,69 @@ messageForm.addEventListener('submit', (e) => {
     messageForm.reset();
 });
 
+
+
+
+
+let githubRequest = new XMLHttpRequest();
+
+githubRequest.open('GET', 'https://api.github.com/users/leipei92/repos');
+githubRequest.send();
+
+// githubRequest.addEventListener('load', function (e) {
+
+//   if (githubRequest.status === 200) {
+//      let repositories = JSON.parse(githubRequest.responseText);
+//      console.log(repositories); //check for repos printing
+
+//   }
+
+// let projectSection = document.getElementById('projects');
+// let projectList = projectSection.querySelector('ul');
+// for ( let i= 0; i < repositories.length; i ++ ) {
+
+//     let repository = repositories[i];
+//     let projectLink= document.createElement('a');
+
+//     projectLink.href = repository.html_url;
+//     projectLink.textContent = repository.name;
+
+//     let project = document.createElement('li');
+
+//     projectList.appendChild(project);
+
+// }
+
+// });
+
+
+
+githubRequest.addEventListener('load', function (e) {
+
+  if (githubRequest.status === 200) {
+     let repositories = JSON.parse(githubRequest.responseText);
+     console.log(repositories); // check for repos printing
+
+     let projectSection = document.getElementById('projects');
+     let projectList = projectSection.querySelector('ul');
+     for (let i = 0; i < repositories.length; i++) {
+
+         let repository = repositories[i];
+         let projectLink = document.createElement('a');
+
+         projectLink.href = repository.html_url;
+         projectLink.textContent = repository.name;
+
+         let project = document.createElement('li');
+         project.appendChild(projectLink); // Append the link to the list item
+
+         projectList.appendChild(project);
+     }
+  }
+});
+
+
+
+
+
+
