@@ -200,19 +200,35 @@ document.addEventListener("DOMContentLoaded", () => {
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
     //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span>${message}</span>`;
+    let startingFlexItems = document.createElement('div');
+    /*
     newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> 
-                            wrote:</strong>&nbsp ${createSpanWithMessage(message)}`;
-
+                            wrote:</strong>&nbsp ${createSpanWithMessage(message)}</div>`;
+    */
+    startingFlexItems.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> 
+                            wrote:</strong>&nbsp ${createSpanWithMessage(message)}</div>`;
+    
     function createButton(buttonText) {
       let typeOfButton = document.createElement("button");
       typeOfButton.innerText = buttonText;
       typeOfButton.type = "button";
       return typeOfButton;
     }
+    let endingFlexItems = document.createElement('div');
+    /*
+      The append method will let you add more than one node to a parent element, provided that you add them all as arguments at once. I tried calling the append method twice on the same parent element, and it did not work. Yet, the following code works for adding two elements to newMessage.
+      endingFlexItems.innerText = 'Test';
+      newMessage.append(startingFlexItems, endingFlexItems);
+    */
+    newMessage.appendChild(startingFlexItems);
+    newMessage.appendChild(endingFlexItems);
 
     function createButtonAndAppendIt(buttonText) {
       let typeOfButton = createButton(buttonText);
-      newMessage.appendChild(typeOfButton);
+      /* newMessage is a variable storing a list item, which is inside of the ul that is stored in the variable messageList. endingFlexItems is a div, which is meant to contain the buttons */ 
+      endingFlexItems.appendChild(typeOfButton);
+      //newMessage.appendChild(endingFlexItems);
+      //newMessage.appendChild(typeOfButton);
       return typeOfButton;
     }
 
@@ -228,12 +244,14 @@ document.addEventListener("DOMContentLoaded", () => {
             let editButton = document.createElement('button');
             editButton.innerText = "edit";
             editButton.type = "button";
-            newMessage.appendChild(editButton);
+            endingFlexItems.appendChild(editButton);
+            newMessage.appendChild(endingFlexItems);
 
             let removeButton = document.createElement('button');
             removeButton.innerText = "remove";
             removeButton.type = "button";
-            newMessage.appendChild(removeButton);
+            endingFlexItems.appendChild(removeButton);
+            newMessage.appendChild(endingFlexItems);
         */
 
     //editButton.style.margin = '0 .4rem 0 3rem';
@@ -258,7 +276,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     editButton.addEventListener("click", () => {
       saveButton.style.display = "";
+      /*
+      The span element is now inside of the div that is stored in the startingFlexItems
+      variable, and not in the list item that is store in the variable newMessage anymore.
+
       let messageContainerSpan = newMessage.getElementsByTagName("span")[0];
+      */
+      let messageContainerSpan = startingFlexItems.getElementsByTagName("span")[0];
       let messageText = messageContainerSpan.textContent;
       messageContainerSpan.textContent = "";
 
@@ -266,9 +290,12 @@ document.addEventListener("DOMContentLoaded", () => {
       editInputField.type = "text";
       editInputField.id = "editInputField";
       editInputField.value = messageText;
-      newMessage.insertBefore(editInputField, editButton);
-
-      newMessage.insertBefore(saveButton, removeButton);
+      //newMessage.insertBefore(editInputField, editButton);
+      //startingFlexItems.insertBefore(messageContainerSpan, editInputField);
+      //messageContainerSpan.append(editInputField);
+      messageContainerSpan.insertAdjacentElement('afterend', editInputField);
+      endingFlexItems.insertBefore(saveButton, removeButton);
+      //newMessage.insertBefore(saveButton, removeButton);
       editButton.style.display = "none";
       //editButton.remove();
     });
@@ -284,7 +311,9 @@ document.addEventListener("DOMContentLoaded", () => {
       editInputField.remove();
 
       //let editButton = createButton('edit');
-      newMessage.insertBefore(editButton, removeButton);
+      //newMessage.insertBefore(editButton, removeButton);
+      //newMessage.append(editButton);
+      removeButton.prepend(editButton);
       saveButton.style.display = "none";
       //saveButton.remove();
     });
