@@ -1,5 +1,5 @@
 // Creating Skills list
-var skills = ["JavaScript", "HTML", "CSS", "DOM"]; // technical skills
+var skills = ["JavaScript", "HTML", "CSS", "DOM","AJAX", "JSON"]; // technical skills
 const skillsSection = document.getElementById('skills'); // selecting the section with id skills
 const skillsList = skillsSection.querySelector('ul');
 
@@ -57,3 +57,28 @@ const footerContent = document.createElement('p');
 const textC = `<small>&#169; Anna Gerhardt ${thisYear}</small>`;
 footerContent.innerHTML = textC;
 containerF.appendChild(footerContent);
+
+
+var githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/annaUniversal/repos");
+githubRequest.send();
+
+githubRequest.addEventListener('load', (e) => {
+    var repositories = JSON.parse(githubRequest.response);
+    console.log(repositories);
+
+    var projectSection = document.getElementById('projects');
+    var projectList = projectSection.querySelector('ul');
+
+    for (var i = 0; i < repositories.length; i += 1){
+        var project = document.createElement('li');
+        project.innerHTML  = `<a href = "https://github.com/${repositories[i].full_name}"> ${repositories[i].name}</a>
+        Created ${repositories[i].created_at.slice(0, 4)}`;
+    
+        projectList.appendChild(project);
+       
+    }  
+
+});
+   
+        

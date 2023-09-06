@@ -6,7 +6,11 @@ header {
   background-color: #c6f5c8;
   padding: 10px;
   text-align: right;
-  // margin-right: 30px; /* add right margin */
+  position: fixed;
+  top: 0px;
+  left:0;
+  right:0;
+  /* margin-right: 30px; add right margin */
 }
 
 footer {
@@ -15,7 +19,11 @@ footer {
   width: 100%;*/
   background-color: #c6f5c8;
   text-align: left;
-  padding: 10px;
+  padding: 3px;
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
 }
 
 body {
@@ -36,6 +44,7 @@ div.a {
   display: inline-block;
   text-align: justify;
   font-weight: bold;
+  list-style-type: none;
 }
 
 div.content {
@@ -65,7 +74,7 @@ textarea {
   padding: 15px;
   width: 90%;
   background-color: #eff7f7;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border-radius: 15px;
   box-sizing: border-box; /* Ensuring padding and border don't increase their size */
 }
@@ -79,7 +88,6 @@ button[type="submit"] {
   cursor: pointer; /* Hand cursor on hover for better UX */
   transition: background-color 0.3s; /* Smooth transition on hover */
 }
-
 
 /*ul.al{
   margin: 4;
@@ -103,8 +111,6 @@ div.c {
 #experience li:hover {
   background-color: #c6f5c8; /* Slightly darker background on hover */
 }
-
-
 
 button[type="submit"]:hover {
   background-color: #0771ea /* A slightly darker shade for hover effect */

@@ -1,33 +1,29 @@
 .body-grid{
     display: grid;
-    //height: calc(100vh - (var(--footer-height) + var(--header-height)));
+    /* height: calc(100vh - (var(--footer-height) + var(--header-height)));*/
     grid-template-columns: 1fr 2fr;
     grid-auto-rows: minmax(50px, auto);
     grid-gap: 20px;
     grid-template-areas: 
       "header header"
        "image about"
-       "skills experience"
+       "projects skills"
        "connect experience"
-       "messages messages"
+       "messages experience"
+       "footer footer"
   }
 
   header{
     /*grid-column: 1 / -1;
     grid-row-start: 1;*/    
-    grid-area: header;
     position: sticky;
-    top: 0px;
+    grid-area: header;
   }
 
   footer {
     /*grid-row-start: -3;
     grid-row-end: -1;*/
     grid-area: footer;
-    position: sticky;
-    bottom:0;
-    left:0;
-    right:0;
   }
 
   /*
@@ -46,7 +42,11 @@
   .skills-grid {
     grid-area: skills;
   }
-  
+
+  .projects-grid {
+    grid-area: projects;
+  } 
+
   .experience-grid {
     grid-area: experience;
   }
@@ -104,6 +104,7 @@
 
     .body-grid{
         display: grid;
+        font-size: 25px;
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(50px, auto);
         grid-gap: 5px;  
@@ -112,6 +113,7 @@
            "image" 
            "about"
            "skills" 
+           "projects"
            "experience"
            "connect"
            "messages"
@@ -128,6 +130,7 @@
 @media (min-width: 601px) and (max-width: 880px){
     .body-grid{
         display: grid;
+        font-size: 23px;
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(50px, auto);
         grid-gap: 15px;
@@ -135,7 +138,8 @@
           "header"
            "image" 
            "about"
-           "skills" 
+           "skills"
+           "projects" 
            "experience"
            "connect"
            "messages"
@@ -151,20 +155,13 @@
         height: 60px;
     }
 
-    body {
-        font-size: 23px;
-    }
-
     div.content {
         font-size: 23px;
         display: flex;
         flex-direction: column;
     }
     
-    div.a {
-        font-size: 23px;
-    }
-
+ 
     .al{
         font-weight: normal;
     }
@@ -178,28 +175,40 @@
     input[type="email"],
     input[type="uderMessage"],
     textarea {
-        font-size: 22px;
+        font-size: 20px;
         background-color: #eff7f7;
     }
-
-    footer {
-        position: sticky;
-        bottom:0;
-        left:0;
-        right:0;
-      }
 }
 
 @media (min-width: 881px) { 
+    .body-grid{
+        display: grid;
+        /* height: calc(100vh - (var(--footer-height) + var(--header-height)));*/
+        grid-template-columns: 1fr 2fr;
+        grid-auto-rows: minmax(50px, auto);
+        grid-gap: 20px;
+        grid-template-areas: 
+          "header header"
+           "image about"
+           "skills projects"
+           "connect experience"
+           "messages messages"
+           "footer footer"
+      }
+
     img {
         border-radius: 50%;
         width: 80px;
         height: 80px;
     }
     
-    div.content {
-    font-size: 12px;
+    body {
+        font-size: 15px;
     }
+
+    div.content {
+    font-size: 20px;
+    }s
 
     form {
     max-width: 600px;
@@ -209,18 +218,11 @@
     input[type="email"],
     input[type="uderMessage"],
     textarea {
-    font-size: 16px;
+    font-size: 25px;
     background-color: #eff7f7;
     }
 
     .messageList-grit{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-
-    footer {
-        position: sticky;
-        bottom:0;
-        left:0;
-        right:0;
-      }
   }
