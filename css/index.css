@@ -1,4 +1,3 @@
-
 header {
   /*position: fixed;
   top: 0;
@@ -14,16 +13,13 @@ header {
 }
 
 footer {
-  /*position: fixed;
-  bottom: 0px;
-  width: 100%;*/
   background-color: #c6f5c8;
   text-align: left;
   padding: 3px;
   position: fixed;
   bottom:0;
-  left:0;
-  right:0;
+  width: 100%;
+  font-size: 15px;
 }
 
 body {
@@ -48,8 +44,8 @@ div.a {
 }
 
 div.content {
-  margin: 50px 20px; /* Add a top/bottom margin to avoid content being hidden behind fixed header/footer */
-  padding: 20px;
+  margin: 50px 50px; /* Add a top/bottom margin to avoid content being hidden behind fixed header/footer */
+  /* padding: 20px;*/
   font-family: cursive;
 }
 

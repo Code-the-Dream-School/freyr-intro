@@ -58,7 +58,7 @@ const textC = `<small>&#169; Anna Gerhardt ${thisYear}</small>`;
 footerContent.innerHTML = textC;
 containerF.appendChild(footerContent);
 
-
+// Adding progects from github
 var githubRequest = new XMLHttpRequest();
 githubRequest.open("GET", "https://api.github.com/users/annaUniversal/repos");
 githubRequest.send();

@@ -1,9 +1,10 @@
 .body-grid{
     display: grid;
-    /* height: calc(100vh - (var(--footer-height) + var(--header-height)));*/
+    /*height: calc(100vh - (var(--footer-height) + var(--header-height)));*/
     grid-template-columns: 1fr 2fr;
     grid-auto-rows: minmax(50px, auto);
     grid-gap: 20px;
+    margin-right: 15px;
     grid-template-areas: 
       "header header"
        "image about"
@@ -17,6 +18,7 @@
     /*grid-column: 1 / -1;
     grid-row-start: 1;*/    
     position: sticky;
+    width: 100%;
     grid-area: header;
   }
 
@@ -24,6 +26,7 @@
     /*grid-row-start: -3;
     grid-row-end: -1;*/
     grid-area: footer;
+    padding: 3px;
   }
 
   /*
@@ -71,158 +74,158 @@
 
    
 @media (min-width: 0) and (max-width: 600px){
-    img {
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-    }
-    
-    div.content {
-      font-size: 25px;
-    }
+  img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
   
-    div.a {
-      font-size: 25px;
-    }
+  div.content {
+    font-size: 25px;
+  }
+
+  div.a {
+    font-size: 25px;
+  }
+
+  .al{
+    font-weight: normal;
+    margin: 5px;
+  }
   
-    .al{
-      font-weight: normal;
-    }
-    
-    form {
-      max-width: 300px;
-      padding: 5px;
-    }
-    
-    input[type="text"],
-    input[type="email"],
-    input[type="uderMessage"],
-    textarea {
-      font-size: 20px;
-      background-color: #eff7f7;
-    }
+  form {
+    max-width: 300px;
+    /*padding: 5px; */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="uderMessage"],
+  textarea {
+    font-size: 20px;
+    background-color: #eff7f7;
+  }
 
-    .body-grid{
-        display: grid;
-        font-size: 25px;
-        grid-template-columns: 1fr;
-        grid-auto-rows: minmax(50px, auto);
-        grid-gap: 5px;  
-        grid-template-areas: 
-          "header"
-           "image" 
-           "about"
-           "skills" 
-           "projects"
-           "experience"
-           "connect"
-           "messages"
-           "footer"
-    }
+  .body-grid{
+      display: grid;
+      font-size: 25px;
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(50px, auto);
+      grid-gap: 5px;  
+      grid-template-areas: 
+        "header"
+          "image" 
+          "about"
+          "skills" 
+          "projects"
+          "experience"
+          "connect"
+          "messages"
+          "footer"
+  }
 
-    .messageList-grit{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
+  .messageList-grit{
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 
 @media (min-width: 601px) and (max-width: 880px){
-    .body-grid{
-        display: grid;
-        font-size: 23px;
-        grid-template-columns: 1fr;
-        grid-auto-rows: minmax(50px, auto);
-        grid-gap: 15px;
-        grid-template-areas: 
-          "header"
-           "image" 
-           "about"
-           "skills"
-           "projects" 
-           "experience"
-           "connect"
-           "messages"
-           "footer"
-    }
-    .messageList-grit{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    
-    img {
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-    }
+  .body-grid{
+      display: grid;
+      font-size: 23px;
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(50px, auto);
+      grid-gap: 15px;
+      grid-template-areas: 
+        "header"
+          "image" 
+          "about"
+          "skills"
+          "projects" 
+          "experience"
+          "connect"
+          "messages"
+          "footer"
+  }
 
-    div.content {
-        font-size: 23px;
-        display: flex;
-        flex-direction: column;
-    }
-    
- 
-    .al{
-        font-weight: normal;
-    }
-    
-    form {
-        max-width: 500px;
-        padding: 5px;
-    }
-    
-    input[type="text"],
-    input[type="email"],
-    input[type="uderMessage"],
-    textarea {
-        font-size: 20px;
-        background-color: #eff7f7;
-    }
+  .messageList-grit{
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+  }
+
+  div.content {
+      font-size: 23px;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .al{
+      font-weight: normal;
+  }
+  
+  form {
+      max-width: 500px;
+      /*padding: 5px;*/
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="uderMessage"],
+  textarea {
+      font-size: 20px;
+      background-color: #eff7f7;
+  }
 }
 
 @media (min-width: 881px) { 
-    .body-grid{
-        display: grid;
-        /* height: calc(100vh - (var(--footer-height) + var(--header-height)));*/
-        grid-template-columns: 1fr 2fr;
-        grid-auto-rows: minmax(50px, auto);
-        grid-gap: 20px;
-        grid-template-areas: 
-          "header header"
-           "image about"
-           "skills projects"
-           "connect experience"
-           "messages messages"
-           "footer footer"
-      }
+  .body-grid{
+    display: grid;
+    /* height: calc(100vh - (var(--footer-height) + var(--header-height)));*/
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 20px;
+    grid-template-areas: 
+      "header header"
+        "image about"
+        "skills projects"
+        "connect experience"
+        "messages messages"
+        "footer footer"
+  }
 
-    img {
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-    }
-    
-    body {
-        font-size: 15px;
-    }
+  img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+  
+  body {
+      font-size: 15px;
+  }
 
-    div.content {
+  div.content {
     font-size: 20px;
-    }s
+  }
 
-    form {
+  form {
     max-width: 600px;
-    }
-    
-    input[type="text"],
-    input[type="email"],
-    input[type="uderMessage"],
-    textarea {
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="uderMessage"],
+  textarea {
     font-size: 25px;
     background-color: #eff7f7;
-    }
-
-    .messageList-grit{
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
   }
+
+  .messageList-grit{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
