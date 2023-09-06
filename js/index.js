@@ -106,3 +106,64 @@ messageList.appendChild(newMessage);
 messageForm.reset();
 });
 
+// Create a new XMLHttpRequest object and store it in a variable named githubRequest
+var githubRequest = new XMLHttpRequest();
+
+// Call the open method on your githubRequest object and pass the necessary arguments
+// 1. method: the method of your request (in this case, "GET")
+// 2. url: the url of your request (in this case, "https://api.github.com/users/{GITHUB_USERNAME}/repos")
+githubRequest.open('GET', 'https://api.github.com/users/Brogibear/repos');
+
+// Finally, call the send method on your githubRequest object to actually send the request
+githubRequest.send();
+
+// Handle Response from Server
+// Below the last line of code you just wrote, add a "load" event listener on your githubRequest object and pass the necessary arguments
+// 1. event: the event that is being handled (in this case, "load")
+// 2. callback: the function that runs when this event occurs
+githubRequest.addEventListener('load', function(event) {
+ if (githubRequest.status === 200) {
+  var repositories = JSON.parse(githubRequest.responseText);
+  console.log(repositories);
+
+// Using "DOM Selection", select the #projects section by id and store it in a variable named projectSection
+
+  var projectSection = document.getElementById('projects');
+
+// Using "DOM Selection", query the projectSection (instead of the entire document) to find the <ul> element and store it in a variable named projectList
+
+  var projectList = projectSection.querySelector('ul');
+
+// Create a for loop to iterate over your repositories Array, starting at index 0
+
+  for (var i = 0; i < repositories.length; i++) {
+   var repository = repositories[i];
+
+// Create a new anchor element (<a>) for each repository
+
+    var projectLink = document.createElement('a');
+    projectLink.href = repository.html_url;
+    projectLink.textContent = repository.name;
+
+// Create a list item (<li>) to contain the anchor
+    
+    var project = document.createElement('li');
+
+// Append the anchor element to the list item
+
+    project.appendChild(projectLink);
+
+// Append the list item to the projectList
+ 
+    projectList.appendChild(project);
+  } 
+} else {
+  console.error("Request failed with status:", githubRequest.status);
+  }
+});
+
+
+
+
+
+
