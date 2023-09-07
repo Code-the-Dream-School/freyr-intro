@@ -8,6 +8,7 @@ body {
 * {
   color: rgb(18, 18, 94);
 }
+
 h1 {
   font-size: 40px;
   color: rgb(9, 74, 74);
@@ -15,12 +16,7 @@ h1 {
   font-weight: bolder;
   font-family: monospace;
 }
-.header {
-  padding: 30px;
-  text-align: center;
-  background: #cce5ff;
-  font-size: 50px;
-}
+
 h2,
 h3,
 label {
@@ -38,9 +34,12 @@ p {
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
 }
-ul li {
+@media (max-width: 800px) {
+}
+#skills ul li,
+#about_me_section ul li {
   background: #cce5ff;
-  color: darkblue;
+  color: rgb(16, 19, 187);
   margin: 5px;
 }
 
@@ -50,9 +49,11 @@ li {
   font-family: "Times New Roman", Times, serif;
 }
 a {
-  color: rgb(77, 77, 241);
+  color: rgb(6, 76, 51);
+  text-decoration: none;
 }
 fieldset {
+  display: grid;
   width: min-content;
   border-color: rgb(68, 120, 120);
 }
@@ -79,7 +80,6 @@ button {
 #connect_section,
 #messages {
   border: 4px;
-  
 }
 
 footer {
@@ -93,3 +93,52 @@ footer {
   height: 14%;
 }
 
+#navbar li {
+  list-style: none;
+  font-style: italic;
+  font-size: 25px;
+}
+#logo {
+  font-size: 25px;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgb(134, 187, 207);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  font-size: 25px;
+}
+
+#menu ul {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+#menu li {
+  list-style: none;
+  margin-right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+container {
+  border: 2px solid #0f6172;
+  width: auto;
+  display: flex;
+  background: #cce5ff;
+}
+container div p {
+  padding: 5px;
+  border: 1px solid #178398;
+  margin: 5px;
+  background: whitesmoke;
+}

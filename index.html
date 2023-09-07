@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <title>My very first website</title> 
     <meta charset="UTF-8" />
@@ -8,7 +9,24 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <div class="header">
+ <nav id="navbar">
+      <!-- LOGO -->
+      <div class="logo"><img src="./images/logo1.png" id="logo"></div>
+
+      <!-- NAVIGATION MENU -->
+      <ul id="nav-links" class ="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu" id="menu">
+          <li><a href="#about_me_section">ABOUT ME</a></li>
+          <li><a href="#experience_section">EXPERIENCE</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#connect_section">CONNECT</a></li>
+          <li><a href="#messages">MESSAGES</a></li>
+        </div>
+      </ul>
+    </nav>
+ 
+    <div class="title_bar">
       <h1>TETIANA'S FIRST WEBSITE</h1>
       </div>
    
@@ -34,16 +52,19 @@
     </section>
     <section id="experience_section">
       <h2>*** EXPERIENCE ***</h2>
-
-      <p>
-        I have been in the IT industry for 5 years and I started off as a manual
-        tester and eventually expanded my skills to the automation testing. So on my
+<container class="grid">
+      <div class = "item 1"><p>
+         I have been in the IT industry for 5 years and I started off as a manual
+        tester and eventually expanded my skills to the automation testing.</p>
+      </div>
+      <div class = "item 2"><p> In my
         current project I am working mostly as a QA automation engineer on my
         team. For our Project - we are using various testing types, like
-        functional, end to end an API testing. I developed Cypress/Js
-        automation framework to write the automation test scripts for our company's
-        main Product.
-      </p>
+        functional, end to end an API testing.</p></div>
+        <div class = "item 3"><p> I have experience in building Cypress/JS
+          automation framework and  use it for writing the automation test scripts for our company's
+          main Product.</p></div>
+    </container>
     </section>
     <section id="skills">
         <h2>*** SKILLS ***</h2>
@@ -54,21 +75,21 @@
       
     </section>
     <footer>
-        <a href="https://github.com/tetianaNEC/freyr-intro/" > <img src="/images/github.png" id="git_image"> </a>
+        <a href="https://github.com/tetianaNEC/freyr-intro/" > <img src="./images/github.png" id="git_image"> </a>
         <section>
             <fieldset>
-                <legend>
-                    <h3>Leave a message</h3>
-                </legend>
+                <legend><h3>Leave a message</h3></legend>
             <form name = "leave_message">
-                <br><label>Name</label></br>
-                <input type ="text" name ="usersName"  required ="true"/>
-                <br><label>Email</label></br>
-                <input type ="text" name ="usersEmail"  required ="true"/>
-                <br><label>Message</label></br>
-                <textarea name = "usersMessage"  required ="true"></textarea>
-                <br><button type = "submit">submit</button></br>
-            </form>
+                <br><label for="name">Name</label></br>
+                <input type ="text" id="name" name ="usersName"  required ="true">
+                <br><label for="phone">Phone</label></br>
+                <input type ="number" id="phone" name ="phoneNumber"  required ="true">
+                <br><label for="email">Email</label></br>
+                <input type ="email" id="email" name ="usersEmail"  required ="true">
+                <br><label for="message">Message</label></br>
+                <textarea id="message" name = "usersMessage"  required ="true"></textarea>
+                <br><button type = "submit">submit</button></br>           
+           </form>
         </fieldset>
         </section>     
         <section id="messages">
