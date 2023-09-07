@@ -12,22 +12,22 @@
 
 
 // opt-2. prevent default behavior and use scrollTo
-// const header = document.querySelector('header');
-// const headerNav = document.querySelector('#headerNav');
-// headerNav.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     const linkID = e.target.hash || e.target.closest('a').hash ;
-//     console.log(linkID)
-//     if (linkID) {
-//         const section = document.querySelector(linkID);
-//         const sectionOffset = section.offsetTop;
-//         const headerHeight = header.clientHeight;
-//         document.documentElement.scrollTo({
-//             top: sectionOffset - headerHeight,
-//             behavior: 'smooth'
-//         });
-//     }
-// });
+const header = document.querySelector('header');
+const headerNav = document.querySelector('#headerNav');
+headerNav.addEventListener('click', (e) => {
+    e.preventDefault();
+    const linkID = e.target.hash || e.target.closest('a').hash ;
+    console.log(linkID)
+    if (linkID) {
+        const section = document.querySelector(linkID);
+        const sectionOffset = section.offsetTop;
+        const headerHeight = header.clientHeight;
+        document.documentElement.scrollTo({
+            top: sectionOffset - headerHeight,
+            // behavior: 'smooth'
+        });
+    }
+});
 
 
 // 1. create copyright element in footer
