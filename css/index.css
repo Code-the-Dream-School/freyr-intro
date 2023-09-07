@@ -200,13 +200,18 @@ header nav a:not(:first-child):hover {
     gap: 20px;
 }
 
+.staticList {
+    display: none ;
+}
+
 .projects_card {
     margin: 0;
     width: 300px;
+    filter:opacity(0.9);
 }
 
 .projects_card:hover {
-    filter:opacity(0.6)
+    filter:opacity(1);
 }
 
 .projects_card a{

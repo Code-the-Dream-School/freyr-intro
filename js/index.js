@@ -167,60 +167,120 @@ messageList.addEventListener('click', (e) => {
 });
 
 
-// 5. API - fetch projects from GitHub with XMLHttpRequest (Lesson 6.1)
+// 5. API - fetch projects from GitHub
+const contentUrl = 'https://raw.githubusercontent.com';
+const githubUser = 'pstnv';
+const branch = 'main';
+const projectSection = document.querySelector('#projects');
+const projectList = projectSection.querySelector('ul');
+// this alternate list is in index.html and display:none (it's for case if Promise returns reject)
+const staticList = document.querySelector('.staticList');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const githubUser = 'pstnv';
-    const reposUrl = `https://api.github.com/users/${githubUser}/repos`;
-    const projectSection = document.querySelector('#projects');
-    const projectList = projectSection.querySelector('ul');
-    
-    const githubRequest = new XMLHttpRequest();
-    githubRequest.addEventListener('load', () => {
-        if (githubRequest.status !== 200) {
+
+// universal function both for 1st fetch(repositories) and 2nd fetch(images)
+async function fetchData(url, method) {
+    try {
+        const response = await fetch(url);
+        if (response.status === 200) {
+            const data = await response[method]();
+            return data;
+        }
+    } catch (error) {
+        console.log('Error: ' + error.message);
+        showStaticList();
+    }
+}
+
+
+async function fetchProjects(reposUrl) {
+    // 1st fetch - for all repos
+    const repositories = await fetchData(reposUrl, 'json');
+    const projects = repositories.map(async (repo) => {
+        const { html_url: url, name } = repo;
+        // 2nd fetch - for each repo fetch README.md file
+        const markupText = await fetchData(`${contentUrl}/${githubUser}/${name}/${branch}/README.md`, 'text');
+        // if README.md doesn't exists return
+        if (!markupText) {
             return;
         }
-        const response = githubRequest.responseText;
-        const repositories = JSON.parse(response);
-        // console.log(repositories);
-        repositories.forEach(repo => {
-            const projectItem = createProjectItem(repo);
-            projectList.append(projectItem);
-        });
-    });
-    // on error show message 'Try again later...'
-    githubRequest.addEventListener('error', (e) => {
-        const rejectMessageItem = createRejectMessage();
-        projectList.append(rejectMessageItem);
-    });
-
-    githubRequest.open('GET', reposUrl);
-    githubRequest.send();
-});
-
-function createProjectItem(project) {
-    let { html_url: url, name } = project;
-    // delete prefix from project name
-    ['app-', 'html-', 'js-'].forEach(prefix => {
-        if (name.startsWith(prefix)) {
-            name = name.replace(prefix, '');
+        // looking for image in README.md text
+        let imageSrc = await markupText
+            .trim()
+            .split('"')
+            .find(string => /png|jpg|jpeg/.test(string));
+        // if no image found or image path has spaces return
+        if (!imageSrc || imageSrc.includes(' ')) {
+            return;
+        }
+        // return short information for each project (only we'll be using)
+        return {
+            url,
+            name,
+            src: imageSrc
         }
     });
-    name = name[0].toUpperCase() + name.slice(1);
-    name = name
-            .split('-')
-            .join(' ');
+    return Promise.all(projects);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // const reposUrl = `https://api.github.com/users/${githubUser}/repos`; // default link
+    const reposUrl = `https://api.github.com/users/${githubUser}/repos?sort=pushed`; // extra options: sort=push,created,updated & per_page=50(default 30)
+
+    fetchProjects(reposUrl)        
+        .then(projects => {
+            // filter results
+            // 1st filter - filter out all undefined
+            // 2st filter (optional) - filter out all projects with images located out of Github (only my preference)
+            const projectsFiltered = projects
+                .filter(project => project)
+                .filter(project => project["src"].startsWith('src'));
+            return projectsFiltered;
+        })
+        .then(projectsFiltered => {
+            // shorten array of projects to 6
+            const totalProjects = 6;
+            if (projectsFiltered.length > totalProjects) {
+                const projectsSliced = projectsFiltered.slice(0, totalProjects);
+                return projectsSliced;
+            }
+            return projectsFiltered;
+        })
+        .then(projectsFiltered => {
+            // display projects
+            projectsFiltered.forEach(project => {
+                const { url, name, src } = project;
+                let path = '';
+                if (src.startsWith('http')) {
+                    path = src;
+                } else {
+                    path = `${contentUrl}/${githubUser}/${name}/${branch}/${src}`;
+                }
+                const projectItem = createProjectItem(url, name, path);
+                projectList.append(projectItem);
+            })
+        })
+        .catch((error) => {
+            if (error) {
+                showStaticList();
+            }
+        });
+});
+
+// function create li with project information
+function createProjectItem(url, alt, src) {
     const projectItem = document.createElement('li');
     projectItem.classList.add('projects_card');
     projectItem.innerHTML = `
-        <a href="${url}" target="_blank"> ${name} </a>            
+        <a href="${url}" target="_blank">
+            <img src="${src}" alt="Project ${alt.split('-').join(' ')}">
+        </a>            
     `;
     return projectItem;
 }
 
-function createRejectMessage() {
-    rejectMessageItem = document.createElement('li');
-    rejectMessageItem.classList.add('projects_card');
-    rejectMessageItem.innerText = 'Try again later...';
-    return rejectMessageItem;
+function showStaticList() {
+    // hide api list
+    projectList.style.display = 'none';
+    // show static list of projects (from index.html)
+    staticList.style.display = 'flex';
 }
