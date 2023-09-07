@@ -504,8 +504,11 @@ header nav a:not(:first-child):hover {
 .feedback_header {
     margin: 0 0 20px;
     text-align: center;
-    font-size: 18px;
-	font-family: 'Preahvihear', sans-serif;
+    font-size: 28px;
+    font-family: 'Caveat Brush', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
     line-height: 1.2;
 }
 
@@ -623,7 +626,7 @@ header nav a:not(:first-child):hover {
 
     .intro_about nav a {
         padding: 5px 2px;
-        min-width: 60px;
+        min-width: 70px;
         font-size: 14px;
     }
 
@@ -732,7 +735,8 @@ header nav a:not(:first-child):hover {
 
     .feedback_header {
         margin-bottom: 10px;
-        font-size: 16px;
+        font-size: 18px;
+        letter-spacing: 1px;
     }
 
 
@@ -807,10 +811,6 @@ header nav a:not(:first-child):hover {
         align-content: center;
     }
 
-    .intro_picture img {
-        width: 150px;
-    }
-
     .intro_about {
         margin-left: 0;
         max-width: unset;
@@ -824,20 +824,6 @@ header nav a:not(:first-child):hover {
     .intro_about_subheader {
         margin: 15px 0 5px;
         font-size: 15px;
-    }
-
-    .intro_about_text {
-        font-size: 14px;
-    }
-
-    .intro_about nav {
-        margin-top: 20px;
-    }
-
-    .intro_about nav a {
-        padding: 5px 2px;
-        min-width: 60px;
-        font-size: 14px;
     }
 
 
@@ -905,6 +891,8 @@ header nav a:not(:first-child):hover {
 		min-height: 60px;
 		flex: initial;
 		font-size: 14px;
+        display: flex;
+        align-items: center;
 	}
 
 
@@ -961,6 +949,10 @@ header nav a:not(:first-child):hover {
         padding: 20px;
     }
 
+    .feedback_header {
+        font-size: 17px;
+    }
+
     .feedback_form textarea {
         height: 60px;
     }
@@ -985,5 +977,9 @@ header nav a:not(:first-child):hover {
 
     .footer_header {
         margin: 5px;
+    }
+
+    .copyright {
+        align-self: flex-end;
     }
 }
