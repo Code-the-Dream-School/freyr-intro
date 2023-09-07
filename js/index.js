@@ -113,6 +113,7 @@ messageForm.addEventListener('submit', (e) => {
     messageForm.reset();
 });
 
+// 4. add edit, save, remove for message list
 messageList.addEventListener('click', (e) => {
     e.preventDefault();
     if (e.target.parentNode.tagName !== 'BUTTON') {
@@ -164,3 +165,62 @@ messageList.addEventListener('click', (e) => {
     }
     nameActions[action]();
 });
+
+
+// 5. API - fetch projects from GitHub with XMLHttpRequest (Lesson 6.1)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const githubUser = 'pstnv';
+    const reposUrl = `https://api.github.com/users/${githubUser}/repos`;
+    const projectSection = document.querySelector('#projects');
+    const projectList = projectSection.querySelector('ul');
+    
+    const githubRequest = new XMLHttpRequest();
+    githubRequest.addEventListener('load', () => {
+        if (githubRequest.status !== 200) {
+            return;
+        }
+        const response = githubRequest.responseText;
+        const repositories = JSON.parse(response);
+        // console.log(repositories);
+        repositories.forEach(repo => {
+            const projectItem = createProjectItem(repo);
+            projectList.append(projectItem);
+        });
+    });
+    // on error show message 'Try again later...'
+    githubRequest.addEventListener('error', (e) => {
+        const rejectMessageItem = createRejectMessage();
+        projectList.append(rejectMessageItem);
+    });
+
+    githubRequest.open('GET', reposUrl);
+    githubRequest.send();
+});
+
+function createProjectItem(project) {
+    let { html_url: url, name } = project;
+    // delete prefix from project name
+    ['app-', 'html-', 'js-'].forEach(prefix => {
+        if (name.startsWith(prefix)) {
+            name = name.replace(prefix, '');
+        }
+    });
+    name = name[0].toUpperCase() + name.slice(1);
+    name = name
+            .split('-')
+            .join(' ');
+    const projectItem = document.createElement('li');
+    projectItem.classList.add('projects_card');
+    projectItem.innerHTML = `
+        <a href="${url}" target="_blank"> ${name} </a>            
+    `;
+    return projectItem;
+}
+
+function createRejectMessage() {
+    rejectMessageItem = document.createElement('li');
+    rejectMessageItem.classList.add('projects_card');
+    rejectMessageItem.innerText = 'Try again later...';
+    return rejectMessageItem;
+}
