@@ -24,7 +24,7 @@ headerNav.addEventListener('click', (e) => {
         const headerHeight = header.clientHeight;
         document.documentElement.scrollTo({
             top: sectionOffset - headerHeight,
-            // behavior: 'smooth'
+            behavior: 'smooth'
         });
     }
 });
