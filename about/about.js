@@ -1,5 +1,9 @@
 const PowerButton = document.getElementById('Circle')
 const Buttons = document.querySelectorAll('.Hidden')
+const GamesTab = document.getElementById("GameDevelopmentExp")
+const DataTab = document.getElementById("DataHead")
+const LanguageTab = document.getElementById("ProgrammingLanguages")
+const WebTab = document.getElementById("WebDevelopment")
 function ButtonToggleVisibility() {
    console.log("it clicked");
 
@@ -50,13 +54,59 @@ function AboutMeAnimation() {
  
     animateText(0);
  }
- window.addEventListener('DOMContentLoaded', function() {
-   if (window.location.href.endsWith('about/')) {
-       console.log("About page loaded!");
-       
-   }
-});
+//  
+function ToggleGame(){
+      const GameList = document.getElementById("GameList")
+      GameList.classList.toggle("Hidden")  
+      const DataSkills = document.getElementById('DataSkills')
+      DataSkills.classList.add("Hidden")
+      const Coding_Languages = document.getElementById("Coding_Languages")
+      Coding_Languages.classList.add("Hidden")
+      const WebSkills = document.getElementById("WebSkills")
+      WebSkills.classList.add("Hidden")
+}
+function ToggleData(){
+  const DataSkills = document.getElementById('DataSkills')
+    DataSkills.classList.toggle("Hidden")
+    const GameList = document.getElementById("GameList")
+   GameList.classList.add("Hidden")
+    const Coding_Languages = document.getElementById("Coding_Languages")
+    Coding_Languages.classList.add("Hidden")
+    const WebSkills = document.getElementById("WebSkills")
+    WebSkills.classList.add("Hidden")
+
+}
+function ToggleLanguage(){
+ const Coding_Languages = document.getElementById("Coding_Languages")
+   Coding_Languages.classList.toggle("Hidden")
+   const GameList = document.getElementById("GameList")
+   GameList.classList.add("Hidden")
+   const WebSkills = document.getElementById("WebSkills")
+   WebSkills.classList.add("Hidden")
+   const DataSkills = document.getElementById('DataSkills')
+      DataSkills.classList.add("Hidden")
+
+}
+function ToggleWeb(){
+const WebSkills = document.getElementById("WebSkills")
+   WebSkills.classList.toggle("Hidden")
+   const Coding_Languages = document.getElementById("Coding_Languages")
+   Coding_Languages.classList.add("Hidden")
+   const DataSkills = document.getElementById('DataSkills')
+   DataSkills.classList.add("Hidden")
+   const GameList = document.getElementById("GameList")
+   GameList.classList.add("Hidden")
+
+
+}
+function ExperienceColor(){
+ 
+}
 
  AboutMeAnimation()
 //  renderCopyRight()
  PowerButton.addEventListener('click',ButtonToggleVisibility)
+ GamesTab.addEventListener('click',ToggleGame)
+ DataTab.addEventListener('click',ToggleData)
+ LanguageTab.addEventListener('click',ToggleLanguage)
+ WebTab.addEventListener('click',ToggleWeb)

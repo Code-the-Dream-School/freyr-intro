@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
- <link rel="stylesheet" href="../css/navigation.css" type = "text/css">
+ 
   <link type="text/css" href="../Contact/Contact.css" rel="stylesheet" />
   
   
@@ -14,53 +14,36 @@
 <body>
   <section class = "Menu">
    
-    <button   alt = powerButton class = "Circle"></button>
+    <button   alt = powerButton id = "Circle"></button>
     <a href="../index.html">
-        <button class = "Home" class = "Hidden">Home</button>
+      <button id = "Home"  class = "Hidden"  >Home</button>
+
     </a>
-   <a href="/Intro-to-programming-John-Gutierrez/Projects">
-    <button class = "Projects" class = "Hidden">Projects</button>
-   </a>
-    <button class = "Contact" class = "Hidden">Contact</button>
-    <a href="../about/index.html">
-      <button class = "AboutMe" class = "Hidden">About Me</button>
-    </a>
+   
+    <a href="../Projects/index.html">
+  <button id = "Projects"    class = "Hidden" >Projects</button>
+  </a>
+<a href="../Contact/index.html">
+<button id = "Contact"   class = "Hidden"  >Contact</button>
+</a>
+<a href="../about/index.html">
+  <button id = "AboutMe"  class = "Hidden"   >About Me</button>
+</a>
     
 
   </section>
-  
-  
- 
-  <!-- Your content goes here -->
-  <section class = "AboutMeButton">
-    <!-- ABoutME-->
-    <h1 name = "Animation1">Hi, my name is John Gutierrez</h1>
-    <p>I am pursuing a degree in computer science. I'm very involved in a few industries and still learning about Game development, Web Development, and Software Engineering.</p>
-  </section>
-  <!-- Expereince-->
-  <section class = "SkillsButton">
-    <ul>
-      <li>Games</li>
-      <li>Web Projects</li>
-    </ul>
-  </section>
-  <!-- Connect-->
-  <section id = "skills" class = "AboutMeButton">
-    <h2> Skills</h2>
-    <ul></ul>
-  </section>
-   
-      <section class = "ContactmeButton">
-           <section>
-           <h2>Leave a Message</h2>
-            <form name = "leave_message">
-            <label>Name</label><br />
-            <input type = "text" name = "usersName" required = true><br />
-            <label>Email</label><br />
-             <input type = "email" name = "usersEmail" required = true><br />
-             <label>Message</label><br />
-             <textarea name = "usersMessage" required = true></textarea>
-            <button type = "Submit">Submit</button>
+    
+      <section >
+           <section class = "Contact">
+           <h2 >Leave a Message</h2>
+            <form name = "leave_message" class = "ContactMe">
+            <label id = "Name">Name</label><br />
+            <input type = "text" name = "usersName" required = true id = "textInbox"><br />
+            <label id = "Email">Email</label><br />
+             <input type = "email" name = "usersEmail" required = true id = "emailInbox"><br />
+             <label id = "Messages">Message</label><br />
+             <textarea name = "usersMessage" required = true id = "messageInbox"></textarea>
+            <button type = "Submit" id = "Submit">Submit</button>
             </form>
            </section>
               <section id = "messages">
@@ -71,16 +54,19 @@
         </section>
     <footer id = "footer" class = "ContactMeButton" >
       <a href="https://github.com/">
-        <img src="../css/images/github.png" alt="GithubIcon" class = "GithubIcon" width =  100 height = 100>
+        <img src="../css/images/github.png" alt="GithubIcon" class = "ContactMeButton"  id = "GithubIcon"width =  100 height = 100>
       </a>
       
         <a href="https://www.instagram.com/">
-          <img src="../css/images/instagram.png" alt="InstagramIcon" class = "InstagramIcon" width = 100 height = 100>
+          <img src="../css/images/instagram.png" alt="InstagramIcon" class = "ContactMeButton" id = "InstagramIcon" width = 100 height = 100>
         </a>
         <a href="https://www.example.com/">
-          <img src="../css/images/contract.png" alt="PortfolioIcon" class = "PortfolioIcon" width = 100 height = 100>
+          <img src="../css/images/contract.png" alt="PortfolioIcon" class = "ContactMeButton" id = "PortfolioIcon" width = 100 height = 100>
         </a>
-        <p> Contact me <a href = "mailto:carlos.will51@gmail.com">carlos.will51@gmail.com</a></p>
+         <a href="https://wwww.mail.google.com/">
+          <img src="../css/images/mail-inbox-app.png" alt="Mailicon" class = "MailIcon" width = 30 height = 30>
+        </a>
+       
 
     </footer>
   </section>

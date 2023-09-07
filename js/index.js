@@ -110,7 +110,12 @@ function ButtonToggleVisibility() {
    About.classList.toggle("Hidden")
 }
 
-
+window.addEventListener('DOMContentLoaded', function() {
+   if (window.location.href.endsWith('about/')) {
+       console.log("About page loaded!");
+       
+   }
+});
 
 
 //LOADINGPAGE
