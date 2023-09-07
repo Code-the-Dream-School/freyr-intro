@@ -16,7 +16,7 @@ const skills = [
   "<b>ReadyAPI</b> - API testing solution to create, run, and analyze complex validation of REST, SOAP, & GraphQL APIs, JMS, JDBC, and other web services.",
   "<b>GitHub</b> - a platform for hosting code that allows for version control and collaboration.",
   "<b>HTML</b> - a markup language for the web that defines the structure of web pages",
-  "<b>CSS</b> - describes how HTML elements are to be displayed on screen, paper, or in other media."
+  "<b>CSS</b> - describes how HTML elements are to be displayed on screen, paper, or in other media.",
 ];
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
@@ -53,3 +53,34 @@ function handleSubmit(event) {
 
   messageForm[0].reset();
 }
+//lesson-6-1.
+const githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/tetianaNEC/repos");
+githubRequest.send();
+
+githubRequest.addEventListener("load", function (event) {
+  if (githubRequest.status === 200) {
+    var repositories = JSON.parse(githubRequest.responseText);
+    console.log(repositories);
+  }
+
+
+var projectSection = document.getElementById("projects");
+
+var projectList = projectSection.querySelector("ul");
+
+for (var i = 0; i < repositories.length; i++) {
+  var repository = repositories[i];
+
+  var projectLink = document.createElement("a");
+  projectLink.href = repository.html_url;
+  projectLink.textContent = repository.name;
+
+  var project = document.createElement("li");
+
+  project.appendChild(projectLink);
+
+  projectList.appendChild(project);
+}
+
+});
