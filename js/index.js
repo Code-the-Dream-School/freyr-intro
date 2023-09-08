@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let newMessage = document.createElement("li");
     //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span>${message}</span>`;
     let startingFlexItems = document.createElement('div');
+    startingFlexItems.id = "startingFlexItems";
     /*
     newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> 
                             wrote:</strong>&nbsp ${createSpanWithMessage(message)}</div>`;
@@ -215,6 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return typeOfButton;
     }
     let endingFlexItems = document.createElement('div');
+    endingFlexItems.id = "endingFlexItems";
     /*
       The append method will let you add more than one node to a parent element, provided that you add them all as arguments at once. I tried calling the append method twice on the same parent element, and it did not work. Yet, the following code works for adding two elements to newMessage.
       endingFlexItems.innerText = 'Test';
@@ -259,12 +261,16 @@ document.addEventListener("DOMContentLoaded", () => {
     messageList.appendChild(newMessage);
 
     removeButton.addEventListener("click", () => {
-      let entry = removeButton.parentNode;
+      let entry = removeButton.parentNode.parentNode;
       /*
           The variable entry is a list item (li), which is the element that is 
-          the parent of the editButton. 
-          It's parent is the unordered list (ul), which is stored in the 
+          the grandparent of the editButton. The editButton's parent is now the 
+          div that is stored in the variable endingFlexItems. The variable entry is
+          an alias for the newMessage variable, which stores that same list item. 
+          
+          That list item's parent is the unordered list (ul), which is stored in the 
           variable messageList.
+          
           The ul's parent is the section element with the id of messages.
       */
       let numOfListItems = messageList.childElementCount;
@@ -277,10 +283,10 @@ document.addEventListener("DOMContentLoaded", () => {
     editButton.addEventListener("click", () => {
       saveButton.style.display = "";
       /*
-      The span element is now inside of the div that is stored in the startingFlexItems
-      variable, and not in the list item that is store in the variable newMessage anymore.
+        The span element is now inside of the div that is stored in the startingFlexItems
+        variable, and not in the list item that is stored in the variable newMessage anymore. So, the following, commented out line of code no longer applies:
 
-      let messageContainerSpan = newMessage.getElementsByTagName("span")[0];
+        let messageContainerSpan = newMessage.getElementsByTagName("span")[0];
       */
       let messageContainerSpan = startingFlexItems.getElementsByTagName("span")[0];
       let messageText = messageContainerSpan.textContent;
@@ -302,7 +308,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     saveButton.addEventListener("click", () => {
       editButton.style.display = "";
-      let messageContainerSpan = newMessage.getElementsByTagName("span")[0];
+      let messageContainerSpan = startingFlexItems.getElementsByTagName("span")[0];
+      //let messageContainerSpan = newMessage.getElementsByTagName("span")[0];
       let editInputField = document.getElementById("editInputField");
       let messageText = editInputField.value;
       // console.log(messageContainerSpan);
@@ -313,7 +320,8 @@ document.addEventListener("DOMContentLoaded", () => {
       //let editButton = createButton('edit');
       //newMessage.insertBefore(editButton, removeButton);
       //newMessage.append(editButton);
-      removeButton.prepend(editButton);
+      endingFlexItems.insertBefore(editButton, removeButton);
+      //removeButton.prepend(editButton);
       saveButton.style.display = "none";
       //saveButton.remove();
     });
