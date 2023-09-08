@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   let githubRequest = new XMLHttpRequest;
   githubRequest.open('GET', 'https://api.github.com/users/NatalyBMota/repos');
+  fetch('https://api.github.com/users/NatalyBMota/repos');
   githubRequest.setRequestHeader('X-GitHub-Api-Version', '2022-11-28');
   githubRequest.send();
   githubRequest.onload = function() {
