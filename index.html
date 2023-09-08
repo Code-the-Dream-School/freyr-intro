@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Stephanie's First Page</title>
-        <style></style>
+        <style>
+
+          h1{
+            color: aqua;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-weight: bolder;
+          }
+          h2{
+            color: aqua;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-weight: bolder;
+          }
+          p{
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          }
+          section{
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 30px;
+          }
+          ul{
+            list-style-type: square;
+            border: 2px solid blueviolet;
+            background-color: pink;
+          }
+          li{
+            margin: 5px;
+            background-color: blueviolet;
+          }
+
+          button{
+            padding: 1%;
+            background-color: aqua;
+            border: black;
+          }
+          footer{
+            background-color: blueviolet;
+            word-spacing: 50%;
+          }
+        </style>
         <meta>
         <link>
         <script></script>
         <base> 
+        <link rel="stylesheet" href="css/index.css">
     </head>
-    <body>
+    <body style="background-color: mediumslateblue;">
     Stephanie Alvarado Gallegos 
       <section>
          <h1>About </h1>    
@@ -41,10 +85,10 @@
       <section> 
         <h2>Leave a Message</h2>
         <form name="leave_message"><br>
-          <label for="leave a message">Leave a Message</label>
-          <input type="text" name="usersName" required>
-          <input type="email" name="usersEmail" required>
-          <textarea name="usersMessage" required></textarea>
+          <label style=" font: bolder; font-family: cursive;   background-color: blueviolet; font-size: 110%;"  for="leave a message">Leave a Message</label>
+          <input style="padding: 2%; background-color: pink; ;" type="text" name="usersName" required>
+          <input style="padding: 2%; background-color: pink;"  type="email" name="usersEmail" required>
+          <textarea style="padding: 1%; background-color: pink;"  name="usersMessage" required></textarea>
           <button type="submit">Submit</button>
         </form><br>
       </section> 
