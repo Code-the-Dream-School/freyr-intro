@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${monthSpelledOut[creationMonth]} ${creationDate}, ${creationYear}`;
   };
   function populateProjectSection(repositories){
+    console.log('GitHub Repository Data:')
     console.log(repositories[0]);
     let projectSection = document.getElementById('projects');
     let projectList = projectSection.querySelector('ul');
@@ -29,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let repositoryName = repositories[i].name;
       let repositoryDateOfCreation = new Date(repositories[i].created_at);
       let creationDate = getdateSpelledOutFromDateObject(repositoryDateOfCreation);
-      console.log(creationDate);
       let subList = document.createElement("ul");
       subList.className = 'subListOfInnerList';
       let li1 = document.createElement('li');
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
   };
+  
   fetch('https://api.github.com/users/NatalyBMota/repos')
     .then(response => response.json())
     .then((repositories) => populateProjectSection(repositories));
