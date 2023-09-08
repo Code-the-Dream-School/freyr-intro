@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let newMessage = document.createElement("li");
     //newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> wrote:</strong> <span>${message}</span>`;
     let startingFlexItems = document.createElement('div');
+    startingFlexItems.id = "startingFlexItems";
     /*
     newMessage.innerHTML = `<strong><a href='mailto:${email}'>${name}</a> 
                             wrote:</strong>&nbsp ${createSpanWithMessage(message)}</div>`;
@@ -215,6 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return typeOfButton;
     }
     let endingFlexItems = document.createElement('div');
+    endingFlexItems.id = "endingFlexItems";
     /*
       The append method will let you add more than one node to a parent element, provided that you add them all as arguments at once. I tried calling the append method twice on the same parent element, and it did not work. Yet, the following code works for adding two elements to newMessage.
       endingFlexItems.innerText = 'Test';
