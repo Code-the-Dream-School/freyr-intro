@@ -1,60 +1,58 @@
 document.addEventListener("DOMContentLoaded", () => {
-  githubRequest.open('GET', 'https://api.github.com/users/NatalyBMota/repos');
+  function getdateSpelledOutFromDateObject(dateObj) {
+    const monthSpelledOut = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    let creationDate = dateObj.getDate();
+    let creationMonth = dateObj.getMonth();
+    let creationYear = dateObj.getFullYear();
+    return `${monthSpelledOut[creationMonth]} ${creationDate}, ${creationYear}`;
+  };
+  function populateProjectSection(repositories){
+    console.log(repositories[0]);
+    let projectSection = document.getElementById('projects');
+    let projectList = projectSection.querySelector('ul');
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement('li');
+      let repositoryURL = repositories[i].html_url;
+      let repositoryName = repositories[i].name;
+      let repositoryDateOfCreation = new Date(repositories[i].created_at);
+      let creationDate = getdateSpelledOutFromDateObject(repositoryDateOfCreation);
+      console.log(creationDate);
+      let subList = document.createElement("ul");
+      subList.className = 'subListOfInnerList';
+      let li1 = document.createElement('li');
+      let li2 = document.createElement('li');
+      project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a><span class="hideable">:</span> `;
+      let descriptionStrong = document.createElement('strong');
+      descriptionStrong.innerText = 'Description: ';
+      li1.appendChild(descriptionStrong);
+      let descriptionTextNode = document.createTextNode(`
+        ${repositories[i].description}
+      `);
+      li1.appendChild(descriptionTextNode);
+      li2.innerHTML = `<strong>Date of Creation:</strong> ${creationDate}`;
+      subList.appendChild(li1);
+      subList.appendChild(li2);
+      project.appendChild(subList);
+      projectList.appendChild(project);
+    }
+
+  };
   fetch('https://api.github.com/users/NatalyBMota/repos')
     .then(response => response.json())
-    .then(() => {
-      let repositories = JSON.parse(githubRequest.responseText);
-      console.log(repositories);
-      let projectSection = document.getElementById('projects');
-      let projectList = projectSection.querySelector('ul');
-      for (let i=0; i < repositories.length; i++) {
-        let project = document.createElement('li');
-        let repositoryURL = repositories[i].html_url;
-        let repositoryName = repositories[i].name;
-        let repositoryDateOfCreation = new Date(repositories[i].created_at);
-        const monthSpelledOut = [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December"
-        ];
-        let creationDate = repositoryDateOfCreation.getDate();
-        let creationMonth = repositoryDateOfCreation.getMonth();
-        let creationYear = repositoryDateOfCreation.getFullYear();
-        
-        let subList = document.createElement("ul");
-        //subList.classList.add('subListOfInnerList');
-        subList.className = 'subListOfInnerList';
-        let li1 = document.createElement('li');
-        let li2 = document.createElement('li');
-        //project.innerHTML = '<a href=' + repositoryURL + '>' + repositoryName + '</a>';
-        project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a><span class="hideable">:</span> `;
-        /*
-        project.innerHTML += `${repositories[i].description}`;
-        */
-        let descriptionStrong = document.createElement('strong');
-        descriptionStrong.innerText = 'Description: ';
-        //li1.innerHTML = `<strong>Description:</strong> ${repositories[i].description}`;
-        li1.appendChild(descriptionStrong);
-        let descriptionTextNode = document.createTextNode(`${repositories[i].description}`);
-        li1.appendChild(descriptionTextNode);
-        li2.innerHTML = `<strong>Date of Creation:</strong> `;
-        li2.innerHTML += `${monthSpelledOut[creationMonth]} ${creationDate}, ${creationYear}`;
-        //li2.innerHTML = `<strong>Date of Creation:</strong> ${repositoryDateOfCreation}`;
-        subList.appendChild(li1);
-        subList.appendChild(li2);
-        project.appendChild(subList);
-        projectList.appendChild(project);
-      }
-    });
+    .then((repositories) => populateProjectSection(repositories));
 
   let skills = [
     "Wireframing",
