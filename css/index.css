@@ -1,3 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: pink;
+}
+
+li{
+    list-style: none;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.container{
+    width: 1280px;
+    margin: auto;
+}
+
+
+.navbar{
+    width: 95%;
+    margin: auto;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding{
+    font-size: 2rem;
+}
+
+.home, .about, .experience, .skills, .connect{
+    height: 720px;
+    margin: 70px ;
+    border: 1px solid black;
+}
+
+.about,.connect{
+    margin-top: 0;
+}
+
+
+
+.flex-grid{
+    display: flex;
+}
+
+.flex-grid,.col{
+    flex: 1;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 10px;
+}
+
+.flex-grid{
+    margin: 0 0 20px 0;
+}
+
+.col{
+    background: pink;
+    border: solid blueviolet;
+    padding: 10px;
+}
+
+@media (max-width: 400px) {
+    .flex-grid{
+      display: block;
+      .col {
+        width: 100%;
+        margin: 0 0 10px 0;
+      }
+    }
+}
+
+@media(max-width:1280px){
+    .container{
+        width: 100%;
+    }
+}
+
+
+
+
+
 
 @media screen and (max-width:845px){
     .page-title{
