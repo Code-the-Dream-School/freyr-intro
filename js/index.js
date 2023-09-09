@@ -48,13 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
       project.appendChild(subList);
       projectList.appendChild(project);
     }
-
   };
-  
+  /*
   fetch('https://api.github.com/users/NatalyBMota/repos')
     .then(response => response.json())
     .then((repositories) => populateProjectSection(repositories));
-
+  */
+  fetch('https://api.github.com/users/NatalyBMota/repos')
+    .then(response => response.json())
+    .then((repositories) => populateProjectSection(repositories))
+    .catch(err => console.log('There was an error with getting data from the GitHub API.', err));
+  
   let skills = [
     "Wireframing",
     "Prototyping",
