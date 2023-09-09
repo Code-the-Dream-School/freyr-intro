@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch('https://api.github.com/users/NatalyBMota/repos')
     .catch(error => console.log('There was an error with getting data from the GitHub API.', error))
     .then(response => response.json())
+    .catch(error => console.log('There was an error with parsing the response GitHub API\'s response data into JSON.', error))
     .then((repositories) => populateProjectSection(repositories))
     .catch(err => console.log('There was an error with processing data from the GitHub API.', err));
   
