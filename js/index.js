@@ -55,9 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((repositories) => populateProjectSection(repositories));
   */
   fetch('https://api.github.com/users/NatalyBMota/repos')
+    .catch(error => console.log('There was an error with getting data from the GitHub API.', error))
     .then(response => response.json())
     .then((repositories) => populateProjectSection(repositories))
-    .catch(err => console.log('There was an error with getting data from the GitHub API.', err));
+    .catch(err => console.log('There was an error with processing data from the GitHub API.', err));
   
   let skills = [
     "Wireframing",
