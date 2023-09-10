@@ -4,7 +4,7 @@
 	--pink-color: rgba(252, 219, 214, 1.00);
 	--blue-color: rgba(196, 226, 226, 1.00);
 	--grey-color: rgba(229, 231, 233, 0.3);
-	--button-size: 25px;
+	--button-size: 26px;
     --header-height: 75px;
 }
 
@@ -453,7 +453,7 @@ header nav a:not(:first-child):hover {
 	width: var(--button-size);
 	height: var(--button-size);
     position: absolute;
-    top: 0;
+    top: 2px;
     border: none;
     background-color: transparent;
 }
@@ -592,7 +592,7 @@ header nav a:not(:first-child):hover {
     
     :root {
     --header-height: 70px;
-	--button-size: 20px;
+	--button-size: 22px;
 }
 
 
