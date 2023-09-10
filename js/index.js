@@ -100,6 +100,7 @@ messageList.addEventListener('click', (e) => {
             const input = document.createElement('textarea');
             input.type = "text";
             input.style.height = span.offsetHeight + 'px';
+            input.style.width = span.offsetWidth + 'px';
             input.value = span.textContent;
             div.insertBefore(input, span);
             div.removeChild(span);  
