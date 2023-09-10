@@ -1,4 +1,3 @@
-
 // 1. create copyright element in footer
 
 const today = new Date();

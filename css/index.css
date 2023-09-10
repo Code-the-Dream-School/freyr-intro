@@ -9,12 +9,16 @@
 }
 
 html {
+    height: 100%; /* solution from flickering screen while scrolling when position:sticky */
+    overflow: hidden;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
+    height: 100%;
+    overflow: auto;
     background-color: #ffffff;
     color: var(--brown-color);
     font-weight: 400;
@@ -29,7 +33,7 @@ body {
 }
 
 section {
-    scroll-margin-top: var(--header-height);
+    scroll-margin-top: calc(var(--header-height) - 1px); /* delete gap between header and section*/
 }
 
 /*********************** HEADER *****************/
@@ -45,7 +49,7 @@ header {
     width: 100%;
     height: var(--header-height);
     position: sticky;
-    top: 0;
+    top: -1px;  /* delete gap between header and top when position:sticky*/
     z-index: 1000;
     background: linear-gradient(var(--grey-color), var(--grey-color)), linear-gradient(#ffffff, #ffffff);
 }
