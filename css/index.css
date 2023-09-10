@@ -100,7 +100,7 @@ header nav a:not(:first-child):hover {
 .intro_inner {
     padding: 20px;
     height: fit-content;
-    min-height: 500px;
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,7 +181,7 @@ header nav a:not(:first-child):hover {
 
 .projects {
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .projects_header {
@@ -232,8 +232,8 @@ header nav a:not(:first-child):hover {
 /*********************** SKILLS *****************/
 
 .skills {
-    margin-top: 100px;
-    padding: 70px 20px;
+    margin-top: 120px;
+    padding: 60px 20px;
     background-color: var(--grey-color);
 }
 
@@ -482,7 +482,7 @@ header nav a:not(:first-child):hover {
 /*********************** FEEDBACK FORM *****************/
 
 .feedback {
-    margin-top: 100px;
+    margin-top: 120px;
     padding: 50px 20px;
     height: 550px;
     background-image: url('../media/img/wp/wp.jpg');
@@ -639,7 +639,7 @@ header nav a:not(:first-child):hover {
     /*********************** PROJECTS *****************/
 
     .projects {
-        margin-top: 40px;
+        margin-top: 60px;
     }
 
     .projects_header {
@@ -660,8 +660,8 @@ header nav a:not(:first-child):hover {
     /*********************** SKILLS *****************/
 
     .skills {
-        margin-top: 50px;
-        padding: 30px 20px;
+        margin-top: 60px;
+        padding: 40px 20px;
     }
 
     .skills_header {
@@ -729,7 +729,7 @@ header nav a:not(:first-child):hover {
     /*********************** FEEDBACK FORM *****************/
 
     .feedback {
-        margin-top: 50px;
+        margin-top: 60px;
         height: fit-content;
     }
 
@@ -787,11 +787,11 @@ header nav a:not(:first-child):hover {
     /*********************** HEADER *****************/
 
     header {
-        padding: 10px 20px;
+        padding: 10px 10px;
     }
 
     header nav a {
-        padding: 4px 8px;
+        padding: 4px 6px;
         font-size: 14px;
     }
 
@@ -811,7 +811,6 @@ header nav a:not(:first-child):hover {
     }
 
     .intro_inner {
-        min-height: 400px;
         flex-wrap: wrap;
         align-content: center;
     }
@@ -835,7 +834,7 @@ header nav a:not(:first-child):hover {
     /*********************** PROJECTS *****************/
 
     .projects {
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
     .projects_header {
@@ -856,8 +855,8 @@ header nav a:not(:first-child):hover {
     /*********************** SKILLS *****************/
 
     .skills {
-        margin-top: 20px;
-        padding-top: 10px;
+        margin-top: 40px;
+        padding-top: 20px;
     }
 
     .skills_header {
@@ -945,11 +944,6 @@ header nav a:not(:first-child):hover {
 
     /*********************** FEEDBACK FORM *****************/
 
-    .feedback {
-        margin-top: 50px;
-        height: fit-content;
-    }
-
     .feedback_form {
         padding: 20px;
     }
@@ -986,5 +980,17 @@ header nav a:not(:first-child):hover {
 
     .copyright {
         align-self: flex-end;
+    }
+}
+
+
+@media all and (max-width: 300px) {
+
+
+    /*********************** HEADER *****************/
+
+    header nav a {
+        padding: 4px;
+        font-size: 13px;
     }
 }
