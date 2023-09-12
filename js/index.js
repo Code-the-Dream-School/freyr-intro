@@ -14,11 +14,6 @@ copyright.innerHTML = "Cristian Moran" + "- " + thisYear;
 copyright.style.display = "inline";
 footer.appendChild(copyright);
 
-var headings = document.querySelectorAll("h2");
-headings.forEach(function (heading) {
-  heading.style.color = "#000080";
-});
-
 //this is a variable refering to the buttonContainer
 var container = document.querySelector("nav button");
 

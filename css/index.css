@@ -1,0 +1,154 @@
+/* Background */
+* {
+  box-sizing: border-box;
+}
+/* .underwater {
+  width: 100;
+  height: 100vh;
+  background-image: url(images\background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+} */
+
+/* song */
+.iframe {
+  position: absolute;
+  top: 0px;
+  right: 500px;
+  left: 0px;
+  width: 500px;
+  height: 0px;
+}
+
+.welcome {
+  padding-top: 300px;
+  padding-bottom: 300px;
+  font-size: larger;
+  font-weight: 500;
+  text-align: center;
+  /* font-family: ; */
+}
+
+.direction-buttons nav {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  /* left: 1000px; */
+  display: inline-block;
+}
+
+.body {
+  background-color: #006994;
+  color: rgb(129, 233, 198);
+  font-family: "Courier New", Courier, monospace;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(129, 233, 198);
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#aboutHeading {
+  padding-top: 150px;
+  padding-bottom: 0px;
+  display: inline-block;
+}
+
+.about-body,
+p {
+  background-color: #190a6d;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.about-body,
+p {
+  text-align: center;
+}
+
+#experienceHeading {
+  padding-top: 100px;
+  padding-bottom: 0px;
+  display: inline-block;
+}
+
+.xp {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.xp-item {
+  background-color: #190a6d;
+  border: 1px solid #ccc;
+  padding: 100px;
+  margin-bottom: 20px;
+}
+
+.xp-item,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#skills {
+  list-style: none;
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+#skills ul {
+  background-color: #190a6d;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-left: 3;
+  /* width:30px;
+  height:50px; */
+}
+
+#connectHeading {
+  padding-top: 100px;
+  padding-bottom: 0px;
+  display: inline-block;
+}
+
+/* .testing {
+  padding-top: 100px;
+  padding-bottom: 0px;
+} */
+
+.leave_message {
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+
+.leave_message fieldset {
+  background-color: #190a6d;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+label {
+  color: blueviolet;
+  font-size: medium;
+}
+
+input,
+textarea {
+}
+
+.submit-button {
+  background-color: rgb(9, 153, 69);
+}
+
+#messages {
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
