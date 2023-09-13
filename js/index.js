@@ -48,12 +48,17 @@ for (let i = 0; i < skills.length; i++) {
 
 
 
-
-
+const messagesHeader = document.getElementById('messagesHeader');
 const messageForm = document.querySelector('form[name="leave_message"]');
+
+
+
+messagesHeader.style.display = "none";
+
 
 messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
 
     const usersName = e.target.usersName.value;
     console.log(usersName);
@@ -71,6 +76,10 @@ messageForm.addEventListener('submit', (e) => {
                          <span >${usersMessage}</span>`
 
     messageList.appendChild(newMessage);
+
+   
+  
+    
                          
     let removeButton = document.createElement('button');
     removeButton.innerText = "Remove";
@@ -85,14 +94,13 @@ messageForm.addEventListener('submit', (e) => {
         let listSize = document.querySelector('#messages ul').childElementCount;
         if (listSize === 0) {
           messagesHeader.style.display = "none";
-        } else {
-          messagesHeader.style.display = "";
         } 
+        
         
     });
 
    
-   
+   messagesHeader.style.display = "";
 
     messageForm.reset();
 });
@@ -105,33 +113,6 @@ let githubRequest = new XMLHttpRequest();
 
 githubRequest.open('GET', 'https://api.github.com/users/leipei92/repos');
 githubRequest.send();
-
-// githubRequest.addEventListener('load', function (e) {
-
-//   if (githubRequest.status === 200) {
-//      let repositories = JSON.parse(githubRequest.responseText);
-//      console.log(repositories); //check for repos printing
-
-//   }
-
-// let projectSection = document.getElementById('projects');
-// let projectList = projectSection.querySelector('ul');
-// for ( let i= 0; i < repositories.length; i ++ ) {
-
-//     let repository = repositories[i];
-//     let projectLink= document.createElement('a');
-
-//     projectLink.href = repository.html_url;
-//     projectLink.textContent = repository.name;
-
-//     let project = document.createElement('li');
-
-//     projectList.appendChild(project);
-
-// }
-
-// });
-
 
 
 githubRequest.addEventListener('load', function (e) {
