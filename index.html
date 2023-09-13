@@ -9,27 +9,31 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
- <nav id="navbar">
+    <header class="header">
+      <div class="header_content">
+        
+ <nav id="navbar" class="navbar" >
       <!-- LOGO -->
       <div class="logo"><img src="./images/logo1.png" id="logo"></div>
 
       <!-- NAVIGATION MENU -->
       <ul id="nav-links" class ="nav-links">
-        <!-- NAVIGATION MENUS -->
+        <!-- NAVIGATION LINKS -->
         <div class="menu" id="menu">
-          <li><a href="#about_me_section">ABOUT ME</a></li>
-          <li><a href="#experience_section">EXPERIENCE</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#connect_section">CONNECT</a></li>
-          <li><a href="#messages">MESSAGES</a></li>
-        </div>
+          <li><a href="#about_me_section" >ABOUT ME</a></li>
+          <li><a href="#experience_section" >EXPERIENCE</a></li>
+          <li><a href="#skills" >SKILLS</a></li>
+          <li><a href="#connect_section" >CONNECT</a></li>
+          <li><a href="#messages" >MESSAGES</a></li>
+        
       </ul>
+    </div>
     </nav>
- 
+  </div>
+  </header>
     <div class="title_bar">
-      <h1>TETIANA'S FIRST WEBSITE</h1>
+      <h1>TETIANA's WEBSITE</h1>
       </div>
-   
     <style src="css/index.css"> </style>
     <section id="about_me_section">
       <h2>*** ABOUT ME ***</h2>
@@ -71,8 +75,13 @@
         <ul></ul>
     </section>
     <section id="connect_section">
-      <h2>*** CONNECT ***</h2>
-      
+      <section id="projects">
+        <h2>*** PROJECTS ***</h2>
+        <ul>
+
+        </ul>
+      </section>
+      <h2>*** CONNECT ***</h2>     
     </section>
     <footer>
         <a href="https://github.com/tetianaNEC/freyr-intro/" > <img src="./images/github.png" id="git_image"> </a>
@@ -95,8 +104,7 @@
         <section id="messages">
             <h2>*** MESSAGES ***</h2>
             <ul></ul>
-        </section>
-    
+        </section>  
     </footer>
     <script src="js/index.js"></script>
   </body>

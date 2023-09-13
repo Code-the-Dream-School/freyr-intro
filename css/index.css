@@ -34,8 +34,7 @@ p {
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
 }
-@media (max-width: 800px) {
-}
+
 #skills ul li,
 #about_me_section ul li {
   background: #cce5ff;
@@ -141,4 +140,34 @@ container div p {
   border: 1px solid #178398;
   margin: 5px;
   background: whitesmoke;
+}
+
+.bar {
+  height: 2px;
+  width: 27px;
+  background: #cce5ff;
+  margin: 5px 0;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+.nav--open {
+  transform: translate(0) !important;
+}
+
+@media (max-width: 950px) {
+  .navbar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0 25px;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .nav-links {
+    font-size: 12px;
+  }
 }
