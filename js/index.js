@@ -162,7 +162,40 @@ githubRequest.addEventListener('load', function(event) {
   }
 });
 
+//Lesson 6-2
+// Using the Fetch API, create a "GET" request to the same GitHub API url as before 
 
+const githubApiUrl = 'https://api.github.com/users/Brogibear/repos'
+
+fetch(githubApiUrl)
+ .then(response => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error('Failed to FETCH data from GitHub API');
+  }
+ }) 
+ .then(repositories => {
+  console.log(repositories);
+ 
+ // Chain another then method and pass it a function, inside of which you can paste the code from your previous "load" event listener function
+
+ var projectSection = document.getElementById('projects');
+ var projectList = projectSection.querySelector('ul');
+
+ for (var i = 0; i < repositories.length; i++) {
+  var repository = repositories[i];
+  var projectLink = document.createElement('a');
+  projectLink.href = repository.html_url;
+  projectLink.textContent = repository.name;
+  var project = document.createElement('li');
+  project.appendChild(projectLink);
+  projectList.appendChild(project);
+ }
+ }) 
+ .catch(error => {
+  console.error(error);
+}); 
 
 
 
