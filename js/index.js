@@ -21,7 +21,7 @@ const skills = [
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
 
-for (var i = 0; i < skills.length; i++) {
+for (let i = 0; i < skills.length; i++) {
   const skill = document.createElement("li");
   skill.innerHTML = skills[i];
   skillsList.appendChild(skill);
@@ -55,31 +55,58 @@ function handleSubmit(event) {
 }
 
 //lesson-6-1.
-const githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/tetianaNEC/repos");
-githubRequest.send();
+//const githubRequest = new XMLHttpRequest();
+// githubRequest.open("GET", "https://api.github.com/users/tetianaNEC/repos");
+// githubRequest.send();
 
-githubRequest.addEventListener("load", function (event) {
-  if (githubRequest.status === 200) {
-    let repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
-  }
+// githubRequest.addEventListener("load", function (event) {
+//   if (githubRequest.status === 200) {
+//     let repositories = JSON.parse(githubRequest.responseText);
+//     console.log(repositories);
+//   }
 
-  let projectSection = document.getElementById("projects");
+//   let projectSection = document.getElementById("projects");
 
-  let projectList = projectSection.querySelector("ul");
+//   let projectList = projectSection.querySelector("ul");
 
-  for (let i = 0; i < repositories.length; i++) {
-    let repository = repositories[i];
+//   for (let i = 0; i < repositories.length; i++) {
+//     let repository = repositories[i];
 
-    let projectLink = document.createElement("a");
-    projectLink.href = repository.html_url;
-    projectLink.textContent = repository.name;
+//     let projectLink = document.createElement("a");
+//     projectLink.href = repository.html_url;
+//     projectLink.textContent = repository.name;
 
-    let project = document.createElement("li");
+//     let project = document.createElement("li");
 
-    project.appendChild(projectLink);
+//     project.appendChild(projectLink);
 
-    projectList.appendChild(project);
-  }
-});
+//     projectList.appendChild(project);
+//   }
+// });
+
+//lesson-6-2.
+
+fetch("https://api.github.com/users/tetianaNEC/repos")
+  .then(function (response) {
+    if (response.ok) {
+      return response.json();
+    }
+  })
+  .then(function (repositories) {
+    let projectSection = document.getElementById("projects");
+    let projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      let repository = repositories[i];
+      let projectLink = document.createElement("a");
+      projectLink.href = repository.html_url;
+      projectLink.textContent = repository.name;
+      let project = document.createElement("li");
+      project.appendChild(projectLink);
+      projectList.appendChild(project);
+    }
+  })
+
+  .catch((error) => {
+    console.error(error);
+  });
