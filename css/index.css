@@ -18,13 +18,14 @@
   top: 0px;
   right: 500px;
   left: 0px;
-  width: 500px;
-  height: 0px;
+  /* width: 500px;
+  height: 0px; */
 }
 
 .welcome {
+  color: whitesmoke;
   padding-top: 300px;
-  padding-bottom: 300px;
+  padding-bottom: 500px;
   font-size: larger;
   font-weight: 500;
   text-align: center;
@@ -41,13 +42,13 @@
 
 .body {
   background-color: #006994;
-  color: rgb(129, 233, 198);
+  color: rgb(0, 0, 0);
   font-family: "Courier New", Courier, monospace;
 }
 
 h2 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgb(129, 233, 198);
+  color: rgb(57, 150, 119);
   font-weight: bold;
 }
 
@@ -57,82 +58,133 @@ h3 {
 }
 
 #aboutHeading {
-  padding-top: 150px;
-  padding-bottom: 0px;
-  display: inline-block;
+  margin-top: 0;
 }
 
-.about-body,
-p {
-  background-color: #190a6d;
-  border: 1px solid #ccc;
-  padding: 20px;
+.about-body {
+  backdrop-filter: blur(200px);
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 100px;
   margin-bottom: 20px;
-}
-.about-body,
-p {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-body {
+  margin-left: 400px;
+  margin-right: 380px;
 }
 
 #experienceHeading {
-  padding-top: 100px;
-  padding-bottom: 0px;
-  display: inline-block;
+  margin-top: 0;
 }
 
 .xp {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
+  margin-left: 400px;
+  margin-right: 380px;
+  padding-top: 350px;
 }
 
 .xp-item {
-  background-color: #190a6d;
-  border: 1px solid #ccc;
+  backdrop-filter: blur(200px);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 100px;
   margin-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.xp-item,
-p {
+.xp-item {
   margin: 0;
-  padding: 0;
+  padding: 10%;
 }
 
 #skills {
   list-style: none;
-  padding-top: 100px;
-  padding-bottom: 0;
+  padding-top: 350px;
 }
 
 #skills ul {
-  background-color: #190a6d;
-  border: 1px solid #ccc;
+  backdrop-filter: blur(200px);
+  background-color: rgba(255, 255, 255, 0.6);
+
+  margin-top: 50px;
   margin-bottom: 10px;
-  margin-left: 3;
+  margin-left: 400px;
+  margin-right: 380px;
+  text-align: center;
+  padding: 5%;
   /* width:30px;
   height:50px; */
 }
 
 #connectHeading {
-  padding-top: 100px;
+  padding-top: 350px;
   padding-bottom: 0px;
   display: inline-block;
 }
 
+.connect-images {
+  position: relative;
+  left: 27%;
+  padding-top: 100px;
+}
+
+.connect-images {
+  backdrop-filter: blur(200px);
+  background-color: rgba(255, 255, 255, 0.6);
+
+  margin-bottom: 10px;
+  margin: 0;
+  padding: 20px;
+  margin-left: 400px;
+  margin-right: 380px;
+  left: 20px;
+}
+.connect-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.connect-images a {
+  text-decoration: none;
+}
+
+.mail-image,
+.linkedin-image,
+.github-image {
+  width: 100px;
+  height: 90px;
+}
+
+.connect-images a.linkedin-image img {
+  width: 80px;
+  height: 60px;
+}
 /* .testing {
   padding-top: 100px;
   padding-bottom: 0px;
 } */
 
 .leave_message {
-  padding-top: 100px;
-  padding-bottom: 0px;
+  text-align: left;
+  padding-top: 350px;
 }
 
 .leave_message fieldset {
-  background-color: #190a6d;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
+  text-align: center;
+  backdrop-filter: blur(200px);
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 300px;
+  margin-left: 400px;
+  margin-right: 380px;
 }
 
 label {
@@ -140,15 +192,71 @@ label {
   font-size: medium;
 }
 
-input,
-textarea {
-}
-
 .submit-button {
   background-color: rgb(9, 153, 69);
 }
-
 #messages {
-  padding-top: 100px;
-  padding-bottom: 0px;
+  backdrop-filter: blur(200px);
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+}
+#messages h2 {
+  margin: 0; /* Remove any default margin from the h2 element */
+}
+
+#footer {
+  background-color: #006994;
+  margin: 5%;
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 380px;
+}
+/* View style for mobile devices */
+@media screen and (max-width: 767px) {
+  .iframe {
+    right: 0;
+  }
+
+  .welcome {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: large;
+  }
+
+  .about-body,
+  .xp {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+  }
+
+  .connect-images {
+    left: 10%;
+  }
+}
+
+/* View style for desktop  */
+@media screen and (min-width: 1024px) {
+  .iframe {
+    right: 100px;
+  }
+
+  .welcome {
+    padding-top: 200px;
+    padding-bottom: 350px;
+    font-size: xx-large;
+  }
+
+  .about-body,
+  .xp {
+    margin-left: 200px;
+    margin-right: 180px;
+  }
+
+  .connect-images {
+    text-align: center;
+  }
 }

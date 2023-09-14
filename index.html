@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>Cristian Moran</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" / >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
   <body class="body">
@@ -10,11 +11,11 @@
     <div class="underwater"></div>
     <!-- Landing -->
       <div class="iframe">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5407a4uk868QuLmcvB58gh?utm_source=generator" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5407a4uk868QuLmcvB58gh?utm_source=generator" width="30%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
         </iframe>
         </div>
         <div class="welcome">
-          <h1>Welcome!</h1>
+          <h1>Welcome</h1>
         </div>
       <div class="direction-buttons">
         <nav>
@@ -27,10 +28,9 @@
           </ul>
         </nav>
       </div>
-      <div>
-        <h2 id="aboutHeading">About</h2>
-      </div>
+  
       <div class="about-body">
+        <h2 id="aboutHeading">About</h2>
         <p>
           <!-- <button onclick="alert('Hello World')">Click Me</button> -->
           My name is Cristian Moran and I am currently an incoming junior at
@@ -38,11 +38,10 @@
           few months ago and am loving every step so far.
         </p>
       </div>
-      <div>
-        <h2 id="experienceHeading">Experience</h2>
-      </div>
       <div class="xp">
+        
       <div class="xp-item">
+        <h2 id="experienceHeading">Experience</h2>
         <p>
           <h3 class="subtitle"><b>TAMUhacks 2023-</b></h3><em>Team member; College Station, TX</em> (March
           2023)
@@ -119,38 +118,35 @@
       </div>
       </div>
       <div id="skills">
-        <h2>Skills</h2>
-        <ul></ul>
+        <ul>
+          <h2>Skills</h2>
+        </ul>
       </div>
-
-      <div>
-        <h2 id="connectHeading">Connect</h2>
-      </div>
-
-      <div>
-        <p>
+      <h2 id="connectHeading">Connect</h2>
+      <div class="connect-images">
           <a href="mailto: cmoran1654@gmail.com" target="_blank"
-            ><img
+            ><img class="mail-image"
               src="https://assets.stickpng.com/images/584856b4e0bb315b0f7675ac.png"
-              width="30"
-              height="25"
+              width="100"
+              height="90"
           /></a>
           <a
+          class="linkedin-image"
             href="https://www.linkedin.com/in/cristian-moran-1b06841ba/"
             target="_blank"
             ><img
               src="https://i.pinimg.com/originals/13/07/a2/1307a2648e71d531704a0f5a270ea966.png"
-              width="30"
-              height="25"
+              width="80"
+              height="60"
           /></a>
 
           <a href="https://github.com/CristianMoran1 " target="_blank"
             ><img
+            class="github-image"
               src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png"
-              width="50"
-              height="30"
+              width="100"
+              height="85"
           /></a>
-        </p>
       </div>
         <!-- Testing
         <form action="submit/" method="post">
@@ -187,9 +183,9 @@
     </div>
     <div class="leave_message">
       <section>
-        <h2><legend>Leave a Message</legend></h2>
         <form id="leave_message" name="leave_message">
           <fieldset>
+            <h2><legend>Leave a Message</legend></h2>
             <div class="label-userName">
               <label for="usersName">Name:</label>
               <input
