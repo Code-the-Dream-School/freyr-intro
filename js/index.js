@@ -1,3 +1,7 @@
+// declare variables for localStorage
+const MESSAGES_SAVED = 'MESSAGES_SAVED';
+let messagesData = [];
+
 // 1. create copyright element in footer
 
 const today = new Date();
@@ -39,10 +43,31 @@ messageForm.addEventListener('submit', (e) => {
     const userName = messageForm.usersName.value;
     const userEmail = messageForm.usersEmail.value;
     const userMessage = messageForm.usersMessage.value;
+    const userMessageID = userName.slice(0, 1).toLowerCase() + (Math.random() * 10000).toFixed();
 
+    messagesData.push({
+        id: userMessageID,
+        name: userName, 
+        email: userEmail, 
+        message: userMessage
+    });
+    saveData();
+    createMessageItem(userName, userEmail, userMessage, userMessageID);
+    messageForm.reset();
+});
+
+function renderMessages() {
+    messagesData.forEach(messageItem => {
+        const { id, name, email, message } = messageItem;
+        createMessageItem(name, email, message, id);
+    });
+}
+
+function createMessageItem(userName, userEmail, userMessage, contentId) {
 
     const newMessage = document.createElement('li');
     newMessage.classList.add('message_item');
+    newMessage.contentId = contentId;
 
     const messageImage = document.createElement('img');
     messageImage.classList.add('message_icon');
@@ -77,9 +102,7 @@ messageForm.addEventListener('submit', (e) => {
     newMessage.append(messageImage);
     newMessage.append(messageText);
     messageList.appendChild(newMessage);
-
-    messageForm.reset();
-});
+}
 
 // 4. add edit, save, remove for message list
 messageList.addEventListener('click', (e) => {
@@ -91,6 +114,7 @@ messageList.addEventListener('click', (e) => {
     const li = button.closest('li');
     const action = button.name;
 
+    const findMessageIndex = () => messagesData.findIndex(message => message.id === li.contentId);
 
     const nameActions = {
         edit: () => {
@@ -126,10 +150,20 @@ messageList.addEventListener('click', (e) => {
             button.innerHTML = `
                 <img src="${editButtonImgSrc}" alt="save button">
             `;
-        },
 
+            const editedMessageIndex = findMessageIndex();
+            messagesData[editedMessageIndex]['message'] = editedMessage;
+            saveData();
+        },
         delete: () => {
             li.remove();
+
+            const deletedMessageIndex = findMessageIndex();
+            if (deletedMessageIndex === -1) {
+                return;
+            }
+            messagesData.splice(deletedMessageIndex, 1);
+            saveData();
         }
     }
     nameActions[action]();
@@ -192,9 +226,18 @@ async function fetchProjects(reposUrl) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // get messages from localStorage
+    (() => {
+        loadData();
+        if (messagesData.length === 0) {
+            return;
+        }
+        renderMessages();
+    })();
+
     // const reposUrl = `https://api.github.com/users/${githubUser}/repos`; // default link
     const reposUrl = `https://api.github.com/users/${githubUser}/repos?sort=pushed`; // extra options: sort=push,created,updated & per_page=50(default 30)
-
     fetchProjects(reposUrl)        
         .then(projects => {
             // filter results
@@ -252,4 +295,15 @@ function showStaticList() {
     projectList.style.display = 'none';
     // show static list of projects (from index.html)
     staticList.style.display = 'flex';
+}
+
+function loadData() {
+    const messagesString = localStorage.getItem(MESSAGES_SAVED);
+    const messagesArray = JSON.parse(messagesString);
+    if(Array.isArray(messagesArray)) {
+        messagesData = messagesArray;
+    }
+}
+function saveData() {
+    localStorage.setItem(MESSAGES_SAVED, JSON.stringify(messagesData));
 }
