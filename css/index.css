@@ -29,15 +29,33 @@
   font-size: larger;
   font-weight: 500;
   text-align: center;
-  /* font-family: ; */
+  font-family: "Lobster";
 }
 
-.direction-buttons nav {
+.direction-buttons {
+  color: whitesmoke;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  /* left: 1000px; */
-  display: inline-block;
+  top: 20px;
+  right: 20px;
+  font-family: "Lobster";
+}
+.direction-buttons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.direction-buttons li {
+  display: inline;
+  margin-right: 20px;
+}
+.direction-buttons a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.direction-buttons a:hover {
+  color: whitesmoke;
 }
 
 .body {
@@ -215,7 +233,7 @@ label {
   margin-right: 380px;
 }
 /* View style for mobile devices */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 500px) {
   .iframe {
     right: 0;
   }
@@ -237,9 +255,32 @@ label {
     left: 10%;
   }
 }
+/* View style for tablets */
+@media screen and (max-width: 999px) {
+  .iframe {
+    right: 0; /* Adjust the positioning of your iframe for tablet */
+    left: 0;
+  }
+
+  .welcome {
+    padding-top: 150px; /* Adjust the padding for the welcome section on tablet */
+    padding-bottom: 250px;
+    font-size: xx-large; /* Adjust the font size for tablet */
+  }
+
+  .about-body,
+  .xp {
+    margin-left: 20px; /* Adjust the margins for about-body and xp sections on tablet */
+    margin-right: 20px;
+  }
+
+  .connect-images {
+    left: 10%; /* Adjust the positioning of the connect images on tablet */
+  }
+}
 
 /* View style for desktop  */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1000px) {
   .iframe {
     right: 100px;
   }
@@ -247,7 +288,7 @@ label {
   .welcome {
     padding-top: 200px;
     padding-bottom: 350px;
-    font-size: xx-large;
+    font-size: x-large;
   }
 
   .about-body,
