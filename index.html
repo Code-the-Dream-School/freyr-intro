@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Irina Postnova">
@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <nav id="headerNav">
-                <a class="header_logo" href="#intro"><img src="media/img/icons/message.png" alt="logo"></a>
+                <a class="header_logo" href="#intro"><img src="media/img/icons/message.png" alt="cat image"></a>
                 <a href="#skills">About & Skills</a>
                 <a class="hidden" href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="intro_about">
                     <h1> Irina Postnova </h1>
-                    <h3 class="intro_about_subheader"> Hello! </h3>
+                    <h2 class="intro_about_subheader"> Hello! </h2>
                     <p class="intro_about_text"> I am your future full stack developer.
                         I'm currently learning JavaScript and can't wait to get started! </p>
                     <nav>
@@ -113,14 +113,14 @@
                 <li class="message_item">
                     <img class="message_icon" src="media/img/icons/message.png" alt="user logo">
                     <div class="message_info">
-                        <a class="message_link" href="maito:pstnv@"> <span>Irina</span> wrote: </a>                        
+                        <a class="message_link" href="maito:pstnv@mail.ru"> <span>Irina</span> wrote: </a>                        
                         <span class="message_text">Welcome to my page!</span>
                     </div>
                 </li>
                 <li class="message_item">
                     <img class="message_icon" src="media/img/icons/message.png" alt="user logo">
                     <div class="message_info">
-                        <a class="message_link" href="maito:pstnv@"> <span>Irina</span> wrote: </a>                        
+                        <a class="message_link" href="maito:pstnv@mail.ru"> <span>Irina</span> wrote: </a>                        
                         <span class="message_text">Feel free to write something! </span>
                     </div>
                 </li>
@@ -131,10 +131,10 @@
         <div class="container">
             <form class="feedback_form" name="leave_message">
                 <h2 class="feedback_header"> Leave a Message </h2>
-                <input type="text" id="name" name="usersName" required placeholder="name*">
-                <input type="email" id="email" name="usersEmail" required placeholder="email*">
-                <textarea id="message" name="usersMessage" required placeholder="message*"></textarea>
-                <button class="feedback_btn" type="submit"> Submit </button>
+                <input type="text" id="name" name="usersName" required placeholder="name*" aria-label="name">
+                <input type="email" id="email" name="usersEmail" required placeholder="email*" aria-label="email">
+                <textarea id="message" name="usersMessage" required placeholder="message*" aria-label="message"></textarea>
+                <button class="feedback_btn" type="submit" aria-label="submit"> Submit </button>
             </form>
         </div>
     </section>
@@ -144,11 +144,11 @@
             <hr>
             <div class="footer_cards">
                 <div class="footer_card">
-                    <h5 class="footer_header">Email Me</h5>
+                    <h4 class="footer_header">Email Me</h4>
                     <a class="footer_link" href="mailto:pstnv@mail.ru" target="_blank">pstnv@mail.ru</a>
                 </div>
                 <div class="footer_card">
-                    <h5 class="footer_header">Follow Me</h5>
+                    <h4 class="footer_header">Follow Me</h4>
                     <a class="footer_link" href="https://github.com/pstnv" target="_blank"> <img src="media/img/icons/github_1.png" alt="Github icon"></a>
                 </div>
                 <div class="footer_card copyright">
