@@ -50,10 +50,30 @@ for (let i = 0; i < skills.length; i++) {
     document.getElementById("submit").reset();
   }
 
+let githubRequest= new XMLHttpRequest();
+githubRequest.open('GET', "https://api.github.com/users/{StephAlvarado}/repos");
+githubRequest.send();
 
+// did I add the correct link to open?
 
+githubRequest.addEventListener('load', () =>{
+let repositories = JSON.parse(githubRequest.response);
+console.log(repositories);
+});
 
+//don't know ig I'm doing JSON.parse correctly
 
+let projectSection = document.getElementById('#projects');
+let projectlist = projectSection.querySelector('ul');
+
+for (let i = 0; i < repositories.length; i++) {
+  let project = document.createElement('li');
+  project.innerText = (projects[i]);
+  projectlist.appendChild(project);
+  console.log(projects);
+ } 
+
+//question about parse and event listener 
 
 
 
