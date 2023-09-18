@@ -1,17 +1,5 @@
-let githubRequest = new XMLHttpRequest;
-githubRequest.open('GET', 'https://api.github.com/users/NatalyBMota/repos');
-githubRequest.setRequestHeader('X-GitHub-Api-Version', '2022-11-28');
-githubRequest.send();
-githubRequest.onload = function() {
-  let repositories = JSON.parse(githubRequest.responseText);
-  console.log(repositories);
-  let projectSection = document.getElementById('projects');
-  let projectList = projectSection.querySelector('ul');
-  for (let i=0; i < repositories.length; i++) {
-    let project = document.createElement('li');
-    let repositoryURL = repositories[i].html_url;
-    let repositoryName = repositories[i].name;
-    let repositoryDateOfCreation = new Date(repositories[i].created_at);
+document.addEventListener("DOMContentLoaded", () => {
+  function getdateSpelledOutFromDateObject(dateObj) {
     const monthSpelledOut = [
       "January",
       "February",
@@ -26,37 +14,49 @@ githubRequest.onload = function() {
       "November",
       "December"
     ];
-    let creationDate = repositoryDateOfCreation.getDate();
-    let creationMonth = repositoryDateOfCreation.getMonth();
-    let creationYear = repositoryDateOfCreation.getFullYear();
-    
-    let subList = document.createElement("ul");
-    //subList.classList.add('subListOfInnerList');
-    subList.className = 'subListOfInnerList';
-    let li1 = document.createElement('li');
-    let li2 = document.createElement('li');
-    //project.innerHTML = '<a href=' + repositoryURL + '>' + repositoryName + '</a>';
-    project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a><span class="hideable">:</span> `;
-    /*
-    project.innerHTML += `${repositories[i].description}`;
-    */
-    let descriptionStrong = document.createElement('strong');
-    descriptionStrong.innerText = 'Description: ';
-    //li1.innerHTML = `<strong>Description:</strong> ${repositories[i].description}`;
-    li1.appendChild(descriptionStrong);
-    let descriptionTextNode = document.createTextNode(`${repositories[i].description}`);
-    li1.appendChild(descriptionTextNode);
-    li2.innerHTML = `<strong>Date of Creation:</strong> `;
-    li2.innerHTML += `${monthSpelledOut[creationMonth]} ${creationDate}, ${creationYear}`;
-    //li2.innerHTML = `<strong>Date of Creation:</strong> ${repositoryDateOfCreation}`;
-    subList.appendChild(li1);
-    subList.appendChild(li2);
-    project.appendChild(subList);
-    projectList.appendChild(project);
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
+    let creationDate = dateObj.getDate();
+    let creationMonth = dateObj.getMonth();
+    let creationYear = dateObj.getFullYear();
+    return `${monthSpelledOut[creationMonth]} ${creationDate}, ${creationYear}`;
+  };
+  function populateProjectSection(repositories){
+    console.log('GitHub Repository Data:')
+    console.log(repositories[0]);
+    let projectSection = document.getElementById('projects');
+    let projectList = projectSection.querySelector('ul');
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement('li');
+      let repositoryURL = repositories[i].html_url;
+      let repositoryName = repositories[i].name;
+      let repositoryDateOfCreation = new Date(repositories[i].created_at);
+      let creationDate = getdateSpelledOutFromDateObject(repositoryDateOfCreation);
+      let subList = document.createElement("ul");
+      subList.className = 'subListOfInnerList';
+      let li1 = document.createElement('li');
+      let li2 = document.createElement('li');
+      project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a><span class="hideable">:</span> `;
+      let descriptionStrong = document.createElement('strong');
+      descriptionStrong.innerText = 'Description: ';
+      li1.appendChild(descriptionStrong);
+      let descriptionTextNode = document.createTextNode(`
+        ${repositories[i].description}
+      `);
+      li1.appendChild(descriptionTextNode);
+      li2.innerHTML = `<strong>Date of Creation:</strong> ${creationDate}`;
+      subList.appendChild(li1);
+      subList.appendChild(li2);
+      project.appendChild(subList);
+      projectList.appendChild(project);
+    }
+  };
+  
+  fetch('https://api.github.com/users/NatalyBMota/repos')
+    .catch(error => console.log('There was an error with getting data from the GitHub API.', error))
+    .then(response => response.json())
+    .catch(error => console.log('There was an error with parsing the response GitHub API\'s response data into JSON.', error))
+    .then((repositories) => populateProjectSection(repositories))
+    .catch(err => console.log('There was an error with processing data from the GitHub API.', err));
+  
   let skills = [
     "Wireframing",
     "Prototyping",

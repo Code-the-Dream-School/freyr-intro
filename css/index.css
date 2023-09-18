@@ -213,17 +213,13 @@ li.outerList div {
     background-color: #dbeef5;
     padding: 1.3rem 1.7rem 1.3rem 1.9rem;
 }
-
-/*
 #startingFlexItems {
     display: inline-flex;
-    margin-right: 20%; 
-    background-color: pink;
+    /* margin-right: 20%; */ 
     flex-direction: row;
     background-color: 'red';
     border: 2px solid blue;
 }
-*/
 #endingFlexItems {
     display: inline-flex;
     flex-direction: row;
