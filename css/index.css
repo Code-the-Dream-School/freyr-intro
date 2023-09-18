@@ -3,7 +3,16 @@
     margin: 0;
 }
 ul.subListOfInnerList li  {
-    display: none;
+    /* display: none; */
+    list-style-type: none;
+    /* border: 1px solid blue; */
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .hideable {
     visibility: hidden;
@@ -126,13 +135,19 @@ label {
 section {
     margin-top: 5.7rem;
 }
+/*
 #experience {
     display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+*/
 #experience ul {
+    display: grid;
+    /*
     display: flex;
     flex-direction: column;
     row-gap: 1.3rem;
+    */
 }
 li.outerList div {
     margin-top: 1em;
@@ -178,6 +193,8 @@ li.outerList div {
 }
 .subListOfInnerList {
     margin-top: .3rem;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
 }
 #skills ul {
     display: flex;
@@ -295,7 +312,7 @@ textarea {
 @media (min-width: 890px), (min-width: 720px) and (max-width: 889px) {
     ul.subListOfInnerList li {
         display: list-item;
-        list-style-type: disc;
+        /* list-style-type: disc; */
     }
     .hideable {
         visibility: visible;
