@@ -29,6 +29,18 @@ h3 {
 #copyright h4 {
     margin-top: -0.1rem;
 }
+
+#skills a, #projects a, #userMessages a  {
+    display: block;
+}
+#projects a {
+    margin-top: 1.5rem;
+}
+#userMessages a {
+    margin-top: 1.7rem;
+}
+
+
 img {
     border: .4rem solid rgb(52, 81, 94);
     border-radius: 100%;
