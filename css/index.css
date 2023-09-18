@@ -15,7 +15,11 @@ ul.subListOfInnerList li  {
     margin-top: 1rem;
 }
 .placeElsewhereInTheGrid {
-    grid-column: 2/3;
+    /* 
+       grid-column: 2/3;
+       The line of CSS code below uses line names instead of line numbers to specify the column in which the item(s) with the class of 'placeElsewhereInTheGrid' should be placed. It does the equivalent of the what the line of code above would do, where it not commented out. The line of code above uses line numbers to specify the column in which the item(s) with the class of 'placeElsewhereInTheGrid' should be placed. 
+    */
+    grid-column: halfway/end-edge;
     /* 
         grid-row: 3/3; 
         The line of code below does the same exact thing as the line of code above, which is commented out.
@@ -202,7 +206,13 @@ li.outerList div {
 }
 .subListOfInnerList {
     display: grid;
-    grid-template-columns: minmax(22rem, 29rem) minmax(19rem, 29rem);
+    /* The line of code below, which ends with a semi-colon, names grid column lines 1 through 3, giving them the names "begin-edge," "halfway" and "end-edge" respectively. */
+    grid-template-columns: 
+    [begin-edge] 
+    minmax(22rem, 29rem) 
+    [halfway] 
+    minmax(19rem, 29rem) 
+    [end-edge];
     grid-template-rows: auto auto auto;
     margin-top: .3rem;
     column-gap: 3rem;
