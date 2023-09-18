@@ -16,7 +16,11 @@ ul.subListOfInnerList li  {
 }
 .placeElsewhereInTheGrid {
     grid-column: 2/3;
-    grid-row: 3/3;
+    /* 
+        grid-row: 3/3; 
+        The line of code below does the same exact thing as the line of code above, which is commented out.
+    */
+    grid-row: 3 span;
 }
 .hideable {
     visibility: hidden;
