@@ -126,6 +126,9 @@ label {
 section {
     margin-top: 5.7rem;
 }
+#experience {
+    display: grid;
+}
 #experience ul {
     display: flex;
     flex-direction: column;
