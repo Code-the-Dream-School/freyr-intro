@@ -1,0 +1,370 @@
+@media only screen  and (max-width:600px){
+  
+}
+
+body{
+  background: linear-gradient(to bottom, #666699 0%, #3333cc 100%);
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+
+#GameDevelopmentExp {
+  background: linear-gradient(to bottom, #000066 0%, #3333cc 100%);
+  border-radius: 2px;
+  height: 35px;
+  width: 233px;
+  position: absolute;
+  left: 378px;
+  top: 292px;
+  text-align: center;
+}
+
+#GameDevelopmentExp:hover{
+  height:40px;
+  width: 240px;
+}
+#GameList{
+  position: absolute;
+  top: 291px;
+  left: 696px;
+  list-style: none;
+}
+
+
+
+#WebDevelopment{
+  background: linear-gradient(to bottom, #000066 0%, #3333cc 100%);
+  border-radius: 2px;
+  height: 35px;
+  width: 233px;
+  position: absolute;
+  left: 378px;
+  top: 382px;
+  text-align: center;
+}
+#WebDevelopment:hover{
+  height:40px;
+  width: 240px;
+}
+#WebSkills{
+  position: absolute;
+  top: 291px;
+  left: 696px;
+  list-style: none;
+}
+/* #HTML{
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  justify-content: space-between;
+
+}
+
+#CSS{
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  justify-content: space-between;
+} */
+.WebList{
+  background-color: gainsboro;
+  border-radius: 3px;
+  height: 53px;
+  width: 518px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  justify-content: space-between;
+}
+.WebList h1{
+  text-decoration: underline;
+  color: black;
+  -webkit-text-fill-color: darkmagenta;
+}
+.Glist{
+  background-color: gainsboro;
+  border-radius: 3px;
+  height: 53px;
+  width: 518px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  justify-content: space-between;
+}
+.Glist h1{
+  text-decoration: underline;
+  color: black;
+  -webkit-text-fill-color: darkmagenta;
+}
+.LangList{
+  background-color: gainsboro;
+  border-radius: 3px;
+  height: 53px;
+  width: 518px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  justify-content: space-between;
+}
+.LangList h1{
+  text-decoration: underline;
+  color: black;
+  -webkit-text-fill-color: darkmagenta;
+}
+.Data{
+  background-color: gainsboro;
+  border-radius: 3px;
+  height: 53px;
+  width: 730px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  justify-content: space-between;
+}
+.Data h1{
+  text-decoration: underline;
+  color: black;
+  -webkit-text-fill-color: darkmagenta;
+}
+/* #JAVASCRIPT h1{
+  margin-right: 20px;
+} */
+#ProgrammingLanguages{
+  background: linear-gradient(to bottom, #000066 0%, #3333cc 100%);
+  border-radius: 2px;
+  height: 35px;
+  width: 233px;
+  position: absolute;
+  top: 340px;
+  left: 378px;
+  text-align: center;
+}
+#ProgrammingLanguages:hover{
+  height: 40px;
+  width: 240px;
+}
+#Coding_Languages{
+  position: absolute;
+  top: 291px;
+  left: 696px;
+  list-style: none;
+}
+#DataHead {
+  background: linear-gradient(to bottom, #000066 0%, #3333cc 100%);
+  border-radius: 2px;
+  height: 35px;
+  width: 233px;
+  position: absolute;
+  left: 378px;
+  top: 408px;
+  text-align: center;
+  font-size: 20px;
+}
+#DataHead:hover{
+  height: 40px;
+  width: 240px;
+}
+#DataSkills{
+  position: absolute;
+  top: 291px;
+  left: 696px;
+  list-style: none;
+}
+#Circle { 
+  width: 194px;
+  height: 194px;
+  border-radius: 60%;
+  position: absolute;
+  top: 47%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  background-color: darkblue;
+  background-image: url("../css/images/powerbutton-PhotoRoom.png-PhotoRoom.png");
+  background-blend-mode: color;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+  box-shadow: -8px 23px 19px rgba(7, 1, 94, 0.452), /* Outer shadow */ inset -4px 19px 16px rgba(70, 130, 180, 0.336), /* Inner shadow */ 78px -23px 16px rgba(-14, 53, -16, -1.9), 33px 50px 191px rgba(32, 0, 30, 0.1);
+}
+
+.CircleImage{
+  color: blue;
+  position: absolute;
+  top: 46%;
+  left: 85%;
+  transform: translate(-51%, -47%);
+
+}
+.Hidden{
+  display: none;
+}
+/* BUTTONS */
+#Home{
+  position: absolute;
+  width: 183px;
+  height: 31px;
+  top: 35%;
+  left: 7%;
+  transform: rotate(-6deg);
+  border-color: azure;
+  background-color: darkblue;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#Contact{
+  position: absolute;
+  top: 52%;
+  left: 7%;
+  width: 183px;
+  height: 31px;
+  background-color: darkblue;
+  border-radius: 4px;
+  border-color: azure;
+  transform: rotate(-4deg);
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#AboutMe{
+  position: absolute;
+  width: 183px;
+  height: 31px;
+  top: 41%;
+  left: 7%;
+  border-color: azure;
+  background-color: darkblue;
+  transform: rotate(355deg);
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#Projects{
+  position: absolute;
+  width: 183px;
+  height: 31px;
+  top: 47%;
+  left: 7%;
+  border-color: azure;
+  background-color: darkblue;
+  transform: rotate(-4deg);
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+#Home:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#Projects:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#Contact:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#AboutMe:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+
+/* /* .Home:hovr{
+ 
+} */
+/* a */
+
+/* /* #Hidden{
+  display: none;
+} */
+ 
+#GithubIcon,
+#InstagramIcon,
+#PortfolioIcon,
+#MailIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.animation-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-58%);
+  margin-top: 40px;
+}
+#WhoAmI{
+    position: absolute;
+    top: 0;
+    left: 32%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    font-size: 69px;
+}
+
+#Animation1  {
+  margin: 0;
+  padding: 0;
+ display: flex;
+ justify-content: center;
+ position: relative;
+ left: 7px;
+ top: 11px;
+  background-size: 20px;
+  padding-bottom: 50px;
+  white-space: nowrap; /* Prevent text from wrapping to a new line */
+ font-size: 27px;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ color: black;
+}
+.animation-container2 {
+  position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 86px;
+    font-size: 20px;
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+.Tabs{
+  background-color: transparent;
+  position: absolute;
+  top: 15%;
+  left: 46%;
+}
+.Tabs h1{
+ font-size: 36px;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ color: black;
+ text-decoration: underline;
+ text-decoration-color: brown;
+
+}
+#Container{
+  background-color: rgb(176, 196, 222); /* Define the background gradient */
+  
+  border-style: none;
+  border-width: 3px;
+  border-image-slice: 1;
+  
+  background-clip: padding-box;
+  position: absolute;
+  top: 93px;
+  left: 212px;
+  font-size: 51px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

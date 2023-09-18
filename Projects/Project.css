@@ -121,6 +121,23 @@ body{
   height: 30px;
   margin-right: 10px;
 }
+#GithubIcon:hover{
+  width: 45px;
+  height: 45px;
+}
+#InstagramIcon:hover{
+  width: 45px;
+  height: 45px;
+}
+#PortfolioIcon:hover{
+  width: 45px;
+  height: 45px;
+}
+#MailIcon:hover{
+  width: 45px;
+  height: 45px;
+
+}
 #footer{
     position: absolute;
     display: flex;
@@ -134,53 +151,63 @@ body{
   .Tabs{
     position: fixed;
     top: 0%;
-    left: 11%;
-    width: 88%;
+    left: 0;
+    width: -webkit-fill-available;
     height: 12%;
-    color: purple;
-    background-color: purple;
+    color: rgb(192, 122, 192);
+    background: linear-gradient( 101deg,darkblue, #29DFF7)
   }
   .HeaderTabs{
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     color: black;
+    font-size: 20px;
+    font-family: sans-serif;
   }
+
   .Headers{
+   
     display: flex;
     justify-content: space-between;
   }
+ 
   #ROBLOX,#WebsiteInterface,#ProgramsInterface{ 
     border-radius: 1%;
     position: fixed;
     top: 12%;
     left: 30%;
-    display: flex;
-    justify-content: center;
     background-color: red;
+    background: linear-gradient(137deg, #00F666, #0F0071, #29DFF7);
+    filter: drop-shadow(1px 4px 6px black);
     width: 66%;
     height: 73%;
     color: red;
-    opacity: 0;
+    overflow: auto; /* Enable scrolling if content overflows */
   }
   #GithubProjects{
     color: white;
     position: fixed;
-    top: 568px;
+    top: px;
     left: 13px;
     font-size: 29px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, darkblue, #00BB13);
+    border-radius: 2%;
+
 }
  #ProjectHeader{
   color: white;
     position: relative;
-    top: 568px;
+    top: 0;
     left: 0px;
     font-size: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
  }
+ 
  #Github.RobloxInterface,.Projects{
+
     border-radius: 1%;
     position: fixed;
     top: 12%;
@@ -193,42 +220,63 @@ body{
     color: red;
     
   }
+  .RobloxInterface{
+    display: flex;
+  }
 #GithubProjects{
+  position: fixed;
   background-color: black;
-  width: 100px;
-  height: 200px;
+  width: 593px;
+  height: 345px;
+  left: 0;
+  top: 598px;
 }
   .RobloxButtons{
     border-radius: 9px;
-    display: flex;
     width: 303px;
     height: 229px;
+    flex-wrap: wrap;
     position: relative;
     top: 0%;
-    left: -6%;
+    left: -1%;
     opacity: 50%;
     color: aqua;
     margin-left: 50px;
     background-color: black;
     opacity: 50%;
+    filter: blur(2px);
   }
+.RobloxButtons h1{
+  position: fixed;
+  top:-1px;
+ 
+}
+  .RobloxButtons:hover{
+    width: 320px;
+    height: 240px;
+    filter: blur(0px);
+
+  }
+  .RobloxButtons
 .Headers:hover{
-  font-size: 35px;
+  color: green;
+  font-size:43px;
+  filter: drop-shadow(1px 4px 6px black);
 }
 .GamesTabs{
   font-size: 20px;
   position: relative;
+  top: -34px;
   left: 0;
-
 }
 #Games{
   list-style: none;
 }
 #RobloxTab{
-  top: 49px;
+  top: 36px;
 }
 #RobloxTab:hover, #UnityTab:hover {
-  color: red; /* Change the text color to red when hovering */
+  color: green; /* Change the text color to red when hovering */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   /* You can add other styles here as needed */
@@ -244,3 +292,16 @@ body{
     align-items: center;
     margin-right: 10px;
   }
+#background-description{
+  position: fixed;
+  top: 34px;
+  font-size: 20px;
+  color: white;
+font-weight: bold;
+}
+#ProjectsList{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: auto;
+}
