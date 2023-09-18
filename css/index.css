@@ -135,6 +135,7 @@ label {
 section {
     margin-top: 5.7rem;
 }
+
 /*
 #experience {
     display: grid;
@@ -193,7 +194,7 @@ li.outerList div {
 }
 .subListOfInnerList {
     margin-top: .3rem;
-    grid-template-columns: minmax(22rem, 29rem) minmax(19rem, 29rem) ;
+    grid-template-columns: minmax(22rem, 29rem) minmax(19rem, 29rem);
     column-gap: 3rem;
 }
 #skills ul {
