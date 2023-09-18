@@ -29,9 +29,9 @@ for (let i = 0; i < skills.length; i++) {
     let usersName = event.target.usersName;
     let usersEmail = event.target.usersEmail;
     let usersMessage = event.target.usersMessage;
-   
-
     console.log(event);
+
+
     let messageSection = document.getElementById('#messages');
     let messageList = messageSection.querySelector(".<ul>");
     let newMessage = document.createElement('li');
@@ -50,30 +50,45 @@ for (let i = 0; i < skills.length; i++) {
     document.getElementById("submit").reset();
   }
 
-let githubRequest= new XMLHttpRequest();
-githubRequest.open('GET', "https://api.github.com/users/{StephAlvarado}/repos");
-githubRequest.send();
+//let githubRequest= new XMLHttpRequest();
+//githubRequest.open('GET', "https://api.github.com/users/{StephAlvarado}/repos");
+//githubRequest.send();
 
 // did I add the correct link to open?
 
-githubRequest.addEventListener('load', () =>{
-let repositories = JSON.parse(githubRequest.response);
-console.log(repositories);
-});
+//githubRequest.addEventListener('load', () =>{
+//let repositories = JSON.parse(githubRequest.response);
+//console.log(repositories);
+//});
 
 //don't know ig I'm doing JSON.parse correctly
 
-let projectSection = document.getElementById('#projects');
-let projectlist = projectSection.querySelector('ul');
 
-for (let i = 0; i < repositories.length; i++) {
-  let project = document.createElement('li');
-  project.innerText = (projects[i]);
-  projectlist.appendChild(project);
-  console.log(projects);
- } 
 
 //question about parse and event listener 
 
+fetch('https://api.github.com/users/StephAlvarado/repos')
+  .then(function(response){
+      console.log(response.json())
+ })
+ .then(function(response){
+  const repositories = JSON.parse(this.response);
+  console.log(repositories);
 
+  const projectSection = document.querySelector('#projects');
+  const projectlist = projectSection.querySelector("ul");
+  
+  
+  for (let i = 0; i < repositories.length; i++) {
+    let project = document.createElement('li');
+    project.innerText = (projects[i]);
+    projectlist.appendChild(project);
+    console.log(projects);
+   } ;
+
+
+});
+
+
+  
 

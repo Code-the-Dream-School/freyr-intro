@@ -34,17 +34,19 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: monospace;
 }
 
 .nav-menu{
     display: flex;
     justify-content:space-between ;
     align-items: center;
-    gap: 60px;
+    gap: 3px;
+    background-color: aqua;
 }
 
 .nav-branding{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .home, .about, .experience, .skills, .connect{
