@@ -6,7 +6,7 @@ const copyright = document.createElement("p");
 copyright.innerHTML = "Stephanie Alvarado" + ' ' + thisYear;
 footer.appendChild(copyright);
 
-
+// Skills Section 
 let skills = ['Microsoft Office', 'Javascript', 'html', 'CSS', 'Lightroom'];
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
@@ -17,8 +17,8 @@ for (let i = 0; i < skills.length; i++) {
     skillsList.appendChild(skill);
     console.log(skills);
   } 
-   //for loop skills section
-
+  
+// Leave a Message
   let messageForm = document.getElementsByName("leave_message");
 
   document.addEventListener("submit", myFunction);
@@ -36,6 +36,7 @@ for (let i = 0; i < skills.length; i++) {
     let messageList = messageSection.querySelector(".<ul>");
     let newMessage = document.createElement('li');
     newMessage.innerHTML = '<a>' + usersEmail + '<span>' + usersMessage;
+
     let removeButton = document.createElement('<button>');
     removeButton.innerText = "Remove";
     removeButton.setAttribute('type', 'button');
@@ -50,13 +51,14 @@ for (let i = 0; i < skills.length; i++) {
     document.getElementById("submit").reset();
   }
 
+  // 6.1
 //let githubRequest= new XMLHttpRequest();
 //githubRequest.open('GET', "https://api.github.com/users/{StephAlvarado}/repos");
 //githubRequest.send();
 
 // did I add the correct link to open?
 
-//githubRequest.addEventListener('load', () =>{
+//githubRequest.addEventListener('load', (event) =>{
 //let repositories = JSON.parse(githubRequest.response);
 //console.log(repositories);
 //});
@@ -67,26 +69,41 @@ for (let i = 0; i < skills.length; i++) {
 
 //question about parse and event listener 
 
+
+
+// Fetch Data 6.2
 fetch('https://api.github.com/users/StephAlvarado/repos')
-  .then(function(response){
-      console.log(response.json())
- })
- .then(function(response){
-  const repositories = JSON.parse(this.response);
+  .then(response => {
+    if(response.ok){
+      return response.json();
+    } else{
+      throw new Error('Failed data Fetch from GitHub Api');
+    }
+  })
+
+ .then(repositories => {
   console.log(repositories);
 
-  const projectSection = document.querySelector('#projects');
+  //const repositories = JSON.parse(this.response);
+  const projectSection = document.getElementById('projects');
   const projectlist = projectSection.querySelector("ul");
   
-  
+
   for (let i = 0; i < repositories.length; i++) {
+    let GitRepository = repositories[i];
+    let LinkProject = document.createElement('a');
+    LinkProject.href = GitRepository.html_url;
+    LinkProject.textContent = GitRepository.name;
+
     let project = document.createElement('li');
-    project.innerText = (projects[i]);
+    project.appendChild(LinkProject);
     projectlist.appendChild(project);
-    console.log(projects);
-   } ;
+   }
+  })
+ 
 
-
+   .catch(error => {
+    console.error("Error fetching data:", error);
 });
 
 

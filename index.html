@@ -42,7 +42,7 @@
             border: black;
           }
           footer{
-            background-color: blueviolet;
+            background-color: aqua;
             word-spacing: 50%;
           }
         </style>
@@ -131,11 +131,14 @@
 
       <section> 
         <h2>Leave a Message</h2>
-        <form name="leave_message"><br>
+        <form name="leave_message" class="message-form"><br>
         <div class="flex-grid">
             <label class="col" style=" font: bolder; font-family: monospace;   background-color: blueviolet; font-size: 110%;"  for="leave a message">Leave a Message</label>
+            <label for="usersName">Tell us your name</label>
             <input class="col" style="padding: 2%; background-color: pink; ;" type="text" name="usersName" required>
+            <label for="usersEmail">Whats your email?</label>
             <input class="col" padding: 2%; background-color: pink; type="email" name="usersEmail" required>
+            <label for="usersMessage">Insert message here</label>
             <textarea class= "col" style="padding: 1%; background-color: pink;"  name="usersMessage" required></textarea>
             <button type="submit">Submit</button>
           </form><br>
