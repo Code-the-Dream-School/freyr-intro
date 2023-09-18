@@ -311,8 +311,9 @@ textarea {
 }
 @media (min-width: 890px), (min-width: 720px) and (max-width: 889px) {
     ul.subListOfInnerList li {
+        /* 
         display: list-item;
-        /* list-style-type: disc; */
+        list-style-type: disc; */
     }
     .hideable {
         visibility: visible;
@@ -398,6 +399,9 @@ textarea {
     }
 }
 @media (min-width: 0px) and (max-width: 522px) {
+    .subListOfInnerList li {
+        display: none;
+    }
     #connect {
         text-align: left;
     }
