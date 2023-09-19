@@ -43,9 +43,12 @@ for (let i = 0; i < skills.length; i++) {
 
 
 const messageForm = document.querySelector('form[name="leave_message"]');
+const messagesHeader = document.getElementById('messagesHeader');
 
 messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    messagesHeader.style.display = ""
 
     const usersName = e.target.usersName.value;
     console.log(usersName);
