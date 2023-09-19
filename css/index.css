@@ -177,6 +177,24 @@ h3 {
   height:50px; */
 }
 
+#projects {
+  list-style: none;
+  padding-top: 350px;
+}
+
+#projects ul {
+  list-style: none;
+  backdrop-filter: blur(200px);
+  background-color: rgba(255, 255, 255, 0.6);
+
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-left: 400px;
+  margin-right: 380px;
+  text-align: center;
+  padding: 5%;
+}
+
 #connectHeading {
   padding-top: 350px;
   padding-bottom: 0px;
