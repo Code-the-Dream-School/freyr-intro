@@ -366,6 +366,17 @@ textarea {
         width: 5rem;
     }
 }
+@media (min-width: 600px) and (max-width: 889px) {
+    .subListOfInnerList li:first-child {
+        display: list-item;
+        list-style-type: disc;
+    }
+}
+@media (min-width: 0px) and (max-width: 889px) {
+    .subListOfInnerList li {
+        display: none;
+    }
+}
 @media (min-width: 510px) and (max-width: 599px), (min-width: 0px) and (min-width: 523px) {
     input {
         width: 77%;
@@ -393,9 +404,6 @@ textarea {
     }
 }
 @media (min-width: 0px) and (max-width: 522px) {
-    .subListOfInnerList li {
-        display: none;
-    }
     #connect {
         text-align: left;
     }
