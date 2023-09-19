@@ -300,6 +300,7 @@ textarea {
 @media (min-width: 720px) and (max-width: 1107px) {
     #main-navigation ul {
         grid-template-columns: 1fr 1fr 1fr;
+        /* could possibly use minmax() for the middle column) */
     }
 }
 @media (min-width: 523px) and (max-width: 719px) {
@@ -333,7 +334,7 @@ textarea {
     
     #website-brand div {
         margin-bottom: 1.5rem;
-        flex-direction: row;
+        /* flex-direction: row; */
         column-gap: .7rem;
     }
 }
