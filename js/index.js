@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let repositoryDateOfCreation = new Date(repositories[i].created_at);
       let creationDate = getdateSpelledOutFromDateObject(repositoryDateOfCreation);
       let subList = document.createElement("ul");
-      subList.className = 'subListOfInnerList';
+      subList.className = 'subListOfInnerList2';
       let li1 = document.createElement('li');
       let li2 = document.createElement('li');
       project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a><span class="hideable">:</span> `;
