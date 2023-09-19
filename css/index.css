@@ -58,15 +58,33 @@
   color: whitesmoke;
 }
 
-.dropdown-arrow {
+.direction-buttons li:active {
+  background-color: #313536;
+}
+
+#top-arrow {
   color: whitesmoke;
   display: flex;
 }
 
-.dropdown-arrow i {
-  position: relative;
-  left: 1250px;
-  bottom: 100px;
+#top-arrow {
+  justify-content: center;
+  padding-top: 25px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #6f8a96;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#top-arrow:active {
+  background: #313536;
 }
 
 .body {
@@ -207,6 +225,8 @@ h3 {
 .leave_message {
   text-align: left;
   padding-top: 350px;
+  display: flexbox;
+  flex-direction: column;
 }
 
 .leave_message fieldset {
@@ -251,10 +271,22 @@ label {
     right: 0;
   }
 
+  .direction-buttons {
+    font-size: smaller;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: inline;
+    list-style: none;
+
+    margin: 0;
+  }
+
   .welcome {
     padding-top: 100px;
     padding-bottom: 100px;
-    font-size: large;
+    font-size: medium;
+    justify-content: center;
   }
 
   .about-body,
@@ -262,10 +294,37 @@ label {
     margin-left: 20px;
     margin-right: 20px;
     padding: 20px;
+    justify-content: center;
+  }
+
+  #skills {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  #skills ul {
+    padding: 20px;
   }
 
   .connect-images {
     left: 10%;
+    justify-content: center;
+  }
+
+  .leave_message fieldset {
+    justify-content: center;
+  }
+
+  #footer {
+    font-size: small;
+    display: inline;
+    justify-content: center;
+    margin: 0;
+    left: 10px;
   }
 }
 /* View style for tablets/ipads */
