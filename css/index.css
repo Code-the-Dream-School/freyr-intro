@@ -10,10 +10,6 @@ ul.subListOfInnerList li  {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
-.placeElsewhereInTheGrid {
-    grid-column: halfway/end-edge;
-    grid-row: 3 span;
-}
 .hideable {
     visibility: hidden;
 }
@@ -179,15 +175,9 @@ li.outerList div {
 }
 .subListOfInnerList {
     display: grid;
-    grid-template-columns: 
-    [begin-edge] 
-    minmax(22rem, 29rem) 
-    [halfway] 
-    minmax(19rem, 29rem) 
-    [end-edge];
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     margin-top: .3rem;
-    column-gap: 3rem;
 }
 #skills ul {
     display: flex;
@@ -262,6 +252,22 @@ textarea {
 }
 #connect li {
     list-style-type: none;
+}
+@media (min-width: 1108px) {
+    .subListOfInnerList {
+        grid-template-columns: 
+        [begin-edge] 
+        minmax(22rem, 29rem) 
+        [halfway] 
+        minmax(19rem, 29rem) 
+        [end-edge];
+        grid-template-rows: auto auto auto;
+        column-gap: 3rem;
+    }
+    .placeElsewhereInTheGrid {
+        grid-column: halfway/end-edge;
+        grid-row: 3 span;
+    }
 }
 @media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 523px) and (max-width: 890px) {
     #connect {
