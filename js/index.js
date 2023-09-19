@@ -92,3 +92,7 @@ messageForm.addEventListener("submit", function (event) {
 
   messageForm.reset();
 });
+
+// Github request
+
+const githubRequest = XMLHttpRequest 
