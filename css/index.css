@@ -2,13 +2,10 @@
     margin: 0;
 }
 ul.subListOfInnerList li  {
-    /* display: none; */
-    list-style-type: none;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    border-radius: 1.2rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    list-style-type: disc;
+    padding-right: .7rem;
+    padding-left: 1.2rem;
+    margin-left: -.5rem;
 }
 .hideable {
     visibility: hidden;
@@ -267,6 +264,19 @@ textarea {
     .placeElsewhereInTheGrid {
         grid-column: halfway/end-edge;
         grid-row: 3 span;
+    }
+    
+    ul.subListOfInnerList li  {
+        list-style-type: none;
+        padding-top: .7rem;
+        padding-bottom: .5rem;
+        padding-right: .9rem;
+        border-bottom: none;
+        border-top: 3px dashed grey;
+        border-right: 3px dashed grey;
+        border-top-right-radius: 15px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
     }
 }
 @media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 523px) and (max-width: 890px) {
