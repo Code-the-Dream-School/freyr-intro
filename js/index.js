@@ -32,19 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
       let creationDate = getdateSpelledOutFromDateObject(repositoryDateOfCreation);
       let subList = document.createElement("ul");
       subList.className = 'subListOfInnerList2';
-      let li1 = document.createElement('li');
-      let li2 = document.createElement('li');
+      let description_li = document.createElement('li');
+      let dateOfCreation_li = document.createElement('li');
       project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a><span class="hideable">:</span> `;
       let descriptionStrong = document.createElement('strong');
       descriptionStrong.innerText = 'Description: ';
-      li1.appendChild(descriptionStrong);
+      description_li.appendChild(descriptionStrong);
       let descriptionTextNode = document.createTextNode(`
         ${repositories[i].description}
       `);
-      li1.appendChild(descriptionTextNode);
-      li2.innerHTML = `<strong>Date of Creation:</strong> ${creationDate}`;
-      subList.appendChild(li1);
-      subList.appendChild(li2);
+      description_li.appendChild(descriptionTextNode);
+      dateOfCreation_li.innerHTML = `<strong>Date of Creation:</strong> ${creationDate}`;
+      subList.appendChild(description_li);
+      subList.appendChild(dateOfCreation_li);
       project.appendChild(subList);
       projectList.appendChild(project);
     }
