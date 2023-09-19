@@ -3,33 +3,34 @@
   <head>
     <title>Cristian Moran</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
   </head>
-  <body>
-    <div>
-      <!-- Landing -->
-      <h1>
-        <div>
-          <img
-            src="file:///C:/Users/cmora/OneDrive/Pictures/Welcome.png"
-            width="600"
-          />
+  <body class="body">
+    <!-- Background img -->
+    <div class="underwater"></div>
+    <!-- Landing -->
+      <div class="iframe">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5407a4uk868QuLmcvB58gh?utm_source=generator" width="30%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
         </div>
-      </h1>
-      <div>
+        <div class="welcome">
+          <h1>Welcome</h1>
+        </div>
+      <div class="direction-buttons">
         <nav>
           <ul>
-            <button id="About"><a href="#aboutHeading">About</a></button>
-            <button id="Experience">
-              <a href="#experienceHeading">Experience</a>
-            </button>
-            <button id="Connect"><a href="#connectHeading">Connect</a></button>
+            <li id="tag"><a href="#aboutHeading">About</a></li>
+            <li id="tag"><a href="#experienceHeading">Experience</a></li>
+            <li id="tag"><a href="#skills">Skills</a></li>
+            <li id="tag"><a href="#connectHeading">Connect</a></li>
           </ul>
         </nav>
       </div>
-      <div>
+  
+      <div class="about-body">
         <h2 id="aboutHeading">About</h2>
-      </div>
-      <div>
         <p>
           <!-- <button onclick="alert('Hello World')">Click Me</button> -->
           My name is Cristian Moran and I am currently an incoming junior at
@@ -37,12 +38,12 @@
           few months ago and am loving every step so far.
         </p>
       </div>
-      <div>
+      <div class="xp">
+        
+      <div class="xp-item">
         <h2 id="experienceHeading">Experience</h2>
-      </div>
-      <div>
         <p>
-          <b>TAMUhacks 2023-</b><em>Team member; College Station, TX</em> (March
+          <h3 class="subtitle"><b>TAMUhacks 2023-</b></h3><em>Team member; College Station, TX</em> (March
           2023)
           <li>
             Worked alongside a team of 4 and collaborated for 24 hours on a
@@ -60,9 +61,9 @@
         </p>
       </div>
 
-      <div>
+      <div class="xp-item">
         <p>
-          <b>Snapbrillia-</b><em> Development Intern; Remote, US</em> (August
+          <h3 class="subtitle"><b>Snapbrillia-</b></h3><em> Development Intern; Remote, US</em> (August
           2022- November 2022)
           <li>
             Gained experience on a large scale and high-performance social
@@ -93,10 +94,10 @@
         </p>
       </div>
 
-      <div>
+      <div class="xp-item">
         <p>
-          <b>META Android Development Certificate Course-</b
-          ><em>Student; Remote, US</em> (August 2022- Present)
+          <h3 class="subtitle"><b>META Android Development Certificate Course-</b
+          ></h3><em>Student; Remote, US</em> (August 2022- Present)
           <li>
             Learning to be proficient in programming languages such as Java and
             Kotlin.
@@ -115,40 +116,38 @@
           </li>
         </p>
       </div>
-
+      </div>
       <div id="skills">
-        <h2>Skills</h2>
-        <ul></ul>
+        <ul>
+          <h2>Skills</h2>
+        </ul>
       </div>
-
-      <div>
-        <h2 id="connectHeading">Connect</h2>
-      </div>
-
-      <div>
-        <p>
+      <h2 id="connectHeading">Connect</h2>
+      <div class="connect-images">
           <a href="mailto: cmoran1654@gmail.com" target="_blank"
-            ><img
-              src="https://th.bing.com/th/id/OIP.qGd92IGgx7bJwhvx26xxIQHaHa?w=183&h=183&c=7&r=0&o=5&pid=1.7"
-              width="30"
-              height="25"
+            ><img class="mail-image"
+              src="https://assets.stickpng.com/images/584856b4e0bb315b0f7675ac.png"
+              width="100"
+              height="90"
           /></a>
           <a
+          class="linkedin-image"
             href="https://www.linkedin.com/in/cristian-moran-1b06841ba/"
             target="_blank"
             ><img
-              src="https://th.bing.com/th/id/OIP.q9s2sSjwz87hMp3bE2WpmwHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7"
-              width="30"
-              height="25"
+              src="https://i.pinimg.com/originals/13/07/a2/1307a2648e71d531704a0f5a270ea966.png"
+              width="80"
+              height="60"
           /></a>
 
           <a href="https://github.com/CristianMoran1 " target="_blank"
             ><img
+            class="github-image"
               src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png"
-              width="50"
-              height="30"
+              width="100"
+              height="85"
           /></a>
-        </p>
+      </div>
         <!-- Testing
         <form action="submit/" method="post">
           <fieldset>
@@ -166,7 +165,7 @@
             <input type="text" id="dob" name="dob" placeholder="06.19.2003" />
           </fieldset> -->
         <!-- </form> -->
-
+        <!-- <div class="testing">
         <label for="Favorite Drake Song?" name="Favorite Drake Song?"
           >Favorite Drake Song?</label
         >
@@ -179,15 +178,15 @@
             Hold on we're going home
           </option>
         </select>
-      </div>
+      </div> -->
       <!-- Testing -->
     </div>
-    <div>
+    <div class="leave_message">
       <section>
-        <h2><legend>Leave a Message</legend></h2>
         <form id="leave_message" name="leave_message">
           <fieldset>
-            <div>
+            <h2><legend>Leave a Message</legend></h2>
+            <div class="label-userName">
               <label for="usersName">Name:</label>
               <input
                 type="text"
@@ -197,7 +196,7 @@
               />
             </div>
             <br />
-            <div>
+            <div class="label-email">
               <label for="email">Email:</label>
               <input
                 type="email"
@@ -207,13 +206,13 @@
               />
             </div>
             <br />
-            <div>
+            <div class="usersMessage">
               <label for="usersMessage">Message:</label>
               <textarea name="usersMessage" required="true"></textarea>
             </div>
             <br />
             <div>
-              <button type="submit">Submit</button>
+              <button class="submit-button" type="submit">Submit</button>
               <!-- <button type="reset" id="resetButton">Reset</button> -->
             </div>
           </fieldset>
