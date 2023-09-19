@@ -59,8 +59,12 @@ ul {
 }
 #main-navigation ul {
     margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    /*
     display: flex;
     flex-direction: column;
+    */
     padding-left: 0;
 }
 #main-navigation li {
@@ -250,7 +254,21 @@ textarea {
 #connect li {
     list-style-type: none;
 }
+@media (min-width: 1220px) {
+    #main-navigation ul {
+        justify-content: right;
+    }
+}
+@media (min-width: 1108px) and (max-width: 1219px) {
+    #main-navigation ul {
+        justify-content: center;
+    }
+}
 @media (min-width: 1108px) {
+    #main-navigation ul {
+        display: flex;
+        flex-direction: row;
+    }
     .subListOfInnerList {
         grid-template-columns: 
         [begin-edge] 
@@ -279,6 +297,22 @@ textarea {
         margin-top: 1rem;
     }
 }
+@media (min-width: 720px) and (max-width: 1107px) {
+    #main-navigation ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 523px) and (max-width: 719px) {
+    #main-navigation ul {
+        grid-template-columns: 1fr 1fr;
+        /*
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1.5rem;
+        */
+    }
+}
+/*
 @media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 523px) and (max-width: 890px) {
     #connect {
         text-align: center;
@@ -296,20 +330,14 @@ textarea {
     #experience ul {
         padding-left: 40px;
     }
-    #main-navigation ul {
-        flex-direction: row;
-        justify-content: center;
-        column-gap: 1.5rem;
-    }
-    #main-navigation li {
-        /* flex-grow: 1; */
-    } 
+    
     #website-brand div {
         margin-bottom: 1.5rem;
         flex-direction: row;
         column-gap: .7rem;
     }
 }
+*/
 @media (min-width: 890px), (min-width: 720px) and (max-width: 889px) {
     .hideable {
         visibility: visible;
@@ -317,7 +345,9 @@ textarea {
 }
 @media (min-width: 890px) {
     #main-navigation ul {
+        /*
         justify-content: right;
+        */
     }
     input {
         width: 27rem;
@@ -394,7 +424,7 @@ textarea {
 }
 @media (min-width: 523px) and (max-width: 599px), (min-width: 0px) and (max-width: 522px) {
     #main-navigation ul {
-        justify-content: center;
+        /* justify-content: center; */
     }
 }
 @media (min-width: 523px) and (max-width: 599px) {
