@@ -312,7 +312,7 @@ textarea {
         */
     }
 }
-/*
+
 @media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 523px) and (max-width: 890px) {
     #connect {
         text-align: center;
@@ -337,7 +337,7 @@ textarea {
         column-gap: .7rem;
     }
 }
-*/
+
 @media (min-width: 890px), (min-width: 720px) and (max-width: 889px) {
     .hideable {
         visibility: visible;
