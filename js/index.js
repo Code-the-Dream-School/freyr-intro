@@ -3,6 +3,20 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("#footer");
 const copyright = document.createElement("p");
+const arrow = document.querySelector("dropdown-arrow");
+
+// arrow.addEventListener("click", function (event) {});
+
+//container.addEventListener("click", function (event) {
+//var clicked = event.target.id;
+//   if (clicked == "button" || "About") {
+//     alert("Welcome to my page!");
+//   } else if (clicked == "button" || "Experience") {
+//     alert("None lol");
+//   } else if (clicked == "button" || "button") {
+//     alert("Follow for follow?");
+//   }
+// });
 
 //copyright logo
 const logoCopyright = document.createElement("p");
@@ -16,17 +30,6 @@ footer.appendChild(copyright);
 
 //this is a variable refering to the buttonContainer
 var container = document.querySelector("nav button");
-
-//container.addEventListener("click", function (event) {
-//var clicked = event.target.id;
-//   if (clicked == "button" || "About") {
-//     alert("Welcome to my page!");
-//   } else if (clicked == "button" || "Experience") {
-//     alert("None lol");
-//   } else if (clicked == "button" || "button") {
-//     alert("Follow for follow?");
-//   }
-// });
 
 //skills section
 const skills = [
