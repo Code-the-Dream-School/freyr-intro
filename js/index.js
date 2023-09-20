@@ -92,3 +92,24 @@ messageForm.addEventListener("submit", function (event) {
 
   messageForm.reset();
 });
+
+// Github request
+const githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/CristianMoran1/repos");
+
+githubRequest.addEventListener("load", function (event) {
+  const repositories = JSON.parse(githubRequest.responseText);
+  console.log(repositories);
+
+  // Display repositories in list
+  const projectSection = document.getElementById("projects");
+  const projectList = projectSection.querySelector("ul");
+
+  for (let i = 0; i < repositories.length; i++) {
+    const project = document.createElement("li");
+    project.innerText = repositories[i].name;
+    projectList.appendChild(project);
+  }
+});
+
+githubRequest.send();
