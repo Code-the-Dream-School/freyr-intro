@@ -2,6 +2,46 @@
 
 - The following tutorial showed me how to stop my image file from stretching weirdly when using flex-box for styling:
   - https://techstacker.com/how-to-prevent-image-stretching-with-flexbox/
+- ## The following line of code helps to keep the image file with my picture from being stretched weirdly by flex-box.
+      align-self: center;
+  --
+
+## Using named grid lines with CSS Grid
+
+### Naming grid lines
+
+- ## The line of code below, which ends with a semi-colon, names grid column lines 1 through 3, giving them the names "begin-edge," "halfway" and "end-edge" respectively.
+  grid-template-columns:
+  [begin-edge]
+  minmax(22rem, 29rem)
+  [halfway]
+  minmax(19rem, 29rem)
+  [end-edge];
+  --
+
+### Using named grid lines
+
+--
+grid-column: 2/3;
+--
+
+- The line of CSS code below uses line names instead of line numbers to specify the column in which the item(s) with the class of 'placeElsewhereInTheGrid' should be placed. It does the equivalent of the what the line of code above would do. The line of code above uses line numbers to specify the column in which the item(s) with the class of 'placeElsewhereInTheGrid' should be placed.
+
+--
+grid-column: halfway/end-edge;
+--
+
+## Using the span keyword within a grid-row property, in a CSS selector
+
+--
+grid-row: 3/3;
+--
+
+The line of code below does the same exact thing as the line of code above, which is commented out.
+
+--
+grid-row: 3 span;
+--
 
 ## Google Fonts
 
@@ -22,10 +62,12 @@ The weights that could be available for the 'Nunito Sans' font, for this project
 
 ### **Sample CSS Code:** for utilizing this hosted Google font.
 
-> h1 {
-> font-family: 'Nunito Sans', sans-serif;
-> font-weight: 1000;
-> }
+--
+h1 {
+font-family: 'Nunito Sans', sans-serif;
+font-weight: 1000;
+}
+--
 
 ## **Markdown Reference:** for editing documents with a md file extension.
 
@@ -36,16 +78,27 @@ The weights that could be available for the 'Nunito Sans' font, for this project
 ## CSS Box Shadows
 
 - For more information about how to create box shadows using cascading style sheets, visit:
+
   - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+
+- The line of code that follows defines what the line of text in the bulleted point below outlines:
+  offset-x | offset-y | blur-radius | color
+
+--
+box-shadow: .4rem .5rem .3rem rgba(142, 172, 187, .2);
+--
 
 ## Trimming Values from Data Captured from Form Fields
 
+--
 let name = getValueOfFormFieldAndTrimIt('usersName');
 let email = getValueOfFormFieldAndTrimIt('usersEmail');
 let message = getValueOfFormFieldAndTrimIt('usersMessage');
+--
 
 #### The code above does the same thing as the code below:
 
+--
 let name = getValueOfFormField('usersName');
 name = name.trim();
 
@@ -54,6 +107,7 @@ email = email.trim();
 
 let message = getValueOfFormField('usersMessage');
 message = message.trim();
+--
 
 ## Default Browser Styles
 

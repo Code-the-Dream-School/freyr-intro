@@ -26,25 +26,26 @@ document.addEventListener("DOMContentLoaded", () => {
     let projectList = projectSection.querySelector('ul');
     for (let i = 0; i < repositories.length; i++) {
       let project = document.createElement('li');
+      project.className = 'projectListItems';
       let repositoryURL = repositories[i].html_url;
       let repositoryName = repositories[i].name;
       let repositoryDateOfCreation = new Date(repositories[i].created_at);
       let creationDate = getdateSpelledOutFromDateObject(repositoryDateOfCreation);
       let subList = document.createElement("ul");
-      subList.className = 'subListOfInnerList';
-      let li1 = document.createElement('li');
-      let li2 = document.createElement('li');
-      project.innerHTML = `<a href='${repositoryURL}' target='_blank'>${repositoryName}</a><span class="hideable">:</span> `;
+      subList.className = 'subListOfInnerList2';
+      let description_li = document.createElement('li');
+      let dateOfCreation_li = document.createElement('li');
+      project.innerHTML = `<a href='${repositoryURL}' target='_blank' class='projectsSectionLinks'>${repositoryName}<span class="hideable">:</span></a> `;
       let descriptionStrong = document.createElement('strong');
       descriptionStrong.innerText = 'Description: ';
-      li1.appendChild(descriptionStrong);
+      description_li.appendChild(descriptionStrong);
       let descriptionTextNode = document.createTextNode(`
         ${repositories[i].description}
       `);
-      li1.appendChild(descriptionTextNode);
-      li2.innerHTML = `<strong>Date of Creation:</strong> ${creationDate}`;
-      subList.appendChild(li1);
-      subList.appendChild(li2);
+      description_li.appendChild(descriptionTextNode);
+      dateOfCreation_li.innerHTML = `<strong>Date of Creation:</strong> ${creationDate}`;
+      subList.appendChild(description_li);
+      subList.appendChild(dateOfCreation_li);
       project.appendChild(subList);
       projectList.appendChild(project);
     }

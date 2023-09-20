@@ -1,9 +1,17 @@
-/* The weights available for the Poppins font for this project are 200 (extra light), 200 italic, 400 (regular), 700 (bold), and 700 bold italic. */
 * {
     margin: 0;
 }
+#top-of-webpage {
+    padding-top: 2rem;
+}
+img {
+    align-self: center;    
+}
 ul.subListOfInnerList li  {
-    display: none;
+    list-style-type: disc;
+    padding-right: .7rem;
+    padding-left: 1.2rem;
+    margin-left: -.5rem;
 }
 .hideable {
     visibility: hidden;
@@ -17,18 +25,21 @@ h3 {
     margin-top: -0.1rem;
     visibility: hidden;
 }
-#website-brand div {
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-}
-#website-brand div img {
-    /* The following line of code helps to keep the image file with my picture from being stretched weirdly by flex-box. */
-    align-self: center;
-}
 #copyright h4 {
     margin-top: -0.1rem;
 }
+
+#skills a, #projects a, #userMessages a  {
+    display: block;
+}
+#projects a {
+    margin-top: 1.5rem;
+}
+#userMessages a {
+    margin-top: 1.7rem;
+}
+
+
 img {
     border: .4rem solid rgb(52, 81, 94);
     border-radius: 100%;
@@ -46,8 +57,12 @@ ul {
 }
 #main-navigation ul {
     margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    /*
     display: flex;
     flex-direction: column;
+    */
     padding-left: 0;
 }
 #main-navigation li {
@@ -114,11 +129,7 @@ label {
 section {
     margin-top: 5.7rem;
 }
-#experience ul {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.3rem;
-}
+
 li.outerList div {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -126,7 +137,7 @@ li.outerList div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 1.2rem;
+    column-gap: 3.6rem;
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1.4rem;
@@ -162,8 +173,19 @@ li.outerList div {
     list-style-type: disc;
 }
 .subListOfInnerList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     margin-top: .3rem;
 }
+
+#projects ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-auto-rows: auto;
+}
+
 #skills ul {
     display: flex;
     flex-direction: row;
@@ -191,7 +213,6 @@ li.outerList div {
     display: flex;
     flex-wrap: wrap;
     column-gap: 1rem;
-    /* list-style-type: none; */
 }
 
 #skills ul li, #messages li {
@@ -205,20 +226,13 @@ li.outerList div {
     justify-content: space-between;
     column-gap: 2rem; 
     align-items: center;
-    /*    
-    display: inline-block;
-    width: 96.5%;
-    */
     border: 3px solid rgb(124, 150, 161);
     background-color: #dbeef5;
     padding: 1.3rem 1.7rem 1.3rem 1.9rem;
 }
 #startingFlexItems {
     display: inline-flex;
-    /* margin-right: 20%; */ 
     flex-direction: row;
-    background-color: 'red';
-    border: 2px solid blue;
 }
 #endingFlexItems {
     display: inline-flex;
@@ -226,11 +240,9 @@ li.outerList div {
     flex-wrap: wrap;
 }
 input, textarea, button {
-    /* offset-x | offset-y | blur-radius | color */
     box-shadow: .4rem .5rem .3rem rgba(142, 172, 187, .2);
 }
 button:hover {
-    /* offset-x | offset-y | blur-radius | color */
     box-shadow: -.4rem .5rem .3rem rgba(142, 172, 187, .2);
 }
 input, textarea {
@@ -246,7 +258,164 @@ textarea {
 #connect li {
     list-style-type: none;
 }
-@media (min-width: 890px), (min-width: 720px) and (max-width: 889px), (min-width: 600px) and (max-width: 719px), (min-width: 523px) and (max-width: 890px) {
+/*
+@media (min-width: 1760px) {
+    #projects ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-auto-rows: auto;
+    }
+    .projectListItems {
+        list-style-type: none;
+        margin-left: -2.5rem;
+    }
+    
+    .subListOfInnerList2 li {
+        grid-column: 1/3;
+    }  
+}
+*/
+@media (min-width: 1220px) {
+    .projectsSectionLinks:hover {
+        color: #280f75;
+    }
+    #projects > ul {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-auto-rows: auto;
+        column-gap: 3.9rem;
+        padding-left: 4.7rem;
+        padding-right: 0.5rem;
+        padding-bottom: 1.8rem;
+        background-color: rgba(192, 212, 225, .4);
+        border: .2rem solid #336699;
+        border-radius: .9rem;
+        box-sizing: border-box;
+    }
+    .projectListItems {
+        list-style-type: none;
+        margin-left: -2.5rem;
+        box-sizing: border-box;
+    }
+    .subListOfInnerList2 li {
+        grid-column: 1/3;
+        list-style-type: none;
+        margin-left: -2.5rem;
+        margin-right: .5rem;
+        
+    }
+    #main-navigation ul {
+        justify-content: right;
+    }
+}
+@media (min-width: 1108px) and (max-width: 1220px) {
+    #projects > ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-auto-rows: auto;
+        column-gap: 4.5rem;
+        padding-left: 4.7rem;
+        padding-right: 1.5rem;
+        padding-bottom: 1.8rem;
+        background-color: rgba(192, 212, 225, .4);
+        border: .2rem solid #336699;
+        border-radius: .9rem;
+        box-sizing: border-box;
+    }
+    .projectListItems {
+        list-style-type: none;
+        margin-left: -2.5rem;
+    }
+    .subListOfInnerList2 li {
+        grid-column: 1/2;
+    }
+    #main-navigation ul {
+        justify-content: center;
+    }
+}
+@media (min-width: 1108px) {
+    #website-brand div {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: row;
+    }
+    img {
+        margin-right: 1rem;
+    }
+    #main-navigation ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .subListOfInnerList {
+        grid-template-columns: 
+        [begin-edge] 
+        minmax(22rem, 29rem) 
+        [halfway] 
+        minmax(19rem, 29rem) 
+        [end-edge];
+        grid-template-rows: auto auto auto;
+        column-gap: 3rem;
+    }
+    .placeElsewhereInTheGrid {
+        grid-column: halfway/end-edge;
+        grid-row: 3 span;
+    }
+    
+    ul.subListOfInnerList li  {
+        list-style-type: none;
+        padding-top: .7rem;
+        padding-bottom: .5rem;
+        padding-right: .9rem;
+        border-bottom: none;
+        border-top: 3px dashed grey;
+        border-right: 3px dashed grey;
+        border-top-right-radius: 15px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+@media (min-width: 720px) and (max-width: 1108px) {
+    #website-brand div {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: row;
+    }
+    img {
+        margin-right: .5rem;
+    }
+    #main-navigation ul {
+        grid-template-columns: 1fr minmax(173px, 200px) 1fr;
+    }
+}
+@media (min-width: 523px) and (max-width: 720px) {
+    #website-brand div {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    img {
+        margin-right: .5rem;
+    }
+    #main-navigation ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 523px) and (max-width: 720px), (min-width: 720px) and (max-width: 1108px) {
+    .projectListItems {
+        background-color: #c0d4e1;
+        border: .2rem solid #336699;
+        border-radius: 1.3rem;
+        list-style-type: none;
+        margin-left: -2.5rem;
+        margin-bottom: 3rem;
+        padding: 0.5rem 2.5rem 2.7rem 2.5rem;
+    }
+}
+@media (min-width: 890px), (min-width: 720px) and (max-width: 890px), (min-width: 600px) and (max-width: 720px), (min-width: 523px) and (max-width: 890px) {
     #connect {
         text-align: center;
     }
@@ -263,34 +432,14 @@ textarea {
     #experience ul {
         padding-left: 40px;
     }
-    #main-navigation ul {
-        flex-direction: row;
-        justify-content: center;
-        column-gap: 1.5rem;
-    }
-    #main-navigation li {
-        /* flex-grow: 1; */
-    } 
-    #website-brand div {
-        margin-bottom: 1.5rem;
-        flex-direction: row;
-        column-gap: .7rem;
-    }
 }
-@media (min-width: 890px), (min-width: 720px) and (max-width: 889px) {
-    ul.subListOfInnerList li {
-        display: list-item;
-        list-style-type: disc;
-    }
+
+@media (min-width: 890px), (min-width: 720px) and (max-width: 890px) {
     .hideable {
         visibility: visible;
     }
 }
 @media (min-width: 890px) {
-    #main-navigation ul {
-        /* text-align: right; */
-        justify-content: right;
-    }
     input {
         width: 27rem;
     }
@@ -306,7 +455,7 @@ textarea {
         width: 6rem;
     }
 }
-@media (min-width: 720px) and (max-width: 889px) {
+@media (min-width: 720px) and (max-width: 890px) {
     input {
         width: 62%;
     }
@@ -322,7 +471,7 @@ textarea {
         width: 5.5rem;
     }
 }    
-@media (min-width: 600px) and (max-width: 719px) {
+@media (min-width: 600px) and (max-width: 720px) {
     input {
         width: 67%;
     }
@@ -338,7 +487,18 @@ textarea {
         width: 5rem;
     }
 }
-@media (min-width: 510px) and (max-width: 599px), (min-width: 0px) and (min-width: 523px) {
+@media (min-width: 600px) and (max-width: 890px) {
+    .subListOfInnerList li:first-child {
+        display: list-item;
+        list-style-type: disc;
+    }
+}
+@media (min-width: 0px) and (max-width: 890px) {
+    .subListOfInnerList li {
+        display: none;
+    }
+}
+@media (min-width: 510px) and (max-width: 600px), (min-width: 0px), (min-width: 523px) {
     input {
         width: 77%;
         min-width: 245px;
@@ -353,26 +513,36 @@ textarea {
         min-width: 235px;
     }
 }
-@media (min-width: 523px) and (max-width: 599px), (min-width: 0px) and (max-width: 522px) {
+
+@media (min-width: 523px) and (max-width: 600px), (min-width: 0px) and (max-width: 522px) {
     #main-navigation ul {
-        /* text-align: center; */
-        justify-content: center;
+         justify-content: center; 
     }
 }
+
 @media (min-width: 523px) and (max-width: 599px) {
     img {
         top: 1.4rem;
-        width: 4.5rem;
+        width: 5rem;
     }
 }
-@media (min-width: 0px) and (max-width: 522px) {
-    #connect {
-        text-align: left;
+@media (min-width: 0px) and (max-width: 523px) {
+    #website-brand div {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
     img {
+        margin-right: .5rem;
         width: 6rem;
         margin-top: 2.3rem;
     }
+    #connect {
+        text-align: left;
+    }
+    
     h1 {
         margin-top: 0.2em;
     }
@@ -418,16 +588,6 @@ button[type=submit]:hover {
     display: inline-block;
     margin-right: .4em;
 }
-/*
-#edit-btn, #remove-btn {   
-    margin-left: 11rem; 
-    align-self: flex-end;
-}
-*/
-#edit-btn {   
-    /*margin-left: 20%; */
-}
-
 #save-btn {
     margin-left: 5rem;
 }
