@@ -542,6 +542,9 @@ textarea {
         width: 6rem;
         margin-top: 2.3rem;
     }
+    #experience li.outerList {
+        margin-left: -0.5rem;
+    }
     #projects > ul {
         display: flex;
         min-width: 150px;
