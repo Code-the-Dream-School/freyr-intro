@@ -310,7 +310,7 @@ textarea {
         justify-content: right;
     }
 }
-@media (min-width: 1108px) and (max-width: 1220px) {
+@media screen and (min-width: 1108px) and (max-width: 1220px) {
     #projects > ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -336,7 +336,7 @@ textarea {
         justify-content: center;
     }
 }
-@media (min-width: 1108px) {
+@media screen and (min-width: 1108px) {
     #website-brand div {
         margin-bottom: 1.5rem;
         display: flex;
@@ -377,7 +377,7 @@ textarea {
         margin-top: 1rem;
     }
 }
-@media (min-width: 720px) and (max-width: 1108px) {
+@media screen and (min-width: 720px) and (max-width: 1108px) {
     #website-brand div {
         margin-bottom: 1.5rem;
         display: flex;
@@ -390,7 +390,7 @@ textarea {
         grid-template-columns: 1fr minmax(173px, 200px) 1fr;
     }
 }
-@media (min-width: 523px) and (max-width: 720px) {
+@media screen and (min-width: 523px) and (max-width: 720px) {
     #website-brand div {
         margin-bottom: 1.5rem;
         display: flex;
@@ -404,7 +404,7 @@ textarea {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media (min-width: 523px) and (max-width: 720px), (min-width: 720px) and (max-width: 1108px) {
+@media screen and (min-width: 523px) and (max-width: 720px), screen and (min-width: 720px) and (max-width: 1108px) {
     .projectListItems {
         background-color: #c0d4e1;
         border: .2rem solid #336699;
@@ -415,7 +415,7 @@ textarea {
         padding: 0.5rem 2.5rem 2.7rem 2.5rem;
     }
 }
-@media (min-width: 890px), (min-width: 720px) and (max-width: 890px), (min-width: 600px) and (max-width: 720px), (min-width: 523px) and (max-width: 890px) {
+@media screen and (min-width: 890px), screen and (min-width: 720px) and (max-width: 890px), screen and (min-width: 600px) and (max-width: 720px), screen and (min-width: 523px) and (max-width: 890px) {
     #connect {
         text-align: center;
     }
@@ -434,12 +434,12 @@ textarea {
     }
 }
 
-@media (min-width: 890px), (min-width: 720px) and (max-width: 890px) {
+@media screen and (min-width: 890px), screen and (min-width: 720px) and (max-width: 890px) {
     .hideable {
         visibility: visible;
     }
 }
-@media (min-width: 890px) {
+@media screen and (min-width: 890px) {
     input {
         width: 27rem;
     }
@@ -455,7 +455,7 @@ textarea {
         width: 6rem;
     }
 }
-@media (min-width: 720px) and (max-width: 890px) {
+@media screen and (min-width: 720px) and (max-width: 890px) {
     input {
         width: 62%;
     }
@@ -471,7 +471,7 @@ textarea {
         width: 5.5rem;
     }
 }    
-@media (min-width: 600px) and (max-width: 720px) {
+@media screen and (min-width: 600px) and (max-width: 720px) {
     input {
         width: 67%;
     }
@@ -487,18 +487,18 @@ textarea {
         width: 5rem;
     }
 }
-@media (min-width: 600px) and (max-width: 890px) {
+@media screen and (min-width: 600px) and (max-width: 890px) {
     .subListOfInnerList li:first-child {
         display: list-item;
         list-style-type: disc;
     }
 }
-@media (min-width: 0px) and (max-width: 890px) {
+@media screen and (min-width: 0px) and (max-width: 890px) {
     .subListOfInnerList li {
         display: none;
     }
 }
-@media (min-width: 510px) and (max-width: 600px), (min-width: 0px), (min-width: 523px) {
+@media screen and (min-width: 510px) and (max-width: 600px), screen and (min-width: 0px), screen and (min-width: 523px) {
     input {
         width: 77%;
         min-width: 245px;
@@ -514,19 +514,19 @@ textarea {
     }
 }
 
-@media (min-width: 523px) and (max-width: 600px), (min-width: 0px) and (max-width: 522px) {
+@media screen and (min-width: 523px) and (max-width: 600px), screen and (min-width: 0px) and (max-width: 522px) {
     #main-navigation ul {
          justify-content: center; 
     }
 }
 
-@media (min-width: 523px) and (max-width: 599px) {
+@media screen and (min-width: 523px) and (max-width: 599px) {
     img {
         top: 1.4rem;
         width: 5rem;
     }
 }
-@media (min-width: 0px) and (max-width: 523px) {
+@media screen and (min-width: 0px) and (max-width: 523px) {
     #website-brand div {
         margin-bottom: 1.5rem;
         display: flex;
