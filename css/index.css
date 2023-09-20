@@ -589,6 +589,9 @@ textarea {
     #skills ul {
         padding-left: 0;
     }
+    #skills ul li {
+        margin-left: -0.5rem;
+    }
 }
 input:hover, textarea:hover {
     border-color: #8EACBB;
