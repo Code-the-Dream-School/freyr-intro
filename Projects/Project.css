@@ -1,0 +1,307 @@
+
+body{
+  background-color: darkblue;
+}
+#Circle{
+  width: 194px;
+    height: 194px;
+    border-radius: 60%;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+    background-color: darkblue;
+    background-image: url(../css/images/powerbutton-PhotoRoom.png-PhotoRoom.png);
+    background-blend-mode: color;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+    box-shadow: rgba(7, 1, 94, 0.45) -8px 23px 19px, rgba(70, 130, 180, 0.337) -4px 19px 16px inset, rgba(0, 53, 0, 0) 78px -23px 16px, rgba(32, 0, 30, 0.1) 33px 50px 191px;
+}
+  .CircleImage{
+    color: blue;
+    position: absolute;
+    top: 46%;
+    left: 85%;
+    transform: translate(-51%, -47%);
+  
+  }
+  .Hidden{
+    display: none;
+  }
+  /* BUTTONS */
+  #Home{
+    position: absolute;
+    width: 183px;
+    height: 31px;
+    top: 38%;
+    left: 11%;
+    border-color: azure;
+    background-color: darkblue;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+  #Contact{
+    position: absolute;
+    top: 50%;
+    left: 11%;
+    width: 183px;
+    height: 31px;
+    background-color: darkblue;
+    border-radius: 4px;
+    border-color: azure;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+  #AboutMe{
+    position: absolute;
+    width: 183px;
+    height: 31px;
+    top: 55%;
+    left: 11%;
+    border-color: azure;
+    background-color: darkblue;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+  #Projects{
+    position: absolute;
+    width: 183px;
+    height: 31px;
+    top: 44%;
+    left: 11%;
+    border-color: azure;
+    background-color: darkblue;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+  #Home:hover{
+    background-color: darkcyan;
+    width: 184px;
+    height: 33px;
+  }
+  #Projects:hover{
+    background-color: darkcyan;
+    width: 184px;
+    height: 33px;
+  }
+  #Contact:hover{
+    background-color: darkcyan;
+    width: 184px;
+    height: 33px;
+  }
+  #AboutMe:hover{
+    background-color: darkcyan;
+    width: 184px;
+    height: 33px;
+  }
+  .Contact{
+    display: flex;
+  }
+  .Contact h2{
+    position: absolute;
+    top: 307px;
+    left: 44px;
+    font-size: 67px;
+  }
+  #messages h2{
+    position: absolute;
+      top: 232px;
+      left: 824px;
+  }
+  #GithubIcon,
+#InstagramIcon,
+#PortfolioIcon,
+#MailIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+#GithubIcon:hover{
+  width: 45px;
+  height: 45px;
+}
+#InstagramIcon:hover{
+  width: 45px;
+  height: 45px;
+}
+#PortfolioIcon:hover{
+  width: 45px;
+  height: 45px;
+}
+#MailIcon:hover{
+  width: 45px;
+  height: 45px;
+
+}
+#footer{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 880px;
+    left: 854px;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+  }
+  .Tabs{
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: -webkit-fill-available;
+    height: 12%;
+    color: rgb(192, 122, 192);
+    background: linear-gradient( 101deg,darkblue, #29DFF7)
+  }
+  .HeaderTabs{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+  .Headers{
+   
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  #ROBLOX,#WebsiteInterface,#ProgramsInterface{ 
+    border-radius: 1%;
+    position: fixed;
+    top: 12%;
+    left: 30%;
+    background-color: red;
+    background: linear-gradient(137deg, #00F666, #0F0071, #29DFF7);
+    filter: drop-shadow(1px 4px 6px black);
+    width: 66%;
+    height: 73%;
+    color: red;
+    overflow: auto; /* Enable scrolling if content overflows */
+  }
+  #GithubProjects{
+    color: white;
+    position: fixed;
+    top: px;
+    left: 13px;
+    font-size: 29px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, darkblue, #00BB13);
+    border-radius: 2%;
+
+}
+ #ProjectHeader{
+  color: white;
+    position: relative;
+    top: 0;
+    left: 0px;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+ }
+ 
+ #Github.RobloxInterface,.Projects{
+
+    border-radius: 1%;
+    position: fixed;
+    top: 12%;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    width: 66%;
+    height: 73%;
+    color: red;
+    
+  }
+  .RobloxInterface{
+    display: flex;
+  }
+#GithubProjects{
+  position: fixed;
+  background-color: black;
+  width: 593px;
+  height: 345px;
+  left: 0;
+  top: 598px;
+}
+  .RobloxButtons{
+    border-radius: 9px;
+    width: 303px;
+    height: 229px;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0%;
+    left: -1%;
+    opacity: 50%;
+    color: aqua;
+    margin-left: 50px;
+    background-color: black;
+    opacity: 50%;
+    filter: blur(2px);
+  }
+.RobloxButtons h1{
+  position: fixed;
+  top:-1px;
+ 
+}
+  .RobloxButtons:hover{
+    width: 320px;
+    height: 240px;
+    filter: blur(0px);
+
+  }
+  .RobloxButtons
+.Headers:hover{
+  color: green;
+  font-size:43px;
+  filter: drop-shadow(1px 4px 6px black);
+}
+.GamesTabs{
+  font-size: 20px;
+  position: relative;
+  top: -34px;
+  left: 0;
+}
+#Games{
+  list-style: none;
+}
+#RobloxTab{
+  top: 36px;
+}
+#RobloxTab:hover, #UnityTab:hover {
+  color: green; /* Change the text color to red when hovering */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  /* You can add other styles here as needed */
+}
+  .Buttons{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 95%;
+    left: 55%;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+    margin-right: 10px;
+  }
+#background-description{
+  position: fixed;
+  top: 34px;
+  font-size: 20px;
+  color: white;
+font-weight: bold;
+}
+#ProjectsList{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: auto;
+}
