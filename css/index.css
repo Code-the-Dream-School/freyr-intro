@@ -323,7 +323,8 @@ label {
   }
 
   .connect-images {
-    left: 10%;
+    margin-left: 50px;
+    margin-right: 20px;
     justify-content: center;
   }
 
@@ -348,12 +349,15 @@ label {
   }
 
   .direction-buttons {
-    font-size: smaller;
     position: absolute;
     top: 20px;
-    right: 15px;
-    display: inline;
+    right: 5px;
     list-style: none;
+    padding-left: 90px;
+    font-size: small;
+  }
+  .direction-buttons li {
+    margin-right: 5px; /* Adjust the margin to reduce space between buttons */
   }
 
   .welcome {
@@ -380,9 +384,14 @@ label {
     border: none;
   }
 
-  #projects {
+  #skills ul {
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+
+  #projects ul {
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 50px;
     margin-right: 20px;
   }
 
