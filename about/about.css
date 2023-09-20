@@ -3,7 +3,7 @@
 }
 
 body{
-  background: linear-gradient(to bottom, #666699 0%, #3333cc 100%);
+  background: linear-gradient(to bottom, #0798c9 0%,#035d79 100%);
   display: flex;
   margin: 0;
   justify-content: center;
@@ -84,10 +84,9 @@ body{
 .WebList h1{
   text-decoration: underline;
   color: black;
-  -webkit-text-fill-color: darkmagenta;
 }
-.Glist{
-  background-color: gainsboro;
+.Glist,.WebList,.LangList,.Data{
+  background: linear-gradient(to bottom, #9de4fb 0%,#06b6ec 100%);
   border-radius: 3px;
   height: 53px;
   width: 518px;
@@ -95,41 +94,43 @@ body{
   align-items: center;
   margin-bottom: 4px;
   justify-content: space-between;
+  border-radius: 10px;
+}
+.Glist:hover{
+
+  height: 60px;
+  width: 530px;        filter: drop-shadow(2px 4px 6px black);
+}
+.WebList:hover{
+  height: 60px;
+  width: 530px;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.LangList:hover{
+  height: 60px;
+  width: 530px;    filter: drop-shadow(2px 4px 6px black);
+}
+.Data:hover{
+  height: 60px;
+  filter: drop-shadow(2px 4px 6px black);
 }
 .Glist h1{
   text-decoration: underline;
   color: black;
-  -webkit-text-fill-color: darkmagenta;
-}
-.LangList{
-  background-color: gainsboro;
-  border-radius: 3px;
-  height: 53px;
-  width: 518px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 4px;
-  justify-content: space-between;
+  font-family: sans-serif;
+  font-weight: bolder;
 }
 .LangList h1{
   text-decoration: underline;
   color: black;
-  -webkit-text-fill-color: darkmagenta;
+  font-family: sans-serif; font-weight: bolder;
 }
-.Data{
-  background-color: gainsboro;
-  border-radius: 3px;
-  height: 53px;
-  width: 730px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 4px;
-  justify-content: space-between;
-}
+
 .Data h1{
   text-decoration: underline;
   color: black;
-  -webkit-text-fill-color: darkmagenta;
+  font-family: sans-serif; font-weight: bolder;
+
 }
 /* #JAVASCRIPT h1{
   margin-right: 20px;
@@ -296,6 +297,10 @@ body{
   height: 30px;
   margin-right: 10px;
 }
+#GithubIcon:hover{
+  width: 40px;
+  height: 40px;
+}
 
 .animation-container {
   position: absolute;
@@ -311,6 +316,7 @@ body{
     transform: translateX(-50%);
     margin-top: 20px;
     font-size: 69px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #Animation1  {
@@ -319,7 +325,7 @@ body{
  display: flex;
  justify-content: center;
  position: relative;
- left: 7px;
+ left: 57px;
  top: 11px;
   background-size: 20px;
   padding-bottom: 50px;
@@ -327,40 +333,39 @@ body{
  font-size: 27px;
  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  color: black;
+ font-weight: bolder;
 }
 .animation-container2 {
-  position: absolute;
-    top: 0;
+  background-color: lightcyan;
+    border-radius: 15px;
+    position: absolute;
+    top: 13px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 86px;
     font-size: 20px;
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
 .Tabs{
   background-color: transparent;
   position: absolute;
-  top: 15%;
-  left: 46%;
+  top: 20%;
+  left: 50%;
 }
+
 .Tabs h1{
  font-size: 36px;
  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- color: black;
- text-decoration: underline;
- text-decoration-color: brown;
-
+ color: darkblue;
 }
+
 #Container{
   background-color: rgb(176, 196, 222); /* Define the background gradient */
-  
   border-style: none;
   border-width: 3px;
   border-image-slice: 1;
-  
   background-clip: padding-box;
   position: absolute;
   top: 93px;

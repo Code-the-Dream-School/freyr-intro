@@ -29,32 +29,32 @@ function ButtonToggleVisibility() {
  
 //  }
  
-function AboutMeAnimation() {
-    const aboutMe = document.getElementsByName('Animation1')[0];
-    const text = aboutMe.innerText;
-    console.log(text);
-    aboutMe.innerText = "";
+// function AboutMeAnimation() {
+//     const aboutMe = document.getElementsByName('Animation1')[0];
+//     const text = aboutMe.innerText;
+//     console.log(text);
+//     aboutMe.innerText = "";
  
-    function animateText(index) {
-       if (index < text.length) {
-          if (text[index] === ' ') {
-             setTimeout(function() {
-                aboutMe.innerText += ' ';
-                console.log("it found the space: ", aboutMe.innerText)
-                animateText(index + 1);
-             }, 700);
-          } else {
-             aboutMe.innerText += text[index];
-             setTimeout(function() {
-                animateText(index + 1);
-             }, 100); 
-          }
-       }
-    }
+//     function animateText(index) {
+//        if (index < text.length) {
+//           if (text[index] === ' ') {
+//              setTimeout(function() {
+//                 aboutMe.innerText += ' ';
+//                 console.log("it found the space: ", aboutMe.innerText)
+//                 animateText(index + 1);
+//              }, 700);
+//           } else {
+//              aboutMe.innerText += text[index];
+//              setTimeout(function() {
+//                 animateText(index + 1);
+//              }, 100); 
+//           }
+//        }
+//     }
  
-    animateText(0);
- }
-//  
+//     animateText(0);
+//  }
+// //  
 function ToggleGame(){
       const GameList = document.getElementById("GameList")
       GameList.classList.toggle("Hidden")  
@@ -103,7 +103,6 @@ function ExperienceColor(){
  
 }
 
- AboutMeAnimation()
 //  renderCopyRight()
  PowerButton.addEventListener('click',ButtonToggleVisibility)
  GamesTab.addEventListener('click',ToggleGame)

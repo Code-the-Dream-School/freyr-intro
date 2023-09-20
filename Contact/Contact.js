@@ -10,58 +10,6 @@ const messageList =  messageSection.querySelector('ul')
 const PowerButton = document.getElementById('Circle')
 const Buttons = document.querySelectorAll('.Hidden')
 let Messageid = 1
-//RENDER FUNCTIONS
-// function renderCopyRight(){
-//    const today = new Date()
-//    const thisyear = today.getFullYear()
-//    const copyright = document.createElement('p')
-//    console.log("this is copyright: ", copyright)
-//    copyright.innerHTML = `${thisyear}`
-//    footer.appendChild(copyright)    
-
-// }
-
-// function renderSkills(){
-//    const Skills = ["game Development","Website Developer"]
-
-//    for(let i = 0; i<Skills.length; i++){
-//       const skill = document.createElement('li')
-//       skill.innerText = Skills[i]
-//       SkillsList.appendChild(skill)
-//    }
-// }
-// function AboutMeAnimation() {
-//    const aboutMe = document.getElementsByName('Animation1')[0];
-//    const text = aboutMe.innerText;
-//    console.log(text);
-//    aboutMe.innerText = "";
-
-//    function animateText(index) {
-//       if (index < text.length) {
-//          if (text[index] === ' ') {
-//             setTimeout(function() {
-//                aboutMe.innerText += ' ';
-//                console.log("it found the space: ", aboutMe.innerText)
-//                animateText(index + 1);
-//             }, 700);
-//          } else {
-//             aboutMe.innerText += text[index];
-//             setTimeout(function() {
-//                animateText(index + 1);
-//             }, 100); 
-//          }
-//       }
-//    }
-
-//    animateText(0);
-// }
-
-// Call the animation function
-
-
-
-//EVENT HANDLERS
-
 function deleteMessage(event){
    let removebutton = event.target
    let message = removebutton.parentNode
@@ -81,8 +29,7 @@ function submit(event){
    const usersMessage = event.target.usersMessage.value
    console.log("This is the Name", Name,"This is the email", Email,"This is the usersMessage", usersMessage)
    const newMessage = document.createElement('li')
-   
-   newMessage.innerHTML = `<a href = "mailto:${Email}"> ${Name}</a> <span>${Email} ${usersMessage}</span> `
+   newMessage.innerHTML = `Name: ${Name} Email: ${Email} Message: ${usersMessage}</span> `
    //clear all inputs
 
    

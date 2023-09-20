@@ -145,6 +145,10 @@ body{
   justify-content: flex-end;
 
 }
+#InstagramIcon,#PortfolioIcon,
+#MailIcon{
+ color: white;
+}
 .ContactMe{
   position: absolute;
     top: 295px;
@@ -170,6 +174,7 @@ body{
   filter: brightness(100%);
   transition: filter 0.3s ease
 }
+
 #Submit:hover{
   width: 100px;
   height: 56px;
@@ -190,11 +195,12 @@ left: -220px;
 .newMesseges {
   background-color: darkblue;
   border-radius: 5px;
-  position: fixed;
+  position: relative;
   top:650px;
-  left:700px;
+  left:600px;
   width: 500px;
   height: 40px;
+  margin-top: 20px;
 }
 .newMesseges span{
   font-size: 20px;
