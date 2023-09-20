@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let subList = document.createElement("ul");
       subList.className = 'subListOfInnerList2';
       let description_li = document.createElement('li');
+      description_li.className = 'description-li';
       let dateOfCreation_li = document.createElement('li');
       project.innerHTML = `<a href='${repositoryURL}' target='_blank' class='projectsSectionLinks'>${repositoryName}<span class="hideable">:</span></a> `;
       let descriptionStrong = document.createElement('strong');
