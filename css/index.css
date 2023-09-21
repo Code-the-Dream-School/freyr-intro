@@ -58,8 +58,8 @@
   color: whitesmoke;
 }
 
-.direction-buttons li:active {
-  background-color: #313536;
+.direction-buttons li:hover {
+  background-color: #6f8a96;
 }
 
 #top-arrow {
@@ -82,9 +82,12 @@
   outline: none;
   cursor: pointer;
 }
+#top-arrow:hover {
+  background: #404e53;
+}
 
 #top-arrow:active {
-  background: #313536;
+  background: #1e2020;
 }
 
 .body {
@@ -98,13 +101,14 @@
 
 h2 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgb(57, 150, 119);
+  color: whitesmoke;
   font-weight: bold;
 }
 
 h3 {
   font-weight: bold;
   margin-bottom: 10px;
+  color: whitesmoke;
 }
 
 #aboutHeading {
@@ -142,7 +146,6 @@ h3 {
 .xp-item {
   backdrop-filter: blur(200px);
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 100px;
   margin-bottom: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -154,7 +157,7 @@ h3 {
 
 .xp-item {
   margin: 0;
-  padding: 10%;
+  padding: 2%;
 }
 
 #skills {
@@ -195,6 +198,15 @@ h3 {
   padding: 5%;
 }
 
+#projects ul li {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#projects ul li:hover {
+  font-weight: bold;
+}
+
 #connectHeading {
   padding-top: 350px;
   padding-bottom: 0px;
@@ -202,39 +214,38 @@ h3 {
   justify-content: center;
 }
 
+/* Styling for the container */
+
 .connect-images {
   position: relative;
-  left: 27%;
   padding-top: 100px;
-}
-
-.connect-images {
+  justify-content: space-evenly;
   backdrop-filter: blur(200px);
   background-color: rgba(255, 255, 255, 0.6);
-
-  margin-bottom: 10px;
-  margin: 0;
-  padding: 20px;
-  margin-left: 400px;
-  margin-right: 380px;
-  left: 20px;
-}
-.connect-images {
-  display: flex;
-  justify-content: space-evenly;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 35%;
+  margin-right: 25%;
+  right: 5%;
 }
 
-.mail-image,
-.linkedin-image,
+.connect-images img {
+  max-width: 15%;
+  max-height: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.connect-images img:hover {
+  margin-top: -100px;
+}
+
 .github-image {
-  width: 100px;
-  height: 90px;
+  max-width: 30%;
+  max-height: 50%;
 }
 
-.connect-images a.linkedin-image img {
-  width: 80px;
-  height: 70px;
-}
 /* .testing {
   padding-top: 100px;
   padding-bottom: 0px;
@@ -257,7 +268,7 @@ h3 {
 }
 
 label {
-  color: blueviolet;
+  color: whitesmoke;
   font-size: medium;
 }
 
@@ -273,15 +284,15 @@ label {
   margin: 0 auto;
 }
 #messages h2 {
-  margin: 0; /* Remove any default margin from the h2 element */
+  margin: 0;
 }
 
 #footer {
   background-color: #064057;
   margin: 5%;
   text-align: center;
-  margin-left: 400px;
-  margin-right: 380px;
+  margin-left: 0;
+  margin-right: 0;
 }
 /* View style for mobile devices */
 @media screen and (max-width: 500px) {
@@ -329,7 +340,8 @@ label {
   }
 
   .connect-images {
-    left: 10%;
+    margin-left: 50px;
+    margin-right: 20px;
     justify-content: center;
   }
 
@@ -338,6 +350,7 @@ label {
   }
 
   #footer {
+    color: whitesmoke;
     font-size: small;
     display: inline;
     justify-content: center;
@@ -348,24 +361,79 @@ label {
 /* View style for tablets/ipads */
 @media screen and (max-width: 999px) {
   .iframe {
-    right: 0; /* Adjust the positioning of your iframe for tablet */
+    right: 0;
     left: 0;
   }
 
-  .welcome {
-    padding-top: 150px; /* Adjust the padding for the welcome section on tablet */
-    padding-bottom: 250px;
-    font-size: xx-large; /* Adjust the font size for tablet */
+  .direction-buttons {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    list-style: none;
+    padding-left: 90px;
+    font-size: small;
+  }
+  .direction-buttons li {
+    margin-right: 5px; /* Adjust the margin to reduce space between buttons */
   }
 
-  .about-body,
+  .welcome {
+    padding-top: 150px;
+    padding-bottom: 250px;
+    font-size: xx-large;
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+
+  .about-body {
+    margin-left: 50px;
+    margin-right: 20px;
+    padding-top: 200px;
+  }
+
   .xp {
-    margin-left: 20px; /* Adjust the margins for about-body and xp sections on tablet */
+    padding-top: 200px;
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+  .xp-item {
+    padding: 2%;
+    border: none;
+  }
+
+  #skills ul {
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+
+  #projects ul {
+    justify-content: center;
+    margin-left: 50px;
     margin-right: 20px;
   }
 
   .connect-images {
-    left: 10%; /* Adjust the positioning of the connect images on tablet */
+    margin-left: 60px;
+    margin-right: 10px;
+  }
+
+  .leave_message fieldset {
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+  #messages {
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+  #footer {
+    color: whitesmoke;
+    font-size: small;
+    /* display: inline; */
+  }
+  .footer-child {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 150px;
   }
 }
 

@@ -1,7 +1,7 @@
 //copyright vars
 const today = new Date();
 const thisYear = today.getFullYear();
-const footer = document.querySelector("#footer");
+const footer = document.querySelector(".footer-child");
 const copyright = document.createElement("p");
 const arrow = document.querySelector("#top-arrow");
 
@@ -93,23 +93,28 @@ messageForm.addEventListener("submit", function (event) {
   messageForm.reset();
 });
 
-// Github request
-const githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/CristianMoran1/repos");
+//Using the Fetch API, create a "GET" request to the same GitHub API url as before
+fetch("https://api.github.com/users/CristianMoran1/repos", {
+  method: "GET",
+})
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (repositories) {
+    // Display repositories in list
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
 
-githubRequest.addEventListener("load", function (event) {
-  const repositories = JSON.parse(githubRequest.responseText);
-  console.log(repositories);
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.innerText = repositories[i].name;
 
-  // Display repositories in list
-  const projectSection = document.getElementById("projects");
-  const projectList = projectSection.querySelector("ul");
-
-  for (let i = 0; i < repositories.length; i++) {
-    const project = document.createElement("li");
-    project.innerText = repositories[i].name;
-    projectList.appendChild(project);
-  }
-});
-
-githubRequest.send();
+      project.addEventListener("click", function () {
+        window.open(repositories[i].html_url, "_blank");
+      });
+      projectList.appendChild(project);
+    }
+  })
+  .catch(function (error) {
+    console.error("Fetch error:", error);
+  });
