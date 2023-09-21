@@ -73,7 +73,7 @@ button {
 #skills,
 #about_me_section {
   border: 4px;
-  padding: 45px;
+  padding: 25px;
 }
 
 #connect_section,
@@ -89,7 +89,7 @@ footer {
 #git_image {
   float: right;
   width: 14%;
-  height: 14%;
+  height: 20%;
 }
 
 #navbar li {
@@ -132,7 +132,7 @@ footer {
 container {
   border: 2px solid #0f6172;
   width: auto;
-  display: flex;
+  display:block;
   background: #cce5ff;
 }
 container div p {
