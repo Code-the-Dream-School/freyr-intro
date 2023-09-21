@@ -153,6 +153,10 @@ container div p {
 .nav--open {
   transform: translate(0) !important;
 }
+#top {
+  text-decoration: underline;
+  
+}
 
 @media (max-width: 950px) {
   .navbar {
