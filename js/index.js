@@ -1,7 +1,7 @@
 //copyright vars
 const today = new Date();
 const thisYear = today.getFullYear();
-const footer = document.querySelector("#footer");
+const footer = document.querySelector(".footer-child");
 const copyright = document.createElement("p");
 const arrow = document.querySelector("#top-arrow");
 
@@ -108,6 +108,10 @@ fetch("https://api.github.com/users/CristianMoran1/repos", {
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement("li");
       project.innerText = repositories[i].name;
+
+      project.addEventListener("click", function () {
+        window.open(repositories[i].html_url, "_blank");
+      });
       projectList.appendChild(project);
     }
   })
