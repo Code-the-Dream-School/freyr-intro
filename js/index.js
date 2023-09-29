@@ -60,7 +60,7 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 //messagesform
-const messageForm = document.getElementById("leave_message");
+const messageForm = document.querySelector("form[name='leave_message']");
 messageForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const usersNameInput = event.target.usersMessage.value;
@@ -81,8 +81,9 @@ messageForm.addEventListener("submit", function (event) {
 
   //remove button
   const removeButton = document.createElement("button");
-  removeButton.innerText = "remove";
+  removeButton.innerText = "Delete";
   removeButton.type = "button";
+  removeButton.classList.add("delete-button");
 
   removeButton.addEventListener("click", function (event) {
     const entry = removeButton.parentNode;

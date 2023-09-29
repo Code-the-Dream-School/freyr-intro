@@ -124,6 +124,9 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid rgb(20, 6, 6);
+  border-radius: 5px;
+  padding: 2%;
 }
 
 .about-body {
@@ -136,7 +139,6 @@ h3 {
 }
 
 .xp {
-  /* max-width: 600px; */
   margin: 0 auto;
   margin-left: 400px;
   margin-right: 380px;
@@ -147,22 +149,21 @@ h3 {
   backdrop-filter: blur(200px);
   background-color: rgba(255, 255, 255, 0.6);
   margin-bottom: 20px;
-  margin-bottom: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-}
-
-.xp-item {
-  margin: 0;
+  border: 2px solid rgb(20, 6, 6);
+  border-radius: 5px;
   padding: 2%;
 }
+
 
 #skills {
   list-style: none;
   padding-top: 350px;
+  
 }
 
 #skills ul {
@@ -176,8 +177,9 @@ h3 {
   margin-right: 380px;
   text-align: center;
   padding: 5%;
-  /* width:30px;
-  height:50px; */
+  border: 2px solid rgb(20, 6, 6);
+  border-radius: 5px;
+  padding: 2%;
 }
 
 #projects {
@@ -186,6 +188,9 @@ h3 {
 }
 
 #projects ul {
+  border: 2px solid rgb(20, 6, 6);
+  border-radius: 5px;
+  padding: 2%;
   list-style: none;
   backdrop-filter: blur(200px);
   background-color: rgba(255, 255, 255, 0.6);
@@ -217,6 +222,9 @@ h3 {
 /* Styling for the container */
 
 .connect-images {
+  border: 2px solid rgb(20, 6, 6);
+  border-radius: 5px;
+  padding: 2%;
   position: relative;
   padding-top: 100px;
   justify-content: space-evenly;
@@ -259,6 +267,9 @@ h3 {
 }
 
 .leave_message fieldset {
+  border: 2px solid rgb(20, 6, 6);
+  border-radius: 5px;
+  padding: 2%;
   text-align: center;
   backdrop-filter: blur(200px);
   background-color: rgba(255, 255, 255, 0.6);
@@ -272,9 +283,13 @@ label {
   font-size: medium;
 }
 
-.submit-button {
-  background-color: rgb(9, 153, 69);
+.submit-button:hover {
+  background-color: rgb(85, 136, 85);
 }
+.submit-button:active {
+  background-color: green;
+}
+
 #messages {
   backdrop-filter: blur(200px);
   background-color: rgba(255, 255, 255, 0.6);
@@ -282,18 +297,27 @@ label {
   max-width: 600px;
   padding: 20px;
   margin: 0 auto;
+  border: 2px solid rgb(20, 6, 6);
+  border-radius: 5px;
+  padding: 2%;
 }
 #messages h2 {
   margin: 0;
 }
+.delete-button:hover{
+  background-color: rgb(156, 50, 50);
+}
+.delete-button:active{
+  background-color: red;
+}
 
 #footer {
-  background-color: #064057;
   margin: 5%;
   text-align: center;
-  margin-left: 0;
-  margin-right: 0;
+  border-radius: 5px;
+  color: whitesmoke;
 }
+
 /* View style for mobile devices */
 @media screen and (max-width: 500px) {
   .iframe {
@@ -301,14 +325,17 @@ label {
   }
 
   .direction-buttons {
-    font-size: smaller;
+    font-size: small;
     position: absolute;
     top: 20px;
     right: 15px;
     display: inline;
     list-style: none;
-
     margin: 0;
+  }
+
+  .direction-buttons li{
+    font-size: 10px;
   }
 
   .welcome {
@@ -325,6 +352,24 @@ label {
     padding: 20px;
     justify-content: center;
   }
+  .xp-item {
+    padding: 2%;
+    list-style: none;
+    
+  }
+
+  .xp-item p {
+    margin-left: 0;
+  }
+  .xp-item li {
+     border: 2px solid rgb(20, 6, 6);
+  border-radius: 5px;
+  padding: 2%;
+      text-align: left;
+      padding-left: 20px; 
+      margin-bottom: 8px; 
+  }
+  
 
   #skills {
     display: flex;
@@ -349,13 +394,12 @@ label {
     justify-content: center;
   }
 
+
   #footer {
+    margin: 5%;
+    text-align: center;
+    border-radius: 5px;
     color: whitesmoke;
-    font-size: small;
-    display: inline;
-    justify-content: center;
-    margin: 0;
-    left: 10px;
   }
 }
 /* View style for tablets/ipads */
