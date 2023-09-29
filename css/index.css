@@ -317,7 +317,28 @@ label {
   border-radius: 5px;
   color: whitesmoke;
 }
+@media screen and (max-width: 450px) {
+  .direction-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 
+  .direction-buttons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .direction-buttons li {
+    display: block; 
+    margin-bottom: 10px; 
+  }
+
+  .direction-buttons li:active{
+    background-color: #6f8a96;
+  }
+}
 /* View style for mobile devices */
 @media screen and (max-width: 500px) {
   .iframe {
@@ -418,7 +439,7 @@ label {
     font-size: small;
   }
   .direction-buttons li {
-    margin-right: 5px; /* Adjust the margin to reduce space between buttons */
+    margin-right: 5px;
   }
 
   .welcome {
