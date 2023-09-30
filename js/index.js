@@ -59,42 +59,63 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
-//messagesform
+//save messages to localStorage
+function saveMessageToLocalStorage(usersNameInput, emailInput, usersMessageInput) {
+  //get message or if not  empty array
+  let messages = JSON.parse(localStorage.getItem('messages')) || [];
+  messages.push({ usersNameInput, emailInput, usersMessageInput });
+  //stringify the array objects into strings
+  localStorage.setItem('messages', JSON.stringify(messages));
+  //call the next function
+  loadMessagesFromLocalStorage();
+}
+
+// Function to load and display messages from localStorage
+function loadMessagesFromLocalStorage() {
+  const messages = JSON.parse(localStorage.getItem('messages')) || [];
+
+  // messagesection
+  const messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul");
+  messageList.innerHTML = '';
+  messages.forEach((message) => {
+    const newMessage = document.createElement("li");
+    newMessage.innerHTML = `
+      <a href="mailto:${message.emailInput}">${message.usersNameInput}</a>
+      <span>${message.usersMessageInput}</span>`;
+
+    // remove button
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Delete";
+    removeButton.type = "button";
+    removeButton.classList.add("delete-button");
+    //event listener for remove button and remove inputs from local storage
+    removeButton.addEventListener("click", function (event) {
+      const entry = removeButton.parentNode;
+      entry.remove();
+      removeMessageFromLocalStorage(message.usersNameInput, message.emailInput, message.usersMessageInput);
+    });
+
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+  });
+}
+
+// Form submission event listener
 const messageForm = document.querySelector("form[name='leave_message']");
 messageForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  const usersNameInput = event.target.usersMessage.value;
+  const usersNameInput = event.target.usersName.value;
   const emailInput = event.target.email.value;
-  const usersMessageInput = event.target.usersName.value;
-  console.log(usersNameInput);
-  console.log(emailInput);
-  console.log(usersMessageInput);
+  const usersMessageInput = event.target.usersMessage.value;
 
-  //messagesection
-  const messageSection = document.getElementById("messages");
-  const messageList = messageSection.querySelector("ul");
-  const newMessage = document.createElement("li");
-  newMessage.innerHTML = `
-    <a href="mailto:${emailInput}">${usersNameInput}</a>
-    <span>${usersMessageInput}</span>
-  `;
 
-  //remove button
-  const removeButton = document.createElement("button");
-  removeButton.innerText = "Delete";
-  removeButton.type = "button";
-  removeButton.classList.add("delete-button");
-
-  removeButton.addEventListener("click", function (event) {
-    const entry = removeButton.parentNode;
-    entry.remove();
-  });
-
-  newMessage.appendChild(removeButton);
-  messageList.appendChild(newMessage);
-
+  saveMessageToLocalStorage(usersNameInput, emailInput, usersMessageInput);
   messageForm.reset();
+
 });
+loadMessagesFromLocalStorage();
+
 
 //Using the Fetch API, create a "GET" request to the same GitHub API url as before
 fetch("https://api.github.com/users/CristianMoran1/repos", {
