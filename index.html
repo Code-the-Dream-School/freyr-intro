@@ -1,12 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title></title>
+	<title>xasterisc</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="Software developer">
 	<meta name="description" content="Portfolio">
 	<meta name="author" content="Mohamed Zouari">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		@font-face {
+			font-family: "handwriting";
+			src: 
+				url("assets/fonts/journal-webfont.woff2") format("woff2"),
+	      url("assets/fonts/journal-webfont.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+		}
+
+		@font-face {
+			font-family: "typewriter";
+			src: 
+				url("assets/fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+        url("assets/fonts/veteran_typewriter-webfont.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+		}
+
+		#postcard {
+			font: 1.3rem sans-serif;
+			padding: 0.5em;
+			margin: 0;
+		}
+
+		form {
+			position: relative;
+			width: 740px;
+			height: 498px;
+			margin: 0 auto;
+			padding: 1em;
+			box-sizing: border-box;
+			background: #fff url(assets/media/background.jpg);
+
+			/* we create our grid */
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 10em 1em 1em 1em;
+		}
+
+		form h2 {
+			font: 
+				1em "typewriter",
+				monospace;
+			align-self: end;
+		}
+
+		#message {
+			grid-row: 1/5;
+		}
+
+		#from, #reply {
+			display: flex;
+		}
+
+		label {
+			font: 
+				0.8em "typewriter",
+				sans-serif;
+			flex: 0 20%;
+		}
+
+		input, textarea {
+			font:
+				1.4em/1.5em "handwriting",
+				cursive,
+				sans-serif;
+			border: none;
+			padding: 0 10px;
+			margin: 0;
+			width: 80%;
+			background: none;
+		}
+
+		input:focus, textarea:focus {
+			background: rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+		}
+
+		input {
+			flex: auto;
+			height: 140%;
+		}
+
+		textarea {
+			display: block;
+			padding: 10px;
+			margin: 10px 0 0 -10px;
+			width: 100%;
+			height: 100%;
+			border-right: 2px solid;
+			overflow: auto;
+		}
+
+		button {
+			margin: 3px;
+			padding: 5px;
+			font: bold 0.6em sans-serif;
+			border: 2px solid #333;
+			border-radius: 5px;
+			background: none;
+			cursor: pointer;
+		}
+
+		form button {
+			transform: rotate(-1.5deg);
+		}
+
+		form button:after {
+			content: " >>>";
+		}
+
+		button:hover, button:focus {
+			outline: none;
+			background: black;
+			color: white;
+		}
+
+		input:user-invalid, textarea:user-invalid {
+			border: 2px solid red;
+			border-radius: 5px;
+		}
+
+		input:user-invalid + span::after,
+		textarea:user-invalid + span::before {
+			font: 
+				1em "typewriter",
+				monospace;
+			content: "required";
+			position: absolute;
+			color: white;
+			background-color: black;
+			padding: 5px 10px;
+			border-radius: 5px;
+			transform: translate(10px);
+		}
+
+		textarea:user-invalid + span::before {
+			transform: translate(-10px, 10px);
+		}
+	</style>
 </head>
 
 <body>
@@ -78,10 +221,43 @@
 	<h1>Connect</h1>
 	<p>
 		I'm excited to engage with the GitHub community and beyond.<br>
-		If you would like to connect, discuss potential collaborations, or share valuable resources, please feel free to reach out <a href="https://github.com/umensa" target="_blank" rel="noopener noreferrer">my profile</a>.<br>
+		If you would like to connect, discuss potential collaborations, or share valuable resources, please feel free to reach out <a href="https://github.com/xasterisc" target="_blank" rel="noopener noreferrer">my profile</a>.<br>
 		<strong>Thank you</strong> for being a part of my transformative journey.<br>
 		Together, let's build a future where technology brings positive change and endless possibilities!
 	</p>
+	</section>
+
+	<section id="postcard">
+		<form name="leave_message">
+			<h2>To: Mohamed Zouari</h2>
+
+			<div id="from">
+				<label for="usersName">From:</label>
+				<input id="usersName" type="text" name="usersName" required>
+				<span></span>
+			</div>
+
+			<div id="reply">
+				<label for="usersEmail">Reply:</label>
+				<input id="usersEmail" type="email" name="usersEmail" required>
+				<span></span>
+			</div>
+
+			<div id="message">
+				<label for="usersMessage">Your message:</label>
+				<textarea id="usersMessage" name="usersMessage" cols="35" rows="10" required></textarea>
+				<span></span>
+			</div>
+
+			<div>
+				<button type="submit">Send your message</button>
+			</div>
+		</form>
+	</section>
+
+	<section id="messages" hidden>
+		<h2>Messages</h2>
+		<ul></ul>
 	</section>
 
 	<footer></footer>
