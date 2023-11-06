@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Major+Mono+Display&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d9f9a5;
+  margin: 0;
+}
+
+* {
+  color: #d9f9a5;;
+  font-family: "Raleway","Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #463834;
+  margin: 30px;
+  padding: 15px;
+  border: thick #81726A solid;
+  border-radius: 3px;
+}
+
+header, footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  background-color: #81726A;
+  padding: 20px;
+}
+
+header {
+  color:#d9f9a5;
+  font-family: "Major Mono Display", "Courier New", Courier, monospace;
+  justify-content: left;
+  font-size: 30px;
+  padding-left: 75px;
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+#top-section {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 10%;
+}
+
+#left-column {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+}
+
+#right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+#messages {
+  background-color: #d9f9a5;
+  border: none;
+}
+
+h1 {
+  font-family: "Major Mono Display","Courier New", Courier, monospace;
+  font-size: 30px;
+  font-weight: 400;
+  color: #d9f9a5;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+  padding-right: 1em;
+}
+
+li {
+  padding-left: 1em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+p {
+  margin: 5px;
+  text-align: center;
+}
+
+label {
+  font-size: 24px;
+  color: #D9F9A5;
+}
+
+#message-form {
+  display: flex;
+  max-width: 50%;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  justify-content: space-between;
+}
+
+#user-info, #user-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: justify;
+  align-items: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+input, textarea {
+  color: #463834;
+  background-color: #F8FED7;
+  font-size: 18px;
+  padding: 5px;
+  margin: 10px;
+  border: medium #D2D68D solid;
+  border-radius: 3px;
+}
+
+button {
+  color: #463834;
+  background-color: #f8fed7;
+  border-radius: 3%;
+  max-width: 50%;
+  margin: 10px;
+  padding: 8px;
+  border: medium #D2D68D solid;
+  border-radius: 5px;
+}
