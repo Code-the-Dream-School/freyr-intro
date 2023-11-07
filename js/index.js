@@ -43,16 +43,20 @@ messageForm.addEventListener("submit", function () {
   //Creates a new list item for message to be appended to
   messageList = messageSection.querySelector("ul");
   newMessage = document.createElement("li");
+  newMessage.setAttribute("class", "messages");
   
   mailLink = document.createElement("a");
   mailLink.innerHTML = name;
   mailLink.href = `mailto:${email}`;
+  mailLink.style.color = "#81726A";
 
   messagePadding = document.createElement("span");
   messagePadding.innerHTML = " wrote: "
+  messagePadding.style.color = "#463834";
 
   messageDisplay = document.createElement("span");
   messageDisplay.innerHTML = message;
+  messageDisplay.style.color = "#463834";
 
   newMessage.appendChild(mailLink);
   newMessage.appendChild(messagePadding);

@@ -19,8 +19,9 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 75%;
   background-color: #463834;
-  margin: 30px;
+  margin: 50px;
   padding: 15px;
   border: thick #81726A solid;
   border-radius: 3px;
@@ -28,41 +29,69 @@ section {
 
 header, footer {
   display: flex;
-  justify-content: center;
   width: 100%;
-  position: fixed;
+  position: sticky;
   background-color: #81726A;
-  padding: 20px;
 }
 
-header {
+.header-and-footer {
   color:#d9f9a5;
   font-family: "Major Mono Display", "Courier New", Courier, monospace;
   justify-content: left;
   font-size: 30px;
-  padding-left: 75px;
+  padding: 20px 30px;
   top: 0;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  z-index: 100;
+}
+
 footer {
+  justify-content: center;
   bottom: 0;
 }
 
-#top-section {
-  display: flex;
-  flex-grow: 1;
-  margin-top: 10%;
+#about, #skills, #experience, #connect {
+  scroll-margin-top: 6em;
 }
 
-#left-column {
-  display: flex;
-  flex-direction: column;
-  max-width: 40%;
+.skills {
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
 }
 
-#right-column {
+#experience {
+  background-color: #81726A;
+  border: thick #D2D68D solid;
+}
+
+.experience-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: justify;
+  list-style-position: inside;
+}
+
+.experience-list-item {
+  max-width: 30%;
+  background-color: #463834;
+  border: medium #D9F9A5 solid;
+  border-radius: 5px;
+  margin-top: 3%;
+  padding: 1em;
+}
+
+.connect {
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
 }
 
 #messages {
@@ -80,18 +109,14 @@ h1 {
 ul {
   display: flex;
   flex-direction: column;
-  flex-shrink: 1;
-  text-align: center;
-  list-style-type: none;
   padding-left: 0;
   padding-right: 1em;
 }
 
 li {
-  padding-left: 1em;
+  margin-left: 1em;
   padding-top: 8px;
   padding-bottom: 8px;
-
 }
 
 p {
@@ -102,6 +127,10 @@ p {
 label {
   font-size: 24px;
   color: #D9F9A5;
+}
+
+span {
+  margin: 0px 5px;
 }
 
 #message-form {
@@ -119,8 +148,9 @@ form {
 #user-info, #user-message {
   display: flex;
   flex-direction: column;
-  justify-content: justify;
+  flex-grow: 1;
   align-items: justify;
+  text-align: justify;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -139,9 +169,75 @@ button {
   color: #463834;
   background-color: #f8fed7;
   border-radius: 3%;
-  max-width: 50%;
+  max-width: 225px;
   margin: 10px;
   padding: 8px;
   border: medium #D2D68D solid;
   border-radius: 5px;
 }
+
+.messages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: medium #D2D68D solid;
+  background-color: #F8FED7;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    z-index: 100;
+    padding: 0px;
+  }
+
+  .header-and-footer {
+    justify-content: left;
+    font-size: 20px;
+    padding: 10px 30px;
+    top: 0;
+  }
+
+  #about, #skills, #experience, #connect {
+    scroll-margin-top: 8em;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-position: inside;
+  }
+
+  .experience-list-item {
+    max-width: 70%;
+  }
+
+  #message-form {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .messages {
+    flex-direction: column;
+  }
+
+  input, textarea {
+    max-width: 200px;
+  }
+
+  section {
+    margin: 20px;
+  }
+}
+
