@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html meta lang ="en-US">
 <head>
  <title>My First Webpage</title>
  <meta lang ="en-US">
  <meta charset ="UTF-8">
+   <title>My First Webpage</title>
+   <meta charset ="UTF-8">
+   <link rel="stylesheet" href="mystyle.css">
+
 </head>
 <body>
 <nav>
@@ -13,37 +17,58 @@
   <li><a href="#">Connect</a></li>
 </ul>
 </nav>
+  <nav>
 
   <h1>Gilbert501</h1>
+<h1>My Portfolio</h1>
 
 <section>
 <h1>About</h1>
-  <p>Hi, I'm Gilbert. This is my first portfolio. I'll add my projects as I go along.
-   To be updated.</p>
-</section>
-
-<section>
 <h1>Experience</h1>
-  <p>To be updated</p>
-</section>
 
 <section id = 'skills'>
   <h2>Skills</h2>
   <ul>
-    
+
   </ul>
+    <ul></ul>
+
 </section>
+<section>
+<h2>Leave a Message</h2>
+  <form  name="leave_message" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="usersName" required/>
+    <label for="email">Email</label>
+    <input 
+       type="email" 
+       id="email" 
+       name="usersEmail" 
+       required 
+    />
+    <label for="usersMessage">Message</label>
+   <textarea name="usersMessage" id="usersMessage" required></textarea>
+   <button type="submit">Submit</button>
+ </form>
+</section>
+<section id="messages">
+<h2>Messages</h2>
+ <ul></ul>
 
 <section >
+</section>
+
+<footer>
+<section>
 <h1>Connect</h1>
   <p><strong>Github:</strong> <a href ="github.com/Gilbert501">github.com/Gilbert501</a></p>
   <p> <strong>Email:</strong> <a href ="mailto:gpas71@hotmail.com">gpas71@hotmail.com</a> </p>
-  <p><strong>Address:</strong>
-                   1234 Virtual Way<br>
-                   New York, NY<br>
-                   10001</p>
+  <p><strong>Address:</strong>                
+              New York, NY
+              10001</p>
 </section>
 <footer></footer>
+</footer>
 <script src = "js/index.js"></script>
 </body>
 </html>
