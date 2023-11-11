@@ -80,7 +80,8 @@ newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
 
 // Reset the form after submission
-messageForm.reset();
+messageForm.requestFullscreen();
+
 
 }); 
  
