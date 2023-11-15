@@ -2,7 +2,7 @@ let today = new Date();
 let thisYear = today.getFullYear();
 let footer = document.querySelector("footer");
 let copyright = document.createElement("p");
-copyright.innerHTML = `${Yourname} + thisYear`;
+copyright.innerHTML = `Nicoleta Nastase &copy ${thisYear}`;
 footer.appendChild(copyright);
 
 let skills = ['Verbal communication', 
@@ -11,7 +11,7 @@ let skills = ['Verbal communication',
   'Fast Learner', 
   'Work well under stress']
 let skillSelection = document.getElementById('skills');
-let skillList = skillSelection.querySelectorAll('ul');
+let skillList = skillSelection.querySelector('ul');
 for(let i = 0; i < skills.length; i++) {
   let skill = document.createElement('li');
   skill.innerText = skills[i];
