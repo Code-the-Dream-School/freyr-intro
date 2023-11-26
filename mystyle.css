@@ -1,0 +1,27 @@
+form {
+    max-width: 200px;
+    margin:0;
+  }
+
+  label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    resize: vertical; /* Allow vertical resizing of textarea */
+  }
+
+  button {
+    padding: 6px;
+    background-color:green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color:blue;
+  }
