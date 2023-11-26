@@ -1,0 +1,237 @@
+body{
+   background-color: black;
+}
+#Circle { 
+  width: 194px;
+  height: 194px;
+  border-radius: 60%;
+  position: absolute;
+  top: 71%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+  background-color: darkblue;
+  background-image: url(../css/images/powerbutton-PhotoRoom.png-PhotoRoom.png);
+  background-blend-mode: color;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+  box-shadow: rgba(7, 1, 94, 0.45) -8px 23px 19px, rgba(70, 130, 180, 0.337) -4px 19px 16px inset, rgba(0, 53, 0, 0) 78px -23px 16px, rgba(32, 0, 30, 0.1) 33px 50px 191px;
+}
+
+.CircleImage{
+  color: blue;
+  position: absolute;
+  top: 46%;
+  left: 85%;
+  transform: translate(-51%, -47%);
+
+}
+.Hidden{
+  display: none;
+}
+/* BUTTONS */
+#Home{
+  position: absolute;
+    width: 183px;
+    height: 31px;
+    top: 60%;
+    left: 24%;
+    border-color: azure;
+    background-color: darkblue;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+#Contact{
+  position: absolute;
+    top: 70%;
+    left: 24%;
+    width: 183px;
+    height: 31px;
+    background-color: darkblue;
+    border-radius: 4px;
+    border-color: azure;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+#AboutMe{
+  position: absolute;
+  width: 183px;
+  height: 31px;
+  top: 75%;
+  left: 24%;
+  border-color: azure;
+  background-color: darkblue;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#Projects{
+  position: absolute;
+  width: 183px;
+  height: 31px;
+  top: 65%;
+  left: 24%;
+  border-color: azure;
+  background-color: darkblue;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+#Home:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#Projects:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#Contact:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#AboutMe:hover{
+  background-color: darkcyan;
+  width: 184px;
+  height: 33px;
+}
+#Hidden{
+    display: none;
+  }
+.Contact{
+  display: flex;
+}
+.Contact h2{
+  position: absolute;
+  top: 307px;
+  left: 44px;
+  font-size: 67px;
+  color: white;
+}
+#messages h2{
+  position: absolute;
+    top: 232px;
+    left: 824px;
+    color: white;
+}
+
+#footer{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 880px;
+  left: 854px;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-items: center;
+}
+#GithubIcon,
+#InstagramIcon,
+#PortfolioIcon,
+#MailIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  
+}
+.ContactMeButton{
+  display: flex;
+  
+  justify-content: flex-end;
+
+}
+#InstagramIcon,#PortfolioIcon,
+#MailIcon{
+ color: white;
+}
+.ContactMe{
+  position: absolute;
+    top: 295px;
+    left: 673px;
+  
+}
+#textInbox,
+#emailInbox,
+#messageInbox{
+  font-size: 20px;
+    width: 476px;
+    height: 56px;
+}
+#Submit {
+  border-radius: 19%;
+  width: 98px;
+  height: 51px;
+  background-color: darkblue;
+  color: azure;
+  border: none;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  filter: brightness(100%);
+  transition: filter 0.3s ease
+}
+
+#Submit:hover{
+  width: 100px;
+  height: 56px;
+  color: red;
+  filter: drop-shadow(2px 4px 6px darkblue);
+  filter: brightness(130%);
+
+}
+
+#M2{
+color: white;
+display: flex;
+justify-content: center;
+position: relative;
+top: 566px;
+left: -220px;
+}
+.newMesseges {
+  background-color: darkblue;
+  border-radius: 5px;
+  position: relative;
+  top:650px;
+  left:600px;
+  width: 500px;
+  height: 40px;
+  margin-top: 20px;
+}
+.newMesseges span{
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.newMesseges button{
+  border-radius: 2px;
+  background-color: blue;
+  border: none;
+  width: 70px;
+  height: 40px;
+  position: relative;
+  left: 9px;
+  filter: brightness(100%);
+  transition: filter 0.3s ease
+}
+.newMesseges button:hover{
+  width: 71px;
+  height: 44x;
+  background-color: blue;
+    filter: drop-shadow(2px 4px 6px black);
+    filter: brightness(130%);
+}
+
+.newMesseges a{
+  text-decoration: none;
+  color: black;
+}
+#Name,#Email,#Messages{
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
