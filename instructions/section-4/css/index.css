@@ -1,0 +1,96 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: pink;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Section Styles */
+  section {
+    margin-bottom: 30px;
+  }
+  
+  /* Heading Styles */
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-top: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  /* List Item Styles */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  li {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Form Styles */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 6px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer Styles */
+  footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #ddd;
+    color: #555;
+  }
