@@ -7,14 +7,15 @@
         <meta name="(Nicoleta Nastase)" content="(Nicoleta Nastase)">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicoleta Nastase</title>
+    <link rel="stylesheet" href="css/index.css">
   </head>
 
   <body>
     <header>
       <h1><strong>Nicoleta Nastase</strong></h1>
       <img src="images/me.jpg" width="250" height="250">
-      <p>A simple vlog about my life</p>
-      <ul>
+      <p>A simple vlog about my life!</p>
+      <ul class="header">
         <li>About me</li>
         <li>Experience</li>
         <li>Connect</li>
@@ -22,7 +23,7 @@
     </header>
 
     <section>
-      <h1>About me:</h1>
+      <h2>About me:</h2>
 
       <ul>
         <p>
@@ -42,8 +43,8 @@
       </ul>
     </section>
     <section>
-      <h1>Experience:</h1>
-      <ul>
+      <h2 id="experience">Experience:</h2>
+      <ul class="one">
         <p>
           In <strong>2006</strong> I graduated the
           <a href="https://www.spiruharet.ro/en/"
@@ -61,12 +62,12 @@
 
     <section id="skills">
      <h2>Skills</h2>
-     <ul></ul>
+     <ul class="two"></ul>
 
     </section>
 
     <section>
-      <h1>Connect:</h1>
+      <h2>Connect:</h2>
       <ul>
         <p>
           <strong>Email: </strong
@@ -91,7 +92,7 @@
 
     <section>
       <h2>Leave a message</h2>
-      <form name="leave_message"> 
+      <form name="leave_message" id="leave_message"> 
         
       
         <label for="name">Name:</label><br>

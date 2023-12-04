@@ -1,0 +1,78 @@
+html {
+  background-color: rgb(239, 248, 245);
+  color: #1e1e22;
+  font-family: Arial, Helvetica, sans-serif;
+     }
+
+section {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+        }
+h1 {
+font-size: 3em;
+font-weight: bold;
+color:rgb(36, 2, 120);
+padding-left: 60px;
+   }
+h2 {
+  font-size: 1.5em;
+  font-weight: semi bold;
+  color:rgb(26, 141, 8);
+  padding-left: 30px;
+   }
+.one {
+  list-style: square inside;
+       }
+.two {
+  list-style: square inside;
+     }
+#leave_message label {
+  font-size: medium;
+  color:rgb(3, 54, 1);
+  
+}
+#leave_message textarea {
+  font-size: larger;
+  padding: auto;
+  border: #090909;
+  padding: 1em;
+  margin-bottom: 1em;
+                        }
+#leave_message input {
+  padding: 10px;
+  margin-bottom: 1.5em;
+                     }
+#leave_message button {
+  padding: 10px;
+  background-color: rgb(0, 255, 162);
+  border: 20px;
+                      }
+#messages ul {
+  list-style: circle;
+             }
+#messages button {
+  padding-left: 10px;
+  background-color:rgb(36, 2, 120)
+  border: 5px;
+                 }
+footer {
+  background-color: rgb(255, 185, 200);
+  padding: 5;
+  margin: 50px;
+       }
+img {
+  width: 25%;
+  padding-left: 2em;
+  margin-bottom: 1.5em;
+    }
+header p {
+  padding-left: 2em;
+}
+.header {
+  padding-left: 3.5em;
+  color:rgb(8, 124, 19);
+}
+header p {
+  color:rgb(3, 49, 1);
+}
