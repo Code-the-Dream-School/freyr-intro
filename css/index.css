@@ -1,0 +1,107 @@
+body{
+    background: linear-gradient(#606060, #d0c0d0);
+    color: #101020;
+    font-family: sans-serif;
+}
+h1{
+    background-color: #d0c0d0;
+    color: #000000;
+    font-weight: lighter;
+    font-size: 2.5rem;
+    margin-top: 0rem;
+    padding: 1rem 1rem 0.5rem;
+    border-radius: 0.125rem;
+    letter-spacing: -0.1ch;
+    word-spacing: 0.5ch;
+}
+h2{
+    background-color: #a0a0ff;
+    font-family: monospace;
+    font-weight: bold;
+    color: #202000;
+    padding: 0.5rem;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+section{
+    background-color: #e0e0e0;
+    margin: 1rem 0rem;
+    padding: 0rem 0rem 0.5rem;
+    border-radius: 1rem;
+}
+p{
+    margin: 0.25rem 0.5rem;
+}
+li:not(#messages li){
+    display: block;
+    background-color: #f0f0f0;
+    padding: 0.25rem;
+    margin: 0.5rem 0rem;
+    width: fit-content;
+    border-radius: 0.25rem;
+}
+footer{
+    background-color: #a0a0a0;
+    text-align: right;
+    font-size: 0.9rem;
+    font-family: serif;
+}
+input{
+    border: 2px solid black;
+    margin: 0.25rem 0.5rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+label{
+    display: block;
+    width: fit-content;
+    font-family: monospace;
+    font-size: 1.25rem;
+    color: #101010;
+    background-color: #c0c0c0;
+    margin: 0.25rem;
+    padding: 0rem 0.25rem;
+}
+textarea{
+    border: 2px solid black;
+    font-size: 1rem;
+    padding: 0.25rem;
+    background-color: #f0f0f0;
+    width: 60ch;
+    margin: 0.25rem 0.5rem;
+    min-height: 4rem;
+}
+button{
+    background-color: #a0a0a0;
+    border: solid 2px #808080;
+    border-radius: 0%;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+}
+button:active{
+    background-color: #c0c0c0;
+    border-color: #a0a0a0;
+}
+form button{
+    margin-left: 1em;
+}
+#messages{
+    min-height: 3rem;
+}
+#messages button{
+    width: 100%;
+}
+#messages li{
+    list-style-type: none;
+    background-color: #d0d0ff;
+    width: fit-content;
+    border-radius: 0.25rem 0.25rem 1rem 1rem;
+    padding-top: 0.5rem;
+    text-indent: 0.5rem;
+}
+#messages li span{
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    display: block;
+    background-color: #f8f0ff;
+}
