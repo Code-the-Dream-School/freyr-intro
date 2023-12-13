@@ -93,9 +93,9 @@ Now, open the project directory in your code editor and continue to the next sec
 - [ ] Using "DOM Selection", select the #messages section by `id` and store it in a variable named `messageSection`
 - [ ] Using "DOM Selection", query the `messageSection` (instead of the entire `document`) to find the `<ul>` element and store it in a variable named `messageList`
 - [ ] Create a new list item (`li`) element and store it in a variable named `newMessage`
-- [ ] On the next line, set the inner HTML of your `newMessage` element with the following information:
-  - `<a>` element that displays the "usersName" and links to the "usersEmail" (hint: use the `mailto:` prefix)
-  - `<span>` element that displays the "usersMessage"
+- [ ] `<a>` element that displays the "usersName" and links to the "usersEmail" (hint: use the `mailto:` prefix)
+  - `<span>` element that displays the "usersMessage"On the next line, set the inner HTML of your `newMessage` element with the following information:
+  -
 - [ ] Create a new `<button>` element and store it in a variable named `removeButton`
   - Set the inner text to "remove"
   - Set the `type` attribute to "button"
@@ -117,7 +117,6 @@ These tasks are **entirely optional**, but if you'd like a challenge then do you
 
 - [ ] (Optional) Hide the #messages section when the list is empty
 - [ ] (Optional) Create an "edit" button for each message entry that allows the user to input a new/modified message
-
 
 ### Final Step:
 
