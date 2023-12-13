@@ -3,15 +3,17 @@
     <head>
         <link rel="stylesheet" href="css/index.css">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Anne Bushey's Webpage</title>
     </head>
     <body>
+        <header><a href="#about">about</a><a href="#experience">experience</a><a href="#skills">skills</a><a href="#connect">connect</a><a href="contact">message</a></header>
         <h1>Anne Bushey</h1>
-        <section>
+        <section id="about">
             <h2>About</h2>
             <p>I'm a 24 year old very interested in learning as much programming as I can, both for utility and because it's fascinating to me.</p>
         </section>
-        <section>
+        <section id="experience">
             <h2>Experience</h2>
             <p>I've tried to learn as much as I can, but I have no real programming experience yet.</p>
         </section>
@@ -19,21 +21,20 @@
             <h2>Skills</h2>
             <ul></ul>
         </section>
-        <section> 
+        <section id="connect"> 
             <h2>Connect</h2>
             <ul>
                 <li><a href="mailto:anne.bushey@gmail.com">Email</a></li>
                 <li><a href="https://github.com/violet-periwinkle">GitHub</a></li>
             </ul>
         </section>
-        <section>
+        <section id="contact">
             <h2>Leave a Message</h2>
             <form name="leave_message">
                 <label for="usersName">Name:</label>
                 <input type="text" name="usersName" required="true" id="usersName">
                 <label for="usersEmail">Email:</label>
                 <input type="email" name="usersEmail" required="true" id="usersEmail">
-                <br>
                 <label for="usersMessage">Message:</label>
                 <textarea name="usersMessage" required="true" id="usersMessage"></textarea>
                 <button type="submit">Submit</button>
@@ -41,7 +42,7 @@
         </section>
         <section id="messages">
             <h2>Messages</h2>
-            <ul>
+            <ul><li><span id="sender"><a href="mailto:a@b.com">name</a> sent: </span><span id="messagecontent">message message lorem ipsum etc...</span><button type="button">remove</button></li>
             </ul>
         </section>
         <footer></footer>
