@@ -1,76 +1,149 @@
 body {
-    background-image: url('wp4997020-amoled-solid-black-wallpapers.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fbfdff;
-    font-family: Brush Script MT, Brush Script Std, cursive;
-    margin: 0; 
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.cube {
+    display: none;
+    flex-direction: column;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cube a {
+    display: block; 
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px; 
 }
 
 section {
-    margin-bottom: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: 24px;
-    font-weight: bold;
+
+@media (max-width: 600px) {
+
 }
 
-ul {
+@media screen and (max-width: 600px) {
+  .nav-ball {
+    right: 10px;
+  }
+}
+.section {
+  padding: 20px;
+}
+
+
+#about {
+  background-color: #9dcde9;
+  font-family: 'Georgia', serif;
+}
+
+#experience {
+  background-color: #d3d3d3;
+  font-family: 'Courier New', monospace;
+}
+
+#connect {
+  background-color: #e6e6fa;
+  font-family: 'Verdana', sans-serif;
+}
+
+#skills {
+  background-color: #d8bfd8;
+  font-family: 'Courier New', monospace;
+}
+
+#contact {
+  background-color: #cccc51;
+  font-family: 'Arial', sans-serif;
+}
+
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.comment-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.messages-list {
     list-style: none;
     padding: 0;
 }
 
-
-
-#skills li {
-    background-color: #e0e0e000;
+.messages-list li {
+    margin-bottom: 10px;
     padding: 10px;
-    margin-bottom: 5px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-#messages li {
-    background-color: #f5f1f144;
-    padding: 5px;
-    margin-bottom: 5px;
-}
-
-form {
-    margin-bottom: 20px;
-}
-
-label {
-    font-size: 16px;
-    color: #555;
-}
-
-input, textarea {
-    font-size: 14px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-    width: 20%; 
-}
-
-button {
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    background-color: #333;
-    padding: 20px;
-    color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }

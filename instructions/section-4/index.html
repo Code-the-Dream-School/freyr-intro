@@ -2,68 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Description about myself">
-    <title>Page About Ivan.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+    <title>Your Website</title>
 </head>
 <body>
+    <nav>
+      <div class="menu" id="menu">
+        <div class="ball"></div>
+        <div class="cube">
+            <a href="#about">About</a><br>
+            <a href="#experience">Experience</a><br>
+            <a href="#connect">Connect</a><br>
+            <a href="#skills">Skills</a><br>
+            <a href="#contact">Contact</a><br>
+            <a href="#comment">Comment</a><br>
+        </div>
+      </div>
+    </nav>
 
-    <section>
-        <h1>About</h1>
+    <!--About-->
+  <section id="about" class="section">
+    <h2>About Me</h2>
         <p>My name is Ivan, and I'm trying to learn coding at CodeTheDreamSchool.</p>
         <p>Born in Kyrgyzstan and then moved to the US at 15y.o.</p>
+  </section>
 
-    </section>
+  <!--Experience-->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="experience-container">
+        
+        <li>Worked at Target and several other retail stores</li>
+       
+        <li>Created small apps in Python a long time ago</li>
+        
+        <li>Worked at Twitch</li>
 
-    <section>
-        <h1>Experience</h1>
-        <ul>
-            <li>Worked at Target and several other retail stores</li>
-            <li>Created small apps in Python a long time ago</li>
-            <li>Worked at Twitch</li>
-        </ul>
-    </section>
+    </div>
+  </section>
 
-    <section>
-        <h1>Connect</h1>
-        <ul>
-            <li><a href="https://github.com/L1zunn">My GitHub</a></li>
-            <li><a href="https://www.instagram.com/lizun.1/">Instagram</a></li>
-            <li><a href="mailto:89293255523v@gmail.com">Email</a></li>
-        </ul>
-    </section>
+  <!-- Connect-->
+  <section id="connect" class="section">
+    <h2>Connect with Me</h2>
+    <li><a href="https://github.com/L1zunn">My GitHub</a></li>
+    <li><a href="https://www.instagram.com/lizun.1/">Instagram</a></li>
+  </section>
 
-    <section id="skills">
-        <h1>Skills</h1>
-        <ul></ul>
-    </section>
+  <!--Skills-->
+  <section id="skills" class="section">
+    <h2>My Skills</h2>
+        <li>HTML,CSS</li>
+        
+        <li>Python</li>
+        
+        <li>JAVASCRIPT</li>
+  </section>
 
-    <section>
-        <h2>Leave a Message</h2>
-        <form name="leave_message">
-            <label for="usersName">Your Name:</label>
-            <input type="text" name="usersName" required><br>
+  <!--Contact-->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+        <li><a href="mailto:89293255523v@gmail.com">Email</a></li>
+    </div>
+  </section>
 
-            <label for="usersEmail">Your Email:</label>
-            <input type="email" name="usersEmail" required><br>
-
-            <label for="usersMessage">Your Message:</label>
-            <textarea name="usersMessage" required></textarea><br>
-
-            <button type="button" onclick="submitForm()">Submit</button>
-        </form>
-    </section>
-
-    <section id="messages">
+    <section id="comment" class="comment-section">
+    <form id="leave_message" class="comment-form">
         <h2>Messages</h2>
-        <ul></ul>
-    </section>
-
-
-    <footer></footer>
+        <ul id="messages" class="messages-list"></ul>
+        <label for="usersName">Name:</label>
+        <input type="text" id="usersName" name="usersName" required>
+        <label for="usersEmail">Email:</label>
+        <input type="email" id="usersEmail" name="usersEmail" required>
+        <label for="usersMessage">Message:</label>
+        <textarea id="usersMessage" name="usersMessage" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
 
     <script src="js/index.js"></script>
 </body>
