@@ -1,0 +1,98 @@
+body {
+  background-color: #f2f2f2;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+a, p {
+  font-family: 'Raleway', sans-serif;
+}
+
+ul#skills li {
+  background-color: #e6f7ff;
+  border: 1px solid #b3e6ff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+ul#experience li {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+ul #messages li {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+.section {
+  margin-bottom: 20px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+input[type="text"],
+textarea {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="text"],
+textarea {
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+}
+
+@media screen and (min-width: 1025px) {
+  
+}
+
+
+
