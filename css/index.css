@@ -5,6 +5,10 @@ body {
   margin-bottom: 20px;
 }
 
+a, p {
+  font-family: 'Raleway', sans-serif;
+}
+
 ul#skills li {
   background-color: #e6f7ff;
   border: 1px solid #b3e6ff;
