@@ -137,15 +137,15 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 768px) {
-  
+  background-color: #007bff
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  
+  background-color: #007bff
 }
 
 @media screen and (min-width: 1025px) {
-  
+  background-color: #007bff
 }
 
 
