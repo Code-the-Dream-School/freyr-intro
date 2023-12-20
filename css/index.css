@@ -55,6 +55,28 @@ label {
   margin-bottom: 0;
 }
 
+nav ul {
+  list-style-type: square;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
 input[type="text"],
 textarea {
   font-size: 14px;
