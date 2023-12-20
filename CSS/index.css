@@ -22,7 +22,7 @@ h2 {
   padding-left: 30px;
    }
 .one {
-  list-style: square inside;
+  list-style: disc;
        }
 .two {
   list-style: square inside;
@@ -53,7 +53,7 @@ h2 {
              }
 #messages button {
   padding-left: 10px;
-  background-color:rgb(36, 2, 120)
+  background-color:rgb(36, 2, 120);
   border: 5px;
                  }
 footer {

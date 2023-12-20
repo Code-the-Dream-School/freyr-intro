@@ -11,25 +11,40 @@
   </head>
 
   <body>
+    <div> <!--Start wrapper div-->
     <header>
       <h1><strong>Nicoleta Nastase</strong></h1>
       <img src="images/me.jpg" width="250" height="250">
       <p>A simple vlog about my life!</p>
+
+     <nav>
       <ul class="header">
-        <li>About me</li>
-        <li>Experience</li>
-        <li>Connect</li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#connect">Connect</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#leave a message">Leave a message</a></li>
       </ul>
+     </nav>
     </header>
 
-    <section>
+  <main>
+    <section id="about">
       <h2>About me:</h2>
 
       <ul>
         <p>
           My name is <em>Nicoleta Nastase</em> and I was born in
-          <a href="https://en.wikipedia.org/wiki/Romania">Romania</a> , a
+          <a href="https://en.wikipedia.org/wiki/Romania" target="_blank">Romania</a> , a
           country in the Eastern Europe.
+        </p>
+        <p>
+          In <strong>2006</strong> I graduated the
+          <a href="https://www.spiruharet.ro/en/"
+            ><strong>Spiru Haret University</strong></a
+          >
+          in Bucharest, Romania, section: Psysical Therapy.
         </p>
         <p>
           I currently live in New Jersey with my husband and our 2 amazing sons.
@@ -42,31 +57,31 @@
         </p>
       </ul>
     </section>
-    <section>
-      <h2 id="experience">Experience:</h2>
-      <ul class="one">
-        <p>
-          In <strong>2006</strong> I graduated the
-          <a href="https://www.spiruharet.ro/en/"
-            ><strong>Spiru Haret University</strong></a
-          >
-          in Bucharest, Romania, section: Psysical Therapy.
-        </p>
-        <p>
-          I have worked as a physical therapist for almost a year and in the
-          meantime I have also developed my private business as a massage
-          therapist.
-        </p>
+    <section id="experience">
+      <h2>Experience:</h2>
+      <ul class="one">  
+       <li>
+        <strong>Massage Therepist</strong> - Self Employed <br>
+        May 2007 to January 2015
+       </li>
+       <li>
+        <strong>Therapist and health club assistant</strong>  - Holliday Inn, Reading <br>
+        January 2015 to September 2015
+       </li> 
+       <li>
+        <strong>Massage Therapist</strong> - Le Masseur Personnel, Reading <br>
+        September 2015 to February 2018
+       </li>
       </ul>
     </section>
 
     <section id="skills">
-     <h2>Skills</h2>
+     <h2>Skills:</h2>
      <ul class="two"></ul>
 
     </section>
 
-    <section>
+    <section id="connect">
       <h2>Connect:</h2>
       <ul>
         <p>
@@ -78,8 +93,7 @@
         <p>
           <strong>Work: </strong
           ><a href="https://github.com/Nicole3891/ganymede-intro"
-            >Nicoleta Nastase</a
-          >
+            >Nicoleta Nastase</a>
         </p>
         <p>
           <strong>Facebook: </strong
@@ -89,8 +103,10 @@
         </p>
       </ul>
     </section>
+  </main>
 
-    <section>
+  <aside>
+    <section id="leave a message">
       <h2>Leave a message</h2>
       <form name="leave_message" id="leave_message"> 
         
@@ -111,12 +127,12 @@
     <section id="messages">
       <h2>Messages</h2>
       <ul></ul>
-     
-
     </section>
+  </aside>
+  
     <footer></footer>
 
       <script src="js/index.js"></script>
-    
+    </div>  <!--End wrapper div--> 
   </body>
 </html>

@@ -5,6 +5,20 @@ let copyright = document.createElement("p");
 copyright.innerHTML = `Nicoleta Nastase &copy ${thisYear}`;
 footer.appendChild(copyright);
 
+//let experience = ['Massage Therepist - Self Employed',
+//'May 2007 to January 2015',
+//'Spa Therapist and health club assistant - Holliday Inn',
+//'January 2015 to September 2015',
+//'Massage Therapist - Le Masseur Personnel',
+//'September 2015 to February 2018']
+//let experienceSelection = document.getElementById('experience');
+//let experienceList = experienceSelection.querySelector('ol');
+//for(let y = 0; y < experience.length; y++) {
+  //let experience = document.createElement('li');
+  //experience.innerText = experience[y];
+  //experienceList.appendChild(experience);
+//}
+
 let skills = ['Verbal communication', 
   'Friendly', 
   'Active Listener', 
