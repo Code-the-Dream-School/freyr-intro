@@ -23,6 +23,12 @@ ul#experience li {
   margin-bottom: 10px;
 }
 
+.experience-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
 ul #messages li {
   background-color: #f2f2f2;
   border: 1px solid #ccc;
@@ -75,6 +81,32 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #666;
+}
+
+.leave-message-form {
+  display: flex;
+  flex-direction: column;
+  grid-row: auto;
+  /* Your styles for the form */
+}
+
+.leave-message-form label {
+  grid-area: label;
+  background-color: #007bff;
+}
+
+.leave-message-form input,
+.leave-message-form textarea {
+  /* Your styles for the form inputs */
+  grid-row: auto;
+  grid-area: textarea;
+  background-color: #ffa08c;
+}
+
+.leave-message-form button {
+  /* Your styles for the form button */
+  grid-area: button;
+   background-color: #ffff64;
 }
 
 input[type="text"],
