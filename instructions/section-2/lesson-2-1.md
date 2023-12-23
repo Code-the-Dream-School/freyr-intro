@@ -46,7 +46,7 @@ Navigate to the directory you just cloned in your terminal:
     cd freyr-intro
     
 Check to be sure you've got the correct GitHub repository linked to your local folder by running the following command in your terminal
-
+\
     git remote -v
 
 After running the above command, you should see the next two lines in your terminal where `<url>` is the address of your forked copy of the repository 

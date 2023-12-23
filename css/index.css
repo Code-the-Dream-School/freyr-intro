@@ -1,0 +1,78 @@
+
+ 
+ * {
+    background-color: lightgray;
+    color:darkkhaki;
+    font-family: 'Oswald', sans-serif;
+ }
+
+ h1 {
+    font: size 1.5rem;
+    font-weight: 120%;
+    color:blueviolet;
+ }
+
+ h2 {
+    font: size 1.3rem;
+    font-weight: 120%;
+    color:blueviolet;
+ }
+
+ section {
+    margin-bottom: 20px;
+ }
+
+ #experience li {
+    color:darkkhaki;
+    border: 50px black;
+    margin-top:5px;
+}
+
+#skills li {
+    color:darkkhaki;
+    border: 50px black;
+    margin-top:5px;
+}
+
+#connect li {
+    color:darkkhaki;
+    border: 50px black;
+    margin-top:5px;
+}
+
+#leaveMessage label {
+    Color:blueviolet; 
+    font-size:1.2rem;
+
+}
+
+#leaveMessage input {
+    Color:blueviolet; 
+    font-size:1.2rem;
+    border: 2px dashed blueviolet; 
+
+}
+
+#leaveMessage textarea {
+    Color:blueviolet; 
+    font-size:1.2rem;
+    border: 2px dashed blueviolet; 
+
+}
+
+#leaveMessage button {
+    background-color:blueviolet;
+    color:white;
+    font-size:1.2rem;
+}
+
+#message ul{
+    color:blueviolet;
+    font-size:3rem
+
+}
+footer {
+    background-color: burlywood;
+
+}
+
