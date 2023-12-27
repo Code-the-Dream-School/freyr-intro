@@ -11,23 +11,27 @@
  <body>
   <header>
     <h1>Shu Hu</h1>
+    <nav class="navcontainer">
+        <div><a href="#about">About</a></div>
+        <div><a href="#experience">Experience</a></div>
+        <div><a href="#skills">Skills</a></div>
+        <div><a href="#connect">Connect</a></div>
+        <div><a href="#leaveMessage">Leave_Message</a></div>
+        <div><a href="#message">Message</a></div>
+    </nav>
   </header>
 
-  <section>
+  <section id="about">
     <h1>About</h1>
     <p>Hi! I am a current master's student in humanities and I used to be a PR/communications professional in tech industry.</p>
   </section>
 
   <section id="experience">
     <h1>Experience</h1>
-    <p>
-        <ul>
-        <li>Volkswagen Mobvoi, product launch planning/execution project</li>
-        <li>Tencent, digital summit planning/organization project</li>
-        <li>BlueFocus Marketing Agency, product launch/CEO event planning/execution project</li>
-        <li>Rare Media, international documentary shooting project </li>
-        </ul>
-    </p>
+       <div class="experience-item">Volkswagen Mobvoi, product launch planning/execution project</div>
+       <div class="experience-item">Tencent, digital summit planning/organization project</div>
+       <div class="experience-item">BlueFocus Marketing Agency, product launch/CEO event planning/execution project</div>
+       <div class="experience-item">Rare Media, international documentary shooting project </div>
   </section>
 
   <section id="skills">
@@ -51,19 +55,27 @@
    </p>
   </section>
 
-  <section id='leaveMessage'>
+  <section id='leaveMessage' class="leaveMessage_container">
     <h2>Leave a Message</h2>
     <form name="leave_message">
+      <div class="leaveMessage_item">
         <label for="usersName">Name:</label><br>
         <input type="text" name="usersName" required><br>
+      </div>
 
+      <div class="leaveMessage_item">
         <label for="usersEmail">Email Address:</label><br>
         <input type="email" name="usersEmail" required><br> 
+      </div>
 
+      <div class="leaveMessage_item">
         <label for="usersMessage">Message:</label><br>
         <textarea name="usersMessage" required> </textarea><br>
+      </div>
 
-        <button type="submit">Submit</button>
+      <div class="leaveMessage_item">
+      <button type="submit">Submit</button>
+      </div>
     </form>
    
   </section>

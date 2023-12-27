@@ -1,8 +1,41 @@
 
- 
+
+.navcontainer {
+    display:flex;
+    flex:1 1 50px;
+    column-gap: 20px;
+    justify-content: center;
+    color:blueviolet;
+    
+}
+
+.experience-item {
+    flex: 1 1 200px;
+    flex-direction:row;
+    margin-bottom: 10px;
+    background-color:darkkhaki;
+    color:white;
+    flex-wrap:wrap;
+
+}
+
+#leaveMessage {
+    display:flex;
+    flex-direction: column;
+    column-gap: 20px;    
+}
+
+
+
+header {
+    position: sticky;
+    top:0;
+    z-index: 1000; 
+    text-align: center;
+    color:blueviolet;
+}
  * {
-    background-color: lightgray;
-    color:darkkhaki;
+    /*color:darkkhaki;*/
     font-family: 'Oswald', sans-serif;
  }
 
@@ -20,6 +53,7 @@
 
  section {
     margin-bottom: 20px;
+    color:darkkhaki;
  }
 
  #experience li {
@@ -74,5 +108,14 @@
 footer {
     background-color: burlywood;
 
+}
+
+@media (max-width:400px){
+
+.navcontainer {
+    flex-wrap:wrap;
+    
+}
+    
 }
 
