@@ -1,62 +1,101 @@
-let today = new Date();
-let thisYear = today.getFullYear();
-let footer = document.querySelector("footer");
-let copyright = document.createElement("p");
-copyright.innerHTML = `Nicoleta Nastase &copy ${thisYear}`;
-footer.appendChild(copyright);
+  ;(() => {
+    // CHALLENGE 1. Insert Copyright Text in Footer
+    // --------------------------------------------------------------
+    const renderCopyright = () => {
+      const today = new Date()
+      const thisYear = today.getFullYear()
 
-//let experience = ['Massage Therepist - Self Employed',
-//'May 2007 to January 2015',
-//'Spa Therapist and health club assistant - Holliday Inn',
-//'January 2015 to September 2015',
-//'Massage Therapist - Le Masseur Personnel',
-//'September 2015 to February 2018']
-//let experienceSelection = document.getElementById('experience');
-//let experienceList = experienceSelection.querySelector('ol');
-//for(let y = 0; y < experience.length; y++) {
-  //let experience = document.createElement('li');
-  //experience.innerText = experience[y];
-  //experienceList.appendChild(experience);
-//}
+      // DOM selection
+      const copyright = document.querySelector('#copyright')
 
-let skills = ['Verbal communication', 
-  'Friendly', 
-  'Active Listener', 
-  'Fast Learner', 
-  'Work well under stress']
-let skillSelection = document.getElementById('skills');
-let skillList = skillSelection.querySelector('ul');
-for(let i = 0; i < skills.length; i++) {
-  let skill = document.createElement('li');
-  skill.innerText = skills[i];
-  skillList.appendChild(skill);
-}
+      // DOM manipulation (modify)
+      copyright.innerHTML = `&copy; Nicoleta Nastase ${thisYear}`
+    }
 
-const messageForm  = document.querySelector('form[name="leave_message"]');
+  //challenge 2. create List of Skills
+  let skills = ['Verbal communication', 
+    'Friendly', 
+    'Active Listener', 
+    'Fast Learner', 
+    'Work well under stress']
+  //let skillSelection = document.getElementById('skills');
+  //let skillList = skillSelection.querySelector('ul');
+  const skillSelection =document.querySelector('#skills');
+  const skillList = skillSelection.querySelector('ul');
+  for(let i = 0; i < skills.length; i++) {
+    let skill = document.createElement('li');
+    skill.classList.add('tag');
+    skill.innerText = skills[i];
+    skillList.appendChild(skill);
+  }
 
-messageForm.addEventListener ('submit', (e) => {
-  e.preventDefault();
-  const name = e.target.usersName.value;
-  const email =  e.target.usersEmail.value;
-  const message =  e.target.usersMessage.value;
-  console.log(name, email, message);
-  messageForm.reset();
 
-  const messageSection = document.getElementById('messages');
-  const messageList = messageSection.querySelector('ul'); 
-  const newMessage = document.createElement('li');
-  newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>
-  <span >${message}</span>`
+
+  // CHALLENGE 3. Register Message Form
+  const messageForm  = document.querySelector('form[name="leave_message"]');
+
+  messageForm.addEventListener ('submit', (e) => {
+    e.preventDefault();
+    const now = new Date();
+    const name = e.target.name.value;
+    const email =  e.target.email.value;
+    const message =  e.target.message.value;
+    //console.log(name, email, message);
+   messageForm.reset();
+  
+    const messageSection = document.getElementById('messages');
+    const messageList = messageSection.querySelector('ul'); 
+    if (messageSection.style.display === 'none') {
+      messageSection.style.display = 'block'
+       }
+    const newMessage = document.createElement('li');
+    newMessage.classList.add('list__item');
+    newMessage.innerHTML = ` <div> 
+    <span class="strong">${message}</span>
+    <p>${now.toLocaleString()} from <a class="link" href="mailto:${
+    email}">${name}</a> &nbsp;</p>
+  </div>`
+
+
+  
+    
+
+
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'remove';
+    removeButton.type = "button";
+    removeButton.classList.add('button', 'button--danger');
+    removeButton.addEventListener ('click', (e) => {
+    //const entry = removeButton.parentNode;
+    const entry = e.target.parentNode;
+    const list = entry.parentNode;
+    entry.remove();
+   
+    })
+    newMessage.appendChild(removeButton)
+    messageList.appendChild(newMessage)
+    //messageList.prepend(newMessage)
+    e.target.reset()
   
 
-  const removeButton = document.createElement('button');
-  removeButton.innerText = 'remove';
-  removeButton.type = "button";
-  removeButton.addEventListener ('click', (e) => {
-    const entry = removeButton.parentNode;
-    entry.remove();
- 
+
+
+
+
+
+
+
+
+
+
   })
-  newMessage.appendChild(removeButton)
-  messageList.appendChild(newMessage)
-})
+  
+  
+     
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCopyright()
+      renderSkillsList()
+      messageForm()
+    })
+  })()
