@@ -1,0 +1,152 @@
+body {
+  background-color: #f2f2f2;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+a, p {
+  font-family: 'Raleway', sans-serif;
+}
+
+ul#skills li {
+  background-color: #e6f7ff;
+  border: 1px solid #b3e6ff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+ul#experience li {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.experience-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+ul #messages li {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+.section {
+  margin-bottom: 20px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+nav ul {
+  list-style-type: square;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
+.leave-message-form {
+  display: flex;
+  flex-direction: column;
+  grid-row: auto;
+  /* Your styles for the form */
+}
+
+.leave-message-form label {
+  grid-area: label;
+  background-color: #007bff;
+}
+
+.leave-message-form input,
+.leave-message-form textarea {
+  /* Your styles for the form inputs */
+  grid-row: auto;
+  grid-area: textarea;
+  background-color: #ffa08c;
+}
+
+.leave-message-form button {
+  /* Your styles for the form button */
+  grid-area: button;
+   background-color: #ffff64;
+}
+
+input[type="text"],
+textarea {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="text"],
+textarea {
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 768px) {
+  background-color: #007bff
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  background-color: #007bff
+}
+
+@media screen and (min-width: 1025px) {
+  background-color: #007bff
+}
+
+
+
