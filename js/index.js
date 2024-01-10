@@ -34,3 +34,17 @@ messageForm.addEventListener('submit', (e) => {
     messageList.appendChild(newMessage);
     messageForm.reset();
 })
+const githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/violet-periwinkle/repos');
+githubRequest.send();
+let repositories;
+githubRequest.addEventListener('load', function () {
+    repositories = JSON.parse(this.response);
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+    for (let i = 0; i < repositories.length; i++) {
+        const project = document.createElement('li');
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project);
+    };
+})
