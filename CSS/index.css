@@ -193,15 +193,6 @@ section {
   transition: opacity 0.2s ease-in-out;
 }
 
-.button--large {
-  font-size: 1.125rem;
-}
-
-.button--minimal {
-  background-color: var(--color-lighter);
-  color: var(--color-darker);
-}
-
 .button--danger {
   background-color: var(--color-danger);
 }
