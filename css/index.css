@@ -2,15 +2,33 @@ body{
     background: linear-gradient(#606060, #d0c0d0);
     color: #101020;
     font-family: sans-serif;
+    margin: 0px;
+}
+header{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    background-color: #fffff080;
+}
+header a{
+    background-color: #fffff0;
+    color: #604080;
+    flex-basis: 0;
+    flex-grow: 1;
+    display: block;
+    margin: 0.5em 0.25em;
+    border: 1px solid white;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    text-decoration: none;
 }
 h1{
     background-color: #d0c0d0;
     color: #000000;
     font-weight: lighter;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 0rem;
-    padding: 1rem 1rem 0.5rem;
-    border-radius: 0.125rem;
+    padding: 0.5rem;
     letter-spacing: -0.1ch;
     word-spacing: 0.5ch;
 }
@@ -24,7 +42,7 @@ h2{
 }
 section{
     background-color: #e0e0e0;
-    margin: 1rem 0rem;
+    margin: 1rem 0.5rem;
     padding: 0rem 0rem 0.5rem;
     border-radius: 1rem;
 }
@@ -36,7 +54,7 @@ li:not(#messages li){
     background-color: #f0f0f0;
     padding: 0.25rem;
     margin: 0.5rem 0rem;
-    width: fit-content;
+    width: max-content;
     border-radius: 0.25rem;
 }
 footer{
@@ -59,7 +77,6 @@ label{
     font-size: 1.25rem;
     color: #101010;
     background-color: #c0c0c0;
-    margin: 0.25rem;
     padding: 0rem 0.25rem;
 }
 textarea{
@@ -67,7 +84,6 @@ textarea{
     font-size: 1rem;
     padding: 0.25rem;
     background-color: #f0f0f0;
-    width: 60ch;
     margin: 0.25rem 0.5rem;
     min-height: 4rem;
 }
@@ -75,6 +91,7 @@ button{
     background-color: #a0a0a0;
     border: solid 2px #808080;
     border-radius: 0%;
+    margin: 0.25rem;
     padding: 0.5rem 2rem;
     font-weight: bold;
 }
@@ -82,26 +99,56 @@ button:active{
     background-color: #c0c0c0;
     border-color: #a0a0a0;
 }
+form{
+    display: grid;
+    grid-template-columns: min-content auto;
+    margin: 0.25rem;
+    grid-gap: 0.25rem;
+}
 form button{
-    margin-left: 1em;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 #messages{
     min-height: 3rem;
 }
 #messages button{
-    width: 100%;
+    width: fit-content;
+}
+#messages ul{
+    padding: 0rem 0.5em;
 }
 #messages li{
+    display: flex;
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+#messagecontent{
     list-style-type: none;
     background-color: #d0d0ff;
-    width: fit-content;
-    border-radius: 0.25rem 0.25rem 1rem 1rem;
     padding-top: 0.5rem;
     text-indent: 0.5rem;
+    flex-grow: 1;
 }
-#messages li span{
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    display: block;
-    background-color: #f8f0ff;
+#sender{
+    background-color: #c0c0c0;
+    padding: 0.5em;
+}
+@media (max-width: 600px) {
+    body{
+        margin: 0px;
+    }
+    section{
+        margin: 0px 4px;
+    }
+    ul{
+        padding: 0em;
+    }
+    li {
+        margin: auto;
+        width:fit-content;
+    }
+    header{
+        display: none;
+    }
 }
