@@ -1,4 +1,4 @@
-  ;(() => {
+  (() => {
     // CHALLENGE 1. Insert Copyright Text in Footer
     // --------------------------------------------------------------
     const renderCopyright = () => {
@@ -77,25 +77,44 @@
     //messageList.prepend(newMessage)
     e.target.reset()
   
-
-
-
-
-
-
-
-
-
-
-
   })
   
+ 
+  // Challenge 4. create the XMLHttpRequest
+   
+  var githubRequest = new XMLHttpRequest();
+  githubRequest.open('GET', 'https://api.github.com/users/nicole3891/repos');
+  githubRequest.send();
+  githubRequest.addEventListener("load", function () {
+   
+    var repositories = JSON.parse(this.response);
+    console.log(this.response)
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+    //projectList.classList.add('link')
+       
+for (let i = 0; i < repositories.length; i ++) {
+  const project = document.createElement('li');
+  var a = document.createElement('a');
+  a.href = repositories[i].html_url;
+  a.textContent = repositories[i].name;
+  a.classList.add('link');
+  a.classList.add('link--no-color');
   
-     
+  project.appendChild(a)
+  //project.innerHTML = a;
+  projectList.appendChild(project);
+ }
 
+    
+});
+
+  
+  
     document.addEventListener('DOMContentLoaded', () => {
-      renderCopyright()
-      renderSkillsList()
-      messageForm()
-    })
-  })()
+      renderCopyright();
+      //renderSkillsList()
+      //messageForm()
+      //projectsWithXHR()
+    });
+}) ();
