@@ -56,6 +56,23 @@ messageForm.addEventListener('submit', function(e) {
 this.reset();
 })
 
+var githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/dreamlala2023/repos");
+githubRequest.send();
+
+githubRequest.addEventListener("load",function(callback){
+    var repositories = JSON.parse(this.response)
+    console.log(repositories);
+    var projectSection = document.getElementById("projects");
+    var projectList = projectSection.querySelector("ul")
+    for (var i=0; i<repositories.length; i++){
+       var project = document.createElement('li');
+       project.innerText = repositories[i].name;
+       projectList.appendChild(project);
+  }
+
+});
+
 
 
 
