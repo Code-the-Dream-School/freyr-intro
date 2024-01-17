@@ -12,14 +12,14 @@ for(let el of skills){
     skill.textContent = el;
     skillsList.appendChild(skill);
 }
+const messageSection = document.getElementById('messages');
 const messageForm = document.querySelector('[name="leave_message"]');
 messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const usersName = e.target.usersName.value;
     const usersEmail = e.target.usersEmail.value;
     const usersMessage = e.target.usersMessage.value;
-    console.log(usersName, usersEmail, usersMessage);
-    const messageSection = document.getElementById('messages');
+    //console.log(usersName, usersEmail, usersMessage);
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<span id="sender"><a href="mailto:${usersEmail}">${usersName}</a> sent: </span><span id="messagecontent">${usersMessage}</span>`
@@ -29,22 +29,25 @@ messageForm.addEventListener('submit', (e) => {
     removeButton.addEventListener('click', () => {
         const entry = removeButton.parentNode;
         entry.remove();
+        if (messageList.childElementCount < 1){
+            messageSection.style.display = 'none';
+            console.log(messageList.length);
+        };
     })
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
+    messageSection.style.display = 'block';
     messageForm.reset();
 })
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/violet-periwinkle/repos');
-githubRequest.send();
-let repositories;
-githubRequest.addEventListener('load', function () {
-    repositories = JSON.parse(this.response);
-    const projectSection = document.getElementById('projects');
-    const projectList = projectSection.querySelector('ul');
-    for (let i = 0; i < repositories.length; i++) {
-        const project = document.createElement('li');
-        project.innerText = repositories[i].name;
-        projectList.appendChild(project);
-    };
-})
+
+fetch('https://api.github.com/users/violet-periwinkle/repos')
+    .then(response => response.json())
+    .then(data => {
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+        for (let i = 0; i < data.length; i++) {
+            const project = document.createElement('li');
+            project.innerHTML = `<a href = '${data[i].html_url}'>${data[i].name}</a>`;
+            projectList.appendChild(project);
+        }
+    });

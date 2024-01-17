@@ -4,13 +4,13 @@ body{
     font-family: sans-serif;
     margin: 0px;
 }
-header{
+nav{
     display: flex;
     position: sticky;
     top: 0px;
     background-color: #fffff080;
 }
-header a{
+nav a{
     background-color: #fffff0;
     color: #604080;
     flex-basis: 0;
@@ -22,12 +22,16 @@ header a{
     border-radius: 0.25em;
     text-decoration: none;
 }
+nav a:hover{
+    background-color: #ffffff;
+    color: #606060;
+}
 h1{
     background-color: #d0c0d0;
     color: #000000;
     font-weight: lighter;
     font-size: 2rem;
-    margin-top: 0rem;
+    margin-top: 0.25em;
     padding: 0.5rem;
     letter-spacing: -0.1ch;
     word-spacing: 0.5ch;
@@ -44,7 +48,7 @@ section{
     background-color: #e0e0e0;
     margin: 1rem 0.5rem;
     padding: 0rem 0rem 0.5rem;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
 }
 p{
     margin: 0.25rem 0.5rem;
@@ -110,6 +114,7 @@ form button{
     grid-column-end: 3;
 }
 #messages{
+    display: none;
     min-height: 3rem;
 }
 #messages button{
