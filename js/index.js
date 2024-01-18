@@ -146,4 +146,8 @@
           }
         })
 
-
+   // make the main menu sticky
+        window.addEventListener("scroll", function () {
+          var header = document.querySelector(".main-header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });

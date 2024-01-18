@@ -14,6 +14,25 @@
   --rounded-full: 999px;
 }
 
+.main-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White with slight transparency */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+.main-header.sticky {
+  /* Additional styling for the header when it becomes sticky */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Example: add a shadow */
+}
+section {
+  scroll-margin-top: 100px; /* Adjust this value to match your header's height */
+}
+
 body {
   background-color: var(--color-lightest);
   color: var(--color-darker);
