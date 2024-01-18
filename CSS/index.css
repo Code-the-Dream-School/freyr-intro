@@ -193,6 +193,11 @@ section {
   transition: opacity 0.2s ease-in-out;
 }
 
+.button--minimal {
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+}
+
 .button--danger {
   background-color: var(--color-danger);
 }

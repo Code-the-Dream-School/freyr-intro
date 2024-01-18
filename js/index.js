@@ -12,14 +12,13 @@
         copyright.innerHTML = `&copy; Nicoleta Nastase ${thisYear}`
       
 
-    //challenge 2. create List of Skills
+    //Challenge 2. create List of Skills
     let skills = ['Verbal communication', 
       'Friendly', 
       'Active Listener', 
       'Fast Learner', 
       'Work well under stress']
-    //let skillSelection = document.getElementById('skills');
-    //let skillList = skillSelection.querySelector('ul');
+    
     const skillSelection =document.querySelector('#skills');
     const skillList = skillSelection.querySelector('ul');
     for(let i = 0; i < skills.length; i++) {
@@ -36,7 +35,9 @@
 
     messageForm.addEventListener ('submit', (e) => {
       e.preventDefault();
+    // capture curent timestamp  
       const now = new Date();
+
       const name = e.target.name.value;
       const email =  e.target.email.value;
       const message =  e.target.message.value;
@@ -45,9 +46,13 @@
     
       const messageSection = document.getElementById('messages');
       const messageList = messageSection.querySelector('ul'); 
+
+    // if hidden, show the messages section  
       if (messageSection.style.display === 'none') {
         messageSection.style.display = 'block'
         }
+    // Create new message
+
       const newMessage = document.createElement('li');
       newMessage.classList.add('list__item');
       newMessage.innerHTML = ` <div> 
@@ -56,21 +61,65 @@
       email}">${name}</a> &nbsp;</p>
     </div>`
 
+    //Create edit button
+    const editButton = document.createElement('button');
+    editButton.innerText = 'edit';
+    editButton.type = "button";
+    editButton.classList.add('button', 'button--minimal');
+    editButton.addEventListener('click', (e) => {
+      const button = e.target;
+      const entry = button.parentNode;
+
+      if (button.innerText === 'edit') {
+        const message = entry.querySelector('span');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = message.innerText;
+        input.classList.add('field__input');
+
+        message.after(input)
+        message.remove()
+
+        button.innerText = 'save'
+      } else {
+        const input = entry.querySelector('input');
+        const message = document.createElement('span');
+        message.innerText = input.value;
+        message.classList.add('strong');
+
+        input.after(message)
+        input.remove()
+
+        button.innerText = 'edit'
+
+      }
+    })
+
+    newMessage.appendChild(editButton)
+
+    // Create remove button
 
       const removeButton = document.createElement('button');
       removeButton.innerText = 'remove';
       removeButton.type = "button";
       removeButton.classList.add('button', 'button--danger');
       removeButton.addEventListener ('click', (e) => {
-      //const entry = removeButton.parentNode;
       const entry = e.target.parentNode;
       const list = entry.parentNode;
+
+    //If there are no messages hide the message section
+     if(list.children.length <= 1) {
+      messageSection.style.display = 'none';
+     } 
+
+     //remove entry from the list
       entry.remove();
     
       })
       newMessage.appendChild(removeButton)
+    //add new message to the list  
       messageList.appendChild(newMessage)
-      //messageList.prepend(newMessage)
+    // reset form
       e.target.reset()
     
     })
