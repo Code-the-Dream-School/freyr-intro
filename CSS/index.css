@@ -22,7 +22,8 @@
     255,
     255,
     0.9
-  ); /* White with slight transparency */
+  ); 
+  /* White with slight transparency */
   z-index: 1000; /* Ensure it stays on top of other elements */
 }
 .main-header.sticky {
@@ -30,7 +31,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Example: add a shadow */
 }
 section {
-  scroll-margin-top: 100px; /* Adjust this value to match your header's height */
+  scroll-margin-top: 100px; /* Adjust  value to match  header's height */
 }
 
 body {
@@ -43,8 +44,7 @@ body {
 }
 
 h1, 
-h2, 
-h3
+h2
  {
   font-weight: 600;
   margin-bottom: 0.5rem;
