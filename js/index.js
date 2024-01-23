@@ -55,14 +55,10 @@ messageForm.addEventListener('submit', function(e) {
 
 this.reset();
 })
-
-var githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/dreamlala2023/repos");
-githubRequest.send();
-
-githubRequest.addEventListener("load",function(callback){
-    var repositories = JSON.parse(this.response)
-    console.log(repositories);
+ 
+fetch ("https://api.github.com/users/dreamlala2023/repos")
+.then(response => response.json())
+.then(function(repositories){
     var projectSection = document.getElementById("projects");
     var projectList = projectSection.querySelector("ul")
     for (var i=0; i<repositories.length; i++){
@@ -71,8 +67,7 @@ githubRequest.addEventListener("load",function(callback){
        projectList.appendChild(project);
   }
 
-});
-
+})
 
 
 
