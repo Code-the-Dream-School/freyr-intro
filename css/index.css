@@ -1,71 +1,108 @@
+:root{
+    --header-color: #e0d0f0;
+    --header-text-color: #080010;
+    --bg-first-color: #c8c8c8;
+    --bg-second-color: #f8f0ff;
+    --bg-accent-color: #a0a0ff;
+    --main-text-color: #101020;
+    --accent-text-color: #200040;
+    --nav-bg-color: #2000a0a0;
+    --nav-button-color: #1000a0;
+    --nav-text-color: #f0e0ff;
+    --button-bg-color: #a0a0a0;
+    --button-border-color: #808080;
+    --footer-color: #a0a0a0;
+}
+h2, nav{
+    font-family: 'Trebuchet MS', Verdana, Geneva, Tahoma, sans-serif;
+}
 body{
-    background: linear-gradient(#606060, #d0c0d0);
-    color: #101020;
-    font-family: sans-serif;
+    background: linear-gradient(#808080 10%, #200080);
+    color: var(--main-text-color);
+    font-family: Helvetica, Arial, sans-serif;
     margin: 0px;
+    padding: 0px;
+}
+h1{
+    background-color: var(--header-color);
+    color: var(--header-text-color);
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 125%;
+    margin-top: 0.25em;
+    padding: 0.25em 0.25em 0.125em 0.5em;
+    letter-spacing: -0.05ch;
+    word-spacing: 0.5ch;
 }
 nav{
     display: flex;
     position: sticky;
     top: 0px;
-    background-color: #fffff080;
+    background-color: var(--nav-bg-color);
 }
 nav a{
-    background-color: #fffff0;
-    color: #604080;
+    background-color: var(--nav-button-color);
+    color: var(--nav-text-color);
     flex-basis: 0;
     flex-grow: 1;
     display: block;
     margin: 0.5em 0.25em;
-    border: 1px solid white;
+    border: 1px solid black;
     padding: 0.25em 0.5em;
     border-radius: 0.25em;
     text-decoration: none;
+    letter-spacing: 0.25ch;
 }
 nav a:hover{
-    background-color: #ffffff;
-    color: #606060;
-}
-h1{
-    background-color: #d0c0d0;
-    color: #000000;
-    font-weight: lighter;
-    font-size: 2rem;
-    margin-top: 0.25em;
-    padding: 0.5rem;
-    letter-spacing: -0.1ch;
-    word-spacing: 0.5ch;
-}
-h2{
-    background-color: #a0a0ff;
-    font-family: monospace;
-    font-weight: bold;
-    color: #202000;
-    padding: 0.5rem;
-    border-radius: 0.25rem 0.25rem 0rem 0rem;
+    background-color: var(--nav-text-color);
+    color: var(--nav-button-color);
 }
 section{
-    background-color: #e0e0e0;
+    background-color: var(--bg-first-color);
     margin: 1rem 0.5rem;
     padding: 0rem 0rem 0.5rem;
     border-radius: 0.75rem;
 }
+h2{
+    background-color: var(--bg-accent-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
 p{
     margin: 0.25rem 0.5rem;
+    line-height: 1.5em;
 }
-li:not(#messages li){
-    display: block;
-    background-color: #f0f0f0;
+#skills ul, #projects ul, #connect ul{
+    padding-inline-start: 0%;
+    margin: 0.25rem 0.5rem;
+}
+#skills li, #projects li, #connect li{
+    background-color: var(--bg-second-color);
     padding: 0.25rem;
-    margin: 0.5rem 0rem;
-    width: max-content;
     border-radius: 0.25rem;
+    list-style-type: none;
+}
+#skills ul, #projects ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+#skills li, #projects li{
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+}
+#projects li:hover, #connect li:hover{
+    background-color: #ffffff;
 }
 footer{
-    background-color: #a0a0a0;
+    background-color: var(--footer-color);
     text-align: right;
-    font-size: 0.9rem;
-    font-family: serif;
+    font-size: 0.8rem;
+    padding: 0.05em;
+    margin-bottom: 0.25em;
 }
 input{
     border: 2px solid black;
@@ -76,32 +113,29 @@ input{
 }
 label{
     display: block;
-    width: fit-content;
-    font-family: monospace;
+    height: fit-content;
     font-size: 1.25rem;
-    color: #101010;
-    background-color: #c0c0c0;
-    padding: 0rem 0.25rem;
+    background-color: var(--bg-second-color);
+    padding: 0.25rem 0.25rem;
+    border-radius: 0.25rem;
 }
 textarea{
     border: 2px solid black;
     font-size: 1rem;
     padding: 0.25rem;
-    background-color: #f0f0f0;
     margin: 0.25rem 0.5rem;
     min-height: 4rem;
 }
 button{
-    background-color: #a0a0a0;
-    border: solid 2px #808080;
+    background-color: var(--button-bg-color);
+    border: solid 2px var(--button-border-color);
     border-radius: 0%;
     margin: 0.25rem;
     padding: 0.5rem 2rem;
     font-weight: bold;
 }
 button:active{
-    background-color: #c0c0c0;
-    border-color: #a0a0a0;
+    background-color: var(--button-border-color);
 }
 form{
     display: grid;
@@ -143,6 +177,9 @@ form button{
     body{
         margin: 0px;
     }
+    h1{
+        font-size: 1.5rem;
+    }
     section{
         margin: 0px 4px;
     }
@@ -153,7 +190,9 @@ form button{
         margin: auto;
         width:fit-content;
     }
-    header{
-        display: none;
+    nav{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        font-size: large;
     }
 }

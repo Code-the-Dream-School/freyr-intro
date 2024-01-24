@@ -39,7 +39,6 @@ messageForm.addEventListener('submit', (e) => {
     messageSection.style.display = 'block';
     messageForm.reset();
 })
-
 fetch('https://api.github.com/users/violet-periwinkle/repos')
     .then(response => response.json())
     .then(data => {
@@ -51,3 +50,9 @@ fetch('https://api.github.com/users/violet-periwinkle/repos')
             projectList.appendChild(project);
         }
     });
+const age = document.getElementById('age');
+if(today.getMonth() < 1 || (today.getMonth() === 1 && today.getDate() < 17)){
+    age.textContent = thisYear - 2000;
+}else{
+    age.textContent = thisYear - 1999;
+}
