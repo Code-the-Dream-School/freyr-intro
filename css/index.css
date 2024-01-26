@@ -9,15 +9,7 @@
     
 }
 
-.experience-item {
-    flex: 1 1 200px;
-    flex-direction:row;
-    margin-bottom: 10px;
-    background-color:darkkhaki;
-    color:white;
-    flex-wrap:wrap;
 
-}
 
 #leaveMessage {
     display:flex;
@@ -33,6 +25,7 @@ header {
     z-index: 1000; 
     text-align: center;
     color:blueviolet;
+    background-color: white;
 }
  * {
     /*color:darkkhaki;*/
@@ -54,19 +47,46 @@ header {
  section {
     margin-bottom: 20px;
     color:darkkhaki;
+    padding-top: 100px; 
+    margin-top: -110px;
  }
 
- #experience li {
+ /**#experience li {
     color:darkkhaki;
     border: 50px black;
     margin-top:5px;
+}
+**/
+
+.experience-item {
+    background-color: #f7f5f9;
+    color:darkkhaki;
+    border-radius: 50px black(--rounded);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 10px;
+  }
+  
+
+
+#skills .skills-buttons button {
+    color: darkkhaki;
+    background-color: white;
+    border: 1px solid darkkhaki;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 8px 12px; /* Adjust padding for button size */
+   
 }
 
-#skills li {
-    color:darkkhaki;
-    border: 50px black;
-    margin-top:5px;
+/*#skills .skill-buttons button:hover {
+    background-color: darkkhaki;
+    color: black;
 }
+*/
+
 
 #connect li {
     color:darkkhaki;
@@ -106,7 +126,7 @@ header {
 
 }
 footer {
-    background-color: burlywood;
+    background-color: #f7f5f9;
 
 }
 

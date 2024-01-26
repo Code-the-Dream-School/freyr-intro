@@ -5,11 +5,14 @@ var copyright = document.createElement("p");
 var myName = "Shu Hu";
 copyright.innerHTML ="@"+ myName +" "+ thisYear;
 footer.appendChild(copyright);
-var skills = ["Javascript","Project Management","Copywriting","Eventplanning"];
+
+var skills = ["JavaScript","Project Management","Copywriting","Event Planning", "Corporate Communication"];
 var skillsSection = document.querySelector("#skills"); 
-var skillsList = skillsSection.querySelector("ul")
+var skillsList = skillsSection.querySelector("div")
+skillsList.classList.add("skills-buttons")
+
 for (let i = 0; i < skills.length; i++){
-    var skill = document.createElement("li");
+    var skill = document.createElement("button");
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
@@ -64,7 +67,8 @@ fetch ("https://api.github.com/users/dreamlala2023/repos")
     for (var i=0; i<repositories.length; i++){
        var project = document.createElement('li');
        project.innerText = repositories[i].name;
-       projectList.appendChild(project);
+       project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
+       projectList.appendChild(project)
   }
 
 })
