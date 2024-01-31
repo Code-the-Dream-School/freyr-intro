@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+        <meta name="lesson 4-2" content="Code The Dream">
+        <meta name="design, website, html,DOM, lesson 4-2" content="HTML, CSS, JavaScript, DOM"/>
+        <meta name="(Nicoleta Nastase)" content="(Nicoleta Nastase)"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nicoleta Nastase</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+  </head>
+
+  <body>
+    
+    <header class="main-header">
+      <div class="container"> <!--Start wrapper div-->
+        <nav class="nav">
+          <ul class="menu" role="list">
+            <li class="menu__item">
+              <img
+              class="image image--small image--rounded" 
+              src="images/me.jpg"
+              role="presentation" 
+              />
+            </li>
+            <li class="menu__item menu__item--large">
+              <a class="link link--no-color strong" href="/">Nicoleta Nastase</a>
+            </li>
+          </ul>
+      
+      <ul class="menu menu--hide-mobile" role="list">
+        <li class="menu__item">
+          <a class="link link--no-color" href="#about">About</a>
+        </li>
+        <li class="menu__item">
+          <a class="link link--no-color" href="#experience">Experience</a>
+        </li>
+        <li class="menu__item">
+          <a class="link link--no-color" href="#skills">Skills</a>
+        </li>
+        <li class="menu__item">
+          <a class="link link--no-color" href="#projects">Projects</a>
+        </li>
+        <li class="menu__item">
+          <a class="link link--no-color" href="#contact">Leave a message</a></li>
+      </ul>
+     </nav>
+    </div>
+    </header>
+
+  <main>
+    <div class="container">
+      <h1 class="sr-only">Personal Portfolio</h1>
+
+    <section id="about">
+      <h2>About</h2>
+
+      
+        <p>
+          My name is <em>Nicoleta Nastase</em> and I was born in
+          <a href="https://en.wikipedia.org/wiki/Romania" target="_blank">Romania</a> , a
+          country in the Eastern Europe.
+        </p>
+        <p>
+          In <strong>2006</strong> I graduated the
+          <a href="https://www.spiruharet.ro/en/" target="_blank"
+            ><strong>Spiru Haret University</strong></a
+          >
+          in Bucharest, Romania, section: Psysical Therapy.
+        </p>
+        <p>
+          I currently live in New Jersey with my husband and our 2 amazing sons.
+        </p>
+        <p>
+          At the moment I am a Stay At Home Mom, who is trying her best to learn
+          coding with help from the amazing staff of
+          <a href="https://codethedream.org/" target="_blank">Code The Dream School!</a>
+        </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul role="list">  
+       <li class="card">
+        <span><strong>Massage Therapist</strong> &mdash; 
+          Self Employed</span>
+        <span class="emphasis">May 2007 - January 2015</span>
+       </li>
+
+       <li class="card">
+        <span>
+        <strong>Therapist and health club assistant</strong> &mdash; Holliday Inn, Reading</span>
+        <span class="emphasis">January 2015 - September 2015</span>
+       </li> 
+
+       <li class="card">
+        <span>
+        <strong>Massage Therapist</strong> &mdash; Le Masseur Personnel, Reading</span> 
+        <span class="emphasis">September 2015 - February 2018</span>
+       </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul role="list">
+       <!--HTML will be inserted via JS-->
+      </ul>
+     </section>
+     
+     <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+       <!--HTML will be inserted via JS-->
+      </ul>
+     </section>
+
+  
+     <section id="contact">
+      <h2>Leave a Message</h2>
+
+      <form name="leave_message">
+        <div class="field field--inline">
+          <label class="field__label" for="lm_name">Name</label>
+          <input
+            class="field__input"
+            id="lm_name"
+            type="text"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="field field--inline">
+          <label class="field__label" for="lm_email">Email Address</label>
+          <input
+            class="field__input"
+            id="lm_email"
+            type="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="lm_message">Message</label>
+          <textarea
+            class="field__input"
+            id="lm_message"
+            name="message"
+            required
+          ></textarea>
+        </div>
+
+        <button class="button" type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="messages" style="display: none">
+      <h2>Messages</h2>
+
+      <ul class="list" role="list">
+        <!-- HTML will be inserted here via JS -->
+      </ul>
+    </section>
+  </div>
+</main>
+ 
+    
+ 
+
+    <footer>
+      <div class="container">
+        <nav class="nav">
+          <p id="copyright">
+            <!--HTML wiil be inserted here via JS-->
+          </p>
+          <ul class="menu" role="list">
+            <li class="menu__item">
+              <a class="link link--no-color" href="https://www.facebook.com/nicoleta.ghise" target="_blank" 
+              title="Facebook">
+              <i data-feather="facebook"></i>
+            </a>
+            </li>
+            <li class="menu__item">
+              <a class="link link--no-color" href="https://www.instagram.com/nicoletaghise/" target="_blank" 
+              title="Instagram">
+              <i data-feather="instagram"></i>
+            </a>
+            </li>
+            <li class="menu__item">
+              <a class="link link--no-color" href="https://github.com/Nicole3891/ganymede-intro"target="_blank" 
+              title="GitHub">
+              <i data-feather="github"></i>
+            </a>
+            </li>
+          </ul>
+         </nav>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace()
+    </script>
+
+      <script src="js/index.js"></script>
+ 
+  </body>
+</html>
