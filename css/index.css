@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "handwriting";
+  src: 
+    url("../assets/fonts/journal-webfont.woff2") format("woff2"),
+    url("../assets/fonts/journal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "typewriter";
+  src: 
+    url("../assets/fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+    url("../assets/fonts/veteran_typewriter-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: snow;
+  color: darkred;
+  font-family: Verdana, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+section {
+  padding: 1em;
+  margin: 0;
+}
+
+section h1 {
+  font: 2rem "typewriter", monospace;
+  font-weight: bold;
+  background-color: black;
+  color: goldenrod;
+  padding: 0.5em;
+  margin: auto;
+  border-radius: 0.5em;
+}
+
+h2 {
+  font-family: "typewriter", monospace;
+  font-weight: lighter;
+  font-size: 2em;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-top: 0;
+  border-radius: 10px;
+  border: solid black thin;
+  border-bottom-width: thick; 
+}
+
+li::marker {
+  color: black;
+}
+
+.experience ul {
+  list-style-type: none;
+}
+
+section p, .experience ul li, .skill-list li, #messages li {
+  background-color: whitesmoke;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.experience ul li h2 {
+  padding: 5px;
+  border: unset;
+  border-bottom: solid goldenrod; thick;
+  margin: auto;
+}
+
+ul li ul li {
+  list-style-type: circle;
+}
+
+.skill-list {
+  margin: 0 1em;
+  padding: 0 0.5em;
+}
+
+.skill-list li {
+  display: inline-block;
+  width: 120px;
+  border: solid goldenrod thin;
+  border-left-width: thick;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  padding: 3px;
+  color: black;
+}
+
+p a {
+  background-color: goldenrod;
+  border-radius: 0 10px;
+}
+
+a:hover, a:focus {
+  color: goldenrod;
+  background-color: black;
+  font-weight: bold;
+}
+
+#postcard {
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
+  margin: 0;
+}
+
+form {
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+  background: #fff url(../assets/media/background.jpg);
+
+  /* we create our grid */
+display: grid;
+grid-gap: 20px;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 10em 1em 1em 1em;
+}
+
+form h2 {
+  font: 
+    1em "typewriter",
+    monospace;
+  align-self: end;
+  border: unset;
+}
+
+#message {
+  grid-row: 1/5;
+}
+
+#from, #reply {
+  display: flex;
+}
+
+label {
+  font: 
+    0.8em "typewriter",
+    sans-serif;
+  flex: 0 20%;
+}
+
+input, textarea {
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+  background: none;
+}
+
+input:focus, textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+input {
+  flex: auto;
+  height: 140%;
+}
+
+textarea {
+  display: block;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 100%;
+  height: 100%;
+  border-right: 2px solid;
+  overflow: auto;
+}
+
+button {
+  margin: 3px;
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+}
+
+.remove-button {
+  color: red;
+  border-color: red;
+}
+
+form button {
+  transform: rotate(-1.5deg);
+}
+
+form button:after {
+  content: " >>>";
+}
+
+button:hover, button:focus {
+  outline: none;
+  background: black;
+  color: white;
+}
+
+.remove-button:hover, .remove-button:focus {
+  background: red;
+}
+
+
+input:user-invalid, textarea:user-invalid {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+input:user-invalid + span::after,
+textarea:user-invalid + span::before {
+  font: 
+    1em "typewriter",
+    monospace;
+  content: "required";
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transform: translate(-110px, -5px);
+}
+
+textarea:user-invalid + span::before {
+  transform: translate(240px, -360px);
+}
+
+footer {
+  border-top: solid black thin;
+  border-radius: 10px 0;
+  background-color: goldenrod;
+  margin-top: 16px;
+}
+
+footer p {
+  margin-top: 0;
+  text-align: center;
+  color: black;
+}
+
+@media (min-width: 800px) {
+  body {
+    width: 800px;
+    margin: auto;
+  }
+
+  .skill-list li {
+    width: 200px;
+  }
+}

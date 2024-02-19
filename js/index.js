@@ -65,6 +65,8 @@ for (const item of skills) {
   skillsList.appendChild(skill).appendChild(skillDescription);
 }
 
+skillsList.setAttribute("class", "skill-list");
+
 messageForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -105,6 +107,7 @@ messageForm.addEventListener("submit", (event) => {
 
   removeButton.textContent = "remove";
   removeButton.type = "button";
+  removeButton.setAttribute("class", "remove-button");
   removeButton.addEventListener("click", (event) => {
     const entry = removeButton.parentElement;
 
